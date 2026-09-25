@@ -1,0 +1,5058 @@
+{
+  "investigation": {
+    "id": "f561829d-17ba-48a7-a5b4-7b40741641f7",
+    "seq": 31,
+    "idem": "c77f5b22-9b55-431a-926f-260853af21e0",
+    "team": "payments",
+    "action": null,
+    "end_at": "2008-11-11T01:59:59.010014+00:00",
+    "report": {
+      "mode": "deterministic-baseline",
+      "facts": [
+        {
+          "id": "fact:logs:10586254:5bcce8517f71",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010000 17043 INFO dfs.DataNode$DataXceiver: 10.250.14.224:50010 Served block blk_-2535946396566531670 to /10.250.6.191",
+          "evidence": [
+            "logs:10586254:5bcce8517f71"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586255:8fb576fcee05",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010000 17059 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_4935079264207202266 to /10.251.70.5",
+          "evidence": [
+            "logs:10586255:8fb576fcee05"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586256:c81a0beaa7a5",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010000 17074 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_5734354678826818426 to /10.251.198.196",
+          "evidence": [
+            "logs:10586256:c81a0beaa7a5"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586257:ac03f29acf91",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010000 17210 INFO dfs.DataNode$DataXceiver: 10.251.67.113:50010 Served block blk_742051221244262507 to /10.251.199.19",
+          "evidence": [
+            "logs:10586257:ac03f29acf91"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586258:92420d8b4eab",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010000 17361 INFO dfs.DataNode$DataXceiver: 10.251.110.68:50010 Served block blk_6318217504485784664 to /10.250.7.96",
+          "evidence": [
+            "logs:10586258:92420d8b4eab"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586259:89345226223c",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010000 17397 INFO dfs.DataNode$DataXceiver: 10.251.214.130:50010 Served block blk_-2609594263602239446 to /10.251.214.130",
+          "evidence": [
+            "logs:10586259:89345226223c"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586260:f1afc97b7aa2",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010000 17433 INFO dfs.DataNode$DataXceiver: 10.251.42.191:50010 Served block blk_-2792469668662373932 to /10.251.42.191",
+          "evidence": [
+            "logs:10586260:f1afc97b7aa2"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586261:0deff04d62c0",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010000 17459 WARN dfs.DataNode$DataXceiver: 10.251.195.33:50010:Got exception while serving blk_535683485277110688 to /10.251.126.83:",
+          "evidence": [
+            "logs:10586261:0deff04d62c0"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586262:4abd49e9b0cb",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010000 17794 INFO dfs.DataNode$DataXceiver: 10.251.74.134:50010 Served block blk_5875595053874249456 to /10.251.74.134",
+          "evidence": [
+            "logs:10586262:4abd49e9b0cb"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586263:6fca0ca0de8e",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_-778877332864369508",
+          "evidence": [
+            "logs:10586263:6fca0ca0de8e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586264:65f153944cd5",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 16843 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_-6838861760263346623 to /10.251.75.228",
+          "evidence": [
+            "logs:10586264:65f153944cd5"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586265:4130e98fb771",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010001 16981 WARN dfs.DataNode$DataXceiver: 10.251.202.134:50010:Got exception while serving blk_7447910973088475858 to /10.251.43.210:",
+          "evidence": [
+            "logs:10586265:4130e98fb771"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586266:9d974165eeb4",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010001 17071 WARN dfs.DataNode$DataXceiver: 10.251.198.196:50010:Got exception while serving blk_5734354678826818426 to /10.251.123.20:",
+          "evidence": [
+            "logs:10586266:9d974165eeb4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586267:bb997e4b669f",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010001 17116 WARN dfs.DataNode$DataXceiver: 10.251.214.32:50010:Got exception while serving blk_5106390787633300578 to /10.251.106.10:",
+          "evidence": [
+            "logs:10586267:bb997e4b669f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586268:c07eebc8b3ea",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17180 INFO dfs.DataNode$DataXceiver: 10.251.201.204:50010 Served block blk_2638434639633029937 to /10.251.201.204",
+          "evidence": [
+            "logs:10586268:c07eebc8b3ea"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586269:a5f0a81b389a",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17267 INFO dfs.DataNode$DataXceiver: 10.251.90.239:50010 Served block blk_9085699272037958248 to /10.251.90.239",
+          "evidence": [
+            "logs:10586269:a5f0a81b389a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586270:c85f247de1df",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010001 17271 WARN dfs.DataNode$DataXceiver: 10.250.17.177:50010:Got exception while serving blk_-7100607078287227729 to /10.251.203.179:",
+          "evidence": [
+            "logs:10586270:c85f247de1df"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586271:e618f2e4771e",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17315 INFO dfs.DataNode$DataXceiver: 10.251.66.63:50010 Served block blk_-8813332928024050051 to /10.250.7.244",
+          "evidence": [
+            "logs:10586271:e618f2e4771e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586272:65218b19141e",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17399 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-1942763242231361813 to /10.251.111.130",
+          "evidence": [
+            "logs:10586272:65218b19141e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586273:19fa8fe5d14d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17420 INFO dfs.DataNode$DataXceiver: 10.250.7.32:50010 Served block blk_1526524957439140626 to /10.250.7.32",
+          "evidence": [
+            "logs:10586273:19fa8fe5d14d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586274:a1a3a7213345",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17431 INFO dfs.DataNode$DataXceiver: 10.251.30.85:50010 Served block blk_4999254835469198006 to /10.251.197.161",
+          "evidence": [
+            "logs:10586274:a1a3a7213345"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586275:0d0ad7a8ee21",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17436 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_-3285780292625981949 to /10.251.199.245",
+          "evidence": [
+            "logs:10586275:0d0ad7a8ee21"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586276:250a19ad6959",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17495 INFO dfs.DataNode$DataXceiver: 10.251.215.16:50010 Served block blk_7155634755627230726 to /10.251.215.16",
+          "evidence": [
+            "logs:10586276:250a19ad6959"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586277:ec8461fccc32",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010001 17543 WARN dfs.DataNode$DataXceiver: 10.250.6.223:50010:Got exception while serving blk_4186370930571701956 to /10.251.195.70:",
+          "evidence": [
+            "logs:10586277:ec8461fccc32"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586278:79815dbde5b4",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010001 17565 INFO dfs.DataNode$DataXceiver: 10.251.91.84:50010 Served block blk_6453526678462649750 to /10.251.91.84",
+          "evidence": [
+            "logs:10586278:79815dbde5b4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586279:27fcea632f30",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010002 17269 INFO dfs.DataNode$DataXceiver: 10.251.202.209:50010 Served block blk_-115239807422414213 to /10.251.202.209",
+          "evidence": [
+            "logs:10586279:27fcea632f30"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586280:90ec82a1135f",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010002 17332 WARN dfs.DataNode$DataXceiver: 10.251.74.192:50010:Got exception while serving blk_-7702370323877835363 to /10.250.6.223:",
+          "evidence": [
+            "logs:10586280:90ec82a1135f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586281:cdc1580f40f3",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010002 17424 WARN dfs.DataNode$DataXceiver: 10.251.122.79:50010:Got exception while serving blk_238415733112760437 to /10.251.125.237:",
+          "evidence": [
+            "logs:10586281:cdc1580f40f3"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586282:f97d03323cf2",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010003 17138 INFO dfs.DataNode$DataXceiver: 10.251.127.243:50010 Served block blk_-5959265275767588350 to /10.251.127.243",
+          "evidence": [
+            "logs:10586282:f97d03323cf2"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586283:57fc9bebb73d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010003 17195 INFO dfs.DataNode$DataXceiver: 10.251.73.220:50010 Served block blk_8392086724506260148 to /10.251.73.220",
+          "evidence": [
+            "logs:10586283:57fc9bebb73d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586284:fcc295aede1d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010003 17199 INFO dfs.DataNode$DataXceiver: 10.251.195.52:50010 Served block blk_4226746322242781942 to /10.251.195.52",
+          "evidence": [
+            "logs:10586284:fcc295aede1d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586285:aa709440d45e",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010003 17308 INFO dfs.DataNode$DataXceiver: 10.251.91.159:50010 Served block blk_8310751108406742538 to /10.251.89.155",
+          "evidence": [
+            "logs:10586285:aa709440d45e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586286:5674bb229f47",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010003 17407 WARN dfs.DataNode$DataXceiver: 10.251.194.102:50010:Got exception while serving blk_-5295391444786787073 to /10.250.14.224:",
+          "evidence": [
+            "logs:10586286:5674bb229f47"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586287:0de7d3bbc0ac",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010003 17507 WARN dfs.DataNode$DataXceiver: 10.251.110.196:50010:Got exception while serving blk_1088283231284558944 to /10.251.111.80:",
+          "evidence": [
+            "logs:10586287:0de7d3bbc0ac"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586288:84354ae019de",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010003 17581 INFO dfs.DataNode$DataXceiver: 10.250.10.144:50010 Served block blk_3181823436681574883 to /10.250.10.144",
+          "evidence": [
+            "logs:10586288:84354ae019de"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586289:f1fa82dae0d4",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010004 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3236494291899365914",
+          "evidence": [
+            "logs:10586289:f1fa82dae0d4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586290:1efd5829ee7c",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010004 16968 INFO dfs.DataNode$DataXceiver: 10.251.202.134:50010 Served block blk_2541276497904364122 to /10.251.214.112",
+          "evidence": [
+            "logs:10586290:1efd5829ee7c"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586291:d614e3aec5fc",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010004 17230 WARN dfs.DataNode$DataXceiver: 10.251.42.16:50010:Got exception while serving blk_-2130024236700155251 to /10.251.71.193:",
+          "evidence": [
+            "logs:10586291:d614e3aec5fc"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586292:67e772b750dd",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010004 17310 WARN dfs.DataNode$DataXceiver: 10.251.214.67:50010:Got exception while serving blk_72225766081841452 to /10.251.74.79:",
+          "evidence": [
+            "logs:10586292:67e772b750dd"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586293:443a1ab1f2b7",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010004 17344 INFO dfs.DataNode$DataXceiver: 10.251.70.211:50010 Served block blk_3976213844904384737 to /10.251.123.99",
+          "evidence": [
+            "logs:10586293:443a1ab1f2b7"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586294:ef275ce8246b",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010004 17361 WARN dfs.DataNode$DataXceiver: 10.251.35.1:50010:Got exception while serving blk_8058974377902737092 to /10.251.214.67:",
+          "evidence": [
+            "logs:10586294:ef275ce8246b"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586295:b9f6515d4d71",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010004 17398 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-883015238343497266 to /10.251.123.195",
+          "evidence": [
+            "logs:10586295:b9f6515d4d71"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586296:29d2013846d5",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010004 17407 WARN dfs.DataNode$DataXceiver: 10.250.10.176:50010:Got exception while serving blk_-8750361725316091712 to /10.251.214.67:",
+          "evidence": [
+            "logs:10586296:29d2013846d5"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586297:e6eb870dee21",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010004 17438 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_5445691417601575728 to /10.251.195.33",
+          "evidence": [
+            "logs:10586297:e6eb870dee21"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586298:d9b97929bbef",
+          "kind": "observation",
+          "text": "日志记录 WARN: 081111 010004 17511 WARN dfs.DataNode$DataXceiver: 10.251.26.8:50010:Got exception while serving blk_3616362597926718614 to /10.251.27.63:",
+          "evidence": [
+            "logs:10586298:d9b97929bbef"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586299:1e515e8bd219",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010004 17605 INFO dfs.DataNode$DataXceiver: 10.251.126.83:50010 Served block blk_-1944295343848439615 to /10.251.126.83",
+          "evidence": [
+            "logs:10586299:1e515e8bd219"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586300:187ba24a448a",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_227385790568806987",
+          "evidence": [
+            "logs:10586300:187ba24a448a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586301:70633e2c2208",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3908966990918828208",
+          "evidence": [
+            "logs:10586301:70633e2c2208"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586302:762c667f6b76",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010005 16833 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_8942486865292502579 to /10.251.123.132",
+          "evidence": [
+            "logs:10586302:762c667f6b76"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10586303:c68837a14e0d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 010005 17279 INFO dfs.DataNode$DataXceiver: 10.251.43.210:50010 Served block blk_-6701095191509941338 to /10.251.193.224",
+          "evidence": [
+            "logs:10586303:c68837a14e0d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "kind": "observation",
+          "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+          "evidence": [
+            "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "deployments",
+              "commit"
+            ],
+            "limit": 50,
+            "object": "Commit",
+            "source": "git"
+          }
+        },
+        {
+          "id": "fact:runbook:orders-runbook:3fd079fe1881",
+          "kind": "observation",
+          "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+          "evidence": [
+            "runbook:orders-runbook:3fd079fe1881"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "runbook"
+            ],
+            "limit": 50,
+            "object": "Runbook",
+            "source": "runbook"
+          }
+        }
+      ],
+      "impact": "svc-23",
+      "context": {
+        "plan": {
+          "end": "2008-11-11T01:59:59.010014Z",
+          "start": "2008-11-11T01:00:00Z",
+          "steps": [
+            {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            },
+            {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            },
+            {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            },
+            {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          ],
+          "service": "svc-23",
+          "version": "1"
+        },
+        "facts": [
+          {
+            "id": "fact:logs:10586254:5bcce8517f71",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010000 17043 INFO dfs.DataNode$DataXceiver: 10.250.14.224:50010 Served block blk_-2535946396566531670 to /10.250.6.191",
+            "evidence": [
+              "logs:10586254:5bcce8517f71"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586255:8fb576fcee05",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010000 17059 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_4935079264207202266 to /10.251.70.5",
+            "evidence": [
+              "logs:10586255:8fb576fcee05"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586256:c81a0beaa7a5",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010000 17074 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_5734354678826818426 to /10.251.198.196",
+            "evidence": [
+              "logs:10586256:c81a0beaa7a5"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586257:ac03f29acf91",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010000 17210 INFO dfs.DataNode$DataXceiver: 10.251.67.113:50010 Served block blk_742051221244262507 to /10.251.199.19",
+            "evidence": [
+              "logs:10586257:ac03f29acf91"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586258:92420d8b4eab",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010000 17361 INFO dfs.DataNode$DataXceiver: 10.251.110.68:50010 Served block blk_6318217504485784664 to /10.250.7.96",
+            "evidence": [
+              "logs:10586258:92420d8b4eab"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586259:89345226223c",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010000 17397 INFO dfs.DataNode$DataXceiver: 10.251.214.130:50010 Served block blk_-2609594263602239446 to /10.251.214.130",
+            "evidence": [
+              "logs:10586259:89345226223c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586260:f1afc97b7aa2",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010000 17433 INFO dfs.DataNode$DataXceiver: 10.251.42.191:50010 Served block blk_-2792469668662373932 to /10.251.42.191",
+            "evidence": [
+              "logs:10586260:f1afc97b7aa2"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586261:0deff04d62c0",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010000 17459 WARN dfs.DataNode$DataXceiver: 10.251.195.33:50010:Got exception while serving blk_535683485277110688 to /10.251.126.83:",
+            "evidence": [
+              "logs:10586261:0deff04d62c0"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586262:4abd49e9b0cb",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010000 17794 INFO dfs.DataNode$DataXceiver: 10.251.74.134:50010 Served block blk_5875595053874249456 to /10.251.74.134",
+            "evidence": [
+              "logs:10586262:4abd49e9b0cb"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586263:6fca0ca0de8e",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_-778877332864369508",
+            "evidence": [
+              "logs:10586263:6fca0ca0de8e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586264:65f153944cd5",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 16843 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_-6838861760263346623 to /10.251.75.228",
+            "evidence": [
+              "logs:10586264:65f153944cd5"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586265:4130e98fb771",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010001 16981 WARN dfs.DataNode$DataXceiver: 10.251.202.134:50010:Got exception while serving blk_7447910973088475858 to /10.251.43.210:",
+            "evidence": [
+              "logs:10586265:4130e98fb771"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586266:9d974165eeb4",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010001 17071 WARN dfs.DataNode$DataXceiver: 10.251.198.196:50010:Got exception while serving blk_5734354678826818426 to /10.251.123.20:",
+            "evidence": [
+              "logs:10586266:9d974165eeb4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586267:bb997e4b669f",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010001 17116 WARN dfs.DataNode$DataXceiver: 10.251.214.32:50010:Got exception while serving blk_5106390787633300578 to /10.251.106.10:",
+            "evidence": [
+              "logs:10586267:bb997e4b669f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586268:c07eebc8b3ea",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17180 INFO dfs.DataNode$DataXceiver: 10.251.201.204:50010 Served block blk_2638434639633029937 to /10.251.201.204",
+            "evidence": [
+              "logs:10586268:c07eebc8b3ea"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586269:a5f0a81b389a",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17267 INFO dfs.DataNode$DataXceiver: 10.251.90.239:50010 Served block blk_9085699272037958248 to /10.251.90.239",
+            "evidence": [
+              "logs:10586269:a5f0a81b389a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586270:c85f247de1df",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010001 17271 WARN dfs.DataNode$DataXceiver: 10.250.17.177:50010:Got exception while serving blk_-7100607078287227729 to /10.251.203.179:",
+            "evidence": [
+              "logs:10586270:c85f247de1df"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586271:e618f2e4771e",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17315 INFO dfs.DataNode$DataXceiver: 10.251.66.63:50010 Served block blk_-8813332928024050051 to /10.250.7.244",
+            "evidence": [
+              "logs:10586271:e618f2e4771e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586272:65218b19141e",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17399 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-1942763242231361813 to /10.251.111.130",
+            "evidence": [
+              "logs:10586272:65218b19141e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586273:19fa8fe5d14d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17420 INFO dfs.DataNode$DataXceiver: 10.250.7.32:50010 Served block blk_1526524957439140626 to /10.250.7.32",
+            "evidence": [
+              "logs:10586273:19fa8fe5d14d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586274:a1a3a7213345",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17431 INFO dfs.DataNode$DataXceiver: 10.251.30.85:50010 Served block blk_4999254835469198006 to /10.251.197.161",
+            "evidence": [
+              "logs:10586274:a1a3a7213345"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586275:0d0ad7a8ee21",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17436 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_-3285780292625981949 to /10.251.199.245",
+            "evidence": [
+              "logs:10586275:0d0ad7a8ee21"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586276:250a19ad6959",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17495 INFO dfs.DataNode$DataXceiver: 10.251.215.16:50010 Served block blk_7155634755627230726 to /10.251.215.16",
+            "evidence": [
+              "logs:10586276:250a19ad6959"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586277:ec8461fccc32",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010001 17543 WARN dfs.DataNode$DataXceiver: 10.250.6.223:50010:Got exception while serving blk_4186370930571701956 to /10.251.195.70:",
+            "evidence": [
+              "logs:10586277:ec8461fccc32"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586278:79815dbde5b4",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010001 17565 INFO dfs.DataNode$DataXceiver: 10.251.91.84:50010 Served block blk_6453526678462649750 to /10.251.91.84",
+            "evidence": [
+              "logs:10586278:79815dbde5b4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586279:27fcea632f30",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010002 17269 INFO dfs.DataNode$DataXceiver: 10.251.202.209:50010 Served block blk_-115239807422414213 to /10.251.202.209",
+            "evidence": [
+              "logs:10586279:27fcea632f30"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586280:90ec82a1135f",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010002 17332 WARN dfs.DataNode$DataXceiver: 10.251.74.192:50010:Got exception while serving blk_-7702370323877835363 to /10.250.6.223:",
+            "evidence": [
+              "logs:10586280:90ec82a1135f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586281:cdc1580f40f3",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010002 17424 WARN dfs.DataNode$DataXceiver: 10.251.122.79:50010:Got exception while serving blk_238415733112760437 to /10.251.125.237:",
+            "evidence": [
+              "logs:10586281:cdc1580f40f3"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586282:f97d03323cf2",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010003 17138 INFO dfs.DataNode$DataXceiver: 10.251.127.243:50010 Served block blk_-5959265275767588350 to /10.251.127.243",
+            "evidence": [
+              "logs:10586282:f97d03323cf2"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586283:57fc9bebb73d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010003 17195 INFO dfs.DataNode$DataXceiver: 10.251.73.220:50010 Served block blk_8392086724506260148 to /10.251.73.220",
+            "evidence": [
+              "logs:10586283:57fc9bebb73d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586284:fcc295aede1d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010003 17199 INFO dfs.DataNode$DataXceiver: 10.251.195.52:50010 Served block blk_4226746322242781942 to /10.251.195.52",
+            "evidence": [
+              "logs:10586284:fcc295aede1d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586285:aa709440d45e",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010003 17308 INFO dfs.DataNode$DataXceiver: 10.251.91.159:50010 Served block blk_8310751108406742538 to /10.251.89.155",
+            "evidence": [
+              "logs:10586285:aa709440d45e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586286:5674bb229f47",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010003 17407 WARN dfs.DataNode$DataXceiver: 10.251.194.102:50010:Got exception while serving blk_-5295391444786787073 to /10.250.14.224:",
+            "evidence": [
+              "logs:10586286:5674bb229f47"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586287:0de7d3bbc0ac",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010003 17507 WARN dfs.DataNode$DataXceiver: 10.251.110.196:50010:Got exception while serving blk_1088283231284558944 to /10.251.111.80:",
+            "evidence": [
+              "logs:10586287:0de7d3bbc0ac"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586288:84354ae019de",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010003 17581 INFO dfs.DataNode$DataXceiver: 10.250.10.144:50010 Served block blk_3181823436681574883 to /10.250.10.144",
+            "evidence": [
+              "logs:10586288:84354ae019de"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586289:f1fa82dae0d4",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010004 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3236494291899365914",
+            "evidence": [
+              "logs:10586289:f1fa82dae0d4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586290:1efd5829ee7c",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010004 16968 INFO dfs.DataNode$DataXceiver: 10.251.202.134:50010 Served block blk_2541276497904364122 to /10.251.214.112",
+            "evidence": [
+              "logs:10586290:1efd5829ee7c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586291:d614e3aec5fc",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010004 17230 WARN dfs.DataNode$DataXceiver: 10.251.42.16:50010:Got exception while serving blk_-2130024236700155251 to /10.251.71.193:",
+            "evidence": [
+              "logs:10586291:d614e3aec5fc"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586292:67e772b750dd",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010004 17310 WARN dfs.DataNode$DataXceiver: 10.251.214.67:50010:Got exception while serving blk_72225766081841452 to /10.251.74.79:",
+            "evidence": [
+              "logs:10586292:67e772b750dd"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586293:443a1ab1f2b7",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010004 17344 INFO dfs.DataNode$DataXceiver: 10.251.70.211:50010 Served block blk_3976213844904384737 to /10.251.123.99",
+            "evidence": [
+              "logs:10586293:443a1ab1f2b7"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586294:ef275ce8246b",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010004 17361 WARN dfs.DataNode$DataXceiver: 10.251.35.1:50010:Got exception while serving blk_8058974377902737092 to /10.251.214.67:",
+            "evidence": [
+              "logs:10586294:ef275ce8246b"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586295:b9f6515d4d71",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010004 17398 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-883015238343497266 to /10.251.123.195",
+            "evidence": [
+              "logs:10586295:b9f6515d4d71"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586296:29d2013846d5",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010004 17407 WARN dfs.DataNode$DataXceiver: 10.250.10.176:50010:Got exception while serving blk_-8750361725316091712 to /10.251.214.67:",
+            "evidence": [
+              "logs:10586296:29d2013846d5"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586297:e6eb870dee21",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010004 17438 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_5445691417601575728 to /10.251.195.33",
+            "evidence": [
+              "logs:10586297:e6eb870dee21"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586298:d9b97929bbef",
+            "kind": "observation",
+            "text": "日志记录 WARN: 081111 010004 17511 WARN dfs.DataNode$DataXceiver: 10.251.26.8:50010:Got exception while serving blk_3616362597926718614 to /10.251.27.63:",
+            "evidence": [
+              "logs:10586298:d9b97929bbef"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586299:1e515e8bd219",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010004 17605 INFO dfs.DataNode$DataXceiver: 10.251.126.83:50010 Served block blk_-1944295343848439615 to /10.251.126.83",
+            "evidence": [
+              "logs:10586299:1e515e8bd219"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586300:187ba24a448a",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_227385790568806987",
+            "evidence": [
+              "logs:10586300:187ba24a448a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586301:70633e2c2208",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3908966990918828208",
+            "evidence": [
+              "logs:10586301:70633e2c2208"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586302:762c667f6b76",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010005 16833 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_8942486865292502579 to /10.251.123.132",
+            "evidence": [
+              "logs:10586302:762c667f6b76"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10586303:c68837a14e0d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 010005 17279 INFO dfs.DataNode$DataXceiver: 10.251.43.210:50010 Served block blk_-6701095191509941338 to /10.251.193.224",
+            "evidence": [
+              "logs:10586303:c68837a14e0d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "kind": "observation",
+            "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:3fd079fe1881",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+            "evidence": [
+              "runbook:orders-runbook:3fd079fe1881"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          }
+        ],
+        "scope": {
+          "team": "payments",
+          "service": "svc-23",
+          "subject": "carol"
+        },
+        "missing": [
+          "deployments: no accessible records in scope",
+          "logs: truncated at bounded page; more records exist"
+        ],
+        "objects": [
+          {
+            "id": "svc-23",
+            "team": "payments",
+            "type": "Service"
+          }
+        ],
+        "version": "1",
+        "evidence": [
+          {
+            "id": "logs:10586254:5bcce8517f71",
+            "team": "payments",
+            "sha256": "5bcce8517f71329229a961dcdeb76242f3b49c705595f32205a7b23e72149e78",
+            "source": "logs",
+            "locator": "demo://logs/10586254",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010000 17043 INFO dfs.DataNode$DataXceiver: 10.250.14.224:50010 Served block blk_-2535946396566531670 to /10.250.6.191",
+              "service_name": "payment-api",
+              "original_line": 5838291
+            },
+            "version": "10586254",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586254"
+          },
+          {
+            "id": "logs:10586255:8fb576fcee05",
+            "team": "payments",
+            "sha256": "8fb576fcee0589dc3fa0db945c5d5f0628458dd53aa93800a6a43752da40f993",
+            "source": "logs",
+            "locator": "demo://logs/10586255",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010000 17059 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_4935079264207202266 to /10.251.70.5",
+              "service_name": "payment-api",
+              "original_line": 5838292
+            },
+            "version": "10586255",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586255"
+          },
+          {
+            "id": "logs:10586256:c81a0beaa7a5",
+            "team": "payments",
+            "sha256": "c81a0beaa7a572e70cce7a91c46fe341fbb88a81a7e839ef58f5e205153f5c6d",
+            "source": "logs",
+            "locator": "demo://logs/10586256",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010000 17074 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_5734354678826818426 to /10.251.198.196",
+              "service_name": "payment-api",
+              "original_line": 5838293
+            },
+            "version": "10586256",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586256"
+          },
+          {
+            "id": "logs:10586257:ac03f29acf91",
+            "team": "payments",
+            "sha256": "ac03f29acf91713354e65c5319e70ad6aff3e1dff33ab40c94ee86c63b58975b",
+            "source": "logs",
+            "locator": "demo://logs/10586257",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010000 17210 INFO dfs.DataNode$DataXceiver: 10.251.67.113:50010 Served block blk_742051221244262507 to /10.251.199.19",
+              "service_name": "payment-api",
+              "original_line": 5838294
+            },
+            "version": "10586257",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586257"
+          },
+          {
+            "id": "logs:10586258:92420d8b4eab",
+            "team": "payments",
+            "sha256": "92420d8b4eabaa91a8cf3c8e9ae8faaa1c89292deecb3ab888032a83bdb997f1",
+            "source": "logs",
+            "locator": "demo://logs/10586258",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010000 17361 INFO dfs.DataNode$DataXceiver: 10.251.110.68:50010 Served block blk_6318217504485784664 to /10.250.7.96",
+              "service_name": "payment-api",
+              "original_line": 5838295
+            },
+            "version": "10586258",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586258"
+          },
+          {
+            "id": "logs:10586259:89345226223c",
+            "team": "payments",
+            "sha256": "89345226223cae226050d25ec39eb0cfa0a747d2a1b2796ca958c6a7e741eb10",
+            "source": "logs",
+            "locator": "demo://logs/10586259",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010000 17397 INFO dfs.DataNode$DataXceiver: 10.251.214.130:50010 Served block blk_-2609594263602239446 to /10.251.214.130",
+              "service_name": "payment-api",
+              "original_line": 5838296
+            },
+            "version": "10586259",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586259"
+          },
+          {
+            "id": "logs:10586260:f1afc97b7aa2",
+            "team": "payments",
+            "sha256": "f1afc97b7aa230b34c9971ea2e129a07ef49fdd5b0be3519e019f45b8c73b12a",
+            "source": "logs",
+            "locator": "demo://logs/10586260",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010000 17433 INFO dfs.DataNode$DataXceiver: 10.251.42.191:50010 Served block blk_-2792469668662373932 to /10.251.42.191",
+              "service_name": "payment-api",
+              "original_line": 5838297
+            },
+            "version": "10586260",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586260"
+          },
+          {
+            "id": "logs:10586261:0deff04d62c0",
+            "team": "payments",
+            "sha256": "0deff04d62c0e8cb5c4760c3619fe8da32ed1b161e95f765e59c1535bba303f0",
+            "source": "logs",
+            "locator": "demo://logs/10586261",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010000 17459 WARN dfs.DataNode$DataXceiver: 10.251.195.33:50010:Got exception while serving blk_535683485277110688 to /10.251.126.83:",
+              "service_name": "payment-api",
+              "original_line": 5838298
+            },
+            "version": "10586261",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586261"
+          },
+          {
+            "id": "logs:10586262:4abd49e9b0cb",
+            "team": "payments",
+            "sha256": "4abd49e9b0cb4525ef947a598932abf0a64f8f8469b919674212138d838b5231",
+            "source": "logs",
+            "locator": "demo://logs/10586262",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010000 17794 INFO dfs.DataNode$DataXceiver: 10.251.74.134:50010 Served block blk_5875595053874249456 to /10.251.74.134",
+              "service_name": "payment-api",
+              "original_line": 5838299
+            },
+            "version": "10586262",
+            "available": true,
+            "event_time": "2008-11-11T01:00:00+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586262"
+          },
+          {
+            "id": "logs:10586263:6fca0ca0de8e",
+            "team": "payments",
+            "sha256": "6fca0ca0de8edc1776f6429fb126f6166d151ffa9f4221725c43827de04b5665",
+            "source": "logs",
+            "locator": "demo://logs/10586263",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_-778877332864369508",
+              "service_name": "payment-api",
+              "original_line": 5838300
+            },
+            "version": "10586263",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586263"
+          },
+          {
+            "id": "logs:10586264:65f153944cd5",
+            "team": "payments",
+            "sha256": "65f153944cd53014950d4685442022dc6f12721a3cd6fe681553f57711f7cbbc",
+            "source": "logs",
+            "locator": "demo://logs/10586264",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 16843 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_-6838861760263346623 to /10.251.75.228",
+              "service_name": "payment-api",
+              "original_line": 5838301
+            },
+            "version": "10586264",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586264"
+          },
+          {
+            "id": "logs:10586265:4130e98fb771",
+            "team": "payments",
+            "sha256": "4130e98fb771ba835b87fbe96b748e624e898e08bb2fbfebe5928bef6df225c9",
+            "source": "logs",
+            "locator": "demo://logs/10586265",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010001 16981 WARN dfs.DataNode$DataXceiver: 10.251.202.134:50010:Got exception while serving blk_7447910973088475858 to /10.251.43.210:",
+              "service_name": "payment-api",
+              "original_line": 5838302
+            },
+            "version": "10586265",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586265"
+          },
+          {
+            "id": "logs:10586266:9d974165eeb4",
+            "team": "payments",
+            "sha256": "9d974165eeb4d099bdbb353f5fe53b9d83b92293de16eedce98679fa5e848588",
+            "source": "logs",
+            "locator": "demo://logs/10586266",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010001 17071 WARN dfs.DataNode$DataXceiver: 10.251.198.196:50010:Got exception while serving blk_5734354678826818426 to /10.251.123.20:",
+              "service_name": "payment-api",
+              "original_line": 5838303
+            },
+            "version": "10586266",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586266"
+          },
+          {
+            "id": "logs:10586267:bb997e4b669f",
+            "team": "payments",
+            "sha256": "bb997e4b669fa254d205916ecaf25d8da90b695319a8c8f326886910eaae92b7",
+            "source": "logs",
+            "locator": "demo://logs/10586267",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010001 17116 WARN dfs.DataNode$DataXceiver: 10.251.214.32:50010:Got exception while serving blk_5106390787633300578 to /10.251.106.10:",
+              "service_name": "payment-api",
+              "original_line": 5838304
+            },
+            "version": "10586267",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586267"
+          },
+          {
+            "id": "logs:10586268:c07eebc8b3ea",
+            "team": "payments",
+            "sha256": "c07eebc8b3eaa412a07346ae02d435a251db82ebddbab5e5a8b98482ceb9cf3c",
+            "source": "logs",
+            "locator": "demo://logs/10586268",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17180 INFO dfs.DataNode$DataXceiver: 10.251.201.204:50010 Served block blk_2638434639633029937 to /10.251.201.204",
+              "service_name": "payment-api",
+              "original_line": 5838305
+            },
+            "version": "10586268",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586268"
+          },
+          {
+            "id": "logs:10586269:a5f0a81b389a",
+            "team": "payments",
+            "sha256": "a5f0a81b389aaa2cb6db2e6b3c902d936cfbaf65b049c51e107c6db7b05113a7",
+            "source": "logs",
+            "locator": "demo://logs/10586269",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17267 INFO dfs.DataNode$DataXceiver: 10.251.90.239:50010 Served block blk_9085699272037958248 to /10.251.90.239",
+              "service_name": "payment-api",
+              "original_line": 5838306
+            },
+            "version": "10586269",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586269"
+          },
+          {
+            "id": "logs:10586270:c85f247de1df",
+            "team": "payments",
+            "sha256": "c85f247de1dfe0060026bfe5f89f5984b5673ac90d18b20137a4f5f8d7eaed27",
+            "source": "logs",
+            "locator": "demo://logs/10586270",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010001 17271 WARN dfs.DataNode$DataXceiver: 10.250.17.177:50010:Got exception while serving blk_-7100607078287227729 to /10.251.203.179:",
+              "service_name": "payment-api",
+              "original_line": 5838307
+            },
+            "version": "10586270",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586270"
+          },
+          {
+            "id": "logs:10586271:e618f2e4771e",
+            "team": "payments",
+            "sha256": "e618f2e4771e5c8c4ee6aa80040a24a25e211ab1bef5b1aff4a03d3ead4c6c3e",
+            "source": "logs",
+            "locator": "demo://logs/10586271",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17315 INFO dfs.DataNode$DataXceiver: 10.251.66.63:50010 Served block blk_-8813332928024050051 to /10.250.7.244",
+              "service_name": "payment-api",
+              "original_line": 5838308
+            },
+            "version": "10586271",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586271"
+          },
+          {
+            "id": "logs:10586272:65218b19141e",
+            "team": "payments",
+            "sha256": "65218b19141e63c5688bc1bdfd048758642aa70c1b4e89febdba07cb4e8c04c3",
+            "source": "logs",
+            "locator": "demo://logs/10586272",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17399 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-1942763242231361813 to /10.251.111.130",
+              "service_name": "payment-api",
+              "original_line": 5838309
+            },
+            "version": "10586272",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586272"
+          },
+          {
+            "id": "logs:10586273:19fa8fe5d14d",
+            "team": "payments",
+            "sha256": "19fa8fe5d14de136ba1ba4e62d9938913d2125ca2da9c56dfeabd0225b70111b",
+            "source": "logs",
+            "locator": "demo://logs/10586273",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17420 INFO dfs.DataNode$DataXceiver: 10.250.7.32:50010 Served block blk_1526524957439140626 to /10.250.7.32",
+              "service_name": "payment-api",
+              "original_line": 5838310
+            },
+            "version": "10586273",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586273"
+          },
+          {
+            "id": "logs:10586274:a1a3a7213345",
+            "team": "payments",
+            "sha256": "a1a3a721334539708a425795b446b5fcbbd83ec33fc2e891e62d9eecccd5ea0f",
+            "source": "logs",
+            "locator": "demo://logs/10586274",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17431 INFO dfs.DataNode$DataXceiver: 10.251.30.85:50010 Served block blk_4999254835469198006 to /10.251.197.161",
+              "service_name": "payment-api",
+              "original_line": 5838311
+            },
+            "version": "10586274",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586274"
+          },
+          {
+            "id": "logs:10586275:0d0ad7a8ee21",
+            "team": "payments",
+            "sha256": "0d0ad7a8ee21e10544f323116fbb201cc03c158b57ae25bef16a2743192eec84",
+            "source": "logs",
+            "locator": "demo://logs/10586275",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17436 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_-3285780292625981949 to /10.251.199.245",
+              "service_name": "payment-api",
+              "original_line": 5838312
+            },
+            "version": "10586275",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586275"
+          },
+          {
+            "id": "logs:10586276:250a19ad6959",
+            "team": "payments",
+            "sha256": "250a19ad6959d9846c0d108b0d3310a10c52a6f653ca53b34ec88ece0f8e340f",
+            "source": "logs",
+            "locator": "demo://logs/10586276",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17495 INFO dfs.DataNode$DataXceiver: 10.251.215.16:50010 Served block blk_7155634755627230726 to /10.251.215.16",
+              "service_name": "payment-api",
+              "original_line": 5838313
+            },
+            "version": "10586276",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586276"
+          },
+          {
+            "id": "logs:10586277:ec8461fccc32",
+            "team": "payments",
+            "sha256": "ec8461fccc32bbc764f71b282e68fed9ecce5093ae51eb66c7e23eb481710861",
+            "source": "logs",
+            "locator": "demo://logs/10586277",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010001 17543 WARN dfs.DataNode$DataXceiver: 10.250.6.223:50010:Got exception while serving blk_4186370930571701956 to /10.251.195.70:",
+              "service_name": "payment-api",
+              "original_line": 5838314
+            },
+            "version": "10586277",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586277"
+          },
+          {
+            "id": "logs:10586278:79815dbde5b4",
+            "team": "payments",
+            "sha256": "79815dbde5b457986c2ce3bb94f301711e97fab8161deb43ff360bc245fe6f28",
+            "source": "logs",
+            "locator": "demo://logs/10586278",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010001 17565 INFO dfs.DataNode$DataXceiver: 10.251.91.84:50010 Served block blk_6453526678462649750 to /10.251.91.84",
+              "service_name": "payment-api",
+              "original_line": 5838315
+            },
+            "version": "10586278",
+            "available": true,
+            "event_time": "2008-11-11T01:00:01+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586278"
+          },
+          {
+            "id": "logs:10586279:27fcea632f30",
+            "team": "payments",
+            "sha256": "27fcea632f30c0d5ed5143340633a91a522dfee74b5e6aa586073cb9dedf2156",
+            "source": "logs",
+            "locator": "demo://logs/10586279",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010002 17269 INFO dfs.DataNode$DataXceiver: 10.251.202.209:50010 Served block blk_-115239807422414213 to /10.251.202.209",
+              "service_name": "payment-api",
+              "original_line": 5838316
+            },
+            "version": "10586279",
+            "available": true,
+            "event_time": "2008-11-11T01:00:02+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586279"
+          },
+          {
+            "id": "logs:10586280:90ec82a1135f",
+            "team": "payments",
+            "sha256": "90ec82a1135fe607ef7a69b752d290616f9e58e7558adef3dad5feeb794643f0",
+            "source": "logs",
+            "locator": "demo://logs/10586280",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010002 17332 WARN dfs.DataNode$DataXceiver: 10.251.74.192:50010:Got exception while serving blk_-7702370323877835363 to /10.250.6.223:",
+              "service_name": "payment-api",
+              "original_line": 5838317
+            },
+            "version": "10586280",
+            "available": true,
+            "event_time": "2008-11-11T01:00:02+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586280"
+          },
+          {
+            "id": "logs:10586281:cdc1580f40f3",
+            "team": "payments",
+            "sha256": "cdc1580f40f377bf518267a3aea7d7312c05b9f12d6d413b64f4783dff2242b0",
+            "source": "logs",
+            "locator": "demo://logs/10586281",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010002 17424 WARN dfs.DataNode$DataXceiver: 10.251.122.79:50010:Got exception while serving blk_238415733112760437 to /10.251.125.237:",
+              "service_name": "payment-api",
+              "original_line": 5838318
+            },
+            "version": "10586281",
+            "available": true,
+            "event_time": "2008-11-11T01:00:02+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586281"
+          },
+          {
+            "id": "logs:10586282:f97d03323cf2",
+            "team": "payments",
+            "sha256": "f97d03323cf295e77d87040b6abe479f2caf525b9ef324495ffae22a2ab59f5f",
+            "source": "logs",
+            "locator": "demo://logs/10586282",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010003 17138 INFO dfs.DataNode$DataXceiver: 10.251.127.243:50010 Served block blk_-5959265275767588350 to /10.251.127.243",
+              "service_name": "payment-api",
+              "original_line": 5838319
+            },
+            "version": "10586282",
+            "available": true,
+            "event_time": "2008-11-11T01:00:03+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586282"
+          },
+          {
+            "id": "logs:10586283:57fc9bebb73d",
+            "team": "payments",
+            "sha256": "57fc9bebb73d75f2635694511398013ccf890a5e96a03d59049a4f99a6d93fc3",
+            "source": "logs",
+            "locator": "demo://logs/10586283",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010003 17195 INFO dfs.DataNode$DataXceiver: 10.251.73.220:50010 Served block blk_8392086724506260148 to /10.251.73.220",
+              "service_name": "payment-api",
+              "original_line": 5838320
+            },
+            "version": "10586283",
+            "available": true,
+            "event_time": "2008-11-11T01:00:03+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586283"
+          },
+          {
+            "id": "logs:10586284:fcc295aede1d",
+            "team": "payments",
+            "sha256": "fcc295aede1d6fc78b70ade5cb680c7628e689620d69fc94e10fbb9d9d2ffbf6",
+            "source": "logs",
+            "locator": "demo://logs/10586284",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010003 17199 INFO dfs.DataNode$DataXceiver: 10.251.195.52:50010 Served block blk_4226746322242781942 to /10.251.195.52",
+              "service_name": "payment-api",
+              "original_line": 5838321
+            },
+            "version": "10586284",
+            "available": true,
+            "event_time": "2008-11-11T01:00:03+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586284"
+          },
+          {
+            "id": "logs:10586285:aa709440d45e",
+            "team": "payments",
+            "sha256": "aa709440d45e4574c5749d328f53f167886c779450d6ffe3d258d744b26e0a12",
+            "source": "logs",
+            "locator": "demo://logs/10586285",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010003 17308 INFO dfs.DataNode$DataXceiver: 10.251.91.159:50010 Served block blk_8310751108406742538 to /10.251.89.155",
+              "service_name": "payment-api",
+              "original_line": 5838322
+            },
+            "version": "10586285",
+            "available": true,
+            "event_time": "2008-11-11T01:00:03+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586285"
+          },
+          {
+            "id": "logs:10586286:5674bb229f47",
+            "team": "payments",
+            "sha256": "5674bb229f47cc8816bba9ed57ecb3a349faaf5596e515edeffe6dff2bed4574",
+            "source": "logs",
+            "locator": "demo://logs/10586286",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010003 17407 WARN dfs.DataNode$DataXceiver: 10.251.194.102:50010:Got exception while serving blk_-5295391444786787073 to /10.250.14.224:",
+              "service_name": "payment-api",
+              "original_line": 5838323
+            },
+            "version": "10586286",
+            "available": true,
+            "event_time": "2008-11-11T01:00:03+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586286"
+          },
+          {
+            "id": "logs:10586287:0de7d3bbc0ac",
+            "team": "payments",
+            "sha256": "0de7d3bbc0acfdd0507d7dc3981524eb040a90ff11d808982a8e6c692bd6f991",
+            "source": "logs",
+            "locator": "demo://logs/10586287",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010003 17507 WARN dfs.DataNode$DataXceiver: 10.251.110.196:50010:Got exception while serving blk_1088283231284558944 to /10.251.111.80:",
+              "service_name": "payment-api",
+              "original_line": 5838324
+            },
+            "version": "10586287",
+            "available": true,
+            "event_time": "2008-11-11T01:00:03+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586287"
+          },
+          {
+            "id": "logs:10586288:84354ae019de",
+            "team": "payments",
+            "sha256": "84354ae019de9a8ae9db8604dccdfd281cfe85a03dbbea338d8017900a2b1e3f",
+            "source": "logs",
+            "locator": "demo://logs/10586288",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010003 17581 INFO dfs.DataNode$DataXceiver: 10.250.10.144:50010 Served block blk_3181823436681574883 to /10.250.10.144",
+              "service_name": "payment-api",
+              "original_line": 5838325
+            },
+            "version": "10586288",
+            "available": true,
+            "event_time": "2008-11-11T01:00:03+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586288"
+          },
+          {
+            "id": "logs:10586289:f1fa82dae0d4",
+            "team": "payments",
+            "sha256": "f1fa82dae0d46ac8217e769aa5065c08e5b0360a1f42d5ed8e5a1211ac1f2672",
+            "source": "logs",
+            "locator": "demo://logs/10586289",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010004 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3236494291899365914",
+              "service_name": "payment-api",
+              "original_line": 5838326
+            },
+            "version": "10586289",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586289"
+          },
+          {
+            "id": "logs:10586290:1efd5829ee7c",
+            "team": "payments",
+            "sha256": "1efd5829ee7cdca599624d9c0478eedafee1eb0c1dfa78d5839b1a761433a9f1",
+            "source": "logs",
+            "locator": "demo://logs/10586290",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010004 16968 INFO dfs.DataNode$DataXceiver: 10.251.202.134:50010 Served block blk_2541276497904364122 to /10.251.214.112",
+              "service_name": "payment-api",
+              "original_line": 5838327
+            },
+            "version": "10586290",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586290"
+          },
+          {
+            "id": "logs:10586291:d614e3aec5fc",
+            "team": "payments",
+            "sha256": "d614e3aec5fc8d8d506354279723a8d43dd92128c641a9b25d85fe283c648ab1",
+            "source": "logs",
+            "locator": "demo://logs/10586291",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010004 17230 WARN dfs.DataNode$DataXceiver: 10.251.42.16:50010:Got exception while serving blk_-2130024236700155251 to /10.251.71.193:",
+              "service_name": "payment-api",
+              "original_line": 5838328
+            },
+            "version": "10586291",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586291"
+          },
+          {
+            "id": "logs:10586292:67e772b750dd",
+            "team": "payments",
+            "sha256": "67e772b750ddcabcac4d844b90f8a81d515d22fb277d480fc1403f747ea77c37",
+            "source": "logs",
+            "locator": "demo://logs/10586292",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010004 17310 WARN dfs.DataNode$DataXceiver: 10.251.214.67:50010:Got exception while serving blk_72225766081841452 to /10.251.74.79:",
+              "service_name": "payment-api",
+              "original_line": 5838329
+            },
+            "version": "10586292",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586292"
+          },
+          {
+            "id": "logs:10586293:443a1ab1f2b7",
+            "team": "payments",
+            "sha256": "443a1ab1f2b7c7ca8177fb07550906547a15a626d744b7382b8233caec2e6b67",
+            "source": "logs",
+            "locator": "demo://logs/10586293",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010004 17344 INFO dfs.DataNode$DataXceiver: 10.251.70.211:50010 Served block blk_3976213844904384737 to /10.251.123.99",
+              "service_name": "payment-api",
+              "original_line": 5838330
+            },
+            "version": "10586293",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586293"
+          },
+          {
+            "id": "logs:10586294:ef275ce8246b",
+            "team": "payments",
+            "sha256": "ef275ce8246ba1123834bb449b63738cbebb9fabcdfcf0f8f4fa9a414a3836c4",
+            "source": "logs",
+            "locator": "demo://logs/10586294",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010004 17361 WARN dfs.DataNode$DataXceiver: 10.251.35.1:50010:Got exception while serving blk_8058974377902737092 to /10.251.214.67:",
+              "service_name": "payment-api",
+              "original_line": 5838331
+            },
+            "version": "10586294",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586294"
+          },
+          {
+            "id": "logs:10586295:b9f6515d4d71",
+            "team": "payments",
+            "sha256": "b9f6515d4d7182c4acbda2341e60e3f0b0a8742c0ebf67b898a912586478ac86",
+            "source": "logs",
+            "locator": "demo://logs/10586295",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010004 17398 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-883015238343497266 to /10.251.123.195",
+              "service_name": "payment-api",
+              "original_line": 5838332
+            },
+            "version": "10586295",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586295"
+          },
+          {
+            "id": "logs:10586296:29d2013846d5",
+            "team": "payments",
+            "sha256": "29d2013846d5d6d4c7af310f375e9390e8f2a6ef90cc8372a32c979d60fc5302",
+            "source": "logs",
+            "locator": "demo://logs/10586296",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010004 17407 WARN dfs.DataNode$DataXceiver: 10.250.10.176:50010:Got exception while serving blk_-8750361725316091712 to /10.251.214.67:",
+              "service_name": "payment-api",
+              "original_line": 5838333
+            },
+            "version": "10586296",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586296"
+          },
+          {
+            "id": "logs:10586297:e6eb870dee21",
+            "team": "payments",
+            "sha256": "e6eb870dee21033a5c6e3e01e896c8c2c86a51c9d103fe8e3271cb152a22b521",
+            "source": "logs",
+            "locator": "demo://logs/10586297",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010004 17438 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_5445691417601575728 to /10.251.195.33",
+              "service_name": "payment-api",
+              "original_line": 5838334
+            },
+            "version": "10586297",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586297"
+          },
+          {
+            "id": "logs:10586298:d9b97929bbef",
+            "team": "payments",
+            "sha256": "d9b97929bbef790c13d429823b5509450dfb41f5ad3fb5c11e76ae643bb9007d",
+            "source": "logs",
+            "locator": "demo://logs/10586298",
+            "snippet": {
+              "level": "WARN",
+              "dataset": "HDFS",
+              "message": "081111 010004 17511 WARN dfs.DataNode$DataXceiver: 10.251.26.8:50010:Got exception while serving blk_3616362597926718614 to /10.251.27.63:",
+              "service_name": "payment-api",
+              "original_line": 5838335
+            },
+            "version": "10586298",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586298"
+          },
+          {
+            "id": "logs:10586299:1e515e8bd219",
+            "team": "payments",
+            "sha256": "1e515e8bd219a9aa75228011160322dafa139235bd1388e6b2f0585928009331",
+            "source": "logs",
+            "locator": "demo://logs/10586299",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010004 17605 INFO dfs.DataNode$DataXceiver: 10.251.126.83:50010 Served block blk_-1944295343848439615 to /10.251.126.83",
+              "service_name": "payment-api",
+              "original_line": 5838336
+            },
+            "version": "10586299",
+            "available": true,
+            "event_time": "2008-11-11T01:00:04+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586299"
+          },
+          {
+            "id": "logs:10586300:187ba24a448a",
+            "team": "payments",
+            "sha256": "187ba24a448a355995ef75149f0fcd0534631beabea3bbecb07f4d39e641ad1a",
+            "source": "logs",
+            "locator": "demo://logs/10586300",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_227385790568806987",
+              "service_name": "payment-api",
+              "original_line": 5838337
+            },
+            "version": "10586300",
+            "available": true,
+            "event_time": "2008-11-11T01:00:05+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586300"
+          },
+          {
+            "id": "logs:10586301:70633e2c2208",
+            "team": "payments",
+            "sha256": "70633e2c2208694064629f0cb05594bfb3517784649f34b0d722889727d2f294",
+            "source": "logs",
+            "locator": "demo://logs/10586301",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3908966990918828208",
+              "service_name": "payment-api",
+              "original_line": 5838338
+            },
+            "version": "10586301",
+            "available": true,
+            "event_time": "2008-11-11T01:00:05+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586301"
+          },
+          {
+            "id": "logs:10586302:762c667f6b76",
+            "team": "payments",
+            "sha256": "762c667f6b76053546cbd857800b72af71e467cf4beb0f7357bb7e2c01432016",
+            "source": "logs",
+            "locator": "demo://logs/10586302",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010005 16833 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_8942486865292502579 to /10.251.123.132",
+              "service_name": "payment-api",
+              "original_line": 5838339
+            },
+            "version": "10586302",
+            "available": true,
+            "event_time": "2008-11-11T01:00:05+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586302"
+          },
+          {
+            "id": "logs:10586303:c68837a14e0d",
+            "team": "payments",
+            "sha256": "c68837a14e0de385b0d22dbf8f97e82ab5f5ac28767b02170903882c91fc9fe9",
+            "source": "logs",
+            "locator": "demo://logs/10586303",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 010005 17279 INFO dfs.DataNode$DataXceiver: 10.251.43.210:50010 Served block blk_-6701095191509941338 to /10.251.193.224",
+              "service_name": "payment-api",
+              "original_line": 5838340
+            },
+            "version": "10586303",
+            "available": true,
+            "event_time": "2008-11-11T01:00:05+00:00",
+            "collected_at": "2026-09-24T20:30:20.709041+00:00",
+            "source_record": "10586303"
+          },
+          {
+            "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "team": "payments",
+            "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+            "source": "git",
+            "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "snippet": {
+              "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+            },
+            "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:30:20.745146+00:00",
+            "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+          },
+          {
+            "id": "runbook:orders-runbook:3fd079fe1881",
+            "team": "payments",
+            "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+            "source": "runbook",
+            "locator": "demo-git://repo/RUNBOOK.md",
+            "snippet": {
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+            },
+            "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:30:20.774753+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "memories": [],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:20.676876+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:20.709041+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:20.745146+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:20.774753+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "token_budget": 12000,
+        "mapping_version": "1",
+        "ontology_version": "1"
+      },
+      "missing": [
+        "deployments: no accessible records in scope",
+        "logs: truncated at bounded page; more records exist"
+      ],
+      "evidence": [
+        {
+          "id": "logs:10586254:5bcce8517f71",
+          "team": "payments",
+          "sha256": "5bcce8517f71329229a961dcdeb76242f3b49c705595f32205a7b23e72149e78",
+          "source": "logs",
+          "locator": "demo://logs/10586254",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010000 17043 INFO dfs.DataNode$DataXceiver: 10.250.14.224:50010 Served block blk_-2535946396566531670 to /10.250.6.191",
+            "service_name": "payment-api",
+            "original_line": 5838291
+          },
+          "version": "10586254",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586254"
+        },
+        {
+          "id": "logs:10586255:8fb576fcee05",
+          "team": "payments",
+          "sha256": "8fb576fcee0589dc3fa0db945c5d5f0628458dd53aa93800a6a43752da40f993",
+          "source": "logs",
+          "locator": "demo://logs/10586255",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010000 17059 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_4935079264207202266 to /10.251.70.5",
+            "service_name": "payment-api",
+            "original_line": 5838292
+          },
+          "version": "10586255",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586255"
+        },
+        {
+          "id": "logs:10586256:c81a0beaa7a5",
+          "team": "payments",
+          "sha256": "c81a0beaa7a572e70cce7a91c46fe341fbb88a81a7e839ef58f5e205153f5c6d",
+          "source": "logs",
+          "locator": "demo://logs/10586256",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010000 17074 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_5734354678826818426 to /10.251.198.196",
+            "service_name": "payment-api",
+            "original_line": 5838293
+          },
+          "version": "10586256",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586256"
+        },
+        {
+          "id": "logs:10586257:ac03f29acf91",
+          "team": "payments",
+          "sha256": "ac03f29acf91713354e65c5319e70ad6aff3e1dff33ab40c94ee86c63b58975b",
+          "source": "logs",
+          "locator": "demo://logs/10586257",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010000 17210 INFO dfs.DataNode$DataXceiver: 10.251.67.113:50010 Served block blk_742051221244262507 to /10.251.199.19",
+            "service_name": "payment-api",
+            "original_line": 5838294
+          },
+          "version": "10586257",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586257"
+        },
+        {
+          "id": "logs:10586258:92420d8b4eab",
+          "team": "payments",
+          "sha256": "92420d8b4eabaa91a8cf3c8e9ae8faaa1c89292deecb3ab888032a83bdb997f1",
+          "source": "logs",
+          "locator": "demo://logs/10586258",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010000 17361 INFO dfs.DataNode$DataXceiver: 10.251.110.68:50010 Served block blk_6318217504485784664 to /10.250.7.96",
+            "service_name": "payment-api",
+            "original_line": 5838295
+          },
+          "version": "10586258",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586258"
+        },
+        {
+          "id": "logs:10586259:89345226223c",
+          "team": "payments",
+          "sha256": "89345226223cae226050d25ec39eb0cfa0a747d2a1b2796ca958c6a7e741eb10",
+          "source": "logs",
+          "locator": "demo://logs/10586259",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010000 17397 INFO dfs.DataNode$DataXceiver: 10.251.214.130:50010 Served block blk_-2609594263602239446 to /10.251.214.130",
+            "service_name": "payment-api",
+            "original_line": 5838296
+          },
+          "version": "10586259",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586259"
+        },
+        {
+          "id": "logs:10586260:f1afc97b7aa2",
+          "team": "payments",
+          "sha256": "f1afc97b7aa230b34c9971ea2e129a07ef49fdd5b0be3519e019f45b8c73b12a",
+          "source": "logs",
+          "locator": "demo://logs/10586260",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010000 17433 INFO dfs.DataNode$DataXceiver: 10.251.42.191:50010 Served block blk_-2792469668662373932 to /10.251.42.191",
+            "service_name": "payment-api",
+            "original_line": 5838297
+          },
+          "version": "10586260",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586260"
+        },
+        {
+          "id": "logs:10586261:0deff04d62c0",
+          "team": "payments",
+          "sha256": "0deff04d62c0e8cb5c4760c3619fe8da32ed1b161e95f765e59c1535bba303f0",
+          "source": "logs",
+          "locator": "demo://logs/10586261",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010000 17459 WARN dfs.DataNode$DataXceiver: 10.251.195.33:50010:Got exception while serving blk_535683485277110688 to /10.251.126.83:",
+            "service_name": "payment-api",
+            "original_line": 5838298
+          },
+          "version": "10586261",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586261"
+        },
+        {
+          "id": "logs:10586262:4abd49e9b0cb",
+          "team": "payments",
+          "sha256": "4abd49e9b0cb4525ef947a598932abf0a64f8f8469b919674212138d838b5231",
+          "source": "logs",
+          "locator": "demo://logs/10586262",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010000 17794 INFO dfs.DataNode$DataXceiver: 10.251.74.134:50010 Served block blk_5875595053874249456 to /10.251.74.134",
+            "service_name": "payment-api",
+            "original_line": 5838299
+          },
+          "version": "10586262",
+          "available": true,
+          "event_time": "2008-11-11T01:00:00+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586262"
+        },
+        {
+          "id": "logs:10586263:6fca0ca0de8e",
+          "team": "payments",
+          "sha256": "6fca0ca0de8edc1776f6429fb126f6166d151ffa9f4221725c43827de04b5665",
+          "source": "logs",
+          "locator": "demo://logs/10586263",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_-778877332864369508",
+            "service_name": "payment-api",
+            "original_line": 5838300
+          },
+          "version": "10586263",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586263"
+        },
+        {
+          "id": "logs:10586264:65f153944cd5",
+          "team": "payments",
+          "sha256": "65f153944cd53014950d4685442022dc6f12721a3cd6fe681553f57711f7cbbc",
+          "source": "logs",
+          "locator": "demo://logs/10586264",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 16843 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_-6838861760263346623 to /10.251.75.228",
+            "service_name": "payment-api",
+            "original_line": 5838301
+          },
+          "version": "10586264",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586264"
+        },
+        {
+          "id": "logs:10586265:4130e98fb771",
+          "team": "payments",
+          "sha256": "4130e98fb771ba835b87fbe96b748e624e898e08bb2fbfebe5928bef6df225c9",
+          "source": "logs",
+          "locator": "demo://logs/10586265",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010001 16981 WARN dfs.DataNode$DataXceiver: 10.251.202.134:50010:Got exception while serving blk_7447910973088475858 to /10.251.43.210:",
+            "service_name": "payment-api",
+            "original_line": 5838302
+          },
+          "version": "10586265",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586265"
+        },
+        {
+          "id": "logs:10586266:9d974165eeb4",
+          "team": "payments",
+          "sha256": "9d974165eeb4d099bdbb353f5fe53b9d83b92293de16eedce98679fa5e848588",
+          "source": "logs",
+          "locator": "demo://logs/10586266",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010001 17071 WARN dfs.DataNode$DataXceiver: 10.251.198.196:50010:Got exception while serving blk_5734354678826818426 to /10.251.123.20:",
+            "service_name": "payment-api",
+            "original_line": 5838303
+          },
+          "version": "10586266",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586266"
+        },
+        {
+          "id": "logs:10586267:bb997e4b669f",
+          "team": "payments",
+          "sha256": "bb997e4b669fa254d205916ecaf25d8da90b695319a8c8f326886910eaae92b7",
+          "source": "logs",
+          "locator": "demo://logs/10586267",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010001 17116 WARN dfs.DataNode$DataXceiver: 10.251.214.32:50010:Got exception while serving blk_5106390787633300578 to /10.251.106.10:",
+            "service_name": "payment-api",
+            "original_line": 5838304
+          },
+          "version": "10586267",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586267"
+        },
+        {
+          "id": "logs:10586268:c07eebc8b3ea",
+          "team": "payments",
+          "sha256": "c07eebc8b3eaa412a07346ae02d435a251db82ebddbab5e5a8b98482ceb9cf3c",
+          "source": "logs",
+          "locator": "demo://logs/10586268",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17180 INFO dfs.DataNode$DataXceiver: 10.251.201.204:50010 Served block blk_2638434639633029937 to /10.251.201.204",
+            "service_name": "payment-api",
+            "original_line": 5838305
+          },
+          "version": "10586268",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586268"
+        },
+        {
+          "id": "logs:10586269:a5f0a81b389a",
+          "team": "payments",
+          "sha256": "a5f0a81b389aaa2cb6db2e6b3c902d936cfbaf65b049c51e107c6db7b05113a7",
+          "source": "logs",
+          "locator": "demo://logs/10586269",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17267 INFO dfs.DataNode$DataXceiver: 10.251.90.239:50010 Served block blk_9085699272037958248 to /10.251.90.239",
+            "service_name": "payment-api",
+            "original_line": 5838306
+          },
+          "version": "10586269",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586269"
+        },
+        {
+          "id": "logs:10586270:c85f247de1df",
+          "team": "payments",
+          "sha256": "c85f247de1dfe0060026bfe5f89f5984b5673ac90d18b20137a4f5f8d7eaed27",
+          "source": "logs",
+          "locator": "demo://logs/10586270",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010001 17271 WARN dfs.DataNode$DataXceiver: 10.250.17.177:50010:Got exception while serving blk_-7100607078287227729 to /10.251.203.179:",
+            "service_name": "payment-api",
+            "original_line": 5838307
+          },
+          "version": "10586270",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586270"
+        },
+        {
+          "id": "logs:10586271:e618f2e4771e",
+          "team": "payments",
+          "sha256": "e618f2e4771e5c8c4ee6aa80040a24a25e211ab1bef5b1aff4a03d3ead4c6c3e",
+          "source": "logs",
+          "locator": "demo://logs/10586271",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17315 INFO dfs.DataNode$DataXceiver: 10.251.66.63:50010 Served block blk_-8813332928024050051 to /10.250.7.244",
+            "service_name": "payment-api",
+            "original_line": 5838308
+          },
+          "version": "10586271",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586271"
+        },
+        {
+          "id": "logs:10586272:65218b19141e",
+          "team": "payments",
+          "sha256": "65218b19141e63c5688bc1bdfd048758642aa70c1b4e89febdba07cb4e8c04c3",
+          "source": "logs",
+          "locator": "demo://logs/10586272",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17399 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-1942763242231361813 to /10.251.111.130",
+            "service_name": "payment-api",
+            "original_line": 5838309
+          },
+          "version": "10586272",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586272"
+        },
+        {
+          "id": "logs:10586273:19fa8fe5d14d",
+          "team": "payments",
+          "sha256": "19fa8fe5d14de136ba1ba4e62d9938913d2125ca2da9c56dfeabd0225b70111b",
+          "source": "logs",
+          "locator": "demo://logs/10586273",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17420 INFO dfs.DataNode$DataXceiver: 10.250.7.32:50010 Served block blk_1526524957439140626 to /10.250.7.32",
+            "service_name": "payment-api",
+            "original_line": 5838310
+          },
+          "version": "10586273",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586273"
+        },
+        {
+          "id": "logs:10586274:a1a3a7213345",
+          "team": "payments",
+          "sha256": "a1a3a721334539708a425795b446b5fcbbd83ec33fc2e891e62d9eecccd5ea0f",
+          "source": "logs",
+          "locator": "demo://logs/10586274",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17431 INFO dfs.DataNode$DataXceiver: 10.251.30.85:50010 Served block blk_4999254835469198006 to /10.251.197.161",
+            "service_name": "payment-api",
+            "original_line": 5838311
+          },
+          "version": "10586274",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586274"
+        },
+        {
+          "id": "logs:10586275:0d0ad7a8ee21",
+          "team": "payments",
+          "sha256": "0d0ad7a8ee21e10544f323116fbb201cc03c158b57ae25bef16a2743192eec84",
+          "source": "logs",
+          "locator": "demo://logs/10586275",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17436 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_-3285780292625981949 to /10.251.199.245",
+            "service_name": "payment-api",
+            "original_line": 5838312
+          },
+          "version": "10586275",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586275"
+        },
+        {
+          "id": "logs:10586276:250a19ad6959",
+          "team": "payments",
+          "sha256": "250a19ad6959d9846c0d108b0d3310a10c52a6f653ca53b34ec88ece0f8e340f",
+          "source": "logs",
+          "locator": "demo://logs/10586276",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17495 INFO dfs.DataNode$DataXceiver: 10.251.215.16:50010 Served block blk_7155634755627230726 to /10.251.215.16",
+            "service_name": "payment-api",
+            "original_line": 5838313
+          },
+          "version": "10586276",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586276"
+        },
+        {
+          "id": "logs:10586277:ec8461fccc32",
+          "team": "payments",
+          "sha256": "ec8461fccc32bbc764f71b282e68fed9ecce5093ae51eb66c7e23eb481710861",
+          "source": "logs",
+          "locator": "demo://logs/10586277",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010001 17543 WARN dfs.DataNode$DataXceiver: 10.250.6.223:50010:Got exception while serving blk_4186370930571701956 to /10.251.195.70:",
+            "service_name": "payment-api",
+            "original_line": 5838314
+          },
+          "version": "10586277",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586277"
+        },
+        {
+          "id": "logs:10586278:79815dbde5b4",
+          "team": "payments",
+          "sha256": "79815dbde5b457986c2ce3bb94f301711e97fab8161deb43ff360bc245fe6f28",
+          "source": "logs",
+          "locator": "demo://logs/10586278",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010001 17565 INFO dfs.DataNode$DataXceiver: 10.251.91.84:50010 Served block blk_6453526678462649750 to /10.251.91.84",
+            "service_name": "payment-api",
+            "original_line": 5838315
+          },
+          "version": "10586278",
+          "available": true,
+          "event_time": "2008-11-11T01:00:01+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586278"
+        },
+        {
+          "id": "logs:10586279:27fcea632f30",
+          "team": "payments",
+          "sha256": "27fcea632f30c0d5ed5143340633a91a522dfee74b5e6aa586073cb9dedf2156",
+          "source": "logs",
+          "locator": "demo://logs/10586279",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010002 17269 INFO dfs.DataNode$DataXceiver: 10.251.202.209:50010 Served block blk_-115239807422414213 to /10.251.202.209",
+            "service_name": "payment-api",
+            "original_line": 5838316
+          },
+          "version": "10586279",
+          "available": true,
+          "event_time": "2008-11-11T01:00:02+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586279"
+        },
+        {
+          "id": "logs:10586280:90ec82a1135f",
+          "team": "payments",
+          "sha256": "90ec82a1135fe607ef7a69b752d290616f9e58e7558adef3dad5feeb794643f0",
+          "source": "logs",
+          "locator": "demo://logs/10586280",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010002 17332 WARN dfs.DataNode$DataXceiver: 10.251.74.192:50010:Got exception while serving blk_-7702370323877835363 to /10.250.6.223:",
+            "service_name": "payment-api",
+            "original_line": 5838317
+          },
+          "version": "10586280",
+          "available": true,
+          "event_time": "2008-11-11T01:00:02+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586280"
+        },
+        {
+          "id": "logs:10586281:cdc1580f40f3",
+          "team": "payments",
+          "sha256": "cdc1580f40f377bf518267a3aea7d7312c05b9f12d6d413b64f4783dff2242b0",
+          "source": "logs",
+          "locator": "demo://logs/10586281",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010002 17424 WARN dfs.DataNode$DataXceiver: 10.251.122.79:50010:Got exception while serving blk_238415733112760437 to /10.251.125.237:",
+            "service_name": "payment-api",
+            "original_line": 5838318
+          },
+          "version": "10586281",
+          "available": true,
+          "event_time": "2008-11-11T01:00:02+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586281"
+        },
+        {
+          "id": "logs:10586282:f97d03323cf2",
+          "team": "payments",
+          "sha256": "f97d03323cf295e77d87040b6abe479f2caf525b9ef324495ffae22a2ab59f5f",
+          "source": "logs",
+          "locator": "demo://logs/10586282",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010003 17138 INFO dfs.DataNode$DataXceiver: 10.251.127.243:50010 Served block blk_-5959265275767588350 to /10.251.127.243",
+            "service_name": "payment-api",
+            "original_line": 5838319
+          },
+          "version": "10586282",
+          "available": true,
+          "event_time": "2008-11-11T01:00:03+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586282"
+        },
+        {
+          "id": "logs:10586283:57fc9bebb73d",
+          "team": "payments",
+          "sha256": "57fc9bebb73d75f2635694511398013ccf890a5e96a03d59049a4f99a6d93fc3",
+          "source": "logs",
+          "locator": "demo://logs/10586283",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010003 17195 INFO dfs.DataNode$DataXceiver: 10.251.73.220:50010 Served block blk_8392086724506260148 to /10.251.73.220",
+            "service_name": "payment-api",
+            "original_line": 5838320
+          },
+          "version": "10586283",
+          "available": true,
+          "event_time": "2008-11-11T01:00:03+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586283"
+        },
+        {
+          "id": "logs:10586284:fcc295aede1d",
+          "team": "payments",
+          "sha256": "fcc295aede1d6fc78b70ade5cb680c7628e689620d69fc94e10fbb9d9d2ffbf6",
+          "source": "logs",
+          "locator": "demo://logs/10586284",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010003 17199 INFO dfs.DataNode$DataXceiver: 10.251.195.52:50010 Served block blk_4226746322242781942 to /10.251.195.52",
+            "service_name": "payment-api",
+            "original_line": 5838321
+          },
+          "version": "10586284",
+          "available": true,
+          "event_time": "2008-11-11T01:00:03+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586284"
+        },
+        {
+          "id": "logs:10586285:aa709440d45e",
+          "team": "payments",
+          "sha256": "aa709440d45e4574c5749d328f53f167886c779450d6ffe3d258d744b26e0a12",
+          "source": "logs",
+          "locator": "demo://logs/10586285",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010003 17308 INFO dfs.DataNode$DataXceiver: 10.251.91.159:50010 Served block blk_8310751108406742538 to /10.251.89.155",
+            "service_name": "payment-api",
+            "original_line": 5838322
+          },
+          "version": "10586285",
+          "available": true,
+          "event_time": "2008-11-11T01:00:03+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586285"
+        },
+        {
+          "id": "logs:10586286:5674bb229f47",
+          "team": "payments",
+          "sha256": "5674bb229f47cc8816bba9ed57ecb3a349faaf5596e515edeffe6dff2bed4574",
+          "source": "logs",
+          "locator": "demo://logs/10586286",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010003 17407 WARN dfs.DataNode$DataXceiver: 10.251.194.102:50010:Got exception while serving blk_-5295391444786787073 to /10.250.14.224:",
+            "service_name": "payment-api",
+            "original_line": 5838323
+          },
+          "version": "10586286",
+          "available": true,
+          "event_time": "2008-11-11T01:00:03+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586286"
+        },
+        {
+          "id": "logs:10586287:0de7d3bbc0ac",
+          "team": "payments",
+          "sha256": "0de7d3bbc0acfdd0507d7dc3981524eb040a90ff11d808982a8e6c692bd6f991",
+          "source": "logs",
+          "locator": "demo://logs/10586287",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010003 17507 WARN dfs.DataNode$DataXceiver: 10.251.110.196:50010:Got exception while serving blk_1088283231284558944 to /10.251.111.80:",
+            "service_name": "payment-api",
+            "original_line": 5838324
+          },
+          "version": "10586287",
+          "available": true,
+          "event_time": "2008-11-11T01:00:03+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586287"
+        },
+        {
+          "id": "logs:10586288:84354ae019de",
+          "team": "payments",
+          "sha256": "84354ae019de9a8ae9db8604dccdfd281cfe85a03dbbea338d8017900a2b1e3f",
+          "source": "logs",
+          "locator": "demo://logs/10586288",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010003 17581 INFO dfs.DataNode$DataXceiver: 10.250.10.144:50010 Served block blk_3181823436681574883 to /10.250.10.144",
+            "service_name": "payment-api",
+            "original_line": 5838325
+          },
+          "version": "10586288",
+          "available": true,
+          "event_time": "2008-11-11T01:00:03+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586288"
+        },
+        {
+          "id": "logs:10586289:f1fa82dae0d4",
+          "team": "payments",
+          "sha256": "f1fa82dae0d46ac8217e769aa5065c08e5b0360a1f42d5ed8e5a1211ac1f2672",
+          "source": "logs",
+          "locator": "demo://logs/10586289",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010004 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3236494291899365914",
+            "service_name": "payment-api",
+            "original_line": 5838326
+          },
+          "version": "10586289",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586289"
+        },
+        {
+          "id": "logs:10586290:1efd5829ee7c",
+          "team": "payments",
+          "sha256": "1efd5829ee7cdca599624d9c0478eedafee1eb0c1dfa78d5839b1a761433a9f1",
+          "source": "logs",
+          "locator": "demo://logs/10586290",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010004 16968 INFO dfs.DataNode$DataXceiver: 10.251.202.134:50010 Served block blk_2541276497904364122 to /10.251.214.112",
+            "service_name": "payment-api",
+            "original_line": 5838327
+          },
+          "version": "10586290",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586290"
+        },
+        {
+          "id": "logs:10586291:d614e3aec5fc",
+          "team": "payments",
+          "sha256": "d614e3aec5fc8d8d506354279723a8d43dd92128c641a9b25d85fe283c648ab1",
+          "source": "logs",
+          "locator": "demo://logs/10586291",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010004 17230 WARN dfs.DataNode$DataXceiver: 10.251.42.16:50010:Got exception while serving blk_-2130024236700155251 to /10.251.71.193:",
+            "service_name": "payment-api",
+            "original_line": 5838328
+          },
+          "version": "10586291",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586291"
+        },
+        {
+          "id": "logs:10586292:67e772b750dd",
+          "team": "payments",
+          "sha256": "67e772b750ddcabcac4d844b90f8a81d515d22fb277d480fc1403f747ea77c37",
+          "source": "logs",
+          "locator": "demo://logs/10586292",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010004 17310 WARN dfs.DataNode$DataXceiver: 10.251.214.67:50010:Got exception while serving blk_72225766081841452 to /10.251.74.79:",
+            "service_name": "payment-api",
+            "original_line": 5838329
+          },
+          "version": "10586292",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586292"
+        },
+        {
+          "id": "logs:10586293:443a1ab1f2b7",
+          "team": "payments",
+          "sha256": "443a1ab1f2b7c7ca8177fb07550906547a15a626d744b7382b8233caec2e6b67",
+          "source": "logs",
+          "locator": "demo://logs/10586293",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010004 17344 INFO dfs.DataNode$DataXceiver: 10.251.70.211:50010 Served block blk_3976213844904384737 to /10.251.123.99",
+            "service_name": "payment-api",
+            "original_line": 5838330
+          },
+          "version": "10586293",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586293"
+        },
+        {
+          "id": "logs:10586294:ef275ce8246b",
+          "team": "payments",
+          "sha256": "ef275ce8246ba1123834bb449b63738cbebb9fabcdfcf0f8f4fa9a414a3836c4",
+          "source": "logs",
+          "locator": "demo://logs/10586294",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010004 17361 WARN dfs.DataNode$DataXceiver: 10.251.35.1:50010:Got exception while serving blk_8058974377902737092 to /10.251.214.67:",
+            "service_name": "payment-api",
+            "original_line": 5838331
+          },
+          "version": "10586294",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586294"
+        },
+        {
+          "id": "logs:10586295:b9f6515d4d71",
+          "team": "payments",
+          "sha256": "b9f6515d4d7182c4acbda2341e60e3f0b0a8742c0ebf67b898a912586478ac86",
+          "source": "logs",
+          "locator": "demo://logs/10586295",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010004 17398 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-883015238343497266 to /10.251.123.195",
+            "service_name": "payment-api",
+            "original_line": 5838332
+          },
+          "version": "10586295",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586295"
+        },
+        {
+          "id": "logs:10586296:29d2013846d5",
+          "team": "payments",
+          "sha256": "29d2013846d5d6d4c7af310f375e9390e8f2a6ef90cc8372a32c979d60fc5302",
+          "source": "logs",
+          "locator": "demo://logs/10586296",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010004 17407 WARN dfs.DataNode$DataXceiver: 10.250.10.176:50010:Got exception while serving blk_-8750361725316091712 to /10.251.214.67:",
+            "service_name": "payment-api",
+            "original_line": 5838333
+          },
+          "version": "10586296",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586296"
+        },
+        {
+          "id": "logs:10586297:e6eb870dee21",
+          "team": "payments",
+          "sha256": "e6eb870dee21033a5c6e3e01e896c8c2c86a51c9d103fe8e3271cb152a22b521",
+          "source": "logs",
+          "locator": "demo://logs/10586297",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010004 17438 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_5445691417601575728 to /10.251.195.33",
+            "service_name": "payment-api",
+            "original_line": 5838334
+          },
+          "version": "10586297",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586297"
+        },
+        {
+          "id": "logs:10586298:d9b97929bbef",
+          "team": "payments",
+          "sha256": "d9b97929bbef790c13d429823b5509450dfb41f5ad3fb5c11e76ae643bb9007d",
+          "source": "logs",
+          "locator": "demo://logs/10586298",
+          "snippet": {
+            "level": "WARN",
+            "dataset": "HDFS",
+            "message": "081111 010004 17511 WARN dfs.DataNode$DataXceiver: 10.251.26.8:50010:Got exception while serving blk_3616362597926718614 to /10.251.27.63:",
+            "service_name": "payment-api",
+            "original_line": 5838335
+          },
+          "version": "10586298",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586298"
+        },
+        {
+          "id": "logs:10586299:1e515e8bd219",
+          "team": "payments",
+          "sha256": "1e515e8bd219a9aa75228011160322dafa139235bd1388e6b2f0585928009331",
+          "source": "logs",
+          "locator": "demo://logs/10586299",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010004 17605 INFO dfs.DataNode$DataXceiver: 10.251.126.83:50010 Served block blk_-1944295343848439615 to /10.251.126.83",
+            "service_name": "payment-api",
+            "original_line": 5838336
+          },
+          "version": "10586299",
+          "available": true,
+          "event_time": "2008-11-11T01:00:04+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586299"
+        },
+        {
+          "id": "logs:10586300:187ba24a448a",
+          "team": "payments",
+          "sha256": "187ba24a448a355995ef75149f0fcd0534631beabea3bbecb07f4d39e641ad1a",
+          "source": "logs",
+          "locator": "demo://logs/10586300",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_227385790568806987",
+            "service_name": "payment-api",
+            "original_line": 5838337
+          },
+          "version": "10586300",
+          "available": true,
+          "event_time": "2008-11-11T01:00:05+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586300"
+        },
+        {
+          "id": "logs:10586301:70633e2c2208",
+          "team": "payments",
+          "sha256": "70633e2c2208694064629f0cb05594bfb3517784649f34b0d722889727d2f294",
+          "source": "logs",
+          "locator": "demo://logs/10586301",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3908966990918828208",
+            "service_name": "payment-api",
+            "original_line": 5838338
+          },
+          "version": "10586301",
+          "available": true,
+          "event_time": "2008-11-11T01:00:05+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586301"
+        },
+        {
+          "id": "logs:10586302:762c667f6b76",
+          "team": "payments",
+          "sha256": "762c667f6b76053546cbd857800b72af71e467cf4beb0f7357bb7e2c01432016",
+          "source": "logs",
+          "locator": "demo://logs/10586302",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010005 16833 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_8942486865292502579 to /10.251.123.132",
+            "service_name": "payment-api",
+            "original_line": 5838339
+          },
+          "version": "10586302",
+          "available": true,
+          "event_time": "2008-11-11T01:00:05+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586302"
+        },
+        {
+          "id": "logs:10586303:c68837a14e0d",
+          "team": "payments",
+          "sha256": "c68837a14e0de385b0d22dbf8f97e82ab5f5ac28767b02170903882c91fc9fe9",
+          "source": "logs",
+          "locator": "demo://logs/10586303",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 010005 17279 INFO dfs.DataNode$DataXceiver: 10.251.43.210:50010 Served block blk_-6701095191509941338 to /10.251.193.224",
+            "service_name": "payment-api",
+            "original_line": 5838340
+          },
+          "version": "10586303",
+          "available": true,
+          "event_time": "2008-11-11T01:00:05+00:00",
+          "collected_at": "2026-09-24T20:30:20.709041+00:00",
+          "source_record": "10586303"
+        },
+        {
+          "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "team": "payments",
+          "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "snippet": {
+            "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+            "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+          },
+          "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:30:20.745146+00:00",
+          "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+        },
+        {
+          "id": "runbook:orders-runbook:3fd079fe1881",
+          "team": "payments",
+          "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "snippet": {
+            "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+          },
+          "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:30:20.774753+00:00",
+          "source_record": "orders-runbook"
+        }
+      ],
+      "conflicts": [],
+      "freshness": [
+        {
+          "source": "deployments",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:20.676876+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "logs",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:20.709041+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "git",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:20.745146+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "runbook",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:20.774753+00:00",
+          "snapshot_consistency": "independent_source"
+        }
+      ],
+      "candidates": [],
+      "next_steps": [
+        "核对实际部署版本与日志时间窗口。",
+        "检查连接池和依赖延迟指标，补齐缺失来源后确认原因。"
+      ],
+      "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+      "historical_memory": []
+    },
+    "status": "partial",
+    "service": "svc-23",
+    "subject": "carol",
+    "symptom": "[Loghub sequential 10013] Investigate public HDFS system logs in this historical window; identify observations, uncertainty and missing sources.",
+    "manifest": {
+      "code": "b2a6c2e5acbbf4372279e4a9a991d3d53e68f4fa",
+      "cost": {
+        "unknown": "provider usage unavailable in baseline",
+        "estimated_usd": null,
+        "known_model_tokens": null
+      },
+      "model": "none-deterministic",
+      "prompt": "investigate-v1",
+      "skills": [
+        "release-compare@1",
+        "log-analysis@1"
+      ],
+      "version": "1",
+      "ontology": "1",
+      "evaluator": "rules-v1",
+      "retrieval": "bounded-50",
+      "snapshots": {
+        "git": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2008-11-11T01:59:59.010014+00:00",
+            "team": "payments",
+            "start": "2008-11-11T01:00:00+00:00",
+            "service": "svc-23",
+            "subject": "carol",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "content": {
+                "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:20.745146+00:00"
+        },
+        "logs": {
+          "sync": "monotonic_id",
+          "scope": {
+            "end": "2008-11-11T01:59:59.010014+00:00",
+            "team": "payments",
+            "start": "2008-11-11T01:00:00+00:00",
+            "service": "svc-23",
+            "subject": "carol",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "10586254",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010000 17043 INFO dfs.DataNode$DataXceiver: 10.250.14.224:50010 Served block blk_-2535946396566531670 to /10.250.6.191",
+                "service_name": "payment-api",
+                "original_line": 5838291
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586254",
+              "version": "10586254",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586255",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010000 17059 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_4935079264207202266 to /10.251.70.5",
+                "service_name": "payment-api",
+                "original_line": 5838292
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586255",
+              "version": "10586255",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586256",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010000 17074 INFO dfs.DataNode$DataXceiver: 10.251.198.196:50010 Served block blk_5734354678826818426 to /10.251.198.196",
+                "service_name": "payment-api",
+                "original_line": 5838293
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586256",
+              "version": "10586256",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586257",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010000 17210 INFO dfs.DataNode$DataXceiver: 10.251.67.113:50010 Served block blk_742051221244262507 to /10.251.199.19",
+                "service_name": "payment-api",
+                "original_line": 5838294
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586257",
+              "version": "10586257",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586258",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010000 17361 INFO dfs.DataNode$DataXceiver: 10.251.110.68:50010 Served block blk_6318217504485784664 to /10.250.7.96",
+                "service_name": "payment-api",
+                "original_line": 5838295
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586258",
+              "version": "10586258",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586259",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010000 17397 INFO dfs.DataNode$DataXceiver: 10.251.214.130:50010 Served block blk_-2609594263602239446 to /10.251.214.130",
+                "service_name": "payment-api",
+                "original_line": 5838296
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586259",
+              "version": "10586259",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586260",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010000 17433 INFO dfs.DataNode$DataXceiver: 10.251.42.191:50010 Served block blk_-2792469668662373932 to /10.251.42.191",
+                "service_name": "payment-api",
+                "original_line": 5838297
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586260",
+              "version": "10586260",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586261",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010000 17459 WARN dfs.DataNode$DataXceiver: 10.251.195.33:50010:Got exception while serving blk_535683485277110688 to /10.251.126.83:",
+                "service_name": "payment-api",
+                "original_line": 5838298
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586261",
+              "version": "10586261",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586262",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010000 17794 INFO dfs.DataNode$DataXceiver: 10.251.74.134:50010 Served block blk_5875595053874249456 to /10.251.74.134",
+                "service_name": "payment-api",
+                "original_line": 5838299
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586262",
+              "version": "10586262",
+              "event_time": "2008-11-11T01:00:00+00:00"
+            },
+            {
+              "id": "10586263",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_-778877332864369508",
+                "service_name": "payment-api",
+                "original_line": 5838300
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586263",
+              "version": "10586263",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586264",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 16843 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_-6838861760263346623 to /10.251.75.228",
+                "service_name": "payment-api",
+                "original_line": 5838301
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586264",
+              "version": "10586264",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586265",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010001 16981 WARN dfs.DataNode$DataXceiver: 10.251.202.134:50010:Got exception while serving blk_7447910973088475858 to /10.251.43.210:",
+                "service_name": "payment-api",
+                "original_line": 5838302
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586265",
+              "version": "10586265",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586266",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010001 17071 WARN dfs.DataNode$DataXceiver: 10.251.198.196:50010:Got exception while serving blk_5734354678826818426 to /10.251.123.20:",
+                "service_name": "payment-api",
+                "original_line": 5838303
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586266",
+              "version": "10586266",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586267",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010001 17116 WARN dfs.DataNode$DataXceiver: 10.251.214.32:50010:Got exception while serving blk_5106390787633300578 to /10.251.106.10:",
+                "service_name": "payment-api",
+                "original_line": 5838304
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586267",
+              "version": "10586267",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586268",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17180 INFO dfs.DataNode$DataXceiver: 10.251.201.204:50010 Served block blk_2638434639633029937 to /10.251.201.204",
+                "service_name": "payment-api",
+                "original_line": 5838305
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586268",
+              "version": "10586268",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586269",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17267 INFO dfs.DataNode$DataXceiver: 10.251.90.239:50010 Served block blk_9085699272037958248 to /10.251.90.239",
+                "service_name": "payment-api",
+                "original_line": 5838306
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586269",
+              "version": "10586269",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586270",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010001 17271 WARN dfs.DataNode$DataXceiver: 10.250.17.177:50010:Got exception while serving blk_-7100607078287227729 to /10.251.203.179:",
+                "service_name": "payment-api",
+                "original_line": 5838307
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586270",
+              "version": "10586270",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586271",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17315 INFO dfs.DataNode$DataXceiver: 10.251.66.63:50010 Served block blk_-8813332928024050051 to /10.250.7.244",
+                "service_name": "payment-api",
+                "original_line": 5838308
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586271",
+              "version": "10586271",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586272",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17399 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-1942763242231361813 to /10.251.111.130",
+                "service_name": "payment-api",
+                "original_line": 5838309
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586272",
+              "version": "10586272",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586273",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17420 INFO dfs.DataNode$DataXceiver: 10.250.7.32:50010 Served block blk_1526524957439140626 to /10.250.7.32",
+                "service_name": "payment-api",
+                "original_line": 5838310
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586273",
+              "version": "10586273",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586274",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17431 INFO dfs.DataNode$DataXceiver: 10.251.30.85:50010 Served block blk_4999254835469198006 to /10.251.197.161",
+                "service_name": "payment-api",
+                "original_line": 5838311
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586274",
+              "version": "10586274",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586275",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17436 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_-3285780292625981949 to /10.251.199.245",
+                "service_name": "payment-api",
+                "original_line": 5838312
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586275",
+              "version": "10586275",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586276",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17495 INFO dfs.DataNode$DataXceiver: 10.251.215.16:50010 Served block blk_7155634755627230726 to /10.251.215.16",
+                "service_name": "payment-api",
+                "original_line": 5838313
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586276",
+              "version": "10586276",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586277",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010001 17543 WARN dfs.DataNode$DataXceiver: 10.250.6.223:50010:Got exception while serving blk_4186370930571701956 to /10.251.195.70:",
+                "service_name": "payment-api",
+                "original_line": 5838314
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586277",
+              "version": "10586277",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586278",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010001 17565 INFO dfs.DataNode$DataXceiver: 10.251.91.84:50010 Served block blk_6453526678462649750 to /10.251.91.84",
+                "service_name": "payment-api",
+                "original_line": 5838315
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586278",
+              "version": "10586278",
+              "event_time": "2008-11-11T01:00:01+00:00"
+            },
+            {
+              "id": "10586279",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010002 17269 INFO dfs.DataNode$DataXceiver: 10.251.202.209:50010 Served block blk_-115239807422414213 to /10.251.202.209",
+                "service_name": "payment-api",
+                "original_line": 5838316
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586279",
+              "version": "10586279",
+              "event_time": "2008-11-11T01:00:02+00:00"
+            },
+            {
+              "id": "10586280",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010002 17332 WARN dfs.DataNode$DataXceiver: 10.251.74.192:50010:Got exception while serving blk_-7702370323877835363 to /10.250.6.223:",
+                "service_name": "payment-api",
+                "original_line": 5838317
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586280",
+              "version": "10586280",
+              "event_time": "2008-11-11T01:00:02+00:00"
+            },
+            {
+              "id": "10586281",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010002 17424 WARN dfs.DataNode$DataXceiver: 10.251.122.79:50010:Got exception while serving blk_238415733112760437 to /10.251.125.237:",
+                "service_name": "payment-api",
+                "original_line": 5838318
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586281",
+              "version": "10586281",
+              "event_time": "2008-11-11T01:00:02+00:00"
+            },
+            {
+              "id": "10586282",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010003 17138 INFO dfs.DataNode$DataXceiver: 10.251.127.243:50010 Served block blk_-5959265275767588350 to /10.251.127.243",
+                "service_name": "payment-api",
+                "original_line": 5838319
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586282",
+              "version": "10586282",
+              "event_time": "2008-11-11T01:00:03+00:00"
+            },
+            {
+              "id": "10586283",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010003 17195 INFO dfs.DataNode$DataXceiver: 10.251.73.220:50010 Served block blk_8392086724506260148 to /10.251.73.220",
+                "service_name": "payment-api",
+                "original_line": 5838320
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586283",
+              "version": "10586283",
+              "event_time": "2008-11-11T01:00:03+00:00"
+            },
+            {
+              "id": "10586284",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010003 17199 INFO dfs.DataNode$DataXceiver: 10.251.195.52:50010 Served block blk_4226746322242781942 to /10.251.195.52",
+                "service_name": "payment-api",
+                "original_line": 5838321
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586284",
+              "version": "10586284",
+              "event_time": "2008-11-11T01:00:03+00:00"
+            },
+            {
+              "id": "10586285",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010003 17308 INFO dfs.DataNode$DataXceiver: 10.251.91.159:50010 Served block blk_8310751108406742538 to /10.251.89.155",
+                "service_name": "payment-api",
+                "original_line": 5838322
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586285",
+              "version": "10586285",
+              "event_time": "2008-11-11T01:00:03+00:00"
+            },
+            {
+              "id": "10586286",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010003 17407 WARN dfs.DataNode$DataXceiver: 10.251.194.102:50010:Got exception while serving blk_-5295391444786787073 to /10.250.14.224:",
+                "service_name": "payment-api",
+                "original_line": 5838323
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586286",
+              "version": "10586286",
+              "event_time": "2008-11-11T01:00:03+00:00"
+            },
+            {
+              "id": "10586287",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010003 17507 WARN dfs.DataNode$DataXceiver: 10.251.110.196:50010:Got exception while serving blk_1088283231284558944 to /10.251.111.80:",
+                "service_name": "payment-api",
+                "original_line": 5838324
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586287",
+              "version": "10586287",
+              "event_time": "2008-11-11T01:00:03+00:00"
+            },
+            {
+              "id": "10586288",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010003 17581 INFO dfs.DataNode$DataXceiver: 10.250.10.144:50010 Served block blk_3181823436681574883 to /10.250.10.144",
+                "service_name": "payment-api",
+                "original_line": 5838325
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586288",
+              "version": "10586288",
+              "event_time": "2008-11-11T01:00:03+00:00"
+            },
+            {
+              "id": "10586289",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010004 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3236494291899365914",
+                "service_name": "payment-api",
+                "original_line": 5838326
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586289",
+              "version": "10586289",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586290",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010004 16968 INFO dfs.DataNode$DataXceiver: 10.251.202.134:50010 Served block blk_2541276497904364122 to /10.251.214.112",
+                "service_name": "payment-api",
+                "original_line": 5838327
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586290",
+              "version": "10586290",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586291",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010004 17230 WARN dfs.DataNode$DataXceiver: 10.251.42.16:50010:Got exception while serving blk_-2130024236700155251 to /10.251.71.193:",
+                "service_name": "payment-api",
+                "original_line": 5838328
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586291",
+              "version": "10586291",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586292",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010004 17310 WARN dfs.DataNode$DataXceiver: 10.251.214.67:50010:Got exception while serving blk_72225766081841452 to /10.251.74.79:",
+                "service_name": "payment-api",
+                "original_line": 5838329
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586292",
+              "version": "10586292",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586293",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010004 17344 INFO dfs.DataNode$DataXceiver: 10.251.70.211:50010 Served block blk_3976213844904384737 to /10.251.123.99",
+                "service_name": "payment-api",
+                "original_line": 5838330
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586293",
+              "version": "10586293",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586294",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010004 17361 WARN dfs.DataNode$DataXceiver: 10.251.35.1:50010:Got exception while serving blk_8058974377902737092 to /10.251.214.67:",
+                "service_name": "payment-api",
+                "original_line": 5838331
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586294",
+              "version": "10586294",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586295",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010004 17398 INFO dfs.DataNode$DataXceiver: 10.251.43.147:50010 Served block blk_-883015238343497266 to /10.251.123.195",
+                "service_name": "payment-api",
+                "original_line": 5838332
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586295",
+              "version": "10586295",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586296",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010004 17407 WARN dfs.DataNode$DataXceiver: 10.250.10.176:50010:Got exception while serving blk_-8750361725316091712 to /10.251.214.67:",
+                "service_name": "payment-api",
+                "original_line": 5838333
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586296",
+              "version": "10586296",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586297",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010004 17438 INFO dfs.DataNode$DataXceiver: 10.251.195.33:50010 Served block blk_5445691417601575728 to /10.251.195.33",
+                "service_name": "payment-api",
+                "original_line": 5838334
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586297",
+              "version": "10586297",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586298",
+              "content": {
+                "level": "WARN",
+                "dataset": "HDFS",
+                "message": "081111 010004 17511 WARN dfs.DataNode$DataXceiver: 10.251.26.8:50010:Got exception while serving blk_3616362597926718614 to /10.251.27.63:",
+                "service_name": "payment-api",
+                "original_line": 5838335
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586298",
+              "version": "10586298",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586299",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010004 17605 INFO dfs.DataNode$DataXceiver: 10.251.126.83:50010 Served block blk_-1944295343848439615 to /10.251.126.83",
+                "service_name": "payment-api",
+                "original_line": 5838336
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586299",
+              "version": "10586299",
+              "event_time": "2008-11-11T01:00:04+00:00"
+            },
+            {
+              "id": "10586300",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_227385790568806987",
+                "service_name": "payment-api",
+                "original_line": 5838337
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586300",
+              "version": "10586300",
+              "event_time": "2008-11-11T01:00:05+00:00"
+            },
+            {
+              "id": "10586301",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010005 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_3908966990918828208",
+                "service_name": "payment-api",
+                "original_line": 5838338
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586301",
+              "version": "10586301",
+              "event_time": "2008-11-11T01:00:05+00:00"
+            },
+            {
+              "id": "10586302",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010005 16833 INFO dfs.DataNode$DataXceiver: 10.251.75.228:50010 Served block blk_8942486865292502579 to /10.251.123.132",
+                "service_name": "payment-api",
+                "original_line": 5838339
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586302",
+              "version": "10586302",
+              "event_time": "2008-11-11T01:00:05+00:00"
+            },
+            {
+              "id": "10586303",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 010005 17279 INFO dfs.DataNode$DataXceiver: 10.251.43.210:50010 Served block blk_-6701095191509941338 to /10.251.193.224",
+                "service_name": "payment-api",
+                "original_line": 5838340
+              },
+              "deleted": false,
+              "locator": "demo://logs/10586303",
+              "version": "10586303",
+              "event_time": "2008-11-11T01:00:05+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": "10586303",
+          "observed_at": "2026-09-24T20:30:20.709041+00:00"
+        },
+        "runbook": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2008-11-11T01:59:59.010014+00:00",
+            "team": "payments",
+            "start": "2008-11-11T01:00:00+00:00",
+            "service": "svc-23",
+            "subject": "carol",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "orders-runbook",
+              "content": {
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/RUNBOOK.md",
+              "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:20.774753+00:00"
+        },
+        "deployments": {
+          "scope": {
+            "end": "2008-11-11T01:59:59.010014+00:00",
+            "team": "payments",
+            "start": "2008-11-11T01:00:00+00:00",
+            "service": "svc-23",
+            "subject": "carol",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:20.676876+00:00"
+        }
+      },
+      "generation": 1,
+      "tool_schema": "1",
+      "source_mapping": "1",
+      "model_parameters": {
+        "temperature": "provider-default"
+      },
+      "permission_policy": "go-v1"
+    },
+    "start_at": "2008-11-11T01:00:00+00:00",
+    "timezone": "UTC",
+    "trace_id": "7164eb33a30321410c52b3700c2662fe",
+    "created_at": "2026-09-24T20:30:20.604717+00:00",
+    "updated_at": "2026-09-24T20:30:20.811848+00:00",
+    "request_hash": "5c276ed87d3969e80bf7a159c1a170bf1c1479563aa3390ec14098739ae372cc",
+    "evidence_stale": false,
+    "source_version": 1
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "queued",
+      "payload": {
+        "request_id": "1d5fb2a0-3e52-4b26-b4b2-b859fd79a453"
+      },
+      "created_at": "2026-09-24T20:30:20.604717+00:00"
+    },
+    {
+      "seq": 2,
+      "kind": "claimed",
+      "payload": {
+        "worker": "62c884b0db5b:344970be-8585-476e-a273-2bda0e10e93b"
+      },
+      "created_at": "2026-09-24T20:30:20.64328+00:00"
+    },
+    {
+      "seq": 3,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.666822+00:00"
+    },
+    {
+      "seq": 4,
+      "kind": "hook",
+      "payload": {
+        "name": "plan_validated",
+        "status": "pass",
+        "summary": {
+          "steps": 4
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.671368+00:00"
+    },
+    {
+      "seq": 5,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.672636+00:00"
+    },
+    {
+      "seq": 6,
+      "kind": "authorized",
+      "payload": {
+        "tool": "deployments",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.673237+00:00"
+    },
+    {
+      "seq": 7,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.677195+00:00"
+    },
+    {
+      "seq": 8,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "deployments",
+          "status": "ok",
+          "milliseconds": 5.5
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.678103+00:00"
+    },
+    {
+      "seq": 9,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.679521+00:00"
+    },
+    {
+      "seq": 10,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.680454+00:00"
+    },
+    {
+      "seq": 11,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.705225+00:00"
+    },
+    {
+      "seq": 12,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 50,
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.711405+00:00"
+    },
+    {
+      "seq": 13,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "logs",
+          "status": "ok",
+          "milliseconds": 34.78
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.714278+00:00"
+    },
+    {
+      "seq": 14,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.71508+00:00"
+    },
+    {
+      "seq": 15,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.715692+00:00"
+    },
+    {
+      "seq": 16,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.741984+00:00"
+    },
+    {
+      "seq": 17,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.745904+00:00"
+    },
+    {
+      "seq": 18,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "git",
+          "status": "ok",
+          "milliseconds": 31.64
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.746718+00:00"
+    },
+    {
+      "seq": 19,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.747523+00:00"
+    },
+    {
+      "seq": 20,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.748203+00:00"
+    },
+    {
+      "seq": 21,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.772165+00:00"
+    },
+    {
+      "seq": 22,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.775484+00:00"
+    },
+    {
+      "seq": 23,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "runbook",
+          "status": "ok",
+          "milliseconds": 29.09
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.77661+00:00"
+    },
+    {
+      "seq": 24,
+      "kind": "authorized",
+      "payload": {
+        "tool": "memory",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.777618+00:00"
+    },
+    {
+      "seq": 25,
+      "kind": "hook",
+      "payload": {
+        "name": "context_assembled",
+        "status": "pass",
+        "summary": {
+          "facts": 52,
+          "evidence": 52,
+          "conflicts": 0
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.778385+00:00"
+    },
+    {
+      "seq": 26,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.778939+00:00"
+    },
+    {
+      "seq": 27,
+      "kind": "checkpoint_saved",
+      "payload": {
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.790229+00:00"
+    },
+    {
+      "seq": 28,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.799477+00:00"
+    },
+    {
+      "seq": 29,
+      "kind": "artifact_saved",
+      "payload": {
+        "key": "payments/f561829d-17ba-48a7-a5b4-7b40741641f7/42ab1bca-cdd2-4305-9cf2-27fb69a82383",
+        "state": "ready",
+        "sha256": "6b25d9de09b897d96153d62df50ccec8484744d5dbc2033c5ad848e88eaeccb6"
+      },
+      "created_at": "2026-09-24T20:30:20.809211+00:00"
+    },
+    {
+      "seq": 30,
+      "kind": "hook",
+      "payload": {
+        "name": "run_finished",
+        "status": "pass",
+        "summary": {
+          "mode": "deterministic-baseline",
+          "facts": 52
+        }
+      },
+      "created_at": "2026-09-24T20:30:20.809993+00:00"
+    },
+    {
+      "seq": 31,
+      "kind": "result",
+      "payload": {
+        "status": "partial",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:20.811848+00:00"
+    }
+  ]
+}

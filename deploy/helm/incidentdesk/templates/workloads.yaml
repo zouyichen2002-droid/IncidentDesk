@@ -1,0 +1,117 @@
+{{- range $name := list "api" "worker" "demo" }}
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ $name }}
+automountServiceAccountToken: {{ ne $name "worker" }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $name }}
+spec:
+  replicas: {{ if eq $name "api" }}{{ $.Values.apiReplicas }}{{ else if eq $name "worker" }}{{ $.Values.workerReplicas }}{{ else }}1{{ end }}
+  selector:
+    matchLabels: {app: {{ $name }}}
+  strategy:
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  template:
+    metadata:
+      labels: {app: {{ $name }}, incidentdesk: "true"}
+    spec:
+      serviceAccountName: {{ $name }}
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: {{ $name }}
+          image: incidentdesk-{{ $name }}:{{ $.Values.imageTag }}
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef: {name: incident-config}
+          env:
+            {{- if eq $name "api" }}
+            - name: DATABASE_URL
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: DATABASE_URL}}
+            - name: INTERNAL_KEY
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: INTERNAL_KEY}}
+            {{- else if eq $name "worker" }}
+            {{- range $key := list "CHECKPOINT_DATABASE_URL" "SOURCE_DATABASE_URL" "INTERNAL_KEY" }}
+            - name: {{ $key }}
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: {{ $key }}}}
+            {{- end }}
+            {{- if $.Values.model.existingSecret }}
+            - name: MISTRAL_API_KEY
+              valueFrom: {secretKeyRef: {name: {{ $.Values.model.existingSecret }}, key: MISTRAL_API_KEY}}
+            {{- end }}
+            {{- else }}
+            - name: SEED_DATABASE_URL
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: SEED_DATABASE_URL}}
+            {{- end }}
+          resources:
+            requests: {cpu: {{ if eq $name "api" }}"50m"{{ else }}"100m"{{ end }}, memory: "128Mi"}
+            limits: {cpu: "1", memory: "768Mi"}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: ["ALL"]}
+          {{- if ne $name "worker" }}
+          ports: [{containerPort: {{ if eq $name "api" }}8080{{ else }}8090{{ end }}}]
+          startupProbe:
+            httpGet: {path: /healthz, port: {{ if eq $name "api" }}8080{{ else }}8090{{ end }}}
+            failureThreshold: 60
+            periodSeconds: 2
+          livenessProbe:
+            httpGet: {path: /healthz, port: {{ if eq $name "api" }}8080{{ else }}8090{{ end }}}
+            periodSeconds: 10
+          readinessProbe:
+            httpGet: {path: {{ if eq $name "api" }}/readyz{{ else }}/healthz{{ end }}, port: {{ if eq $name "api" }}8080{{ else }}8090{{ end }}}
+            periodSeconds: 3
+          {{- else }}
+          startupProbe:
+            exec: {command: ["python", "-c", "import pathlib; assert pathlib.Path('/tmp/worker-alive').exists()"]}
+            failureThreshold: 60
+            periodSeconds: 2
+          livenessProbe:
+            exec: {command: ["python", "-c", "import pathlib,time; assert time.time()-pathlib.Path('/tmp/worker-alive').stat().st_mtime<30"]}
+            periodSeconds: 10
+          readinessProbe:
+            exec: {command: ["python", "-c", "import pathlib; assert pathlib.Path('/tmp/worker-alive').exists()"]}
+            periodSeconds: 5
+          {{- end }}
+          {{- if eq $name "demo" }}
+          volumeMounts: [{name: data, mountPath: /data}]
+      volumes: [{name: data, persistentVolumeClaim: {claimName: demo-data}}]
+          {{- end }}
+---
+{{- if ne $name "worker" }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $name }}
+spec:
+  selector: {app: {{ $name }}}
+  ports: [{port: {{ if eq $name "api" }}8080{{ else }}8090{{ end }}, targetPort: {{ if eq $name "api" }}8080{{ else }}8090{{ end }}}]
+---
+{{- end }}
+{{- end }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: api}
+spec:
+  minAvailable: 1
+  selector: {matchLabels: {app: api}}
+---
+{{- if .Values.hpa.enabled }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: api}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: api}
+  minReplicas: {{ .Values.hpa.minReplicas }}
+  maxReplicas: {{ .Values.hpa.maxReplicas }}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 30}
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target: {type: Utilization, averageUtilization: {{ .Values.hpa.cpu }}}
+{{- end }}

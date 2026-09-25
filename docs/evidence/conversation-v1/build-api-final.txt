@@ -1,0 +1,70 @@
+ Image incidentdesk-api:0.1.0 Building 
+ Image incidentdesk-demo:0.1.0 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.03kB done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 317B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.27.1-bookworm
+#3 ...
+
+#4 [internal] load metadata for gcr.io/distroless/static-debian12:nonroot
+#4 DONE 0.3s
+
+#3 [internal] load metadata for docker.io/library/golang:1.27.1-bookworm
+#3 DONE 0.4s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [stage-1 1/2] FROM gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab
+#6 resolve gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab done
+#6 DONE 0.0s
+
+#7 [build 1/6] FROM docker.io/library/golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195
+#7 resolve docker.io/library/golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195 done
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 transferring context: 16.19kB done
+#8 DONE 0.0s
+
+#9 [build 3/6] COPY go.mod go.sum ./
+#9 CACHED
+
+#10 [build 2/6] WORKDIR /src
+#10 CACHED
+
+#11 [build 4/6] RUN go mod download
+#11 CACHED
+
+#12 [build 5/6] COPY . .
+#12 DONE 0.1s
+
+#13 [build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#13 DONE 6.2s
+
+#6 [stage-1 1/2] FROM gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab
+#6 CACHED
+
+#14 [stage-1 2/2] COPY --from=build /server /server
+#14 DONE 0.0s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.4s done
+#15 exporting manifest sha256:e3d5ea3dfdf04c821cdd75bac3b0f90da2827c74b8d92cf67c8ef9ad7a6b6143 done
+#15 exporting config sha256:f79db0ffc437964414b70ab2216aa823a303a38aa992553789b2ea0fa677ff9f done
+#15 exporting attestation manifest sha256:4ec0473c2c4255166f5ba4ea081d5cb6a38f7d093aad991e391ac94e409d5730 done
+#15 exporting manifest list sha256:9f0cce3910b83916785e6fca3d2951d5f2dce56f3a7a4da51c7d59b355ac229c done
+#15 naming to docker.io/library/incidentdesk-api:0.1.0 done
+#15 unpacking to docker.io/library/incidentdesk-api:0.1.0 0.1s done
+#15 DONE 0.5s
+
+#16 resolving provenance for metadata file
+#16 DONE 0.0s
+ Image incidentdesk-api:0.1.0 Built 

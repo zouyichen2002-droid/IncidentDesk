@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: incident-secrets
+type: Opaque
+stringData:
+  POSTGRES_PASSWORD: {{ .Values.localSecrets.databasePassword | quote }}
+  DATABASE_URL: "postgres://incident_api:{{ .Values.localSecrets.apiPassword }}@postgres/incidentdesk?search_path=business"
+  CHECKPOINT_DATABASE_URL: "postgres://incident_agent:{{ .Values.localSecrets.agentPassword }}@postgres/incidentdesk?options=-csearch_path%3Dagent"
+  SOURCE_DATABASE_URL: "postgres://incident_source:{{ .Values.localSecrets.sourcePassword }}@postgres/incidentdesk"
+  SEED_DATABASE_URL: "postgres://postgres:{{ .Values.localSecrets.databasePassword }}@postgres/incidentdesk"
+  INTERNAL_KEY: {{ .Values.localSecrets.workerKey | quote }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: incident-config
+data:
+  API_URL: http://api:8080
+  SOURCE_URL: http://demo:8090
+  OIDC_ISSUER: http://demo:8090
+  GITHUB_API_URL: http://demo:8090/github
+  CONTEXT_URL: http://context:8091
+  HARNESS: {{ .Values.model.harness | quote }}
+  MISTRAL_MODEL: {{ .Values.model.name | quote }}
+  MISTRAL_BASE_URL: {{ .Values.model.baseURL | quote }}
+  OBSERVE_NAMESPACE: incident-demo
+  S3_ENDPOINT: http://objects:9000
+  WORKER_SLOTS: {{ .Values.workerSlots | quote }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-init
+data:
+  001_init.sql: |
+{{ .Files.Get "files/init.sql" | indent 4 }}
+  002_runtime.sql: |
+{{ .Files.Get "files/runtime.sql" | indent 4 }}
+
+  003_search.sql: |
+{{ .Files.Get "files/search.sql" | indent 4 }}

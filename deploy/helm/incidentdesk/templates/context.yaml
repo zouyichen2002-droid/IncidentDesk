@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: context}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: context}}
+  template:
+    metadata:
+      labels: {app: context, incidentdesk: "true"}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: context
+          image: incidentdesk-worker:{{ .Values.imageTag }}
+          command: ["uvicorn", "incident_worker.context_api:app", "--host", "0.0.0.0", "--port", "8091"]
+          envFrom: [{configMapRef: {name: incident-config}}]
+          env:
+            {{- range $key := list "CHECKPOINT_DATABASE_URL" "SOURCE_DATABASE_URL" "INTERNAL_KEY" }}
+            - name: {{ $key }}
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: {{ $key }}}}
+            {{- end }}
+            {{- if .Values.model.existingSecret }}
+            - name: MISTRAL_API_KEY
+              valueFrom: {secretKeyRef: {name: {{ .Values.model.existingSecret }}, key: MISTRAL_API_KEY}}
+            {{- end }}
+          ports: [{containerPort: 8091}]
+          resources:
+            requests: {cpu: "100m", memory: "128Mi"}
+            limits: {cpu: "1", memory: "768Mi"}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: ["ALL"]}
+          readinessProbe: {httpGet: {path: /healthz, port: 8091}, periodSeconds: 3}
+          livenessProbe: {httpGet: {path: /healthz, port: 8091}, periodSeconds: 10}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: context}
+spec:
+  selector: {app: context}
+  ports: [{port: 8091, targetPort: 8091}]

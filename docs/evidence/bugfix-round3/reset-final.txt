@@ -1,0 +1,16 @@
+重置前有明确旧条件 PASS
+明确要求忘记查询上下文 PASS
+服务端保存重置动作 PASS
+重置后闲聊1 PASS
+重置后闲聊2 PASS
+重置后闲聊3 PASS
+重置后闲聊4 PASS
+重置后闲聊5 PASS
+重置超过短窗口后不恢复旧条件 PASS
+重置后重新给完整问题 PASS
+否定重置不误触发 FAIL
+否定重置保留查询意图 PASS
+否定重置后地区追问 PASS
+重置并提出完整新需求 PASS
+再次追问只继承新条件 PASS
+TOTAL 14 / 15 docs/evidence/bugfix-round3/20260925-162245-reset.json

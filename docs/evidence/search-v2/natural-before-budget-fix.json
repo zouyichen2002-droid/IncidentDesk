@@ -1,0 +1,190 @@
+[
+  {
+    "case": "rare",
+    "question": "查BGL在2005年11月3日的异常日志",
+    "create_status": 202,
+    "create_s": 1.474,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": true,
+      "planner_mistral": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": true,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "rare_event_found": true
+    },
+    "id": "85118d96-51f6-4b6e-aed0-248086686b2b",
+    "status": "partial",
+    "elapsed_s": 9.536,
+    "mode": "mistral",
+    "retrieval": {
+      "mode": "anomalies",
+      "pages": 3,
+      "terms": [],
+      "levels": {
+        "INFO": 157110,
+        "KILL": 8,
+        "FATAL": 5577
+      },
+      "matched": 5577,
+      "sampled": true,
+      "selection": "rare-patterns-and-severity-keyset",
+      "provenance": "public-dataset",
+      "labels_used": false,
+      "template_scan": 5577,
+      "evidence_count": 60,
+      "total_in_query": 162695
+    },
+    "log_evidence": 60,
+    "answer": "已按条件检索 BGL 2005-11-03 全天异常日志（FATAL 级别）。命中 5,577 条记录，已按严重程度与稀疏模式分层抽样，证据预算内分页结束，仍有剩余记录（truncated）。检索范围：checkout-api 服务；统计：FATAL 5,577 条，INFO 157,110 条，KILL 8 条；抽样覆盖 60 条证据。",
+    "model": {
+      "model": "mistral-small-latest",
+      "usage": {
+        "service_tier": "standard",
+        "total_tokens": 11074,
+        "prompt_tokens": 10162,
+        "completion_tokens": 912,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "provider": "mistral",
+      "milliseconds": 6319.91
+    },
+    "query": {
+      "mode": "anomalies",
+      "terms": [],
+      "levels": []
+    }
+  },
+  {
+    "case": "block",
+    "question": "查HDFS在2008年11月9日 blk_-1608999687919862906 的日志",
+    "create_status": 202,
+    "create_s": 2.017,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": false,
+      "planner_mistral": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": false,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "exact_block": false
+    },
+    "id": "f4c3fd27-82a0-4f1c-8236-e15d66a10514",
+    "status": "failed",
+    "elapsed_s": 54.364,
+    "mode": null,
+    "retrieval": null,
+    "log_evidence": 0,
+    "answer": null,
+    "model": null,
+    "query": {
+      "mode": "search",
+      "terms": [
+        "blk_-1608999687919862906"
+      ],
+      "levels": []
+    }
+  },
+  {
+    "case": "empty",
+    "question": "查BGL在2005年11月3日包含“zznonexistentmarker91472”的日志",
+    "create_status": 202,
+    "create_s": 1.825,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": true,
+      "planner_mistral": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": true,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "empty_honest": true
+    },
+    "id": "96e901b1-181e-4004-80a6-a87b2890eab9",
+    "status": "waiting_information",
+    "elapsed_s": 4.854,
+    "mode": "mistral",
+    "retrieval": {
+      "mode": "search",
+      "pages": 1,
+      "terms": [
+        "zznonexistentmarker91472"
+      ],
+      "levels": {},
+      "matched": 0,
+      "sampled": false,
+      "selection": "rare-patterns-and-severity-keyset",
+      "provenance": "local-demo",
+      "labels_used": false,
+      "template_scan": 0,
+      "evidence_count": 0,
+      "total_in_query": 0
+    },
+    "log_evidence": 0,
+    "answer": "在 orders/alice/svc-17 范围内，未检索到 2005-11-03 含有关键词“zznonexistentmarker91472”的 BGL 日志。检索统计：总查询数 0 条，命中 0 条，未抽样任何日志内容。",
+    "model": {
+      "model": "mistral-small-latest",
+      "usage": {
+        "service_tier": "standard",
+        "total_tokens": 573,
+        "prompt_tokens": 374,
+        "completion_tokens": 199,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "provider": "mistral",
+      "milliseconds": 1927.46
+    },
+    "query": {
+      "mode": "search",
+      "terms": [
+        "zznonexistentmarker91472"
+      ],
+      "levels": []
+    }
+  },
+  {
+    "case": "forbidden",
+    "question": "查HDFS在2008年11月9日的错误日志",
+    "create_status": 200,
+    "create_s": 0.008,
+    "checks": {
+      "expected_status": true,
+      "clarification": true
+    },
+    "response": {
+      "clarification": "该服务不在当前账号可查询的来源中。可选：订单服务",
+      "mode": "scope-check",
+      "status": "clarification"
+    }
+  },
+  {
+    "case": "wide",
+    "question": "查BGL在2005年11月1日到2005年11月30日的异常",
+    "create_status": 200,
+    "create_s": 1.449,
+    "checks": {
+      "expected_status": true,
+      "clarification": true
+    },
+    "response": {
+      "clarification": "请给出明确的起止时间，且单次范围不超过7天。",
+      "mode": "mistral",
+      "status": "clarification"
+    }
+  }
+]

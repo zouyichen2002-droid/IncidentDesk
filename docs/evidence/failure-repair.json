@@ -1,0 +1,12 @@
+{
+  "failed_task": "b1f8dacc-a303-40b5-828f-f721d530eb98",
+  "failure": "HTTP result callback rejected a 43147-byte recorded snapshot by its former 32768-byte Manifest cap; four bounded attempts terminated failed.",
+  "category": "tool",
+  "fix": "Align bounded Manifest cap to 524288 bytes; test accepted 48000-byte fixture and rejected oversized recording.",
+  "retested_task": "2c0a5dfe-c8af-4012-819c-9075e4efbdb8",
+  "retested_status": "partial",
+  "grounded_release_links": 4,
+  "automated_regression": "backend/internal/app/queue_test.go",
+  "independent_human_review": false,
+  "split": "development"
+}

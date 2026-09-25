@@ -1,0 +1,32 @@
+test_customer_count_can_coexist_with_aov (test_business_contracts.BusinessContractTests.test_customer_count_can_coexist_with_aov) ... ok
+test_explicit_month_cannot_disappear_when_changing_metrics (test_business_contracts.BusinessContractTests.test_explicit_month_cannot_disappear_when_changing_metrics) ... ok
+test_name_in_place_of_foreign_key_cannot_be_reported_as_empty (test_business_contracts.BusinessContractTests.test_name_in_place_of_foreign_key_cannot_be_reported_as_empty) ... ok
+test_requested_year_cannot_be_silently_ignored (test_business_contracts.BusinessContractTests.test_requested_year_cannot_be_silently_ignored) ... ok
+test_wrong_aov_denominator_is_not_a_valid_answer (test_business_contracts.BusinessContractTests.test_wrong_aov_denominator_is_not_a_valid_answer) ... ok
+test_chat_history_does_not_authorize_guessing_a_metric (test_conversation.ConversationTests.test_chat_history_does_not_authorize_guessing_a_metric) ... ok
+test_context_control_never_dispatches_a_query (test_conversation.ConversationTests.test_context_control_never_dispatches_a_query) ... ok
+test_context_reset_is_structured_not_inferred_from_answer_words (test_conversation.ConversationTests.test_context_reset_is_structured_not_inferred_from_answer_words) ... ok
+test_dangling_followup_requires_context_without_calling_tools (test_conversation.ConversationTests.test_dangling_followup_requires_context_without_calling_tools) ... ok
+test_followup_context_and_capabilities_reach_router (test_conversation.ConversationTests.test_followup_context_and_capabilities_reach_router) ... ok
+test_invalid_or_empty_decision_and_system_history_rejected (test_conversation.ConversationTests.test_invalid_or_empty_decision_and_system_history_rejected) ... ok
+test_mixed_clarification_asks_which_query_first (test_conversation.ConversationTests.test_mixed_clarification_asks_which_query_first) ... ok
+test_reset_can_carry_a_new_standalone_query (test_conversation.ConversationTests.test_reset_can_carry_a_new_standalone_query) ... ok
+test_saved_query_anchor_permits_followup (test_conversation.ConversationTests.test_saved_query_anchor_permits_followup) ... ok
+test_targeted_reply_is_not_overwritten (test_conversation.ConversationTests.test_targeted_reply_is_not_overwritten) ... ok
+test_authenticated_uuid_survives_middleware_and_stream (test_query_trace.QueryTraceTests.test_authenticated_uuid_survives_middleware_and_stream) ... ok
+test_parallel_streams_and_errors_retain_their_own_identity (test_query_trace.QueryTraceTests.test_parallel_streams_and_errors_retain_their_own_identity) ... 2026-09-25 16:23:54.898 | ERROR    | request_id - b | app.services.query_service:query:89 - Query failed: ValueError
+ok
+test_concurrency_is_bounded_and_order_stable (test_retrieval.RetrievalTests.test_concurrency_is_bounded_and_order_stable) ... ok
+test_duplicate_aliases_do_not_outvote_independent_hits (test_retrieval.RetrievalTests.test_duplicate_aliases_do_not_outvote_independent_hits) ... ok
+test_embeddings_are_batched_and_partial_responses_rejected (test_retrieval.RetrievalTests.test_embeddings_are_batched_and_partial_responses_rejected) ... ok
+test_failure_cancels_other_requests (test_retrieval.RetrievalTests.test_failure_cancels_other_requests) ... ok
+test_question_is_retained_and_expansion_is_bounded (test_retrieval.RetrievalTests.test_question_is_retained_and_expansion_is_bounded) ... ok
+test_direct_requests_require_internal_identity (test_service_identity.ServiceIdentityTests.test_direct_requests_require_internal_identity) ... ok
+test_caps_rows_without_expanding_explicit_limit (test_sql_guard.SQLGuardTests.test_caps_rows_without_expanding_explicit_limit) ... ok
+test_read_only_business_queries (test_sql_guard.SQLGuardTests.test_read_only_business_queries) ... ok
+test_rejects_mutation_and_external_access (test_sql_guard.SQLGuardTests.test_rejects_mutation_and_external_access) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.086s
+
+OK

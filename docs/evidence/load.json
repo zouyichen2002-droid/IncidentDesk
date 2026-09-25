@@ -1,0 +1,22 @@
+{
+  "environment": {
+    "host": "macOS-15.6-arm64-arm-64bit",
+    "cpu_count": 10,
+    "host_ram_gib": 32,
+    "deployment": "Docker Compose",
+    "model": "deterministic baseline, separate from API timing"
+  },
+  "target_rps": 20,
+  "duration_seconds": 600,
+  "requests": 12000,
+  "p50_ms": 5.616790964268148,
+  "p95_ms": 9.712207945995033,
+  "max_ms": 131.7567500518635,
+  "non_success": 0,
+  "non_success_rate": 0.0,
+  "statuses": {
+    "200": 6000,
+    "202": 6000
+  },
+  "pass": true
+}

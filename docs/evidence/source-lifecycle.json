@@ -1,0 +1,42 @@
+[
+  {
+    "test": "same_scope_cache_hit",
+    "pass": true
+  },
+  {
+    "test": "reviewed_memory_visible",
+    "pass": true
+  },
+  {
+    "test": "open_workbench_invalidation_event",
+    "pass": true
+  },
+  {
+    "test": "modified_report_hidden",
+    "pass": true
+  },
+  {
+    "test": "modified_memory_expired",
+    "pass": true
+  },
+  {
+    "test": "fresh_source_read",
+    "pass": true
+  },
+  {
+    "test": "old_recording_not_exported",
+    "pass": true
+  },
+  {
+    "test": "deleted_report_hidden",
+    "pass": true
+  },
+  {
+    "test": "deleted_source_not_in_new_evidence",
+    "pass": true
+  },
+  {
+    "test": "index_tombstone",
+    "pass": true
+  }
+]

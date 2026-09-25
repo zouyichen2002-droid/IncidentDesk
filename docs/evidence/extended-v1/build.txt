@@ -1,0 +1,156 @@
+ Image incidentdesk-query-es Building 
+ Image incidentdesk-demo:0.1.0 Building 
+ Image incidentdesk-api:0.1.0 Building 
+ Image incidentdesk-query:0.1.0 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 2.04kB done
+#1 DONE 0.0s
+
+#2 [api internal] load build definition from Dockerfile
+#2 transferring dockerfile: 317B done
+#2 DONE 0.0s
+
+#3 [query internal] load build definition from Dockerfile
+#3 transferring dockerfile: 580B done
+#3 DONE 0.0s
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [auth] library/golang:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#6 [api internal] load metadata for gcr.io/distroless/static-debian12:nonroot
+#6 DONE 0.3s
+
+#7 [api internal] load metadata for docker.io/library/golang:1.27.1-bookworm
+#7 DONE 0.4s
+
+#8 [query internal] load metadata for docker.io/library/python:3.14.6-slim-bookworm
+#8 DONE 0.5s
+
+#9 [api internal] load .dockerignore
+#9 transferring context: 2B done
+#9 DONE 0.0s
+
+#10 [api stage-1 1/2] FROM gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab
+#10 resolve gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab done
+#10 DONE 0.0s
+
+#11 [api build 1/6] FROM docker.io/library/golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195
+#11 resolve docker.io/library/golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195 done
+#11 DONE 0.0s
+
+#12 [api internal] load build context
+#12 transferring context: 16.36kB done
+#12 DONE 0.0s
+
+#13 [api build 3/6] COPY go.mod go.sum ./
+#13 CACHED
+
+#14 [api build 2/6] WORKDIR /src
+#14 CACHED
+
+#15 [api build 4/6] RUN go mod download
+#15 CACHED
+
+#16 [query internal] load metadata for ghcr.io/astral-sh/uv:0.10.12
+#16 DONE 0.5s
+
+#17 [api build 5/6] COPY . .
+#17 DONE 0.0s
+
+#18 [api build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#18 ...
+
+#19 [query internal] load .dockerignore
+#19 transferring context: 2B done
+#19 DONE 0.0s
+
+#20 [query stage-0  1/11] FROM docker.io/library/python:3.14.6-slim-bookworm@sha256:4c92ffcde4dd6f1ff72a24518f49fd4990b27134987dfa31a733badde66df9f8
+#20 resolve docker.io/library/python:3.14.6-slim-bookworm@sha256:4c92ffcde4dd6f1ff72a24518f49fd4990b27134987dfa31a733badde66df9f8 done
+#20 DONE 0.0s
+
+#21 [query] FROM ghcr.io/astral-sh/uv:0.10.12@sha256:72ab0aeb448090480ccabb99fb5f52b0dc3c71923bffb5e2e26517a1c27b7fec
+#21 resolve ghcr.io/astral-sh/uv:0.10.12@sha256:72ab0aeb448090480ccabb99fb5f52b0dc3c71923bffb5e2e26517a1c27b7fec done
+#21 DONE 0.0s
+
+#22 [query internal] load build context
+#22 transferring context: 60.44kB done
+#22 DONE 0.0s
+
+#23 [query stage-0  5/11] COPY pyproject.toml uv.lock ./
+#23 CACHED
+
+#24 [query stage-0  3/11] WORKDIR /app
+#24 CACHED
+
+#25 [query stage-0  4/11] RUN apt-get update && apt-get install -y --no-install-recommends gcc libc6-dev && rm -rf /var/lib/apt/lists/*
+#25 CACHED
+
+#26 [query stage-0  2/11] COPY --from=ghcr.io/astral-sh/uv:0.10.12 /uv /usr/local/bin/uv
+#26 CACHED
+
+#27 [query stage-0  6/11] RUN uv sync --frozen --no-dev
+#27 CACHED
+
+#28 [query stage-0  7/11] COPY app ./app
+#28 DONE 0.0s
+
+#29 [query stage-0  8/11] COPY conf ./conf
+#29 DONE 0.0s
+
+#30 [query stage-0  9/11] COPY prompts ./prompts
+#30 DONE 0.0s
+
+#31 [query stage-0 10/11] COPY main.py ./main.py
+#31 DONE 0.0s
+
+#32 [query stage-0 11/11] RUN useradd --uid 10001 --create-home agent && chown -R agent:agent /app
+#32 ...
+
+#18 [api build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#18 DONE 7.7s
+
+#32 [query stage-0 11/11] RUN useradd --uid 10001 --create-home agent && chown -R agent:agent /app
+#32 ...
+
+#10 [api stage-1 1/2] FROM gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab
+#10 CACHED
+
+#33 [api stage-1 2/2] COPY --from=build /server /server
+#33 DONE 0.0s
+
+#34 [api] exporting to image
+#34 exporting layers
+#34 exporting layers 0.5s done
+#34 exporting manifest sha256:31295ee14f8d6c50effa0a65bdc0aab8799b5ef1fa21b8fb921388e1de73e836
+#34 exporting manifest sha256:31295ee14f8d6c50effa0a65bdc0aab8799b5ef1fa21b8fb921388e1de73e836 done
+#34 exporting config sha256:da53c25e5fa5912df6dbe1bf2401cd765e12e44a610ec4b83b2bb5458378d550 done
+#34 exporting attestation manifest sha256:f89a8d5552bc134c5e5ff78956bd1e8d3c10f870a4cd4c6e5b2989f6f3d231ea 0.0s done
+#34 exporting manifest list sha256:a574c50d62c036ef451c126f12d14f01f8a96427213951aec54d7be3e2c51696 done
+#34 naming to docker.io/library/incidentdesk-api:0.1.0 done
+#34 unpacking to docker.io/library/incidentdesk-api:0.1.0 0.1s done
+#34 DONE 0.6s
+
+#35 [api] resolving provenance for metadata file
+#35 DONE 0.0s
+
+#32 [query stage-0 11/11] RUN useradd --uid 10001 --create-home agent && chown -R agent:agent /app
+#32 DONE 10.7s
+
+#36 [query] exporting to image
+#36 exporting layers 5.7s done
+#36 exporting manifest sha256:a61deaf6862765771afa9097c2bcaf92cd1e96b54957149eed226003cd9c689c done
+#36 exporting config sha256:6b45306e43e7d0f05814c3e1477758eb12967ed4cf5afebb98e18278dab49c21 done
+#36 exporting attestation manifest sha256:9d796ed3a24081b911ad2b0a6c1d03df820c3d71ed4434bc1ede00b5bb2313a5 0.0s done
+#36 exporting manifest list sha256:cd4dec7c9910943078a988991f259d9c08b21f1a347a75419f07a78b1dc7faab done
+#36 naming to docker.io/library/incidentdesk-query:0.1.0 done
+#36 unpacking to docker.io/library/incidentdesk-query:0.1.0
+#36 unpacking to docker.io/library/incidentdesk-query:0.1.0 1.0s done
+#36 DONE 6.7s
+
+#37 [query] resolving provenance for metadata file
+#37 DONE 0.0s
+ Image incidentdesk-api:0.1.0 Built 
+ Image incidentdesk-query:0.1.0 Built 

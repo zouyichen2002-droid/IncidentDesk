@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-25",
+  "main_live_cases": {
+    "passed": 34,
+    "total": 34,
+    "evidence": "20260925-154343.json"
+  },
+  "go": {
+    "tests": 12,
+    "new_tests": 4,
+    "race": "passed",
+    "vet": "passed",
+    "evidence": "go-tests.txt"
+  },
+  "frontend_build": "passed",
+  "compose_api_web_build": "passed",
+  "api_restart": {
+    "api_restart_preserved_session": true,
+    "id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+    "revision": 12,
+    "turns": 12
+  },
+  "manual_browser_checks": {
+    "new_conversation": "passed",
+    "select_older_conversation": "passed",
+    "refresh_preserves_selected_conversation": "passed",
+    "followup_after_refresh": "passed",
+    "january_east_order_count": 16,
+    "february_east_order_count": 11,
+    "bob_sees_only_bob_conversation": "passed",
+    "alice_relogin_restores_selected_conversation": "passed",
+    "console_errors": 0
+  },
+  "limits": [
+    "115 teaching orders",
+    "latest four turns and latest query intent; no independent structured query plan",
+    "local Compose only"
+  ],
+  "log_investigation_cases": {
+    "passed": 2,
+    "total": 2,
+    "evidence": "log-investigations.json",
+    "initial_test_correction": "Initial assertion excluded waiting_information for an empty log window; corrected to require explicit source gap, zero matches, and an answer. Initial result preserved."
+  }
+}

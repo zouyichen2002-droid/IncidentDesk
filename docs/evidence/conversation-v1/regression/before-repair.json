@@ -1,0 +1,1683 @@
+[
+  {
+    "name": "地区GMV",
+    "passed": true,
+    "seconds": 9.01,
+    "detail": {
+      "id": "2ed74705-abaa-4548-b4f2-43f9eca68857",
+      "error": null,
+      "result": {
+        "sql": "SELECT dr.region_name AS 地区, SUM(fo.order_amount) AS GMV FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dr.region_name ORDER BY GMV DESC LIMIT 500",
+        "data": [
+          {
+            "GMV": 107373.0,
+            "地区": "华东"
+          },
+          {
+            "GMV": 70202.0,
+            "地区": "华南"
+          },
+          {
+            "GMV": 41099.5,
+            "地区": "华北"
+          },
+          {
+            "GMV": 31528.0,
+            "地区": "西南"
+          },
+          {
+            "GMV": 28957.0,
+            "地区": "华中"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询 2025 年第一季度（2025-01-01 至 2025-03-31）各大区的 GMV（销售总额），并按 GMV 从高到低排序。",
+      "created_at": "2026-09-25T18:39:35.62054+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "region_name": "华东",
+        "SUM(o.order_amount)": 107373.0
+      },
+      {
+        "region_name": "华南",
+        "SUM(o.order_amount)": 70202.0
+      },
+      {
+        "region_name": "华北",
+        "SUM(o.order_amount)": 41099.5
+      },
+      {
+        "region_name": "西南",
+        "SUM(o.order_amount)": 31528.0
+      },
+      {
+        "region_name": "华中",
+        "SUM(o.order_amount)": 28957.0
+      }
+    ]
+  },
+  {
+    "name": "品类销量销售额",
+    "passed": true,
+    "seconds": 13.88,
+    "detail": {
+      "id": "6f7eb606-3653-4b9f-a06d-0a6f1d78a7d2",
+      "error": null,
+      "result": {
+        "sql": "SELECT dp.category AS 品类, SUM(fo.order_quantity) AS 销量, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_product AS dp ON fo.product_id = dp.product_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.month = 3 GROUP BY dp.category ORDER BY 销售额 DESC LIMIT 500",
+        "data": [
+          {
+            "品类": "手机数码",
+            "销量": "10",
+            "销售额": 62190.0
+          },
+          {
+            "品类": "家用电器",
+            "销量": "6",
+            "销售额": 19196.0
+          },
+          {
+            "品类": "鞋靴",
+            "销量": "4",
+            "销售额": 4396.0
+          },
+          {
+            "品类": "服饰",
+            "销量": "7",
+            "销售额": 2593.0
+          },
+          {
+            "品类": "食品饮料",
+            "销量": "139",
+            "销售额": 1115.0
+          },
+          {
+            "品类": "休闲零食",
+            "销量": "156",
+            "销售额": 630.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询 2025 年 3 月各商品品类的销量和销售额（GMV）",
+      "created_at": "2026-09-25T18:39:44.453568+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "category": "手机数码",
+        "SUM(o.order_quantity)": "10",
+        "SUM(o.order_amount)": 62190.0
+      },
+      {
+        "category": "食品饮料",
+        "SUM(o.order_quantity)": "139",
+        "SUM(o.order_amount)": 1115.0
+      },
+      {
+        "category": "休闲零食",
+        "SUM(o.order_quantity)": "156",
+        "SUM(o.order_amount)": 630.0
+      },
+      {
+        "category": "鞋靴",
+        "SUM(o.order_quantity)": "4",
+        "SUM(o.order_amount)": 4396.0
+      },
+      {
+        "category": "服饰",
+        "SUM(o.order_quantity)": "7",
+        "SUM(o.order_amount)": 2593.0
+      },
+      {
+        "category": "家用电器",
+        "SUM(o.order_quantity)": "6",
+        "SUM(o.order_amount)": 19196.0
+      }
+    ]
+  },
+  {
+    "name": "地区商品排行",
+    "passed": true,
+    "seconds": 8.97,
+    "detail": {
+      "id": "0b1c3411-14db-4114-b736-41a8d5762dee",
+      "error": null,
+      "result": {
+        "sql": "SELECT dp.product_name AS 商品名称, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_product AS dp ON fo.product_id = dp.product_id JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.date_id BETWEEN 20250101 AND 20250331 GROUP BY dp.product_name ORDER BY 销售额 DESC LIMIT 5",
+        "data": [
+          {
+            "销售额": 28497.0,
+            "商品名称": "Galaxy S24 Ultra"
+          },
+          {
+            "销售额": 27996.0,
+            "商品名称": "Mate 60 Pro"
+          },
+          {
+            "销售额": 17998.0,
+            "商品名称": "iPhone 15 Pro"
+          },
+          {
+            "销售额": 10998.0,
+            "商品名称": "戴森 V15 吸尘器"
+          },
+          {
+            "销售额": 6400.0,
+            "商品名称": "美的空调 KFR-35GW"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询华东地区 2025 年第一季度（2025-01-01 至 2025-03-31）销售额最高的前 5 个商品",
+      "created_at": "2026-09-25T18:39:58.46336+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "product_name": "Galaxy S24 Ultra",
+        "SUM(o.order_amount)": 28497.0
+      },
+      {
+        "product_name": "Mate 60 Pro",
+        "SUM(o.order_amount)": 27996.0
+      },
+      {
+        "product_name": "iPhone 15 Pro",
+        "SUM(o.order_amount)": 17998.0
+      },
+      {
+        "product_name": "戴森 V15 吸尘器",
+        "SUM(o.order_amount)": 10998.0
+      },
+      {
+        "product_name": "美的空调 KFR-35GW",
+        "SUM(o.order_amount)": 6400.0
+      }
+    ]
+  },
+  {
+    "name": "会员订单销售额",
+    "passed": true,
+    "seconds": 9.8,
+    "detail": {
+      "id": "0ca24871-f791-4063-b7f5-7c26e29df022",
+      "error": null,
+      "result": {
+        "sql": "SELECT dc.member_level AS 会员等级, COUNT(DISTINCT fo.order_id) AS 订单数, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_customer AS dc ON fo.customer_id = dc.customer_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dc.member_level ORDER BY dc.member_level LIMIT 500",
+        "data": [
+          {
+            "订单数": 30,
+            "销售额": 71094.0,
+            "会员等级": "白银"
+          },
+          {
+            "订单数": 25,
+            "销售额": 57679.0,
+            "会员等级": "铂金"
+          },
+          {
+            "订单数": 26,
+            "销售额": 50208.0,
+            "会员等级": "青铜"
+          },
+          {
+            "订单数": 34,
+            "销售额": 100178.5,
+            "会员等级": "黄金"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "按会员等级统计 2025 年第一季度（2025-01-01 至 2025-03-31）的订单数和销售额",
+      "created_at": "2026-09-25T18:40:07.252495+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "member_level": "黄金",
+        "COUNT(*)": 34,
+        "SUM(o.order_amount)": 100178.5
+      },
+      {
+        "member_level": "铂金",
+        "COUNT(*)": 25,
+        "SUM(o.order_amount)": 57679.0
+      },
+      {
+        "member_level": "青铜",
+        "COUNT(*)": 26,
+        "SUM(o.order_amount)": 50208.0
+      },
+      {
+        "member_level": "白银",
+        "COUNT(*)": 30,
+        "SUM(o.order_amount)": 71094.0
+      }
+    ]
+  },
+  {
+    "name": "客单价",
+    "passed": true,
+    "seconds": 12.32,
+    "detail": {
+      "id": "16d4d49f-bc67-4109-b3ea-8f058e71a412",
+      "error": null,
+      "result": {
+        "sql": "SELECT ROUND(AVG(order_amount), 2) AS 客单价 FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331 LIMIT 500",
+        "data": [
+          {
+            "客单价": 2427.47
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年第一季度（2025-01-01至2025-03-31）的客单价（AOV，订单金额/订单数），保留两位小数。",
+      "created_at": "2026-09-25T18:40:17.561642+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "ROUND(SUM(order_amount)/COUNT(DISTINCT order_id),2)": 2427.47
+      }
+    ]
+  },
+  {
+    "name": "空结果",
+    "passed": false,
+    "response": {
+      "answer": "",
+      "clarification": "抱歉，当前仅支持查询 2025-01-01 至 2025-03-31 期间的订单数据。2026年9月的订单超出可查询范围，请确认是否需要查询其他时间段的订单明细？",
+      "status": "clarification"
+    }
+  },
+  {
+    "name": "缺少成本字段",
+    "passed": false,
+    "response": {
+      "answer": "我无法查询利润数据，因为当前可查询的电商演示数仓仅包含销售额（GMV）、客单价（AOV）等字段，不包含成本或利润相关指标。如果您需要利润分析，可能需要其他数据源或业务系统。",
+      "clarification": "",
+      "status": "answer"
+    }
+  },
+  {
+    "name": "拒绝删除",
+    "passed": false,
+    "response": {
+      "answer": "抱歉，我当前只能查询数据而无法删除或修改任何业务数据。如果您需要查询订单信息，可以告诉我具体的查询条件（如时间范围、地区、商品等），我可以帮您获取相关数据。",
+      "clarification": "",
+      "status": "answer"
+    }
+  },
+  {
+    "name": "复测-客单价",
+    "passed": true,
+    "detail": {
+      "id": "aa0eb519-613a-4905-a37b-34e9d05d2e85",
+      "error": null,
+      "result": {
+        "sql": "SELECT ROUND(AVG(order_amount), 2) AS 客单价 FROM fact_order WHERE date_id >= 20250101 AND date_id <= 20250331 LIMIT 500",
+        "data": [
+          {
+            "客单价": 2427.47
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年第一季度（2025-01-01至2025-03-31）的客单价（AOV，订单金额/订单数），保留两位小数。",
+      "created_at": "2026-09-25T18:40:33.252201+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "复测-地区商品排行",
+    "passed": true,
+    "detail": {
+      "id": "7ec7e72f-647b-4cf2-9298-5b25e6937c19",
+      "error": null,
+      "result": {
+        "sql": "SELECT dp.product_name AS 商品名称, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_product AS dp ON fo.product_id = dp.product_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.date_id BETWEEN 20250101 AND 20250331 GROUP BY dp.product_name ORDER BY 销售额 DESC LIMIT 5",
+        "data": [
+          {
+            "销售额": 28497.0,
+            "商品名称": "Galaxy S24 Ultra"
+          },
+          {
+            "销售额": 27996.0,
+            "商品名称": "Mate 60 Pro"
+          },
+          {
+            "销售额": 17998.0,
+            "商品名称": "iPhone 15 Pro"
+          },
+          {
+            "销售额": 10998.0,
+            "商品名称": "戴森 V15 吸尘器"
+          },
+          {
+            "销售额": 6400.0,
+            "商品名称": "美的空调 KFR-35GW"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询华东地区 2025 年第一季度（2025-01-01 至 2025-03-31）销售额最高的前 5 个商品",
+      "created_at": "2026-09-25T18:40:44.125246+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "复测-客单价",
+    "passed": true,
+    "detail": {
+      "id": "53267d9f-8b37-4f36-be0d-620cd7f8873e",
+      "error": null,
+      "result": {
+        "sql": "SELECT ROUND(AVG(order_amount), 2) AS 客单价 FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331 LIMIT 500",
+        "data": [
+          {
+            "客单价": 2427.47
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年第一季度（2025-01-01至2025-03-31）的客单价（AOV，订单金额/订单数），保留两位小数。",
+      "created_at": "2026-09-25T18:40:54.053312+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "复测-地区商品排行",
+    "passed": true,
+    "detail": {
+      "id": "6409ed06-9c5e-4d61-867e-29acad9c3f0f",
+      "error": null,
+      "result": {
+        "sql": "SELECT dp.product_name AS 商品名称, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_product AS dp ON fo.product_id = dp.product_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.date_id >= 20250101 AND dd.date_id <= 20250331 GROUP BY dp.product_name ORDER BY 销售额 DESC LIMIT 5",
+        "data": [
+          {
+            "销售额": 28497.0,
+            "商品名称": "Galaxy S24 Ultra"
+          },
+          {
+            "销售额": 27996.0,
+            "商品名称": "Mate 60 Pro"
+          },
+          {
+            "销售额": 17998.0,
+            "商品名称": "iPhone 15 Pro"
+          },
+          {
+            "销售额": 10998.0,
+            "商品名称": "戴森 V15 吸尘器"
+          },
+          {
+            "销售额": 6400.0,
+            "商品名称": "美的空调 KFR-35GW"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询华东地区2025年第一季度（2025-01-01至2025-03-31）销售额最高的前5个商品",
+      "created_at": "2026-09-25T18:41:04.972312+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "未登录拒绝",
+    "passed": true,
+    "http": 401
+  },
+  {
+    "name": "跨团队拒绝",
+    "passed": false,
+    "http": 200
+  },
+  {
+    "name": "管理员不自动获得数据权限",
+    "passed": false,
+    "http": 200
+  },
+  {
+    "name": "目录按权限过滤",
+    "passed": true,
+    "response": []
+  },
+  {
+    "name": "混合问题澄清",
+    "passed": true,
+    "response": {
+      "answer": "",
+      "clarification": "请明确您希望先查询哪一项：\n1. 销售额数据（如各地区/商品/时间段的销售额、客单价等）\n2. 服务错误日志（如订单服务的错误日志）\n请选择其中一项，或说明优先级。",
+      "status": "clarification"
+    }
+  },
+  {
+    "name": "范围外问题提供帮助",
+    "passed": true,
+    "response": {
+      "answer": "我无法直接访问您的电脑文件或照片。不过，您可以尝试以下方法在本地找到个人照片：\n\n1. **Windows系统**：\n   - 打开文件资源管理器（快捷键 `Win + E`），在左侧导航栏点击“图片”或“此电脑”，然后搜索 `.jpg`、`.png` 等图片格式的文件。\n   - 或者使用系统自带的“照片”应用，它会自动整理本地和OneDrive中的照片。\n\n2. **Mac系统**：\n   - 打开“访达”（Finder），在左侧边栏点击“图片”，或使用 `Cmd + F` 搜索图片文件（如 `.jpg`、`.heic`）。\n   - 也可以使用“照片”应用（macOS自带）来管理本地照片。\n\n3. **跨平台工具**：\n   - 使用系统自带的搜索功能（Windows：`Win + S`；Mac：`Cmd + 空格`），输入“照片”或图片格式（如 `.jpg`）进行搜索。\n   - 如果照片存储在云端（如iCloud、Google相册、OneDrive等），可以登录相应账户查看。\n\n4. **第三方工具**：\n   - 使用专业的文件管理工具（如Everything、TreeSize等）快速搜索图片文件。\n   - 如果照片被误删，可以尝试使用数据恢复软件（如Recuva、Disk Drill等）进行恢复。\n\n如果您需要帮助排查特定问题（如照片丢失、格式损坏等），可以提供更多细节，我会尽力给出建议！",
+      "clarification": "",
+      "status": "answer"
+    }
+  },
+  {
+    "name": "自然表达自动分流",
+    "passed": true,
+    "response": {
+      "id": "cc7941c4-08b5-412f-920a-68c130381be8",
+      "kind": "warehouse",
+      "question": "2025年全年销售额（GMV）"
+    }
+  },
+  {
+    "name": "今年不偷换成全部历史",
+    "passed": false,
+    "detail": {
+      "id": "cc7941c4-08b5-412f-920a-68c130381be8",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(order_amount) AS 销售额 FROM fact_order WHERE date_id >= 20250101 AND date_id <= 20251231 LIMIT 500",
+        "data": [
+          {
+            "销售额": 279159.5
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年全年销售额（GMV）",
+      "created_at": "2026-09-25T18:41:21.27799+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "并发重试幂等",
+    "passed": true,
+    "ids": [
+      "2efc659b-de61-4f3f-ba80-f2dd8bb3d814",
+      "2efc659b-de61-4f3f-ba80-f2dd8bb3d814"
+    ]
+  },
+  {
+    "name": "跨查询类型幂等冲突",
+    "passed": true,
+    "http": 409
+  },
+  {
+    "name": "结果可重新读取",
+    "passed": true,
+    "id": "2efc659b-de61-4f3f-ba80-f2dd8bb3d814"
+  },
+  {
+    "name": "结果跨团队不可读",
+    "passed": true,
+    "http": 404
+  },
+  {
+    "name": "同团队查询历史按创建人隔离",
+    "passed": true,
+    "http": 404
+  },
+  {
+    "name": "原调查能力经统一入口回归",
+    "passed": false,
+    "response": {
+      "answer": "",
+      "clarification": "请问您希望先查询订单服务的超时日志，还是需要其他信息？",
+      "status": "clarification"
+    }
+  }
+]

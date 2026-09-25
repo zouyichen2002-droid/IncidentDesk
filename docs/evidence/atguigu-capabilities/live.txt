@@ -1,0 +1,83 @@
+无订单客单价空值 PASS
+客单价单指标 PASS
+口语金额 PASS
+英文问数 PASS
+繁体问数 PASS
+月份分组 PASS
+排除地区 PASS
+双地区筛选 PASS
+多维筛选 PASS
+客户去重与客单价 PASS
+跨月闭区间 PASS
+单日查询 PASS
+无数据月份 PASS
+不存在地区 PASS
+最低排名 PASS
+聚合后筛选 PASS
+销售额占比 PASS
+去年同期 PASS
+错别字表达 PASS
+订单金额阈值 PASS
+品牌真实取值 PASS
+会员指标口径 PASS
+品类真实取值 PASS
+商品件数区别订单数 PASS
+英文解释 PASS
+代码中的日志关键词 PASS
+假设数字计算 PASS
+SQL知识 PASS
+上下文不足 PASS
+明确不查数 PASS
+中英混合帮助 PASS
+不知道问什么 PASS
+越界执行说明 PASS
+缺少退货字段 PASS
+追问撤销地区 PASS
+追问换地区 PASS
+追问换指标 PASS
+纠正年份 PASS
+新问题不带旧筛选 PASS
+超长输入 PASS
+无效时区 PASS
+无效模式 PASS
+过长历史 PASS
+空历史消息 PASS
+不存在记录 PASS
+无效记录ID PASS
+PASS 46 / 46 Evidence: /workspace/docs/evidence/atguigu-capabilities/20260925-151627.json
+[
+  {
+    "name": "workflow_progress_and_timing",
+    "passed": true,
+    "queries": 29,
+    "required_steps": [
+      "召回字段信息",
+      "召回字段取值",
+      "召回指标信息",
+      "合并召回信息",
+      "执行SQL",
+      "抽取关键词",
+      "校验SQL",
+      "添加额外上下文",
+      "生成SQL",
+      "过滤指标信息",
+      "过滤表信息"
+    ]
+  },
+  {
+    "name": "query_id_in_python_logs",
+    "passed": true
+  },
+  {
+    "name": "teaching_metadata_and_data_preserved",
+    "passed": true,
+    "counts_tables_columns_metrics_orders": [
+      [
+        "5",
+        "24",
+        "2",
+        "115"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "runbook_as_of_end": true,
+  "deployed_commit_not_head": true,
+  "no_future_runbook": true,
+  "other_service_no_fixture": true,
+  "public_source_no_demo_fixture": true
+}

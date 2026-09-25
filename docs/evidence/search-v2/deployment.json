@@ -1,0 +1,62 @@
+{
+  "main": [
+    {
+      "Service": "api",
+      "State": "running"
+    },
+    {
+      "Service": "context",
+      "State": "running"
+    },
+    {
+      "Service": "demo",
+      "State": "running"
+    },
+    {
+      "Service": "web",
+      "State": "running"
+    },
+    {
+      "Service": "worker",
+      "State": "running"
+    },
+    {
+      "Service": "worker",
+      "State": "running"
+    },
+    {
+      "Service": "worker",
+      "State": "running"
+    }
+  ],
+  "public": [
+    {
+      "Service": "api",
+      "State": "running"
+    },
+    {
+      "Service": "context",
+      "State": "running"
+    },
+    {
+      "Service": "demo",
+      "State": "running"
+    },
+    {
+      "Service": "web",
+      "State": "running"
+    },
+    {
+      "Service": "worker",
+      "State": "running"
+    },
+    {
+      "Service": "worker",
+      "State": "running"
+    },
+    {
+      "Service": "worker",
+      "State": "running"
+    }
+  ]
+}

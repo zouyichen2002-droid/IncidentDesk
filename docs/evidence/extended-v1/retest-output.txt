@@ -1,0 +1,44 @@
+无订单客单价空值 FAIL
+客单价单指标 FAIL
+月份分组 FAIL
+客户去重与客单价 FAIL
+单日查询 FAIL
+跨月闭区间 FAIL
+无数据月份 FAIL
+销售额占比 FAIL
+代码中的日志关键词 FAIL
+假设数字计算 FAIL
+缺少退货字段 FAIL
+追问撤销地区 FAIL
+追问换地区 FAIL
+纠正年份 FAIL
+追问换指标 FAIL
+新问题不带旧筛选 FAIL
+Traceback (most recent call last):
+  File "/workspace/scripts/extended_acceptance.py", line 134, in <module>
+    results=asyncio.run(main(set(args.only.split(',')) if args.only else None))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/workspace/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scripts/extended_acceptance.py", line 128, in main
+    r=await c.get(BASE+'/api/v1/queries/'+id,headers=auth);save(n,r.status_code==expected,http=r.status_code,response=r.json())
+                                                                                                                      ^^^^^^^^
+  File "/workspace/worker/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

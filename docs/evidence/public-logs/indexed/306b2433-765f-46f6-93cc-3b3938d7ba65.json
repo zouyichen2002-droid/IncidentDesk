@@ -1,0 +1,5058 @@
+{
+  "investigation": {
+    "id": "306b2433-765f-46f6-93cc-3b3938d7ba65",
+    "seq": 31,
+    "idem": "b561e2de-d82a-4f8a-8cbf-848ac26fe20a",
+    "team": "orders",
+    "action": null,
+    "end_at": "2005-06-03T23:59:59.010001+00:00",
+    "report": {
+      "mode": "deterministic-baseline",
+      "facts": [
+        {
+          "id": "fact:logs:1:dcdb85bc35bf",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.363779 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:1:dcdb85bc35bf"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:2:4b5a78bc9018",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.527847 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:2:4b5a78bc9018"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:3:d1d97827f259",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.675872 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:3:d1d97827f259"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:4:cb4dbb21ecb2",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.823719 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:4:cb4dbb21ecb2"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:5:9a47a051f8b6",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.982731 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:5:9a47a051f8b6"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:6:76a7cc4933bd",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.131467 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:6:76a7cc4933bd"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:7:323966b4f204",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.293532 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:7:323966b4f204"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:8:5f72a40754bc",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.428563 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:8:5f72a40754bc"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:9:7126a47fd3c0",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.601412 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:9:7126a47fd3c0"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:10:c881516bbf86",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.749199 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:10:c881516bbf86"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:11:61ef95a328de",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.885834 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:11:61ef95a328de"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:12:db18daac6f96",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.041388 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:12:db18daac6f96"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13:00eb33790c2e",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.199063 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:13:00eb33790c2e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:14:21a49eb7e230",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.345821 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:14:21a49eb7e230"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:15:d5718240c7e8",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.493353 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:15:d5718240c7e8"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:16:04991f65d640",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.638135 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:16:04991f65d640"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:17:bdf1e9956ba0",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.807927 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:17:bdf1e9956ba0"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:18:1dfa8e5bd847",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.951717 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:18:1dfa8e5bd847"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:19:fbde6f41a78f",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.125780 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:19:fbde6f41a78f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:20:55e5d9bf0cc9",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.276129 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:20:55e5d9bf0cc9"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:21:5ea8579c273d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.414979 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:21:5ea8579c273d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:22:e5cc17a65e8e",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.573391 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:22:e5cc17a65e8e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:23:1cbd532017c3",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.722611 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:23:1cbd532017c3"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:24:3b072f11fe8f",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.870042 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:24:3b072f11fe8f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:25:5a05952a240c",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.019446 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:25:5a05952a240c"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:26:9b202ce829f6",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.161937 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:26:9b202ce829f6"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:27:7f8b5321f3d6",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.309788 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:27:7f8b5321f3d6"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:28:bec022347f03",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.532078 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:28:bec022347f03"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:29:f94ed043f18b",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.672029 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:29:f94ed043f18b"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:30:879f16126912",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.822857 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:30:879f16126912"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:31:22fbacf2e09c",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.958702 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:31:22fbacf2e09c"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:32:2fb72b58363d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.114809 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:32:2fb72b58363d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:33:e7bd0657c3db",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.258578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:33:e7bd0657c3db"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:34:d062ddb5b3dc",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.401336 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:34:d062ddb5b3dc"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:35:8d7569ea6ca3",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.551171 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:35:8d7569ea6ca3"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:36:2d86e0308130",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.696784 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:36:2d86e0308130"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:37:2774387c30f1",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.841735 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:37:2774387c30f1"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:38:85a0fc0cb21b",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.973893 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:38:85a0fc0cb21b"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:39:60fbf5be8864",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.126048 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:39:60fbf5be8864"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:40:22a26978c62c",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.275900 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:40:22a26978c62c"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:41:55f3cb37e076",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.420533 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:41:55f3cb37e076"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:42:1ece104a0d83",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.558188 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:42:1ece104a0d83"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:43:def222e31728",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.715625 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:43:def222e31728"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:44:2d786f6b270e",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.863230 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:44:2d786f6b270e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:45:cdc92c6314eb",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.001213 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:45:cdc92c6314eb"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:46:dd5f48dd006f",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.170578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:46:dd5f48dd006f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:47:c12dfc17864d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.319602 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:47:c12dfc17864d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:48:a9183e6f70b7",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.468068 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:48:a9183e6f70b7"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:49:747b96e4283f",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.609155 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:49:747b96e4283f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:50:d25fc351862e",
+          "kind": "observation",
+          "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.757117 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+          "evidence": [
+            "logs:50:d25fc351862e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "kind": "observation",
+          "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+          "evidence": [
+            "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "deployments",
+              "commit"
+            ],
+            "limit": 50,
+            "object": "Commit",
+            "source": "git"
+          }
+        },
+        {
+          "id": "fact:runbook:orders-runbook:3fd079fe1881",
+          "kind": "observation",
+          "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+          "evidence": [
+            "runbook:orders-runbook:3fd079fe1881"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "runbook"
+            ],
+            "limit": 50,
+            "object": "Runbook",
+            "source": "runbook"
+          }
+        }
+      ],
+      "impact": "svc-17",
+      "context": {
+        "plan": {
+          "end": "2005-06-03T23:59:59.010001Z",
+          "start": "2005-06-03T00:00:00Z",
+          "steps": [
+            {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            },
+            {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            },
+            {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            },
+            {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          ],
+          "service": "svc-17",
+          "version": "1"
+        },
+        "facts": [
+          {
+            "id": "fact:logs:1:dcdb85bc35bf",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.363779 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:1:dcdb85bc35bf"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:2:4b5a78bc9018",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.527847 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:2:4b5a78bc9018"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:3:d1d97827f259",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.675872 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:3:d1d97827f259"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:4:cb4dbb21ecb2",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.823719 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:4:cb4dbb21ecb2"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:5:9a47a051f8b6",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.982731 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:5:9a47a051f8b6"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:6:76a7cc4933bd",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.131467 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:6:76a7cc4933bd"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:7:323966b4f204",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.293532 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:7:323966b4f204"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:8:5f72a40754bc",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.428563 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:8:5f72a40754bc"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:9:7126a47fd3c0",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.601412 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:9:7126a47fd3c0"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:10:c881516bbf86",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.749199 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:10:c881516bbf86"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:11:61ef95a328de",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.885834 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:11:61ef95a328de"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:12:db18daac6f96",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.041388 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:12:db18daac6f96"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13:00eb33790c2e",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.199063 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:13:00eb33790c2e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:14:21a49eb7e230",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.345821 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:14:21a49eb7e230"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:15:d5718240c7e8",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.493353 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:15:d5718240c7e8"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:16:04991f65d640",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.638135 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:16:04991f65d640"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:17:bdf1e9956ba0",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.807927 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:17:bdf1e9956ba0"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:18:1dfa8e5bd847",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.951717 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:18:1dfa8e5bd847"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:19:fbde6f41a78f",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.125780 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:19:fbde6f41a78f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:20:55e5d9bf0cc9",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.276129 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:20:55e5d9bf0cc9"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:21:5ea8579c273d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.414979 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:21:5ea8579c273d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:22:e5cc17a65e8e",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.573391 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:22:e5cc17a65e8e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:23:1cbd532017c3",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.722611 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:23:1cbd532017c3"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:24:3b072f11fe8f",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.870042 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:24:3b072f11fe8f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:25:5a05952a240c",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.019446 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:25:5a05952a240c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:26:9b202ce829f6",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.161937 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:26:9b202ce829f6"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:27:7f8b5321f3d6",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.309788 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:27:7f8b5321f3d6"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:28:bec022347f03",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.532078 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:28:bec022347f03"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:29:f94ed043f18b",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.672029 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:29:f94ed043f18b"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:30:879f16126912",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.822857 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:30:879f16126912"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:31:22fbacf2e09c",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.958702 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:31:22fbacf2e09c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:32:2fb72b58363d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.114809 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:32:2fb72b58363d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:33:e7bd0657c3db",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.258578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:33:e7bd0657c3db"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:34:d062ddb5b3dc",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.401336 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:34:d062ddb5b3dc"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:35:8d7569ea6ca3",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.551171 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:35:8d7569ea6ca3"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:36:2d86e0308130",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.696784 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:36:2d86e0308130"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:37:2774387c30f1",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.841735 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:37:2774387c30f1"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:38:85a0fc0cb21b",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.973893 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:38:85a0fc0cb21b"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:39:60fbf5be8864",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.126048 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:39:60fbf5be8864"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:40:22a26978c62c",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.275900 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:40:22a26978c62c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:41:55f3cb37e076",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.420533 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:41:55f3cb37e076"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:42:1ece104a0d83",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.558188 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:42:1ece104a0d83"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:43:def222e31728",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.715625 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:43:def222e31728"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:44:2d786f6b270e",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.863230 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:44:2d786f6b270e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:45:cdc92c6314eb",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.001213 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:45:cdc92c6314eb"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:46:dd5f48dd006f",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.170578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:46:dd5f48dd006f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:47:c12dfc17864d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.319602 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:47:c12dfc17864d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:48:a9183e6f70b7",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.468068 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:48:a9183e6f70b7"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:49:747b96e4283f",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.609155 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:49:747b96e4283f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:50:d25fc351862e",
+            "kind": "observation",
+            "text": "日志记录 INFO: 1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.757117 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "evidence": [
+              "logs:50:d25fc351862e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "kind": "observation",
+            "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:3fd079fe1881",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+            "evidence": [
+              "runbook:orders-runbook:3fd079fe1881"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          }
+        ],
+        "scope": {
+          "team": "orders",
+          "service": "svc-17",
+          "subject": "alice"
+        },
+        "missing": [
+          "deployments: no accessible records in scope",
+          "logs: truncated at bounded page; more records exist"
+        ],
+        "objects": [
+          {
+            "id": "svc-17",
+            "team": "orders",
+            "type": "Service"
+          }
+        ],
+        "version": "1",
+        "evidence": [
+          {
+            "id": "logs:1:dcdb85bc35bf",
+            "team": "orders",
+            "sha256": "dcdb85bc35bf7f6bbb1f16f7a8e5ed1ff404cd46fcfe19f28c2f0e4956392a90",
+            "source": "logs",
+            "locator": "demo://logs/1",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.363779 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 1
+            },
+            "version": "1",
+            "available": true,
+            "event_time": "2005-06-03T22:42:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "1"
+          },
+          {
+            "id": "logs:2:4b5a78bc9018",
+            "team": "orders",
+            "sha256": "4b5a78bc901828c80b0d259683d6ce17e68b10a2ab567abd75f9bcda1b61f2a8",
+            "source": "logs",
+            "locator": "demo://logs/2",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.527847 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 2
+            },
+            "version": "2",
+            "available": true,
+            "event_time": "2005-06-03T22:42:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "2"
+          },
+          {
+            "id": "logs:3:d1d97827f259",
+            "team": "orders",
+            "sha256": "d1d97827f259401658c3d9a3918b81c20295342c5204b26bf56aff9508c23f04",
+            "source": "logs",
+            "locator": "demo://logs/3",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.675872 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 3
+            },
+            "version": "3",
+            "available": true,
+            "event_time": "2005-06-03T22:42:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "3"
+          },
+          {
+            "id": "logs:4:cb4dbb21ecb2",
+            "team": "orders",
+            "sha256": "cb4dbb21ecb22aa94ff1af7933183db9ed6f67b3c5066e20f7c06bea3e3a51ec",
+            "source": "logs",
+            "locator": "demo://logs/4",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.823719 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 4
+            },
+            "version": "4",
+            "available": true,
+            "event_time": "2005-06-03T22:42:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "4"
+          },
+          {
+            "id": "logs:5:9a47a051f8b6",
+            "team": "orders",
+            "sha256": "9a47a051f8b6c9c2f2737402c2d24e5af98d37d8dab2cc0b4dd77ff2e06aab32",
+            "source": "logs",
+            "locator": "demo://logs/5",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.982731 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 5
+            },
+            "version": "5",
+            "available": true,
+            "event_time": "2005-06-03T22:42:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "5"
+          },
+          {
+            "id": "logs:6:76a7cc4933bd",
+            "team": "orders",
+            "sha256": "76a7cc4933bda7784815036db5e85346a822475583b340c2c34ebb14abaeec88",
+            "source": "logs",
+            "locator": "demo://logs/6",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.131467 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 6
+            },
+            "version": "6",
+            "available": true,
+            "event_time": "2005-06-03T22:42:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "6"
+          },
+          {
+            "id": "logs:7:323966b4f204",
+            "team": "orders",
+            "sha256": "323966b4f204a75990a453d6fa6289a886d6c9cce721376a53e5a039e130998c",
+            "source": "logs",
+            "locator": "demo://logs/7",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.293532 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 7
+            },
+            "version": "7",
+            "available": true,
+            "event_time": "2005-06-03T22:42:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "7"
+          },
+          {
+            "id": "logs:8:5f72a40754bc",
+            "team": "orders",
+            "sha256": "5f72a40754bcb90a8f75d46104a1cc027ba37ae26d000bd3fbc0070b16f12392",
+            "source": "logs",
+            "locator": "demo://logs/8",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.428563 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 8
+            },
+            "version": "8",
+            "available": true,
+            "event_time": "2005-06-03T22:42:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "8"
+          },
+          {
+            "id": "logs:9:7126a47fd3c0",
+            "team": "orders",
+            "sha256": "7126a47fd3c0163491d6edd90a618294dceeb95d8dcbce4d55922b745bd69cd7",
+            "source": "logs",
+            "locator": "demo://logs/9",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.601412 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 9
+            },
+            "version": "9",
+            "available": true,
+            "event_time": "2005-06-03T22:42:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "9"
+          },
+          {
+            "id": "logs:10:c881516bbf86",
+            "team": "orders",
+            "sha256": "c881516bbf863660c9499fa3b0452dfa85afd883cc5f911e0c4ac7a6cc2768bb",
+            "source": "logs",
+            "locator": "demo://logs/10",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.749199 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 10
+            },
+            "version": "10",
+            "available": true,
+            "event_time": "2005-06-03T22:42:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "10"
+          },
+          {
+            "id": "logs:11:61ef95a328de",
+            "team": "orders",
+            "sha256": "61ef95a328de1abacba861e2740f009eb23f6c89d05157a66568808e36a558a6",
+            "source": "logs",
+            "locator": "demo://logs/11",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.885834 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 11
+            },
+            "version": "11",
+            "available": true,
+            "event_time": "2005-06-03T22:42:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "11"
+          },
+          {
+            "id": "logs:12:db18daac6f96",
+            "team": "orders",
+            "sha256": "db18daac6f96a05c5a84c03b2a3efc9be9fc8cf09b0fa32fc6dc60821d82b637",
+            "source": "logs",
+            "locator": "demo://logs/12",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.041388 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 12
+            },
+            "version": "12",
+            "available": true,
+            "event_time": "2005-06-03T22:42:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "12"
+          },
+          {
+            "id": "logs:13:00eb33790c2e",
+            "team": "orders",
+            "sha256": "00eb33790c2edd6596c4c7162ed6d1827e2670f5cff2b6029df80dd8434b5494",
+            "source": "logs",
+            "locator": "demo://logs/13",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.199063 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 13
+            },
+            "version": "13",
+            "available": true,
+            "event_time": "2005-06-03T22:42:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "13"
+          },
+          {
+            "id": "logs:14:21a49eb7e230",
+            "team": "orders",
+            "sha256": "21a49eb7e23082f4061e7921307aa19e44c5625fead86e822da7476c8a9a1373",
+            "source": "logs",
+            "locator": "demo://logs/14",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.345821 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 14
+            },
+            "version": "14",
+            "available": true,
+            "event_time": "2005-06-03T22:42:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "14"
+          },
+          {
+            "id": "logs:15:d5718240c7e8",
+            "team": "orders",
+            "sha256": "d5718240c7e84f192b5766de8193f5585c1ccad4e625f6aec74ce0878347151f",
+            "source": "logs",
+            "locator": "demo://logs/15",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.493353 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 15
+            },
+            "version": "15",
+            "available": true,
+            "event_time": "2005-06-03T22:42:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "15"
+          },
+          {
+            "id": "logs:16:04991f65d640",
+            "team": "orders",
+            "sha256": "04991f65d64022a204ee6947998a6b2b29c8d9eb3eb16cb674d8b37c56487427",
+            "source": "logs",
+            "locator": "demo://logs/16",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.638135 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 16
+            },
+            "version": "16",
+            "available": true,
+            "event_time": "2005-06-03T22:42:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "16"
+          },
+          {
+            "id": "logs:17:bdf1e9956ba0",
+            "team": "orders",
+            "sha256": "bdf1e9956ba00ce3d87fc6ca0b7c3d3b233247598977ce93f281ce5569132d32",
+            "source": "logs",
+            "locator": "demo://logs/17",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.807927 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 17
+            },
+            "version": "17",
+            "available": true,
+            "event_time": "2005-06-03T22:42:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "17"
+          },
+          {
+            "id": "logs:18:1dfa8e5bd847",
+            "team": "orders",
+            "sha256": "1dfa8e5bd8479d4432f3dc2720571c7dc7df5c2a6969498432d1e6ce105da019",
+            "source": "logs",
+            "locator": "demo://logs/18",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.951717 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 18
+            },
+            "version": "18",
+            "available": true,
+            "event_time": "2005-06-03T22:42:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "18"
+          },
+          {
+            "id": "logs:19:fbde6f41a78f",
+            "team": "orders",
+            "sha256": "fbde6f41a78f79cf9d16e042dbceb689b7982b2e08d51c84daec2ec912ef9a03",
+            "source": "logs",
+            "locator": "demo://logs/19",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.125780 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 19
+            },
+            "version": "19",
+            "available": true,
+            "event_time": "2005-06-03T22:42:53+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "19"
+          },
+          {
+            "id": "logs:20:55e5d9bf0cc9",
+            "team": "orders",
+            "sha256": "55e5d9bf0cc913d432c166a14a6221ebed42b335ec411104e8d54046bd13abbc",
+            "source": "logs",
+            "locator": "demo://logs/20",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.276129 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 20
+            },
+            "version": "20",
+            "available": true,
+            "event_time": "2005-06-03T22:42:53+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "20"
+          },
+          {
+            "id": "logs:21:5ea8579c273d",
+            "team": "orders",
+            "sha256": "5ea8579c273d551680a1050c1c676c2b8d50633cbfc977b087f50907559b0f58",
+            "source": "logs",
+            "locator": "demo://logs/21",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.414979 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 21
+            },
+            "version": "21",
+            "available": true,
+            "event_time": "2005-06-03T22:42:53+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "21"
+          },
+          {
+            "id": "logs:22:e5cc17a65e8e",
+            "team": "orders",
+            "sha256": "e5cc17a65e8e805cbda2a2fbd10eb730241cbb0376ec5385c7f1b0f2be6590b5",
+            "source": "logs",
+            "locator": "demo://logs/22",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.573391 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 22
+            },
+            "version": "22",
+            "available": true,
+            "event_time": "2005-06-03T22:42:53+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "22"
+          },
+          {
+            "id": "logs:23:1cbd532017c3",
+            "team": "orders",
+            "sha256": "1cbd532017c392a8da00a862e30562fc363be6ccee8163210032a7cabb57dc0a",
+            "source": "logs",
+            "locator": "demo://logs/23",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.722611 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 23
+            },
+            "version": "23",
+            "available": true,
+            "event_time": "2005-06-03T22:42:53+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "23"
+          },
+          {
+            "id": "logs:24:3b072f11fe8f",
+            "team": "orders",
+            "sha256": "3b072f11fe8f59e9fd5dd0d2d175dd1df753b4d3469917929eeeb136bb3e4b47",
+            "source": "logs",
+            "locator": "demo://logs/24",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.870042 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 24
+            },
+            "version": "24",
+            "available": true,
+            "event_time": "2005-06-03T22:42:53+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "24"
+          },
+          {
+            "id": "logs:25:5a05952a240c",
+            "team": "orders",
+            "sha256": "5a05952a240c67cfc3144dcc4998a107e751fd3133ad462c9352bfd7f18d01fc",
+            "source": "logs",
+            "locator": "demo://logs/25",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.019446 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 25
+            },
+            "version": "25",
+            "available": true,
+            "event_time": "2005-06-03T22:42:54+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "25"
+          },
+          {
+            "id": "logs:26:9b202ce829f6",
+            "team": "orders",
+            "sha256": "9b202ce829f691e72a99f62a646a2f1d480cf0a55a53dbb60629f225235e580d",
+            "source": "logs",
+            "locator": "demo://logs/26",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.161937 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 26
+            },
+            "version": "26",
+            "available": true,
+            "event_time": "2005-06-03T22:42:54+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "26"
+          },
+          {
+            "id": "logs:27:7f8b5321f3d6",
+            "team": "orders",
+            "sha256": "7f8b5321f3d65f30be77c2cfd45da3d4ac80b6d9ce7486d79f355e9b0684e4ec",
+            "source": "logs",
+            "locator": "demo://logs/27",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.309788 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 27
+            },
+            "version": "27",
+            "available": true,
+            "event_time": "2005-06-03T22:42:54+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "27"
+          },
+          {
+            "id": "logs:28:bec022347f03",
+            "team": "orders",
+            "sha256": "bec022347f035eab04dbecd90ae5a04402c475e83504aad46b9796bc2c41a5f1",
+            "source": "logs",
+            "locator": "demo://logs/28",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.532078 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 28
+            },
+            "version": "28",
+            "available": true,
+            "event_time": "2005-06-03T22:42:54+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "28"
+          },
+          {
+            "id": "logs:29:f94ed043f18b",
+            "team": "orders",
+            "sha256": "f94ed043f18b17827cb80852fa7a3051b1a9ddf90337e22999e38dd3c588975e",
+            "source": "logs",
+            "locator": "demo://logs/29",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.672029 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 29
+            },
+            "version": "29",
+            "available": true,
+            "event_time": "2005-06-03T22:42:54+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "29"
+          },
+          {
+            "id": "logs:30:879f16126912",
+            "team": "orders",
+            "sha256": "879f1612691222b92519deab24c78b3ca0d6d145e0fbd83c813bc2929af9526e",
+            "source": "logs",
+            "locator": "demo://logs/30",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.822857 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 30
+            },
+            "version": "30",
+            "available": true,
+            "event_time": "2005-06-03T22:42:54+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "30"
+          },
+          {
+            "id": "logs:31:22fbacf2e09c",
+            "team": "orders",
+            "sha256": "22fbacf2e09c05b5ed1fa99776cfee1841c94525f1dd60205884ec4562fa0154",
+            "source": "logs",
+            "locator": "demo://logs/31",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.958702 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 31
+            },
+            "version": "31",
+            "available": true,
+            "event_time": "2005-06-03T22:42:54+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "31"
+          },
+          {
+            "id": "logs:32:2fb72b58363d",
+            "team": "orders",
+            "sha256": "2fb72b58363d4cee33b93299585dfdb8cd022f0e9ac261947246108effef76c7",
+            "source": "logs",
+            "locator": "demo://logs/32",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.114809 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 32
+            },
+            "version": "32",
+            "available": true,
+            "event_time": "2005-06-03T22:42:55+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "32"
+          },
+          {
+            "id": "logs:33:e7bd0657c3db",
+            "team": "orders",
+            "sha256": "e7bd0657c3db7e33cc012ec06ba2be2bc7aaf09acdc60b825f4ac528feea1799",
+            "source": "logs",
+            "locator": "demo://logs/33",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.258578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 33
+            },
+            "version": "33",
+            "available": true,
+            "event_time": "2005-06-03T22:42:55+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "33"
+          },
+          {
+            "id": "logs:34:d062ddb5b3dc",
+            "team": "orders",
+            "sha256": "d062ddb5b3dc984e1750981b28f90ea9aeada6a6a6a7af710a6baa788a00e255",
+            "source": "logs",
+            "locator": "demo://logs/34",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.401336 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 34
+            },
+            "version": "34",
+            "available": true,
+            "event_time": "2005-06-03T22:42:55+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "34"
+          },
+          {
+            "id": "logs:35:8d7569ea6ca3",
+            "team": "orders",
+            "sha256": "8d7569ea6ca337f05adb7868ce8a17b1028a4af4704039c46b5859bf7c8ff04e",
+            "source": "logs",
+            "locator": "demo://logs/35",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.551171 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 35
+            },
+            "version": "35",
+            "available": true,
+            "event_time": "2005-06-03T22:42:55+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "35"
+          },
+          {
+            "id": "logs:36:2d86e0308130",
+            "team": "orders",
+            "sha256": "2d86e0308130054f9135231179c96dfd117abb33029ed808455736ea9e518d22",
+            "source": "logs",
+            "locator": "demo://logs/36",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.696784 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 36
+            },
+            "version": "36",
+            "available": true,
+            "event_time": "2005-06-03T22:42:55+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "36"
+          },
+          {
+            "id": "logs:37:2774387c30f1",
+            "team": "orders",
+            "sha256": "2774387c30f1ffce14a0b952f16591ae9f8cfcd6c1ffca60c1d8ee9dd3116287",
+            "source": "logs",
+            "locator": "demo://logs/37",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.841735 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 37
+            },
+            "version": "37",
+            "available": true,
+            "event_time": "2005-06-03T22:42:55+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "37"
+          },
+          {
+            "id": "logs:38:85a0fc0cb21b",
+            "team": "orders",
+            "sha256": "85a0fc0cb21b4d9072fb35a1fd1b4c43c5a359f359a0ee5176813d67b066c14e",
+            "source": "logs",
+            "locator": "demo://logs/38",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.973893 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 38
+            },
+            "version": "38",
+            "available": true,
+            "event_time": "2005-06-03T22:42:55+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "38"
+          },
+          {
+            "id": "logs:39:60fbf5be8864",
+            "team": "orders",
+            "sha256": "60fbf5be8864931b3f9cb2aa3f5b7a982903419f5f3004c3c86dfb553d03e048",
+            "source": "logs",
+            "locator": "demo://logs/39",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.126048 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 39
+            },
+            "version": "39",
+            "available": true,
+            "event_time": "2005-06-03T22:42:56+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "39"
+          },
+          {
+            "id": "logs:40:22a26978c62c",
+            "team": "orders",
+            "sha256": "22a26978c62c6551636e6836024246e4407c416c4934275e68b1bb69e8414efb",
+            "source": "logs",
+            "locator": "demo://logs/40",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.275900 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 40
+            },
+            "version": "40",
+            "available": true,
+            "event_time": "2005-06-03T22:42:56+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "40"
+          },
+          {
+            "id": "logs:41:55f3cb37e076",
+            "team": "orders",
+            "sha256": "55f3cb37e076388bf7d13f538162d98565f1a601f90ea9739da92be706a08d9c",
+            "source": "logs",
+            "locator": "demo://logs/41",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.420533 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 41
+            },
+            "version": "41",
+            "available": true,
+            "event_time": "2005-06-03T22:42:56+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "41"
+          },
+          {
+            "id": "logs:42:1ece104a0d83",
+            "team": "orders",
+            "sha256": "1ece104a0d83a739f5e39960a919a03e6a2e55e3d993408184b60a3349266061",
+            "source": "logs",
+            "locator": "demo://logs/42",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.558188 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 42
+            },
+            "version": "42",
+            "available": true,
+            "event_time": "2005-06-03T22:42:56+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "42"
+          },
+          {
+            "id": "logs:43:def222e31728",
+            "team": "orders",
+            "sha256": "def222e31728152ec82c7a93ccb3848824c72f4c287dadb91c97de63cfb6a49d",
+            "source": "logs",
+            "locator": "demo://logs/43",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.715625 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 43
+            },
+            "version": "43",
+            "available": true,
+            "event_time": "2005-06-03T22:42:56+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "43"
+          },
+          {
+            "id": "logs:44:2d786f6b270e",
+            "team": "orders",
+            "sha256": "2d786f6b270e03f582c10f1dbcec9abccc943ade79797b43c367a75ddeac80fd",
+            "source": "logs",
+            "locator": "demo://logs/44",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.863230 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 44
+            },
+            "version": "44",
+            "available": true,
+            "event_time": "2005-06-03T22:42:56+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "44"
+          },
+          {
+            "id": "logs:45:cdc92c6314eb",
+            "team": "orders",
+            "sha256": "cdc92c6314ebce57f96021cbf7da152fdae384b0ed6bab5eec0d2f722009457d",
+            "source": "logs",
+            "locator": "demo://logs/45",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.001213 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 45
+            },
+            "version": "45",
+            "available": true,
+            "event_time": "2005-06-03T22:42:57+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "45"
+          },
+          {
+            "id": "logs:46:dd5f48dd006f",
+            "team": "orders",
+            "sha256": "dd5f48dd006f5cd77e94350dd0dc708e4ca15ab5e3eb4da134c534bb2ab7def6",
+            "source": "logs",
+            "locator": "demo://logs/46",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.170578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 46
+            },
+            "version": "46",
+            "available": true,
+            "event_time": "2005-06-03T22:42:57+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "46"
+          },
+          {
+            "id": "logs:47:c12dfc17864d",
+            "team": "orders",
+            "sha256": "c12dfc17864d773928fb98a5df625740b41c9bbe684cd356530d5da7bea894cf",
+            "source": "logs",
+            "locator": "demo://logs/47",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.319602 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 47
+            },
+            "version": "47",
+            "available": true,
+            "event_time": "2005-06-03T22:42:57+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "47"
+          },
+          {
+            "id": "logs:48:a9183e6f70b7",
+            "team": "orders",
+            "sha256": "a9183e6f70b7425e85d04206b3708a58c10b2d9c23fd33d40a7e3605e61ff3f1",
+            "source": "logs",
+            "locator": "demo://logs/48",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.468068 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 48
+            },
+            "version": "48",
+            "available": true,
+            "event_time": "2005-06-03T22:42:57+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "48"
+          },
+          {
+            "id": "logs:49:747b96e4283f",
+            "team": "orders",
+            "sha256": "747b96e4283f494ede3096c66829a1db2d1cb02f9a42b87b7c89ebcb03cab8b1",
+            "source": "logs",
+            "locator": "demo://logs/49",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.609155 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 49
+            },
+            "version": "49",
+            "available": true,
+            "event_time": "2005-06-03T22:42:57+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "49"
+          },
+          {
+            "id": "logs:50:d25fc351862e",
+            "team": "orders",
+            "sha256": "d25fc351862eddccad4367bc1ad5100c413b7f90f33e224a7daff1e30b16a065",
+            "source": "logs",
+            "locator": "demo://logs/50",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "BGL",
+              "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.757117 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+              "service_name": "checkout-api",
+              "original_line": 50
+            },
+            "version": "50",
+            "available": true,
+            "event_time": "2005-06-03T22:42:57+00:00",
+            "collected_at": "2026-09-24T20:30:14.019419+00:00",
+            "source_record": "50"
+          },
+          {
+            "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "team": "orders",
+            "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+            "source": "git",
+            "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "snippet": {
+              "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+            },
+            "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.054617+00:00",
+            "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+          },
+          {
+            "id": "runbook:orders-runbook:3fd079fe1881",
+            "team": "orders",
+            "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+            "source": "runbook",
+            "locator": "demo-git://repo/RUNBOOK.md",
+            "snippet": {
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+            },
+            "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.084032+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "memories": [],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:13.984961+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:14.019419+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:14.054617+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:14.084032+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "token_budget": 12000,
+        "mapping_version": "1",
+        "ontology_version": "1"
+      },
+      "missing": [
+        "deployments: no accessible records in scope",
+        "logs: truncated at bounded page; more records exist"
+      ],
+      "evidence": [
+        {
+          "id": "logs:1:dcdb85bc35bf",
+          "team": "orders",
+          "sha256": "dcdb85bc35bf7f6bbb1f16f7a8e5ed1ff404cd46fcfe19f28c2f0e4956392a90",
+          "source": "logs",
+          "locator": "demo://logs/1",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.363779 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 1
+          },
+          "version": "1",
+          "available": true,
+          "event_time": "2005-06-03T22:42:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "1"
+        },
+        {
+          "id": "logs:2:4b5a78bc9018",
+          "team": "orders",
+          "sha256": "4b5a78bc901828c80b0d259683d6ce17e68b10a2ab567abd75f9bcda1b61f2a8",
+          "source": "logs",
+          "locator": "demo://logs/2",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.527847 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 2
+          },
+          "version": "2",
+          "available": true,
+          "event_time": "2005-06-03T22:42:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "2"
+        },
+        {
+          "id": "logs:3:d1d97827f259",
+          "team": "orders",
+          "sha256": "d1d97827f259401658c3d9a3918b81c20295342c5204b26bf56aff9508c23f04",
+          "source": "logs",
+          "locator": "demo://logs/3",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.675872 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 3
+          },
+          "version": "3",
+          "available": true,
+          "event_time": "2005-06-03T22:42:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "3"
+        },
+        {
+          "id": "logs:4:cb4dbb21ecb2",
+          "team": "orders",
+          "sha256": "cb4dbb21ecb22aa94ff1af7933183db9ed6f67b3c5066e20f7c06bea3e3a51ec",
+          "source": "logs",
+          "locator": "demo://logs/4",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.823719 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 4
+          },
+          "version": "4",
+          "available": true,
+          "event_time": "2005-06-03T22:42:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "4"
+        },
+        {
+          "id": "logs:5:9a47a051f8b6",
+          "team": "orders",
+          "sha256": "9a47a051f8b6c9c2f2737402c2d24e5af98d37d8dab2cc0b4dd77ff2e06aab32",
+          "source": "logs",
+          "locator": "demo://logs/5",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.982731 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 5
+          },
+          "version": "5",
+          "available": true,
+          "event_time": "2005-06-03T22:42:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "5"
+        },
+        {
+          "id": "logs:6:76a7cc4933bd",
+          "team": "orders",
+          "sha256": "76a7cc4933bda7784815036db5e85346a822475583b340c2c34ebb14abaeec88",
+          "source": "logs",
+          "locator": "demo://logs/6",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.131467 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 6
+          },
+          "version": "6",
+          "available": true,
+          "event_time": "2005-06-03T22:42:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "6"
+        },
+        {
+          "id": "logs:7:323966b4f204",
+          "team": "orders",
+          "sha256": "323966b4f204a75990a453d6fa6289a886d6c9cce721376a53e5a039e130998c",
+          "source": "logs",
+          "locator": "demo://logs/7",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.293532 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 7
+          },
+          "version": "7",
+          "available": true,
+          "event_time": "2005-06-03T22:42:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "7"
+        },
+        {
+          "id": "logs:8:5f72a40754bc",
+          "team": "orders",
+          "sha256": "5f72a40754bcb90a8f75d46104a1cc027ba37ae26d000bd3fbc0070b16f12392",
+          "source": "logs",
+          "locator": "demo://logs/8",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.428563 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 8
+          },
+          "version": "8",
+          "available": true,
+          "event_time": "2005-06-03T22:42:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "8"
+        },
+        {
+          "id": "logs:9:7126a47fd3c0",
+          "team": "orders",
+          "sha256": "7126a47fd3c0163491d6edd90a618294dceeb95d8dcbce4d55922b745bd69cd7",
+          "source": "logs",
+          "locator": "demo://logs/9",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.601412 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 9
+          },
+          "version": "9",
+          "available": true,
+          "event_time": "2005-06-03T22:42:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "9"
+        },
+        {
+          "id": "logs:10:c881516bbf86",
+          "team": "orders",
+          "sha256": "c881516bbf863660c9499fa3b0452dfa85afd883cc5f911e0c4ac7a6cc2768bb",
+          "source": "logs",
+          "locator": "demo://logs/10",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.749199 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 10
+          },
+          "version": "10",
+          "available": true,
+          "event_time": "2005-06-03T22:42:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "10"
+        },
+        {
+          "id": "logs:11:61ef95a328de",
+          "team": "orders",
+          "sha256": "61ef95a328de1abacba861e2740f009eb23f6c89d05157a66568808e36a558a6",
+          "source": "logs",
+          "locator": "demo://logs/11",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.885834 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 11
+          },
+          "version": "11",
+          "available": true,
+          "event_time": "2005-06-03T22:42:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "11"
+        },
+        {
+          "id": "logs:12:db18daac6f96",
+          "team": "orders",
+          "sha256": "db18daac6f96a05c5a84c03b2a3efc9be9fc8cf09b0fa32fc6dc60821d82b637",
+          "source": "logs",
+          "locator": "demo://logs/12",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.041388 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 12
+          },
+          "version": "12",
+          "available": true,
+          "event_time": "2005-06-03T22:42:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "12"
+        },
+        {
+          "id": "logs:13:00eb33790c2e",
+          "team": "orders",
+          "sha256": "00eb33790c2edd6596c4c7162ed6d1827e2670f5cff2b6029df80dd8434b5494",
+          "source": "logs",
+          "locator": "demo://logs/13",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.199063 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 13
+          },
+          "version": "13",
+          "available": true,
+          "event_time": "2005-06-03T22:42:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "13"
+        },
+        {
+          "id": "logs:14:21a49eb7e230",
+          "team": "orders",
+          "sha256": "21a49eb7e23082f4061e7921307aa19e44c5625fead86e822da7476c8a9a1373",
+          "source": "logs",
+          "locator": "demo://logs/14",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.345821 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 14
+          },
+          "version": "14",
+          "available": true,
+          "event_time": "2005-06-03T22:42:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "14"
+        },
+        {
+          "id": "logs:15:d5718240c7e8",
+          "team": "orders",
+          "sha256": "d5718240c7e84f192b5766de8193f5585c1ccad4e625f6aec74ce0878347151f",
+          "source": "logs",
+          "locator": "demo://logs/15",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.493353 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 15
+          },
+          "version": "15",
+          "available": true,
+          "event_time": "2005-06-03T22:42:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "15"
+        },
+        {
+          "id": "logs:16:04991f65d640",
+          "team": "orders",
+          "sha256": "04991f65d64022a204ee6947998a6b2b29c8d9eb3eb16cb674d8b37c56487427",
+          "source": "logs",
+          "locator": "demo://logs/16",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.638135 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 16
+          },
+          "version": "16",
+          "available": true,
+          "event_time": "2005-06-03T22:42:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "16"
+        },
+        {
+          "id": "logs:17:bdf1e9956ba0",
+          "team": "orders",
+          "sha256": "bdf1e9956ba00ce3d87fc6ca0b7c3d3b233247598977ce93f281ce5569132d32",
+          "source": "logs",
+          "locator": "demo://logs/17",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.807927 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 17
+          },
+          "version": "17",
+          "available": true,
+          "event_time": "2005-06-03T22:42:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "17"
+        },
+        {
+          "id": "logs:18:1dfa8e5bd847",
+          "team": "orders",
+          "sha256": "1dfa8e5bd8479d4432f3dc2720571c7dc7df5c2a6969498432d1e6ce105da019",
+          "source": "logs",
+          "locator": "demo://logs/18",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.951717 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 18
+          },
+          "version": "18",
+          "available": true,
+          "event_time": "2005-06-03T22:42:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "18"
+        },
+        {
+          "id": "logs:19:fbde6f41a78f",
+          "team": "orders",
+          "sha256": "fbde6f41a78f79cf9d16e042dbceb689b7982b2e08d51c84daec2ec912ef9a03",
+          "source": "logs",
+          "locator": "demo://logs/19",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.125780 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 19
+          },
+          "version": "19",
+          "available": true,
+          "event_time": "2005-06-03T22:42:53+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "19"
+        },
+        {
+          "id": "logs:20:55e5d9bf0cc9",
+          "team": "orders",
+          "sha256": "55e5d9bf0cc913d432c166a14a6221ebed42b335ec411104e8d54046bd13abbc",
+          "source": "logs",
+          "locator": "demo://logs/20",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.276129 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 20
+          },
+          "version": "20",
+          "available": true,
+          "event_time": "2005-06-03T22:42:53+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "20"
+        },
+        {
+          "id": "logs:21:5ea8579c273d",
+          "team": "orders",
+          "sha256": "5ea8579c273d551680a1050c1c676c2b8d50633cbfc977b087f50907559b0f58",
+          "source": "logs",
+          "locator": "demo://logs/21",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.414979 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 21
+          },
+          "version": "21",
+          "available": true,
+          "event_time": "2005-06-03T22:42:53+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "21"
+        },
+        {
+          "id": "logs:22:e5cc17a65e8e",
+          "team": "orders",
+          "sha256": "e5cc17a65e8e805cbda2a2fbd10eb730241cbb0376ec5385c7f1b0f2be6590b5",
+          "source": "logs",
+          "locator": "demo://logs/22",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.573391 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 22
+          },
+          "version": "22",
+          "available": true,
+          "event_time": "2005-06-03T22:42:53+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "22"
+        },
+        {
+          "id": "logs:23:1cbd532017c3",
+          "team": "orders",
+          "sha256": "1cbd532017c392a8da00a862e30562fc363be6ccee8163210032a7cabb57dc0a",
+          "source": "logs",
+          "locator": "demo://logs/23",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.722611 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 23
+          },
+          "version": "23",
+          "available": true,
+          "event_time": "2005-06-03T22:42:53+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "23"
+        },
+        {
+          "id": "logs:24:3b072f11fe8f",
+          "team": "orders",
+          "sha256": "3b072f11fe8f59e9fd5dd0d2d175dd1df753b4d3469917929eeeb136bb3e4b47",
+          "source": "logs",
+          "locator": "demo://logs/24",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.870042 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 24
+          },
+          "version": "24",
+          "available": true,
+          "event_time": "2005-06-03T22:42:53+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "24"
+        },
+        {
+          "id": "logs:25:5a05952a240c",
+          "team": "orders",
+          "sha256": "5a05952a240c67cfc3144dcc4998a107e751fd3133ad462c9352bfd7f18d01fc",
+          "source": "logs",
+          "locator": "demo://logs/25",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.019446 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 25
+          },
+          "version": "25",
+          "available": true,
+          "event_time": "2005-06-03T22:42:54+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "25"
+        },
+        {
+          "id": "logs:26:9b202ce829f6",
+          "team": "orders",
+          "sha256": "9b202ce829f691e72a99f62a646a2f1d480cf0a55a53dbb60629f225235e580d",
+          "source": "logs",
+          "locator": "demo://logs/26",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.161937 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 26
+          },
+          "version": "26",
+          "available": true,
+          "event_time": "2005-06-03T22:42:54+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "26"
+        },
+        {
+          "id": "logs:27:7f8b5321f3d6",
+          "team": "orders",
+          "sha256": "7f8b5321f3d65f30be77c2cfd45da3d4ac80b6d9ce7486d79f355e9b0684e4ec",
+          "source": "logs",
+          "locator": "demo://logs/27",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.309788 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 27
+          },
+          "version": "27",
+          "available": true,
+          "event_time": "2005-06-03T22:42:54+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "27"
+        },
+        {
+          "id": "logs:28:bec022347f03",
+          "team": "orders",
+          "sha256": "bec022347f035eab04dbecd90ae5a04402c475e83504aad46b9796bc2c41a5f1",
+          "source": "logs",
+          "locator": "demo://logs/28",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.532078 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 28
+          },
+          "version": "28",
+          "available": true,
+          "event_time": "2005-06-03T22:42:54+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "28"
+        },
+        {
+          "id": "logs:29:f94ed043f18b",
+          "team": "orders",
+          "sha256": "f94ed043f18b17827cb80852fa7a3051b1a9ddf90337e22999e38dd3c588975e",
+          "source": "logs",
+          "locator": "demo://logs/29",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.672029 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 29
+          },
+          "version": "29",
+          "available": true,
+          "event_time": "2005-06-03T22:42:54+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "29"
+        },
+        {
+          "id": "logs:30:879f16126912",
+          "team": "orders",
+          "sha256": "879f1612691222b92519deab24c78b3ca0d6d145e0fbd83c813bc2929af9526e",
+          "source": "logs",
+          "locator": "demo://logs/30",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.822857 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 30
+          },
+          "version": "30",
+          "available": true,
+          "event_time": "2005-06-03T22:42:54+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "30"
+        },
+        {
+          "id": "logs:31:22fbacf2e09c",
+          "team": "orders",
+          "sha256": "22fbacf2e09c05b5ed1fa99776cfee1841c94525f1dd60205884ec4562fa0154",
+          "source": "logs",
+          "locator": "demo://logs/31",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.958702 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 31
+          },
+          "version": "31",
+          "available": true,
+          "event_time": "2005-06-03T22:42:54+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "31"
+        },
+        {
+          "id": "logs:32:2fb72b58363d",
+          "team": "orders",
+          "sha256": "2fb72b58363d4cee33b93299585dfdb8cd022f0e9ac261947246108effef76c7",
+          "source": "logs",
+          "locator": "demo://logs/32",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.114809 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 32
+          },
+          "version": "32",
+          "available": true,
+          "event_time": "2005-06-03T22:42:55+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "32"
+        },
+        {
+          "id": "logs:33:e7bd0657c3db",
+          "team": "orders",
+          "sha256": "e7bd0657c3db7e33cc012ec06ba2be2bc7aaf09acdc60b825f4ac528feea1799",
+          "source": "logs",
+          "locator": "demo://logs/33",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.258578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 33
+          },
+          "version": "33",
+          "available": true,
+          "event_time": "2005-06-03T22:42:55+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "33"
+        },
+        {
+          "id": "logs:34:d062ddb5b3dc",
+          "team": "orders",
+          "sha256": "d062ddb5b3dc984e1750981b28f90ea9aeada6a6a6a7af710a6baa788a00e255",
+          "source": "logs",
+          "locator": "demo://logs/34",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.401336 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 34
+          },
+          "version": "34",
+          "available": true,
+          "event_time": "2005-06-03T22:42:55+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "34"
+        },
+        {
+          "id": "logs:35:8d7569ea6ca3",
+          "team": "orders",
+          "sha256": "8d7569ea6ca337f05adb7868ce8a17b1028a4af4704039c46b5859bf7c8ff04e",
+          "source": "logs",
+          "locator": "demo://logs/35",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.551171 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 35
+          },
+          "version": "35",
+          "available": true,
+          "event_time": "2005-06-03T22:42:55+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "35"
+        },
+        {
+          "id": "logs:36:2d86e0308130",
+          "team": "orders",
+          "sha256": "2d86e0308130054f9135231179c96dfd117abb33029ed808455736ea9e518d22",
+          "source": "logs",
+          "locator": "demo://logs/36",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.696784 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 36
+          },
+          "version": "36",
+          "available": true,
+          "event_time": "2005-06-03T22:42:55+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "36"
+        },
+        {
+          "id": "logs:37:2774387c30f1",
+          "team": "orders",
+          "sha256": "2774387c30f1ffce14a0b952f16591ae9f8cfcd6c1ffca60c1d8ee9dd3116287",
+          "source": "logs",
+          "locator": "demo://logs/37",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.841735 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 37
+          },
+          "version": "37",
+          "available": true,
+          "event_time": "2005-06-03T22:42:55+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "37"
+        },
+        {
+          "id": "logs:38:85a0fc0cb21b",
+          "team": "orders",
+          "sha256": "85a0fc0cb21b4d9072fb35a1fd1b4c43c5a359f359a0ee5176813d67b066c14e",
+          "source": "logs",
+          "locator": "demo://logs/38",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.973893 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 38
+          },
+          "version": "38",
+          "available": true,
+          "event_time": "2005-06-03T22:42:55+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "38"
+        },
+        {
+          "id": "logs:39:60fbf5be8864",
+          "team": "orders",
+          "sha256": "60fbf5be8864931b3f9cb2aa3f5b7a982903419f5f3004c3c86dfb553d03e048",
+          "source": "logs",
+          "locator": "demo://logs/39",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.126048 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 39
+          },
+          "version": "39",
+          "available": true,
+          "event_time": "2005-06-03T22:42:56+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "39"
+        },
+        {
+          "id": "logs:40:22a26978c62c",
+          "team": "orders",
+          "sha256": "22a26978c62c6551636e6836024246e4407c416c4934275e68b1bb69e8414efb",
+          "source": "logs",
+          "locator": "demo://logs/40",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.275900 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 40
+          },
+          "version": "40",
+          "available": true,
+          "event_time": "2005-06-03T22:42:56+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "40"
+        },
+        {
+          "id": "logs:41:55f3cb37e076",
+          "team": "orders",
+          "sha256": "55f3cb37e076388bf7d13f538162d98565f1a601f90ea9739da92be706a08d9c",
+          "source": "logs",
+          "locator": "demo://logs/41",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.420533 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 41
+          },
+          "version": "41",
+          "available": true,
+          "event_time": "2005-06-03T22:42:56+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "41"
+        },
+        {
+          "id": "logs:42:1ece104a0d83",
+          "team": "orders",
+          "sha256": "1ece104a0d83a739f5e39960a919a03e6a2e55e3d993408184b60a3349266061",
+          "source": "logs",
+          "locator": "demo://logs/42",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.558188 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 42
+          },
+          "version": "42",
+          "available": true,
+          "event_time": "2005-06-03T22:42:56+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "42"
+        },
+        {
+          "id": "logs:43:def222e31728",
+          "team": "orders",
+          "sha256": "def222e31728152ec82c7a93ccb3848824c72f4c287dadb91c97de63cfb6a49d",
+          "source": "logs",
+          "locator": "demo://logs/43",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.715625 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 43
+          },
+          "version": "43",
+          "available": true,
+          "event_time": "2005-06-03T22:42:56+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "43"
+        },
+        {
+          "id": "logs:44:2d786f6b270e",
+          "team": "orders",
+          "sha256": "2d786f6b270e03f582c10f1dbcec9abccc943ade79797b43c367a75ddeac80fd",
+          "source": "logs",
+          "locator": "demo://logs/44",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.863230 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 44
+          },
+          "version": "44",
+          "available": true,
+          "event_time": "2005-06-03T22:42:56+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "44"
+        },
+        {
+          "id": "logs:45:cdc92c6314eb",
+          "team": "orders",
+          "sha256": "cdc92c6314ebce57f96021cbf7da152fdae384b0ed6bab5eec0d2f722009457d",
+          "source": "logs",
+          "locator": "demo://logs/45",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.001213 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 45
+          },
+          "version": "45",
+          "available": true,
+          "event_time": "2005-06-03T22:42:57+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "45"
+        },
+        {
+          "id": "logs:46:dd5f48dd006f",
+          "team": "orders",
+          "sha256": "dd5f48dd006f5cd77e94350dd0dc708e4ca15ab5e3eb4da134c534bb2ab7def6",
+          "source": "logs",
+          "locator": "demo://logs/46",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.170578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 46
+          },
+          "version": "46",
+          "available": true,
+          "event_time": "2005-06-03T22:42:57+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "46"
+        },
+        {
+          "id": "logs:47:c12dfc17864d",
+          "team": "orders",
+          "sha256": "c12dfc17864d773928fb98a5df625740b41c9bbe684cd356530d5da7bea894cf",
+          "source": "logs",
+          "locator": "demo://logs/47",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.319602 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 47
+          },
+          "version": "47",
+          "available": true,
+          "event_time": "2005-06-03T22:42:57+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "47"
+        },
+        {
+          "id": "logs:48:a9183e6f70b7",
+          "team": "orders",
+          "sha256": "a9183e6f70b7425e85d04206b3708a58c10b2d9c23fd33d40a7e3605e61ff3f1",
+          "source": "logs",
+          "locator": "demo://logs/48",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.468068 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 48
+          },
+          "version": "48",
+          "available": true,
+          "event_time": "2005-06-03T22:42:57+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "48"
+        },
+        {
+          "id": "logs:49:747b96e4283f",
+          "team": "orders",
+          "sha256": "747b96e4283f494ede3096c66829a1db2d1cb02f9a42b87b7c89ebcb03cab8b1",
+          "source": "logs",
+          "locator": "demo://logs/49",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.609155 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 49
+          },
+          "version": "49",
+          "available": true,
+          "event_time": "2005-06-03T22:42:57+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "49"
+        },
+        {
+          "id": "logs:50:d25fc351862e",
+          "team": "orders",
+          "sha256": "d25fc351862eddccad4367bc1ad5100c413b7f90f33e224a7daff1e30b16a065",
+          "source": "logs",
+          "locator": "demo://logs/50",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "BGL",
+            "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.757117 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+            "service_name": "checkout-api",
+            "original_line": 50
+          },
+          "version": "50",
+          "available": true,
+          "event_time": "2005-06-03T22:42:57+00:00",
+          "collected_at": "2026-09-24T20:30:14.019419+00:00",
+          "source_record": "50"
+        },
+        {
+          "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "team": "orders",
+          "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "snippet": {
+            "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+            "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+          },
+          "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.054617+00:00",
+          "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+        },
+        {
+          "id": "runbook:orders-runbook:3fd079fe1881",
+          "team": "orders",
+          "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "snippet": {
+            "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+          },
+          "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.084032+00:00",
+          "source_record": "orders-runbook"
+        }
+      ],
+      "conflicts": [],
+      "freshness": [
+        {
+          "source": "deployments",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:13.984961+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "logs",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:14.019419+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "git",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:14.054617+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "runbook",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:14.084032+00:00",
+          "snapshot_consistency": "independent_source"
+        }
+      ],
+      "candidates": [],
+      "next_steps": [
+        "核对实际部署版本与日志时间窗口。",
+        "检查连接池和依赖延迟指标，补齐缺失来源后确认原因。"
+      ],
+      "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+      "historical_memory": []
+    },
+    "status": "partial",
+    "service": "svc-17",
+    "subject": "alice",
+    "symptom": "[Loghub sequential 10000] Investigate public BGL system logs in this historical window; identify observations, uncertainty and missing sources.",
+    "manifest": {
+      "code": "b2a6c2e5acbbf4372279e4a9a991d3d53e68f4fa",
+      "cost": {
+        "unknown": "provider usage unavailable in baseline",
+        "estimated_usd": null,
+        "known_model_tokens": null
+      },
+      "model": "none-deterministic",
+      "prompt": "investigate-v1",
+      "skills": [
+        "release-compare@1",
+        "log-analysis@1"
+      ],
+      "version": "1",
+      "ontology": "1",
+      "evaluator": "rules-v1",
+      "retrieval": "bounded-50",
+      "snapshots": {
+        "git": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2005-06-03T23:59:59.010001+00:00",
+            "team": "orders",
+            "start": "2005-06-03T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "content": {
+                "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:14.054617+00:00"
+        },
+        "logs": {
+          "sync": "monotonic_id",
+          "scope": {
+            "end": "2005-06-03T23:59:59.010001+00:00",
+            "team": "orders",
+            "start": "2005-06-03T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "1",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.363779 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 1
+              },
+              "deleted": false,
+              "locator": "demo://logs/1",
+              "version": "1",
+              "event_time": "2005-06-03T22:42:50+00:00"
+            },
+            {
+              "id": "2",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.527847 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 2
+              },
+              "deleted": false,
+              "locator": "demo://logs/2",
+              "version": "2",
+              "event_time": "2005-06-03T22:42:50+00:00"
+            },
+            {
+              "id": "3",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.675872 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 3
+              },
+              "deleted": false,
+              "locator": "demo://logs/3",
+              "version": "3",
+              "event_time": "2005-06-03T22:42:50+00:00"
+            },
+            {
+              "id": "4",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.823719 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 4
+              },
+              "deleted": false,
+              "locator": "demo://logs/4",
+              "version": "4",
+              "event_time": "2005-06-03T22:42:50+00:00"
+            },
+            {
+              "id": "5",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838570 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.50.982731 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 5
+              },
+              "deleted": false,
+              "locator": "demo://logs/5",
+              "version": "5",
+              "event_time": "2005-06-03T22:42:50+00:00"
+            },
+            {
+              "id": "6",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.131467 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 6
+              },
+              "deleted": false,
+              "locator": "demo://logs/6",
+              "version": "6",
+              "event_time": "2005-06-03T22:42:51+00:00"
+            },
+            {
+              "id": "7",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.293532 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 7
+              },
+              "deleted": false,
+              "locator": "demo://logs/7",
+              "version": "7",
+              "event_time": "2005-06-03T22:42:51+00:00"
+            },
+            {
+              "id": "8",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.428563 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 8
+              },
+              "deleted": false,
+              "locator": "demo://logs/8",
+              "version": "8",
+              "event_time": "2005-06-03T22:42:51+00:00"
+            },
+            {
+              "id": "9",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.601412 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 9
+              },
+              "deleted": false,
+              "locator": "demo://logs/9",
+              "version": "9",
+              "event_time": "2005-06-03T22:42:51+00:00"
+            },
+            {
+              "id": "10",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.749199 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 10
+              },
+              "deleted": false,
+              "locator": "demo://logs/10",
+              "version": "10",
+              "event_time": "2005-06-03T22:42:51+00:00"
+            },
+            {
+              "id": "11",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838571 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.51.885834 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 11
+              },
+              "deleted": false,
+              "locator": "demo://logs/11",
+              "version": "11",
+              "event_time": "2005-06-03T22:42:51+00:00"
+            },
+            {
+              "id": "12",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.041388 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 12
+              },
+              "deleted": false,
+              "locator": "demo://logs/12",
+              "version": "12",
+              "event_time": "2005-06-03T22:42:52+00:00"
+            },
+            {
+              "id": "13",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.199063 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 13
+              },
+              "deleted": false,
+              "locator": "demo://logs/13",
+              "version": "13",
+              "event_time": "2005-06-03T22:42:52+00:00"
+            },
+            {
+              "id": "14",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.345821 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 14
+              },
+              "deleted": false,
+              "locator": "demo://logs/14",
+              "version": "14",
+              "event_time": "2005-06-03T22:42:52+00:00"
+            },
+            {
+              "id": "15",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.493353 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 15
+              },
+              "deleted": false,
+              "locator": "demo://logs/15",
+              "version": "15",
+              "event_time": "2005-06-03T22:42:52+00:00"
+            },
+            {
+              "id": "16",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.638135 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 16
+              },
+              "deleted": false,
+              "locator": "demo://logs/16",
+              "version": "16",
+              "event_time": "2005-06-03T22:42:52+00:00"
+            },
+            {
+              "id": "17",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.807927 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 17
+              },
+              "deleted": false,
+              "locator": "demo://logs/17",
+              "version": "17",
+              "event_time": "2005-06-03T22:42:52+00:00"
+            },
+            {
+              "id": "18",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838572 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.52.951717 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 18
+              },
+              "deleted": false,
+              "locator": "demo://logs/18",
+              "version": "18",
+              "event_time": "2005-06-03T22:42:52+00:00"
+            },
+            {
+              "id": "19",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.125780 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 19
+              },
+              "deleted": false,
+              "locator": "demo://logs/19",
+              "version": "19",
+              "event_time": "2005-06-03T22:42:53+00:00"
+            },
+            {
+              "id": "20",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.276129 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 20
+              },
+              "deleted": false,
+              "locator": "demo://logs/20",
+              "version": "20",
+              "event_time": "2005-06-03T22:42:53+00:00"
+            },
+            {
+              "id": "21",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.414979 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 21
+              },
+              "deleted": false,
+              "locator": "demo://logs/21",
+              "version": "21",
+              "event_time": "2005-06-03T22:42:53+00:00"
+            },
+            {
+              "id": "22",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.573391 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 22
+              },
+              "deleted": false,
+              "locator": "demo://logs/22",
+              "version": "22",
+              "event_time": "2005-06-03T22:42:53+00:00"
+            },
+            {
+              "id": "23",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.722611 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 23
+              },
+              "deleted": false,
+              "locator": "demo://logs/23",
+              "version": "23",
+              "event_time": "2005-06-03T22:42:53+00:00"
+            },
+            {
+              "id": "24",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838573 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.53.870042 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 24
+              },
+              "deleted": false,
+              "locator": "demo://logs/24",
+              "version": "24",
+              "event_time": "2005-06-03T22:42:53+00:00"
+            },
+            {
+              "id": "25",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.019446 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 25
+              },
+              "deleted": false,
+              "locator": "demo://logs/25",
+              "version": "25",
+              "event_time": "2005-06-03T22:42:54+00:00"
+            },
+            {
+              "id": "26",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.161937 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 26
+              },
+              "deleted": false,
+              "locator": "demo://logs/26",
+              "version": "26",
+              "event_time": "2005-06-03T22:42:54+00:00"
+            },
+            {
+              "id": "27",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.309788 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 27
+              },
+              "deleted": false,
+              "locator": "demo://logs/27",
+              "version": "27",
+              "event_time": "2005-06-03T22:42:54+00:00"
+            },
+            {
+              "id": "28",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.532078 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 28
+              },
+              "deleted": false,
+              "locator": "demo://logs/28",
+              "version": "28",
+              "event_time": "2005-06-03T22:42:54+00:00"
+            },
+            {
+              "id": "29",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.672029 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 29
+              },
+              "deleted": false,
+              "locator": "demo://logs/29",
+              "version": "29",
+              "event_time": "2005-06-03T22:42:54+00:00"
+            },
+            {
+              "id": "30",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.822857 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 30
+              },
+              "deleted": false,
+              "locator": "demo://logs/30",
+              "version": "30",
+              "event_time": "2005-06-03T22:42:54+00:00"
+            },
+            {
+              "id": "31",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838574 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.54.958702 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 31
+              },
+              "deleted": false,
+              "locator": "demo://logs/31",
+              "version": "31",
+              "event_time": "2005-06-03T22:42:54+00:00"
+            },
+            {
+              "id": "32",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.114809 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 32
+              },
+              "deleted": false,
+              "locator": "demo://logs/32",
+              "version": "32",
+              "event_time": "2005-06-03T22:42:55+00:00"
+            },
+            {
+              "id": "33",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.258578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 33
+              },
+              "deleted": false,
+              "locator": "demo://logs/33",
+              "version": "33",
+              "event_time": "2005-06-03T22:42:55+00:00"
+            },
+            {
+              "id": "34",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.401336 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 34
+              },
+              "deleted": false,
+              "locator": "demo://logs/34",
+              "version": "34",
+              "event_time": "2005-06-03T22:42:55+00:00"
+            },
+            {
+              "id": "35",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.551171 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 35
+              },
+              "deleted": false,
+              "locator": "demo://logs/35",
+              "version": "35",
+              "event_time": "2005-06-03T22:42:55+00:00"
+            },
+            {
+              "id": "36",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.696784 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 36
+              },
+              "deleted": false,
+              "locator": "demo://logs/36",
+              "version": "36",
+              "event_time": "2005-06-03T22:42:55+00:00"
+            },
+            {
+              "id": "37",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.841735 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 37
+              },
+              "deleted": false,
+              "locator": "demo://logs/37",
+              "version": "37",
+              "event_time": "2005-06-03T22:42:55+00:00"
+            },
+            {
+              "id": "38",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838575 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.55.973893 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 38
+              },
+              "deleted": false,
+              "locator": "demo://logs/38",
+              "version": "38",
+              "event_time": "2005-06-03T22:42:55+00:00"
+            },
+            {
+              "id": "39",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.126048 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 39
+              },
+              "deleted": false,
+              "locator": "demo://logs/39",
+              "version": "39",
+              "event_time": "2005-06-03T22:42:56+00:00"
+            },
+            {
+              "id": "40",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.275900 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 40
+              },
+              "deleted": false,
+              "locator": "demo://logs/40",
+              "version": "40",
+              "event_time": "2005-06-03T22:42:56+00:00"
+            },
+            {
+              "id": "41",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.420533 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 41
+              },
+              "deleted": false,
+              "locator": "demo://logs/41",
+              "version": "41",
+              "event_time": "2005-06-03T22:42:56+00:00"
+            },
+            {
+              "id": "42",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.558188 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 42
+              },
+              "deleted": false,
+              "locator": "demo://logs/42",
+              "version": "42",
+              "event_time": "2005-06-03T22:42:56+00:00"
+            },
+            {
+              "id": "43",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.715625 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 43
+              },
+              "deleted": false,
+              "locator": "demo://logs/43",
+              "version": "43",
+              "event_time": "2005-06-03T22:42:56+00:00"
+            },
+            {
+              "id": "44",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838576 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.56.863230 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 44
+              },
+              "deleted": false,
+              "locator": "demo://logs/44",
+              "version": "44",
+              "event_time": "2005-06-03T22:42:56+00:00"
+            },
+            {
+              "id": "45",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.001213 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 45
+              },
+              "deleted": false,
+              "locator": "demo://logs/45",
+              "version": "45",
+              "event_time": "2005-06-03T22:42:57+00:00"
+            },
+            {
+              "id": "46",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.170578 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 46
+              },
+              "deleted": false,
+              "locator": "demo://logs/46",
+              "version": "46",
+              "event_time": "2005-06-03T22:42:57+00:00"
+            },
+            {
+              "id": "47",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.319602 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 47
+              },
+              "deleted": false,
+              "locator": "demo://logs/47",
+              "version": "47",
+              "event_time": "2005-06-03T22:42:57+00:00"
+            },
+            {
+              "id": "48",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.468068 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 48
+              },
+              "deleted": false,
+              "locator": "demo://logs/48",
+              "version": "48",
+              "event_time": "2005-06-03T22:42:57+00:00"
+            },
+            {
+              "id": "49",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.609155 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 49
+              },
+              "deleted": false,
+              "locator": "demo://logs/49",
+              "version": "49",
+              "event_time": "2005-06-03T22:42:57+00:00"
+            },
+            {
+              "id": "50",
+              "content": {
+                "level": "INFO",
+                "dataset": "BGL",
+                "message": "1117838577 2005.06.03 R02-M1-N0-C:J12-U11 2005-06-03-15.42.57.757117 R02-M1-N0-C:J12-U11 RAS KERNEL INFO instruction cache parity error corrected",
+                "service_name": "checkout-api",
+                "original_line": 50
+              },
+              "deleted": false,
+              "locator": "demo://logs/50",
+              "version": "50",
+              "event_time": "2005-06-03T22:42:57+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": "50",
+          "observed_at": "2026-09-24T20:30:14.019419+00:00"
+        },
+        "runbook": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2005-06-03T23:59:59.010001+00:00",
+            "team": "orders",
+            "start": "2005-06-03T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "orders-runbook",
+              "content": {
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/RUNBOOK.md",
+              "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:14.084032+00:00"
+        },
+        "deployments": {
+          "scope": {
+            "end": "2005-06-03T23:59:59.010001+00:00",
+            "team": "orders",
+            "start": "2005-06-03T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:13.984961+00:00"
+        }
+      },
+      "generation": 1,
+      "tool_schema": "1",
+      "source_mapping": "1",
+      "model_parameters": {
+        "temperature": "provider-default"
+      },
+      "permission_policy": "go-v1"
+    },
+    "start_at": "2005-06-03T00:00:00+00:00",
+    "timezone": "UTC",
+    "trace_id": "6f88d3a722868af9b2159f0765401619",
+    "created_at": "2026-09-24T20:30:13.712743+00:00",
+    "updated_at": "2026-09-24T20:30:14.1237+00:00",
+    "request_hash": "0aaefce076d56be541c107e5d2c6898aeb14c73caa1ebe8d960e58a8b6b2dc79",
+    "evidence_stale": false,
+    "source_version": 1
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "queued",
+      "payload": {
+        "request_id": "9932a202-1399-494e-908e-3ef14edea801"
+      },
+      "created_at": "2026-09-24T20:30:13.712743+00:00"
+    },
+    {
+      "seq": 2,
+      "kind": "claimed",
+      "payload": {
+        "worker": "62c884b0db5b:344970be-8585-476e-a273-2bda0e10e93b"
+      },
+      "created_at": "2026-09-24T20:30:13.939694+00:00"
+    },
+    {
+      "seq": 3,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:13.971783+00:00"
+    },
+    {
+      "seq": 4,
+      "kind": "hook",
+      "payload": {
+        "name": "plan_validated",
+        "status": "pass",
+        "summary": {
+          "steps": 4
+        }
+      },
+      "created_at": "2026-09-24T20:30:13.977214+00:00"
+    },
+    {
+      "seq": 5,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:30:13.979233+00:00"
+    },
+    {
+      "seq": 6,
+      "kind": "authorized",
+      "payload": {
+        "tool": "deployments",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:13.980134+00:00"
+    },
+    {
+      "seq": 7,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:30:13.985808+00:00"
+    },
+    {
+      "seq": 8,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "deployments",
+          "status": "ok",
+          "milliseconds": 8.38
+        }
+      },
+      "created_at": "2026-09-24T20:30:13.987642+00:00"
+    },
+    {
+      "seq": 9,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:30:13.988606+00:00"
+    },
+    {
+      "seq": 10,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:13.989763+00:00"
+    },
+    {
+      "seq": 11,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.016905+00:00"
+    },
+    {
+      "seq": 12,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 50,
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.02142+00:00"
+    },
+    {
+      "seq": 13,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "logs",
+          "status": "ok",
+          "milliseconds": 34.22
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.023346+00:00"
+    },
+    {
+      "seq": 14,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.024247+00:00"
+    },
+    {
+      "seq": 15,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.025504+00:00"
+    },
+    {
+      "seq": 16,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.050256+00:00"
+    },
+    {
+      "seq": 17,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.055393+00:00"
+    },
+    {
+      "seq": 18,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "git",
+          "status": "ok",
+          "milliseconds": 32.0
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.056268+00:00"
+    },
+    {
+      "seq": 19,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.05698+00:00"
+    },
+    {
+      "seq": 20,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.057722+00:00"
+    },
+    {
+      "seq": 21,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.08155+00:00"
+    },
+    {
+      "seq": 22,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.08464+00:00"
+    },
+    {
+      "seq": 23,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "runbook",
+          "status": "ok",
+          "milliseconds": 28.36
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.085293+00:00"
+    },
+    {
+      "seq": 24,
+      "kind": "authorized",
+      "payload": {
+        "tool": "memory",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.086125+00:00"
+    },
+    {
+      "seq": 25,
+      "kind": "hook",
+      "payload": {
+        "name": "context_assembled",
+        "status": "pass",
+        "summary": {
+          "facts": 52,
+          "evidence": 52,
+          "conflicts": 0
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.086927+00:00"
+    },
+    {
+      "seq": 26,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.087578+00:00"
+    },
+    {
+      "seq": 27,
+      "kind": "checkpoint_saved",
+      "payload": {
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.09864+00:00"
+    },
+    {
+      "seq": 28,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.108283+00:00"
+    },
+    {
+      "seq": 29,
+      "kind": "artifact_saved",
+      "payload": {
+        "key": "orders/306b2433-765f-46f6-93cc-3b3938d7ba65/5a831fbb-e267-4c66-86c5-b70f9aae2803",
+        "state": "ready",
+        "sha256": "e88354f5d0b6031f03069b95dfb6e4e8278be0af8b23fbd54621bcbd2c012fb0"
+      },
+      "created_at": "2026-09-24T20:30:14.120891+00:00"
+    },
+    {
+      "seq": 30,
+      "kind": "hook",
+      "payload": {
+        "name": "run_finished",
+        "status": "pass",
+        "summary": {
+          "mode": "deterministic-baseline",
+          "facts": 52
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.121914+00:00"
+    },
+    {
+      "seq": 31,
+      "kind": "result",
+      "payload": {
+        "status": "partial",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.1237+00:00"
+    }
+  ]
+}

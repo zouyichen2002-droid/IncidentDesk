@@ -1,0 +1,248 @@
+[
+  {
+    "case": "rare",
+    "question": "查BGL在2005年11月3日的异常日志",
+    "create_status": 202,
+    "create_s": 2.552,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": true,
+      "planner_mistral": true,
+      "answer_references_resolve": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": true,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "rare_event_found": true
+    },
+    "id": "a6f6a955-651a-49ca-8b0f-4f29875b8007",
+    "status": "partial",
+    "elapsed_s": 9.611,
+    "mode": "mistral",
+    "retrieval": {
+      "mode": "anomalies",
+      "pages": 3,
+      "terms": [],
+      "levels": {
+        "INFO": 157110,
+        "KILL": 8,
+        "FATAL": 5577
+      },
+      "matched": 5577,
+      "sampled": true,
+      "selection": "rare-patterns-and-severity-keyset",
+      "provenance": "public-dataset",
+      "labels_used": false,
+      "template_scan": 5577,
+      "evidence_count": 60,
+      "total_in_query": 162695
+    },
+    "log_evidence": 60,
+    "answer": "2005年11月3日BGL异常日志共命中5577条FATAL级别记录（按稀疏模式与严重级别抽样）。核心异常类型：1）内核panic（1条）；2）ciod加载程序镜像失败（文件不存在或权限不足，7条）；3）镜像过大（2条）；4）工作目录不存在（1条）。均为RAS APP/FATAL级别，涉及节点R23/R63/R62/R77/R40/R35等。",
+    "model": {
+      "model": "mistral-small-latest",
+      "usage": {
+        "service_tier": "standard",
+        "total_tokens": 3893,
+        "prompt_tokens": 3076,
+        "completion_tokens": 817,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "provider": "mistral",
+      "milliseconds": 5108.65
+    },
+    "query": {
+      "mode": "anomalies",
+      "terms": [],
+      "levels": [
+        "ERROR",
+        "FATAL",
+        "SEVERE",
+        "FAILURE",
+        "WARN",
+        "WARNING",
+        "CRITICAL",
+        "ALERT",
+        "EMERG"
+      ]
+    }
+  },
+  {
+    "case": "block",
+    "question": "查HDFS在2008年11月9日 blk_-1608999687919862906 的日志",
+    "create_status": 202,
+    "create_s": 2.111,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": true,
+      "planner_mistral": true,
+      "answer_references_resolve": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": true,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "exact_block": true
+    },
+    "id": "875c5593-1fff-47b7-a344-c6abe6c52664",
+    "status": "partial",
+    "elapsed_s": 9.179,
+    "mode": "mistral",
+    "retrieval": {
+      "mode": "search",
+      "pages": 3,
+      "terms": [
+        "blk_-1608999687919862906"
+      ],
+      "levels": {
+        "INFO": 269
+      },
+      "matched": 269,
+      "sampled": true,
+      "selection": "rare-patterns-and-severity-keyset",
+      "provenance": "public-dataset",
+      "labels_used": false,
+      "template_scan": 0,
+      "evidence_count": 60,
+      "total_in_query": 269
+    },
+    "log_evidence": 60,
+    "answer": "在2008年11月9日，HDFS日志中检索到blk_-1608999687919862906的INFO级别记录。该块在20:35:18被FSNamesystem分配用于job_200811092030_0001/job.jar，随后被三个DataNode（10.250.19.102、10.250.10.6、10.250.14.224）接收并存储，块大小为91178字节。",
+    "model": {
+      "model": "mistral-small-latest",
+      "usage": {
+        "service_tier": "standard",
+        "total_tokens": 3838,
+        "prompt_tokens": 2936,
+        "completion_tokens": 902,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "provider": "mistral",
+      "milliseconds": 5127.42
+    },
+    "query": {
+      "mode": "search",
+      "terms": [
+        "blk_-1608999687919862906"
+      ],
+      "levels": [
+        "ERROR",
+        "FATAL",
+        "SEVERE",
+        "FAILURE",
+        "WARN",
+        "WARNING",
+        "CRITICAL",
+        "ALERT",
+        "EMERG",
+        "INFO",
+        "DEBUG",
+        "TRACE"
+      ]
+    }
+  },
+  {
+    "case": "empty",
+    "question": "查BGL在2005年11月3日包含“zznonexistentmarker91472”的日志",
+    "create_status": 202,
+    "create_s": 1.705,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": true,
+      "planner_mistral": true,
+      "answer_references_resolve": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": true,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "empty_honest": true
+    },
+    "id": "6ffa7f35-2351-42ad-bbc3-a4e31881e93b",
+    "status": "waiting_information",
+    "elapsed_s": 3.721,
+    "mode": "mistral",
+    "retrieval": {
+      "mode": "search",
+      "pages": 1,
+      "terms": [
+        "zznonexistentmarker91472"
+      ],
+      "levels": {},
+      "matched": 0,
+      "sampled": false,
+      "selection": "rare-patterns-and-severity-keyset",
+      "provenance": "public-dataset",
+      "labels_used": false,
+      "template_scan": 0,
+      "evidence_count": 0,
+      "total_in_query": 0
+    },
+    "log_evidence": 0,
+    "answer": "在给定范围内未查到2005年11月3日包含“zznonexistentmarker91472”的BGL日志。检索统计显示：retrieval.matched=0，且scope内无可访问的部署、日志、Git或运维手册记录。",
+    "model": {
+      "model": "mistral-small-latest",
+      "usage": {
+        "service_tier": "standard",
+        "total_tokens": 773,
+        "prompt_tokens": 609,
+        "completion_tokens": 164,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "provider": "mistral",
+      "milliseconds": 1612.69
+    },
+    "query": {
+      "mode": "search",
+      "terms": [
+        "zznonexistentmarker91472"
+      ],
+      "levels": [
+        "UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case": "forbidden",
+    "question": "查HDFS在2008年11月9日的错误日志",
+    "create_status": 200,
+    "create_s": 0.005,
+    "checks": {
+      "expected_status": true,
+      "clarification": true
+    },
+    "response": {
+      "clarification": "该服务不在当前账号可查询的来源中。可选：订单服务",
+      "mode": "scope-check",
+      "status": "clarification"
+    }
+  },
+  {
+    "case": "wide",
+    "question": "查BGL在2005年11月1日到2005年11月30日的异常",
+    "create_status": 200,
+    "create_s": 1.739,
+    "checks": {
+      "expected_status": true,
+      "clarification": true
+    },
+    "response": {
+      "clarification": "请给出明确的起止时间，且单次范围不超过7天。",
+      "mode": "mistral",
+      "status": "clarification"
+    }
+  }
+]

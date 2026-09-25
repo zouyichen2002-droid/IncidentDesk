@@ -1,0 +1,68 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "tool": {
+      "title": "Tool",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "error",
+        "denied",
+        "truncated"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "records": {
+      "default": [],
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Records",
+      "type": "array"
+    },
+    "next_cursor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Next Cursor"
+    },
+    "watermark": {
+      "title": "Watermark",
+      "type": "string"
+    },
+    "observed_at": {
+      "title": "Observed At",
+      "type": "string"
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Error"
+    }
+  },
+  "required": [
+    "tool",
+    "status",
+    "watermark",
+    "observed_at"
+  ],
+  "title": "ToolResult",
+  "type": "object"
+}

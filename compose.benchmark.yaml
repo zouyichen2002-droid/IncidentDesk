@@ -1,0 +1,85 @@
+# Isolated, local-only full-public-log benchmark. Does not use the default volumes.
+name: incidentdesk-public-logs
+services:
+  postgres:
+    image: postgres:17.6-bookworm
+    environment:
+      POSTGRES_DB: incidentdesk
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: local-bootstrap
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d incidentdesk"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  demo:
+    image: incidentdesk-demo:0.1.0
+    environment:
+      OIDC_ISSUER: http://demo:8090
+      API_URL: http://api:8080
+      SEED_DATABASE_URL: postgres://postgres:local-bootstrap@postgres/incidentdesk
+    volumes:
+      - demodata:/data
+      - ./.local/public-log-benchmark:/benchmark
+      - ./scripts:/bench-scripts:ro
+      - ./docs/evidence/public-logs:/evidence
+    ports: ["127.0.0.1:28090:8090"]
+    depends_on:
+      postgres: {condition: service_healthy}
+  api:
+    restart: on-failure
+    image: incidentdesk-api:0.1.0
+    environment:
+      DATABASE_URL: postgres://incident_api:local-api@postgres/incidentdesk?search_path=business
+      OIDC_ISSUER: http://demo:8090
+      CONTEXT_URL: http://context:8091
+      SOURCE_URL: http://demo:8090
+      INTERNAL_KEY: local-worker-key
+      GITHUB_API_URL: http://demo:8090/github
+    ports: ["127.0.0.1:28080:8080"]
+    depends_on: [demo]
+  worker:
+    restart: on-failure
+    image: incidentdesk-worker:0.1.0
+    environment:
+      API_URL: http://api:8080
+      SOURCE_URL: http://demo:8090
+      CHECKPOINT_DATABASE_URL: postgres://incident_agent:local-agent@postgres/incidentdesk?options=-csearch_path%3Dagent
+      SOURCE_DATABASE_URL: postgres://incident_source:local-source@postgres/incidentdesk
+      INTERNAL_KEY: local-worker-key
+      HARNESS: ${BENCH_HARNESS:-langgraph}
+      MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
+      MISTRAL_MODEL: ${MISTRAL_MODEL:-mistral-small-latest}
+      MISTRAL_BASE_URL: ${MISTRAL_BASE_URL:-https://api.mistral.ai/v1}
+      WORKER_SLOTS: '3'
+      S3_ENDPOINT: http://objects:9000
+    depends_on: [api, objects]
+  context:
+    image: incidentdesk-worker:0.1.0
+    command: ["uvicorn", "incident_worker.context_api:app", "--host", "0.0.0.0", "--port", "8091"]
+    environment:
+      INTERNAL_KEY: local-worker-key
+      MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
+      MISTRAL_MODEL: ${MISTRAL_MODEL:-mistral-small-latest}
+      MISTRAL_BASE_URL: ${MISTRAL_BASE_URL:-https://api.mistral.ai/v1}
+      API_URL: http://api:8080
+      SOURCE_URL: http://demo:8090
+      CHECKPOINT_DATABASE_URL: postgres://incident_agent:local-agent@postgres/incidentdesk?options=-csearch_path%3Dagent
+      SOURCE_DATABASE_URL: postgres://incident_source:local-source@postgres/incidentdesk
+    depends_on: [api]
+  objects:
+    image: chrislusf/seaweedfs:3.97
+    command: server -dir=/data -s3 -s3.port=9000 -ip=objects
+    volumes: ["objects:/data"]
+  web:
+    restart: on-failure
+    image: incidentdesk-web:0.1.0
+    ports: ["127.0.0.1:28088:80"]
+    depends_on: [api, demo]
+volumes:
+  pgdata:
+  demodata:
+  objects:

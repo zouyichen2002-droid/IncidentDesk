@@ -1,0 +1,2 @@
+Table 'knowledge_build' already exists
+Knowledge already initialized: merged-v1

@@ -1,0 +1,260 @@
+{
+  "$defs": {
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "collected_at": {
+          "title": "Collected At",
+          "type": "string"
+        },
+        "event_time": {
+          "title": "Event Time",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "snippet": {
+          "title": "Snippet"
+        },
+        "team": {
+          "title": "Team",
+          "type": "string"
+        },
+        "source_record": {
+          "title": "Source Record",
+          "type": "string"
+        },
+        "available": {
+          "default": true,
+          "title": "Available",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "locator",
+        "collected_at",
+        "event_time",
+        "version",
+        "sha256",
+        "snippet",
+        "team",
+        "source_record"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "PlanStep": {
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "enum": [
+            "logs",
+            "deployments",
+            "git",
+            "runbook",
+            "cluster"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "object": {
+          "enum": [
+            "Service",
+            "Deployment",
+            "Commit",
+            "Runbook",
+            "Incident"
+          ],
+          "title": "Object",
+          "type": "string"
+        },
+        "path": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Path",
+          "type": "array"
+        },
+        "limit": {
+          "default": 50,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Limit",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "source",
+        "object",
+        "path"
+      ],
+      "title": "PlanStep",
+      "type": "object"
+    },
+    "QueryPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": "1",
+          "default": "1",
+          "title": "Version",
+          "type": "string"
+        },
+        "service": {
+          "title": "Service",
+          "type": "string"
+        },
+        "start": {
+          "format": "date-time",
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "format": "date-time",
+          "title": "End",
+          "type": "string"
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/$defs/PlanStep"
+          },
+          "maxItems": 12,
+          "title": "Steps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "service",
+        "start",
+        "end",
+        "steps"
+      ],
+      "title": "QueryPlan",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "1",
+      "default": "1",
+      "title": "Version",
+      "type": "string"
+    },
+    "scope": {
+      "additionalProperties": true,
+      "title": "Scope",
+      "type": "object"
+    },
+    "objects": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Objects",
+      "type": "array"
+    },
+    "facts": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Facts",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "missing": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing",
+      "type": "array"
+    },
+    "conflicts": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Conflicts",
+      "type": "array"
+    },
+    "freshness": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Freshness",
+      "type": "array"
+    },
+    "plan": {
+      "$ref": "#/$defs/QueryPlan"
+    },
+    "token_budget": {
+      "title": "Token Budget",
+      "type": "integer"
+    },
+    "memories": {
+      "default": [],
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Memories",
+      "type": "array"
+    },
+    "retrieval": {
+      "additionalProperties": true,
+      "title": "Retrieval",
+      "type": "object"
+    },
+    "mapping_version": {
+      "default": "2",
+      "title": "Mapping Version",
+      "type": "string"
+    },
+    "ontology_version": {
+      "default": "1",
+      "title": "Ontology Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scope",
+    "objects",
+    "facts",
+    "evidence",
+    "missing",
+    "conflicts",
+    "freshness",
+    "plan",
+    "token_budget"
+  ],
+  "title": "ContextBundle",
+  "type": "object"
+}

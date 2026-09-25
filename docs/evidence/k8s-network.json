@@ -1,0 +1,14 @@
+{
+  "denied": {
+    "phase": "Failed",
+    "log": "wget: can't connect to remote host (10.43.141.123): Connection refused\n"
+  },
+  "allowed": {
+    "phase": "Succeeded",
+    "log": "{\"status\":\"ready\"}\n"
+  },
+  "rbac_allowed": "yes",
+  "rbac_denied": "no",
+  "rbac_cross_namespace": "no",
+  "pass": true
+}

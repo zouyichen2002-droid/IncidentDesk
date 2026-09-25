@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-25",
+  "conversation": {
+    "passed": 30,
+    "total": 30
+  },
+  "regression": {
+    "passed": 26,
+    "total": 26,
+    "method": "24 passed in full regression; two authorization checks retested with explicit warehouse mode. Automatic authorization also covered by conversation acceptance."
+  },
+  "query_unit_tests": 12,
+  "go_race_and_vet": "passed",
+  "web_build": "passed",
+  "numerical_oracles": {
+    "east_q1_gmv": 107373,
+    "east_feb_gmv": 17508
+  },
+  "limitations": [
+    "finite cases, no claim of universal accuracy",
+    "conversation context stays in this tab until reload",
+    "no new data sources or web search"
+  ]
+}

@@ -1,0 +1,95 @@
+goroutine profile: total 18
+7 @ 0x9a948 0x5b340 0x99b40 0x100238 0x10121c 0x10120d 0x21b278 0x226284 0x3330a8 0x2b428c 0x2b43c8 0x33823c 0xa1d94
+#	0x99b3f		internal/poll.runtime_pollWait+0x9f		runtime/netpoll.go:351
+#	0x100237	internal/poll.(*pollDesc).wait+0x27		internal/poll/fd_poll_runtime.go:84
+#	0x10121b	internal/poll.(*pollDesc).waitRead+0x22b	internal/poll/fd_poll_runtime.go:89
+#	0x10120c	internal/poll.(*FD).Read+0x21c			internal/poll/fd_unix.go:170
+#	0x21b277	net.(*netFD).Read+0x27				net/fd_posix.go:68
+#	0x226283	net.(*conn).Read+0x33				net/net.go:196
+#	0x3330a7	net/http.(*connReader).Read+0x227		net/http/server.go:856
+#	0x2b428b	bufio.(*Reader).fill+0xdb			bufio/bufio.go:113
+#	0x2b43c7	bufio.(*Reader).Peek+0x57			bufio/bufio.go:152
+#	0x33823b	net/http.(*conn).serve+0x6cb			net/http/server.go:2173
+
+1 @ 0x2e3e4 0x9cba4 0x65050c 0xa1d94
+#	0x9cba3		os/signal.signal_recv+0x113	runtime/sigqueue.go:152
+#	0x65050b	os/signal.loop+0x1b		os/signal/signal_unix.go:23
+
+1 @ 0x5795c 0x99684 0x63c2f4 0x63bfa0 0x639804 0x64c204 0x64ca30 0x339a68 0x33b1d4 0x359160 0x338110 0xa1d94
+#	0x63c2f3	runtime/pprof.writeRuntimeProfile+0xb3	runtime/pprof/pprof.go:848
+#	0x63bf9f	runtime/pprof.writeGoroutine+0x4f	runtime/pprof/pprof.go:781
+#	0x639803	runtime/pprof.(*Profile).WriteTo+0x143	runtime/pprof/pprof.go:405
+#	0x64c203	net/http/pprof.handler.ServeHTTP+0x433	net/http/pprof/pprof.go:272
+#	0x64ca2f	net/http/pprof.Index+0xaf		net/http/pprof/pprof.go:391
+#	0x339a67	net/http.HandlerFunc.ServeHTTP+0x37	net/http/server.go:2338
+#	0x33b1d3	net/http.(*ServeMux).ServeHTTP+0x193	net/http/server.go:2903
+#	0x35915f	net/http.serverHandler.ServeHTTP+0xaf	net/http/server.go:3413
+#	0x33810f	net/http.(*conn).serve+0x59f		net/http/server.go:2137
+
+1 @ 0x9a948 0x28ff0 0x28b44 0x6510e8 0x61d20 0xa1d94
+#	0x6510e7	main.main+0x3e7		incidentdesk/cmd/server/main.go:43
+#	0x61d1f		runtime.main+0x37f	runtime/proc.go:302
+
+1 @ 0x9a948 0x5b340 0x99b40 0x100238 0x10121c 0x10120d 0x21b278 0x226284 0x332b88 0xa1d94
+#	0x99b3f		internal/poll.runtime_pollWait+0x9f		runtime/netpoll.go:351
+#	0x100237	internal/poll.(*pollDesc).wait+0x27		internal/poll/fd_poll_runtime.go:84
+#	0x10121b	internal/poll.(*pollDesc).waitRead+0x22b	internal/poll/fd_poll_runtime.go:89
+#	0x10120c	internal/poll.(*FD).Read+0x21c			internal/poll/fd_unix.go:170
+#	0x21b277	net.(*netFD).Read+0x27				net/fd_posix.go:68
+#	0x226283	net.(*conn).Read+0x33				net/net.go:196
+#	0x332b87	net/http.(*connReader).backgroundRead+0x37	net/http/server.go:746
+
+1 @ 0x9a948 0x5b340 0x99b40 0x100238 0x103e50 0x103e41 0x21c878 0x22e434 0x22d85c 0x33c858 0x33c4a0 0x651234 0xa1d94
+#	0x99b3f		internal/poll.runtime_pollWait+0x9f		runtime/netpoll.go:351
+#	0x100237	internal/poll.(*pollDesc).wait+0x27		internal/poll/fd_poll_runtime.go:84
+#	0x103e4f	internal/poll.(*pollDesc).waitRead+0x20f	internal/poll/fd_poll_runtime.go:89
+#	0x103e40	internal/poll.(*FD).Accept+0x200		internal/poll/fd_unix.go:618
+#	0x21c877	net.(*netFD).accept+0x27			net/fd_unix.go:149
+#	0x22e433	net.(*TCPListener).accept+0x23			net/tcpsock_posix.go:159
+#	0x22d85b	net.(*TCPListener).Accept+0x2b			net/tcpsock.go:387
+#	0x33c857	net/http.(*Server).Serve+0x2a7			net/http/server.go:3551
+#	0x33c49f	net/http.(*Server).ListenAndServe+0x7f		net/http/server.go:3462
+#	0x651233	main.main.func1+0xa3				incidentdesk/cmd/server/main.go:38
+
+1 @ 0x9a948 0x5b340 0x99b40 0x100238 0x103e50 0x103e41 0x21c878 0x22e434 0x22d85c 0x33c858 0x33c4a0 0x651364 0xa1d94
+#	0x99b3f		internal/poll.runtime_pollWait+0x9f		runtime/netpoll.go:351
+#	0x100237	internal/poll.(*pollDesc).wait+0x27		internal/poll/fd_poll_runtime.go:84
+#	0x103e4f	internal/poll.(*pollDesc).waitRead+0x20f	internal/poll/fd_poll_runtime.go:89
+#	0x103e40	internal/poll.(*FD).Accept+0x200		internal/poll/fd_unix.go:618
+#	0x21c877	net.(*netFD).accept+0x27			net/fd_unix.go:149
+#	0x22e433	net.(*TCPListener).accept+0x23			net/tcpsock_posix.go:159
+#	0x22d85b	net.(*TCPListener).Accept+0x2b			net/tcpsock.go:387
+#	0x33c857	net/http.(*Server).Serve+0x2a7			net/http/server.go:3551
+#	0x33c49f	net/http.(*Server).ListenAndServe+0x7f		net/http/server.go:3462
+#	0x651363	net/http.ListenAndServe+0x63			net/http/server.go:3813
+
+1 @ 0x9a948 0x747e8 0x536c90 0x53911c 0xa1d94
+#	0x536c8f	github.com/jackc/pgx/v5/pgxpool.(*Pool).backgroundHealthCheck+0x9f	github.com/jackc/pgx/v5@v5.8.0/pgxpool/pool.go:495
+#	0x53911b	github.com/jackc/pgx/v5/pgxpool.NewWithConfig.func5+0x3b		github.com/jackc/pgx/v5@v5.8.0/pgxpool/pool.go:338
+
+1 @ 0x9a948 0x747e8 0x616c78 0xa1d94
+#	0x616c77	incidentdesk/internal/app.(*App).RunActions+0xb7	incidentdesk/internal/app/actions.go:151
+
+1 @ 0x9a948 0x747e8 0x61fa30 0x62248c 0x339a68 0x33b1d4 0x65157c 0x339a68 0x359160 0x338110 0xa1d94
+#	0x61fa2f	incidentdesk/internal/app.(*App).events+0xacf		incidentdesk/internal/app/queue.go:294
+#	0x62248b	incidentdesk/internal/app.(*App).route.func1+0x3b	incidentdesk/internal/app/app.go:199
+#	0x339a67	net/http.HandlerFunc.ServeHTTP+0x37			net/http/server.go:2338
+#	0x33b1d3	net/http.(*ServeMux).ServeHTTP+0x193			net/http/server.go:2903
+#	0x65157b	incidentdesk/internal/app.(*App).Handler.func1+0x1bb	incidentdesk/internal/app/app.go:136
+#	0x339a67	net/http.HandlerFunc.ServeHTTP+0x37			net/http/server.go:2338
+#	0x35915f	net/http.serverHandler.ServeHTTP+0xaf			net/http/server.go:3413
+#	0x33810f	net/http.(*conn).serve+0x59f				net/http/server.go:2137
+
+1 @ 0x9a948 0x747e8 0x650904 0xa1d94
+#	0x650903	os/signal.NotifyContext.func1+0x73	os/signal/signal.go:304
+
+1 @ 0xb5760 0xb3b30 0x101188 0x101179 0x1010e9 0x21b278 0x226284 0x332b88 0xa1d94
+#	0xb575f		syscall.Syscall+0x1f				syscall/syscall_linux.go:74
+#	0xb3b2f		syscall.read+0x3f				syscall/zsyscall_linux_arm64.go:736
+#	0x101187	syscall.Read+0x197				syscall/syscall_unix.go:183
+#	0x101178	internal/poll.ignoringEINTRIO+0x188		internal/poll/fd_unix.go:743
+#	0x1010e8	internal/poll.(*FD).Read+0xf8			internal/poll/fd_unix.go:166
+#	0x21b277	net.(*netFD).Read+0x27				net/fd_posix.go:68
+#	0x226283	net.(*conn).Read+0x33				net/net.go:196
+#	0x332b87	net/http.(*connReader).backgroundRead+0x37	net/http/server.go:746
+

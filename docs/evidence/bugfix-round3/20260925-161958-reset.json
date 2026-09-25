@@ -1,0 +1,165 @@
+[
+  {
+    "name": "重置前有明确旧条件",
+    "passed": false,
+    "question": "2025年1月华东销售额，只返回金额。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "detail": {},
+    "gold_sql": "SELECT SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id WHERE f.date_id BETWEEN 20250101 AND 20250131 AND r.region_name='华东'",
+    "expected": [
+      [
+        "54924"
+      ]
+    ]
+  },
+  {
+    "name": "明确要求忘记查询上下文",
+    "passed": false,
+    "question": "忘掉之前所有查询条件和问题，接下来的问题从零开始，不要继承刚才的时间、地区或指标。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "conversation": "b88a9c98-8ec8-4157-94d3-17d3f8622d72"
+  },
+  {
+    "name": "服务端保存重置动作",
+    "passed": false,
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "summary": {}
+  },
+  {
+    "name": "重置后闲聊1",
+    "passed": false,
+    "question": "用一句话解释什么是数据库事务，不要查数据。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "conversation": "b88a9c98-8ec8-4157-94d3-17d3f8622d72"
+  },
+  {
+    "name": "重置后闲聊2",
+    "passed": false,
+    "question": "用一句话解释什么是数据库事务，不要查数据。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "conversation": "b88a9c98-8ec8-4157-94d3-17d3f8622d72"
+  },
+  {
+    "name": "重置后闲聊3",
+    "passed": false,
+    "question": "用一句话解释什么是数据库事务，不要查数据。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "conversation": "b88a9c98-8ec8-4157-94d3-17d3f8622d72"
+  },
+  {
+    "name": "重置后闲聊4",
+    "passed": false,
+    "question": "用一句话解释什么是数据库事务，不要查数据。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "conversation": "b88a9c98-8ec8-4157-94d3-17d3f8622d72"
+  },
+  {
+    "name": "重置后闲聊5",
+    "passed": false,
+    "question": "用一句话解释什么是数据库事务，不要查数据。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "conversation": "b88a9c98-8ec8-4157-94d3-17d3f8622d72"
+  },
+  {
+    "name": "重置超过短窗口后不恢复旧条件",
+    "passed": false,
+    "question": "那华南呢？",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "conversation": "b88a9c98-8ec8-4157-94d3-17d3f8622d72"
+  },
+  {
+    "name": "重置后重新给完整问题",
+    "passed": false,
+    "question": "请统计2025年2月全国订单数，只返回订单数。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "detail": {},
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id BETWEEN 20250201 AND 20250228",
+    "expected": [
+      [
+        "33"
+      ]
+    ]
+  },
+  {
+    "name": "否定重置不误触发",
+    "passed": false,
+    "question": "不要忘掉刚才的查询条件，接下来的追问继续沿用。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "conversation": "b88a9c98-8ec8-4157-94d3-17d3f8622d72"
+  },
+  {
+    "name": "否定重置保留查询意图",
+    "passed": false,
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "summary": {}
+  },
+  {
+    "name": "否定重置后地区追问",
+    "passed": false,
+    "question": "那华东呢？",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "detail": {},
+    "gold_sql": "SELECT COUNT(*) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id WHERE f.date_id BETWEEN 20250201 AND 20250228 AND r.region_name='华东'",
+    "expected": [
+      [
+        "11"
+      ]
+    ]
+  },
+  {
+    "name": "重置并提出完整新需求",
+    "passed": false,
+    "question": "忘掉前面的查询条件，从零开始：统计2026年3月全国订单数，只返回订单数。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "detail": {},
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id BETWEEN 20260301 AND 20260331",
+    "expected": [
+      [
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "再次追问只继承新条件",
+    "passed": false,
+    "question": "改成2月，其他不变。",
+    "response": {
+      "error": "query_service_unavailable"
+    },
+    "detail": {},
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id BETWEEN 20260201 AND 20260228",
+    "expected": [
+      [
+        "0"
+      ]
+    ]
+  }
+]

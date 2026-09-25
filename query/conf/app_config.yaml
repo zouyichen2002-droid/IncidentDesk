@@ -1,0 +1,44 @@
+logging:
+  file:
+    enable: false
+    level: INFO
+    path: logs
+    rotation: "10 MB"
+    retention: "7 days"
+  console:
+    enable: true
+    level: INFO
+
+db_meta:
+  host: ${oc.env:QUERY_MYSQL_HOST,localhost}
+  port: ${oc.env:QUERY_MYSQL_PORT,33306}
+  user: didilili
+  password: dili123
+  database: meta
+
+db_dw:
+  host: ${oc.env:QUERY_MYSQL_HOST,localhost}
+  port: ${oc.env:QUERY_MYSQL_PORT,33306}
+  user: shopkeeper_reader
+  password: local-reader-only
+  database: dw
+
+qdrant:
+  host: ${oc.env:QUERY_QDRANT_HOST,localhost}
+  port: ${oc.env:QUERY_QDRANT_PORT,36333}
+  embedding_size: 1024
+
+embedding:
+  host: localhost
+  port: 8081
+  model: mistral-embed
+
+es:
+  host: ${oc.env:QUERY_ES_HOST,localhost}
+  port: ${oc.env:QUERY_ES_PORT,39200}
+  index_name: data_agent
+
+llm:
+  model_name: ${oc.env:MISTRAL_MODEL,mistral-small-latest}
+  api_key: ${oc.env:LLM_API_KEY}
+  base_url: ${oc.env:MISTRAL_BASE_URL,https://api.mistral.ai/v1}

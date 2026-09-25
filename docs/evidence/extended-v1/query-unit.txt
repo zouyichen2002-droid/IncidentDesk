@@ -1,0 +1,20 @@
+warning: Project directory `query` does not exist. This will become an error in a future release. Use `--preview-features project-directory-must-exist` to error on this now.
+test_customer_count_can_coexist_with_aov (test_business_contracts.BusinessContractTests.test_customer_count_can_coexist_with_aov) ... ok
+test_explicit_month_cannot_disappear_when_changing_metrics (test_business_contracts.BusinessContractTests.test_explicit_month_cannot_disappear_when_changing_metrics) ... ok
+test_name_in_place_of_foreign_key_cannot_be_reported_as_empty (test_business_contracts.BusinessContractTests.test_name_in_place_of_foreign_key_cannot_be_reported_as_empty) ... ok
+test_requested_year_cannot_be_silently_ignored (test_business_contracts.BusinessContractTests.test_requested_year_cannot_be_silently_ignored) ... ok
+test_wrong_aov_denominator_is_not_a_valid_answer (test_business_contracts.BusinessContractTests.test_wrong_aov_denominator_is_not_a_valid_answer) ... ok
+test_dangling_followup_requires_context_without_calling_tools (test_conversation.ConversationTests.test_dangling_followup_requires_context_without_calling_tools) ... ok
+test_followup_context_and_capabilities_reach_router (test_conversation.ConversationTests.test_followup_context_and_capabilities_reach_router) ... ok
+test_invalid_or_empty_decision_and_system_history_rejected (test_conversation.ConversationTests.test_invalid_or_empty_decision_and_system_history_rejected) ... ok
+test_mixed_clarification_asks_which_query_first (test_conversation.ConversationTests.test_mixed_clarification_asks_which_query_first) ... ok
+test_targeted_reply_is_not_overwritten (test_conversation.ConversationTests.test_targeted_reply_is_not_overwritten) ... ok
+test_direct_requests_require_internal_identity (test_service_identity.ServiceIdentityTests.test_direct_requests_require_internal_identity) ... ok
+test_caps_rows_without_expanding_explicit_limit (test_sql_guard.SQLGuardTests.test_caps_rows_without_expanding_explicit_limit) ... ok
+test_read_only_business_queries (test_sql_guard.SQLGuardTests.test_read_only_business_queries) ... ok
+test_rejects_mutation_and_external_access (test_sql_guard.SQLGuardTests.test_rejects_mutation_and_external_access) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.021s
+
+OK

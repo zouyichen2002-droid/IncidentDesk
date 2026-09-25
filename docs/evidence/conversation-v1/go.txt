@@ -1,0 +1,25 @@
+NOTICE:  column "query" of relation "investigations" already exists, skipping
+NOTICE:  relation "query_datasets" already exists, skipping
+NOTICE:  relation "unified_requests" already exists, skipping
+NOTICE:  relation "data_queries" already exists, skipping
+NOTICE:  relation "data_queries_pending" already exists, skipping
+NOTICE:  column "decision" of relation "unified_requests" already exists, skipping
+?   	incidentdesk/cmd/server	[no test files]
+=== RUN   TestApprovalInvalidationAndRevocation
+    approval_test.go:20: Editing approved content invalidates approval; new source watermark prevents dispatch; live membership overrides existing token.
+--- PASS: TestApprovalInvalidationAndRevocation (0.09s)
+=== RUN   TestConversationValidation
+--- PASS: TestConversationValidation (0.00s)
+=== RUN   TestConversationCatalogPermission
+--- PASS: TestConversationCatalogPermission (0.02s)
+=== RUN   TestDataQueryClaimsAndRetryFence
+--- PASS: TestDataQueryClaimsAndRetryFence (0.05s)
+=== RUN   TestDataQueryExecutionAuthAndInterruptedStream
+--- PASS: TestDataQueryExecutionAuthAndInterruptedStream (0.02s)
+=== RUN   TestQueueCapacityFencingAndGoroutineConvergence
+    queue_test.go:163: 100 concurrent claims: 10 leases; takeover fenced; duplicate callbacks replayed; goroutines 3 -> 3
+--- PASS: TestQueueCapacityFencingAndGoroutineConvergence (0.62s)
+=== RUN   TestGroundingGuard
+--- PASS: TestGroundingGuard (0.00s)
+PASS
+ok  	incidentdesk/internal/app	2.186s

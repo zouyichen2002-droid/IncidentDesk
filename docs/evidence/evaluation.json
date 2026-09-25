@@ -1,0 +1,6468 @@
+{
+  "mode": "offline deterministic rule checks; NOT human investigation effectiveness or real-model evaluation",
+  "cases": 24,
+  "heldout_cases": 12,
+  "heldout_repeats": 3,
+  "passed": 48,
+  "runs": 48,
+  "failed": [],
+  "latency_mean_ms": 0.1053932622501937,
+  "latency_stdev_ms": 0.03693674595866672,
+  "human_effectiveness": {
+    "status": "external_input_required",
+    "scored": 0,
+    "threshold": 0.8
+  },
+  "regression_gate": {
+    "candidate_pass": true,
+    "injected_regression_blocked": true
+  },
+  "per_case": [
+    {
+      "case": "case-00",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.3462500171735883,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.13
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.03
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-01",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.12841704301536083,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-02",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.11670798994600773,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-03",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.1318339491263032,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-04",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.08870894089341164,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 4,
+            "evidence": 3,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-05",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.114083057269454,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 1
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-06",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10329100769013166,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-07",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10066700633615255,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-08",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10195898357778788,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-09",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.100292032584548,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-10",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.0813750084489584,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 4,
+            "evidence": 3,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-11",
+      "variant": "current",
+      "split": "development",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10549998842179775,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 1
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-12",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10416703298687935,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-12",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10075001046061516,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-12",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10616600047796965,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-13",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09966699872165918,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-13",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10020891204476357,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-13",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10025000665336847,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-14",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.0991250853985548,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-14",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.0991669949144125,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-14",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09795790538191795,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-15",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10099995415657759,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-15",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09866594336926937,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-15",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09770807810127735,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-16",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.07958291098475456,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 4,
+            "evidence": 3,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-16",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.08670799434185028,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 4,
+            "evidence": 3,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-16",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09462493471801281,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 4,
+            "evidence": 3,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-17",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10579207446426153,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 1
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-17",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10304199531674385,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 1
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-17",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10366598144173622,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 1
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-18",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10337494313716888,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-18",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.1134589547291398,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-18",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.0980000477284193,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-19",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10062498040497303,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-19",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09929202497005463,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-19",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09791599586606026,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-20",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09916606359183788,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-20",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09962497279047966,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-20",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.1004999503493309,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-21",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10187493171542883,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-21",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09833392687141895,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-21",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.09941693861037493,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-22",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.08050003089010715,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 4,
+            "evidence": 3,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-22",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.08449994493275881,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 4,
+            "evidence": 3,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-22",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.07845798972994089,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.0
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 4,
+            "evidence": 3,
+            "conflicts": 0
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "case": "case-23",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10375003330409527,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 1
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "case-23",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10045897215604782,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 1
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "case": "case-23",
+      "variant": "current",
+      "split": "heldout",
+      "checks": {
+        "fact_count": true,
+        "candidate_count": true,
+        "conflicts": true,
+        "missing": true,
+        "grounding": true,
+        "no_writes": true
+      },
+      "pass": true,
+      "latency_ms": 0.10229204781353474,
+      "tool_calls": 4,
+      "model_tokens": 0,
+      "model_cost_usd": 0,
+      "hooks": [
+        {
+          "hook": "plan_validated",
+          "data": {
+            "steps": 4
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "deployments"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "deployments",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "deployments",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "logs"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "logs",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "logs",
+            "status": "ok",
+            "milliseconds": 0.02
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "git"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "git",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "git",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_before",
+          "data": {
+            "source": "runbook"
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "retrieval_returned",
+          "data": {
+            "source": "runbook",
+            "count": 1
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "tool_after",
+          "data": {
+            "source": "runbook",
+            "status": "ok",
+            "milliseconds": 0.01
+          },
+          "status": "pass"
+        },
+        {
+          "hook": "context_assembled",
+          "data": {
+            "facts": 5,
+            "evidence": 4,
+            "conflicts": 1
+          },
+          "status": "pass"
+        }
+      ],
+      "repeat": 3
+    }
+  ],
+  "version_diffs": [
+    {
+      "case": "case-00",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-01",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-02",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-03",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-04",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-05",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-06",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-07",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-08",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-09",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-10",
+      "old_pass": false,
+      "new_pass": true
+    },
+    {
+      "case": "case-11",
+      "old_pass": false,
+      "new_pass": true
+    }
+  ]
+}

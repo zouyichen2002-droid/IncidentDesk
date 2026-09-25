@@ -1,0 +1,1 @@
+{"mode": "offline_reevaluation", "writes_enabled": false, "original_facts": 12, "current_facts": 12, "changed": false, "pass": true}

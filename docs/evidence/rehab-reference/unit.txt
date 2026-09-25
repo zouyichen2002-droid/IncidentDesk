@@ -1,0 +1,16 @@
+Installed 5 packages in 10ms
+============================= test session starts ==============================
+platform darwin -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0
+rootdir: /workspace/.local/rehab-reference
+configfile: pytest.ini
+plugins: langsmith-0.7.30, anyio-4.13.0
+collected 59 items
+
+.local/rehab-reference/tests/unit/test_coaching_agent.py ............... [ 25%]
+                                                                         [ 25%]
+.local/rehab-reference/tests/unit/test_integration_layer.py ............ [ 45%]
+..............                                                           [ 69%]
+.local/rehab-reference/tests/unit/test_progress_tracker_agent.py ....... [ 81%]
+...........                                                              [100%]
+
+============================== 59 passed in 0.11s ==============================

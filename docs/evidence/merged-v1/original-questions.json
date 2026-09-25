@@ -1,0 +1,2330 @@
+[
+  {
+    "question": "订单服务的连接池配置文件在哪？",
+    "detail": {
+      "id": "5c9ba275-ba36-4c89-ba8a-f522351e80f9",
+      "seq": 33,
+      "idem": "2ae92a29-ae1f-493d-8b87-656d89847670",
+      "team": "orders",
+      "query": {
+        "mode": "search",
+        "terms": [
+          "pool",
+          "connection pool",
+          "配置",
+          "config",
+          "pool config"
+        ],
+        "levels": []
+      },
+      "action": null,
+      "end_at": "2026-09-24T21:00:43.034277+00:00",
+      "report": {
+        "mode": "mistral",
+        "facts": [
+          {
+            "id": "fact:deployments:dep-svc-17:744e6bc77038",
+            "kind": "observation",
+            "text": "发布版本 v2 指向提交 e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            }
+          },
+          {
+            "id": "fact:logs:1:35e25a778bff",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:1:35e25a778bff"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:2:5b74dc48e26c",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:2:5b74dc48e26c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:3:7e9dc3719f2c",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:3:7e9dc3719f2c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:4:f207a12b4c2d",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:4:f207a12b4c2d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:5:4e7e509fc579",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:5:4e7e509fc579"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:6:c309d777ce65",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:6:c309d777ce65"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:7:67e3a6f10213",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:7:67e3a6f10213"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:8:860056d421ee",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:8:860056d421ee"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:9:8bb75203e558",
+            "kind": "observation",
+            "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+            "evidence": [
+              "logs:9:8bb75203e558"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+            "kind": "observation",
+            "text": "代码提交 e1925867e810fa1bacfb21a5cba711fdef2239be，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:72ff7bd64d97",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+            "evidence": [
+              "runbook:orders-runbook:72ff7bd64d97"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          },
+          {
+            "id": "fact:relation:deployments:dep-svc-17:744e6bc77038",
+            "kind": "computed",
+            "text": "发布记录与 Git 提交标识一致；这只确认变更归属，不证明故障因果。",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038",
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ],
+            "transform": "commit-equality-v1",
+            "query_step": {
+              "relation": "Deployment.commit"
+            }
+          }
+        ],
+        "model": {
+          "model": "mistral-small-latest",
+          "usage": {
+            "service_tier": "standard",
+            "total_tokens": 3262,
+            "prompt_tokens": 2816,
+            "completion_tokens": 446,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "provider": "mistral",
+          "milliseconds": 3407.79
+        },
+        "answer": "订单服务（svc-17）的连接池配置文件为项目根目录下的 config.json，当前配置为：{\"pool_size\":1,\"timeout_ms\":50}。",
+        "impact": "svc-17",
+        "context": {
+          "plan": {
+            "end": "2026-09-24T21:00:43.034277Z",
+            "start": "2026-09-24T19:11:14.722934Z",
+            "steps": [
+              {
+                "path": [
+                  "Service",
+                  "deployments"
+                ],
+                "limit": 50,
+                "object": "Deployment",
+                "source": "deployments"
+              },
+              {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              },
+              {
+                "path": [
+                  "Service",
+                  "deployments",
+                  "commit"
+                ],
+                "limit": 50,
+                "object": "Commit",
+                "source": "git"
+              },
+              {
+                "path": [
+                  "Service",
+                  "runbook"
+                ],
+                "limit": 50,
+                "object": "Runbook",
+                "source": "runbook"
+              }
+            ],
+            "service": "svc-17",
+            "version": "1"
+          },
+          "facts": [
+            {
+              "id": "fact:deployments:dep-svc-17:744e6bc77038",
+              "kind": "observation",
+              "text": "发布版本 v2 指向提交 e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "deployments"
+                ],
+                "limit": 50,
+                "object": "Deployment",
+                "source": "deployments"
+              }
+            },
+            {
+              "id": "fact:logs:1:35e25a778bff",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:1:35e25a778bff"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:2:5b74dc48e26c",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:2:5b74dc48e26c"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:3:7e9dc3719f2c",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:3:7e9dc3719f2c"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:4:f207a12b4c2d",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:4:f207a12b4c2d"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:5:4e7e509fc579",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:5:4e7e509fc579"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:6:c309d777ce65",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:6:c309d777ce65"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:7:67e3a6f10213",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:7:67e3a6f10213"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:8:860056d421ee",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:8:860056d421ee"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:9:8bb75203e558",
+              "kind": "observation",
+              "text": "日志记录 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:9:8bb75203e558"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+              "kind": "observation",
+              "text": "代码提交 e1925867e810fa1bacfb21a5cba711fdef2239be，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+              "evidence": [
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "deployments",
+                  "commit"
+                ],
+                "limit": 50,
+                "object": "Commit",
+                "source": "git"
+              }
+            },
+            {
+              "id": "fact:runbook:orders-runbook:72ff7bd64d97",
+              "kind": "observation",
+              "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+              "evidence": [
+                "runbook:orders-runbook:72ff7bd64d97"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "runbook"
+                ],
+                "limit": 50,
+                "object": "Runbook",
+                "source": "runbook"
+              }
+            },
+            {
+              "id": "fact:relation:deployments:dep-svc-17:744e6bc77038",
+              "kind": "computed",
+              "text": "发布记录与 Git 提交标识一致；这只确认变更归属，不证明故障因果。",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038",
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "transform": "commit-equality-v1",
+              "query_step": {
+                "relation": "Deployment.commit"
+              }
+            }
+          ],
+          "scope": {
+            "team": "orders",
+            "service": "svc-17",
+            "subject": "alice"
+          },
+          "missing": [],
+          "objects": [
+            {
+              "id": "svc-17",
+              "team": "orders",
+              "type": "Service"
+            },
+            {
+              "id": "dep-svc-17",
+              "type": "Deployment",
+              "service": "svc-17",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038"
+              ],
+              "valid_time": "2026-09-24T19:10:15.958646+00:00"
+            },
+            {
+              "id": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "type": "Commit",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038",
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "deployment": "dep-svc-17"
+            }
+          ],
+          "version": "1",
+          "evidence": [
+            {
+              "id": "deployments:dep-svc-17:744e6bc77038",
+              "team": "orders",
+              "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+              "source": "deployments",
+              "locator": "postgres://sources/deployments/dep-svc-17",
+              "snippet": {
+                "id": "dep-svc-17",
+                "app_id": "svc-17",
+                "deleted": false,
+                "service": "svc-17",
+                "version": "v2",
+                "watermark": 1,
+                "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+              },
+              "version": "1",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15.958646+00:00",
+              "collected_at": "2026-09-25T00:41:35.548314+00:00",
+              "source_record": "dep-svc-17"
+            },
+            {
+              "id": "logs:1:35e25a778bff",
+              "team": "orders",
+              "sha256": "35e25a778bff69f48eca7fbd9b64dd88349149d0015c2436d8fff559d903c457",
+              "source": "logs",
+              "locator": "logs://svc-17/1",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 76.67,
+                "service_name": "checkout-api"
+              },
+              "version": "1",
+              "available": true,
+              "event_time": "2026-09-24T19:11:14.722934+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "1"
+            },
+            {
+              "id": "logs:2:5b74dc48e26c",
+              "team": "orders",
+              "sha256": "5b74dc48e26c18d94776d5688f2286612d46698a3bd79086195eb58c960a160c",
+              "source": "logs",
+              "locator": "logs://svc-17/2",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 81.67,
+                "service_name": "checkout-api"
+              },
+              "version": "2",
+              "available": true,
+              "event_time": "2026-09-24T19:11:14.813295+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "2"
+            },
+            {
+              "id": "logs:3:7e9dc3719f2c",
+              "team": "orders",
+              "sha256": "7e9dc3719f2c8f6fb9023b882ddcd5a826a796c6109f9c6d9a81a4900b09f02c",
+              "source": "logs",
+              "locator": "logs://svc-17/3",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 79.54,
+                "service_name": "checkout-api"
+              },
+              "version": "3",
+              "available": true,
+              "event_time": "2026-09-24T19:11:14.907093+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "3"
+            },
+            {
+              "id": "logs:4:f207a12b4c2d",
+              "team": "orders",
+              "sha256": "f207a12b4c2d24c7c637c4c6cdd96d447dd4ffc5fe3927bcab4bcf36949dea00",
+              "source": "logs",
+              "locator": "logs://svc-17/4",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 51.57,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "4",
+              "available": true,
+              "event_time": "2026-09-24T19:43:41.958902+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "4"
+            },
+            {
+              "id": "logs:5:4e7e509fc579",
+              "team": "orders",
+              "sha256": "4e7e509fc579334f8c0f83f088ac4acacdc4a33215f5364c437dde4f16393a7d",
+              "source": "logs",
+              "locator": "logs://svc-17/5",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 50.43,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "5",
+              "available": true,
+              "event_time": "2026-09-24T19:43:42.020279+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "5"
+            },
+            {
+              "id": "logs:6:c309d777ce65",
+              "team": "orders",
+              "sha256": "c309d777ce6571c34d3b68d2167386f7daf5e3ac502fd8fc7472c8bc04840fd3",
+              "source": "logs",
+              "locator": "logs://svc-17/6",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 61.04,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "6",
+              "available": true,
+              "event_time": "2026-09-24T19:43:42.093701+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "6"
+            },
+            {
+              "id": "logs:7:67e3a6f10213",
+              "team": "orders",
+              "sha256": "67e3a6f10213bc5928227143f3ceeec89c173d73c0bb622d64c073760a7baa9d",
+              "source": "logs",
+              "locator": "logs://svc-17/7",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 53.53,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "7",
+              "available": true,
+              "event_time": "2026-09-24T19:53:05.054034+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "7"
+            },
+            {
+              "id": "logs:8:860056d421ee",
+              "team": "orders",
+              "sha256": "860056d421ee9ff079150beb4bccf320837088fa0656771e99824a5c0fd559f2",
+              "source": "logs",
+              "locator": "logs://svc-17/8",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 50.77,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "8",
+              "available": true,
+              "event_time": "2026-09-24T19:53:05.113454+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "8"
+            },
+            {
+              "id": "logs:9:8bb75203e558",
+              "team": "orders",
+              "sha256": "8bb75203e558d0469c00ca66c5f514665211facf17ca8718f9e5215298cd0783",
+              "source": "logs",
+              "locator": "logs://svc-17/9",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 51.16,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "9",
+              "available": true,
+              "event_time": "2026-09-24T19:53:05.175255+00:00",
+              "collected_at": "2026-09-25T00:41:35.585328+00:00",
+              "source_record": "9"
+            },
+            {
+              "id": "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+              "team": "orders",
+              "sha256": "a0bdae97902c01ab77a2dfb41b772e98a550fdb57ebd95789f0694422e13d749",
+              "source": "git",
+              "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "snippet": {
+                "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+                "service": "svc-17",
+                "provenance": "local-demo",
+                "config_path": "config.json",
+                "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+              },
+              "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15+00:00",
+              "collected_at": "2026-09-25T00:41:35.625258+00:00",
+              "source_record": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+            },
+            {
+              "id": "runbook:orders-runbook:72ff7bd64d97",
+              "team": "orders",
+              "sha256": "72ff7bd64d9701e8672b5e0512060f2b89d0d2c67f866e9276167108689026e0",
+              "source": "runbook",
+              "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+              "snippet": {
+                "service": "svc-17",
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+                "provenance": "local-demo",
+                "valid_as_of": "2026-09-24T21:00:43.034277+00:00"
+              },
+              "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15+00:00",
+              "collected_at": "2026-09-25T00:41:35.656388+00:00",
+              "source_record": "orders-runbook"
+            }
+          ],
+          "memories": [],
+          "conflicts": [],
+          "freshness": [
+            {
+              "source": "deployments",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:35.548314+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "logs",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:35.585328+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "git",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:35.625258+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "runbook",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:35.656388+00:00",
+              "snapshot_consistency": "independent_source"
+            }
+          ],
+          "retrieval": {
+            "mode": "search",
+            "pages": 1,
+            "terms": [
+              "pool",
+              "connection pool",
+              "配置",
+              "config",
+              "pool config"
+            ],
+            "levels": {
+              "ERROR": 9
+            },
+            "matched": 9,
+            "sampled": false,
+            "selection": "rare-patterns-and-severity-keyset",
+            "provenance": "local-demo",
+            "labels_used": false,
+            "template_scan": 0,
+            "evidence_count": 9,
+            "total_in_query": 9
+          },
+          "token_budget": 12000,
+          "mapping_version": "2",
+          "ontology_version": "1"
+        },
+        "missing": [],
+        "evidence": [
+          {
+            "id": "deployments:dep-svc-17:744e6bc77038",
+            "team": "orders",
+            "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+            "source": "deployments",
+            "locator": "postgres://sources/deployments/dep-svc-17",
+            "snippet": {
+              "id": "dep-svc-17",
+              "app_id": "svc-17",
+              "deleted": false,
+              "service": "svc-17",
+              "version": "v2",
+              "watermark": 1,
+              "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+            },
+            "version": "1",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15.958646+00:00",
+            "collected_at": "2026-09-25T00:41:35.548314+00:00",
+            "source_record": "dep-svc-17"
+          },
+          {
+            "id": "logs:1:35e25a778bff",
+            "team": "orders",
+            "sha256": "35e25a778bff69f48eca7fbd9b64dd88349149d0015c2436d8fff559d903c457",
+            "source": "logs",
+            "locator": "logs://svc-17/1",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 76.67,
+              "service_name": "checkout-api"
+            },
+            "version": "1",
+            "available": true,
+            "event_time": "2026-09-24T19:11:14.722934+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "1"
+          },
+          {
+            "id": "logs:2:5b74dc48e26c",
+            "team": "orders",
+            "sha256": "5b74dc48e26c18d94776d5688f2286612d46698a3bd79086195eb58c960a160c",
+            "source": "logs",
+            "locator": "logs://svc-17/2",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 81.67,
+              "service_name": "checkout-api"
+            },
+            "version": "2",
+            "available": true,
+            "event_time": "2026-09-24T19:11:14.813295+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "2"
+          },
+          {
+            "id": "logs:3:7e9dc3719f2c",
+            "team": "orders",
+            "sha256": "7e9dc3719f2c8f6fb9023b882ddcd5a826a796c6109f9c6d9a81a4900b09f02c",
+            "source": "logs",
+            "locator": "logs://svc-17/3",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 79.54,
+              "service_name": "checkout-api"
+            },
+            "version": "3",
+            "available": true,
+            "event_time": "2026-09-24T19:11:14.907093+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "3"
+          },
+          {
+            "id": "logs:4:f207a12b4c2d",
+            "team": "orders",
+            "sha256": "f207a12b4c2d24c7c637c4c6cdd96d447dd4ffc5fe3927bcab4bcf36949dea00",
+            "source": "logs",
+            "locator": "logs://svc-17/4",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 51.57,
+              "error_class": "PoolAcquireTimeout",
+              "service_name": "checkout-api"
+            },
+            "version": "4",
+            "available": true,
+            "event_time": "2026-09-24T19:43:41.958902+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "4"
+          },
+          {
+            "id": "logs:5:4e7e509fc579",
+            "team": "orders",
+            "sha256": "4e7e509fc579334f8c0f83f088ac4acacdc4a33215f5364c437dde4f16393a7d",
+            "source": "logs",
+            "locator": "logs://svc-17/5",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 50.43,
+              "error_class": "PoolAcquireTimeout",
+              "service_name": "checkout-api"
+            },
+            "version": "5",
+            "available": true,
+            "event_time": "2026-09-24T19:43:42.020279+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "5"
+          },
+          {
+            "id": "logs:6:c309d777ce65",
+            "team": "orders",
+            "sha256": "c309d777ce6571c34d3b68d2167386f7daf5e3ac502fd8fc7472c8bc04840fd3",
+            "source": "logs",
+            "locator": "logs://svc-17/6",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 61.04,
+              "error_class": "PoolAcquireTimeout",
+              "service_name": "checkout-api"
+            },
+            "version": "6",
+            "available": true,
+            "event_time": "2026-09-24T19:43:42.093701+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "6"
+          },
+          {
+            "id": "logs:7:67e3a6f10213",
+            "team": "orders",
+            "sha256": "67e3a6f10213bc5928227143f3ceeec89c173d73c0bb622d64c073760a7baa9d",
+            "source": "logs",
+            "locator": "logs://svc-17/7",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 53.53,
+              "error_class": "PoolAcquireTimeout",
+              "service_name": "checkout-api"
+            },
+            "version": "7",
+            "available": true,
+            "event_time": "2026-09-24T19:53:05.054034+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "7"
+          },
+          {
+            "id": "logs:8:860056d421ee",
+            "team": "orders",
+            "sha256": "860056d421ee9ff079150beb4bccf320837088fa0656771e99824a5c0fd559f2",
+            "source": "logs",
+            "locator": "logs://svc-17/8",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 50.77,
+              "error_class": "PoolAcquireTimeout",
+              "service_name": "checkout-api"
+            },
+            "version": "8",
+            "available": true,
+            "event_time": "2026-09-24T19:53:05.113454+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "8"
+          },
+          {
+            "id": "logs:9:8bb75203e558",
+            "team": "orders",
+            "sha256": "8bb75203e558d0469c00ca66c5f514665211facf17ca8718f9e5215298cd0783",
+            "source": "logs",
+            "locator": "logs://svc-17/9",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "message": "database pool exhausted: active=1 max=1",
+              "release": "v2",
+              "duration_ms": 51.16,
+              "error_class": "PoolAcquireTimeout",
+              "service_name": "checkout-api"
+            },
+            "version": "9",
+            "available": true,
+            "event_time": "2026-09-24T19:53:05.175255+00:00",
+            "collected_at": "2026-09-25T00:41:35.585328+00:00",
+            "source_record": "9"
+          },
+          {
+            "id": "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+            "team": "orders",
+            "sha256": "a0bdae97902c01ab77a2dfb41b772e98a550fdb57ebd95789f0694422e13d749",
+            "source": "git",
+            "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "snippet": {
+              "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+              "service": "svc-17",
+              "provenance": "local-demo",
+              "config_path": "config.json",
+              "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+            },
+            "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15+00:00",
+            "collected_at": "2026-09-25T00:41:35.625258+00:00",
+            "source_record": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+          },
+          {
+            "id": "runbook:orders-runbook:72ff7bd64d97",
+            "team": "orders",
+            "sha256": "72ff7bd64d9701e8672b5e0512060f2b89d0d2c67f866e9276167108689026e0",
+            "source": "runbook",
+            "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+            "snippet": {
+              "service": "svc-17",
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+              "provenance": "local-demo",
+              "valid_as_of": "2026-09-24T21:00:43.034277+00:00"
+            },
+            "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15+00:00",
+            "collected_at": "2026-09-25T00:41:35.656388+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:35.548314+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:35.585328+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:35.625258+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:35.656388+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "retrieval": {
+          "mode": "search",
+          "pages": 1,
+          "terms": [
+            "pool",
+            "connection pool",
+            "配置",
+            "config",
+            "pool config"
+          ],
+          "levels": {
+            "ERROR": 9
+          },
+          "matched": 9,
+          "sampled": false,
+          "selection": "rare-patterns-and-severity-keyset",
+          "provenance": "local-demo",
+          "labels_used": false,
+          "template_scan": 0,
+          "evidence_count": 9,
+          "total_in_query": 9
+        },
+        "candidates": [
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "连接池配置可能在运行时环境变量中，需检查部署清单或环境变量。",
+            "label": "有待验证",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038"
+            ]
+          },
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "连接池配置可能在其他配置文件（如 application.yml）中，需进一步检索。",
+            "label": "有待验证",
+            "evidence": [
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ]
+          },
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "连接池配置可能在数据库连接串中，需检查数据库配置。",
+            "label": "有待验证",
+            "evidence": [
+              "logs:1:35e25a778bff",
+              "logs:2:5b74dc48e26c",
+              "logs:3:7e9dc3719f2c"
+            ]
+          }
+        ],
+        "next_steps": [
+          "确认 config.json 是否为当前生效的唯一配置源",
+          "检查是否有覆盖 config.json 的外部环境变量或配置注入",
+          "对比 v2 与后续 commit 的配置差异以排除冲突",
+          "参考 runbook 进行连接池监控与调优验证"
+        ],
+        "answer_evidence": [
+          "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+        ],
+        "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+        "historical_memory": [],
+        "model_evidence_count": 10
+      },
+      "status": "completed",
+      "service": "svc-17",
+      "subject": "alice",
+      "symptom": "订单服务的连接池配置文件在哪？",
+      "manifest": {
+        "code": "working-tree",
+        "cost": {
+          "unknown": "USD cost not calculated; interpretation usage is in queued event",
+          "estimated_usd": null,
+          "known_model_tokens": 3262
+        },
+        "model": "mistral-small-latest",
+        "prompt": "investigate-v1",
+        "skills": [
+          "release-compare@1",
+          "log-analysis@1"
+        ],
+        "version": "1",
+        "ontology": "1",
+        "evaluator": "rules-v1",
+        "retrieval": "indexed-stratified-3-pages-v2",
+        "snapshots": {
+          "git": {
+            "sync": "rescan",
+            "scope": {
+              "end": "2026-09-24T21:00:43.034277+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "pool",
+                  "connection pool",
+                  "配置",
+                  "config",
+                  "pool config"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T19:11:14.722934+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "content": {
+                  "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+                  "service": "svc-17",
+                  "provenance": "local-demo",
+                  "config_path": "config.json",
+                  "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+                },
+                "deleted": false,
+                "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "event_time": "2026-09-24T19:10:15+00:00"
+              }
+            ],
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:35.625258+00:00"
+          },
+          "logs": {
+            "sync": "indexed-keyset-v2",
+            "scope": {
+              "end": "2026-09-24T21:00:43.034277+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "pool",
+                  "connection pool",
+                  "配置",
+                  "config",
+                  "pool config"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T19:11:14.722934+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "1",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 76.67,
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/1",
+                "version": "1",
+                "event_time": "2026-09-24T19:11:14.722934+00:00"
+              },
+              {
+                "id": "2",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 81.67,
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/2",
+                "version": "2",
+                "event_time": "2026-09-24T19:11:14.813295+00:00"
+              },
+              {
+                "id": "3",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 79.54,
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/3",
+                "version": "3",
+                "event_time": "2026-09-24T19:11:14.907093+00:00"
+              },
+              {
+                "id": "4",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 51.57,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/4",
+                "version": "4",
+                "event_time": "2026-09-24T19:43:41.958902+00:00"
+              },
+              {
+                "id": "5",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 50.43,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/5",
+                "version": "5",
+                "event_time": "2026-09-24T19:43:42.020279+00:00"
+              },
+              {
+                "id": "6",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 61.04,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/6",
+                "version": "6",
+                "event_time": "2026-09-24T19:43:42.093701+00:00"
+              },
+              {
+                "id": "7",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 53.53,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/7",
+                "version": "7",
+                "event_time": "2026-09-24T19:53:05.054034+00:00"
+              },
+              {
+                "id": "8",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 50.77,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/8",
+                "version": "8",
+                "event_time": "2026-09-24T19:53:05.113454+00:00"
+              },
+              {
+                "id": "9",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 51.16,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/9",
+                "version": "9",
+                "event_time": "2026-09-24T19:53:05.175255+00:00"
+              }
+            ],
+            "summary": {
+              "mode": "search",
+              "terms": [
+                "pool",
+                "connection pool",
+                "配置",
+                "config",
+                "pool config"
+              ],
+              "levels": {
+                "ERROR": 9
+              },
+              "matched": 9,
+              "selection": "rare-patterns-and-severity-keyset",
+              "labels_used": false,
+              "template_scan": 0,
+              "total_in_query": 9
+            },
+            "retrieval": {
+              "mode": "search",
+              "pages": 1,
+              "terms": [
+                "pool",
+                "connection pool",
+                "配置",
+                "config",
+                "pool config"
+              ],
+              "levels": {
+                "ERROR": 9
+              },
+              "matched": 9,
+              "sampled": false,
+              "selection": "rare-patterns-and-severity-keyset",
+              "provenance": "local-demo",
+              "labels_used": false,
+              "template_scan": 0,
+              "evidence_count": 9,
+              "total_in_query": 9
+            },
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:35.585328+00:00"
+          },
+          "runbook": {
+            "sync": "rescan",
+            "scope": {
+              "end": "2026-09-24T21:00:43.034277+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "pool",
+                  "connection pool",
+                  "配置",
+                  "config",
+                  "pool config"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T19:11:14.722934+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "orders-runbook",
+                "content": {
+                  "service": "svc-17",
+                  "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+                  "provenance": "local-demo",
+                  "valid_as_of": "2026-09-24T21:00:43.034277+00:00"
+                },
+                "deleted": false,
+                "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+                "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "event_time": "2026-09-24T19:10:15+00:00"
+              }
+            ],
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:35.656388+00:00"
+          },
+          "deployments": {
+            "scope": {
+              "end": "2026-09-24T21:00:43.034277+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "pool",
+                  "connection pool",
+                  "配置",
+                  "config",
+                  "pool config"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T19:11:14.722934+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "dep-svc-17",
+                "content": {
+                  "id": "dep-svc-17",
+                  "app_id": "svc-17",
+                  "deleted": false,
+                  "service": "svc-17",
+                  "version": "v2",
+                  "watermark": 1,
+                  "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+                },
+                "deleted": false,
+                "locator": "postgres://sources/deployments/dep-svc-17",
+                "version": "1",
+                "event_time": "2026-09-24T19:10:15.958646+00:00"
+              }
+            ],
+            "watermark": 4,
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:35.548314+00:00"
+          }
+        },
+        "generation": 1,
+        "tool_schema": "1",
+        "source_mapping": "2",
+        "model_parameters": {
+          "temperature": 0
+        },
+        "permission_policy": "go-v1"
+      },
+      "start_at": "2026-09-24T19:11:14.722934+00:00",
+      "timezone": "UTC",
+      "trace_id": "924fed8cebbdfad8eaaf28b5d8a55939",
+      "created_at": "2026-09-25T00:41:34.942158+00:00",
+      "updated_at": "2026-09-25T00:41:39.31051+00:00",
+      "request_hash": "a724def77e391f8b01df597cb0f13e307cc61ca6283359c470e0273ed49f5794",
+      "evidence_stale": false,
+      "source_version": 4
+    }
+  },
+  {
+    "question": "订单服务的数据库备份操作文档在哪？",
+    "detail": {
+      "id": "4af4a098-b686-4caf-84a0-875dc884e81f",
+      "seq": 33,
+      "idem": "f923eb65-6ef6-4bc5-bd2e-1e7ed387f65f",
+      "team": "orders",
+      "query": {
+        "mode": "search",
+        "terms": [
+          "database backup",
+          "backup operation",
+          "documentation"
+        ],
+        "levels": []
+      },
+      "action": null,
+      "end_at": "2026-09-24T21:00:43.034277+00:00",
+      "report": {
+        "mode": "mistral",
+        "facts": [
+          {
+            "id": "fact:deployments:dep-svc-17:744e6bc77038",
+            "kind": "observation",
+            "text": "发布版本 v2 指向提交 e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            }
+          },
+          {
+            "id": "fact:git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+            "kind": "observation",
+            "text": "代码提交 e1925867e810fa1bacfb21a5cba711fdef2239be，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:72ff7bd64d97",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+            "evidence": [
+              "runbook:orders-runbook:72ff7bd64d97"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          },
+          {
+            "id": "fact:relation:deployments:dep-svc-17:744e6bc77038",
+            "kind": "computed",
+            "text": "发布记录与 Git 提交标识一致；这只确认变更归属，不证明故障因果。",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038",
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ],
+            "transform": "commit-equality-v1",
+            "query_step": {
+              "relation": "Deployment.commit"
+            }
+          }
+        ],
+        "model": {
+          "model": "mistral-small-latest",
+          "usage": {
+            "service_tier": "standard",
+            "total_tokens": 2016,
+            "prompt_tokens": 1576,
+            "completion_tokens": 440,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "provider": "mistral",
+          "milliseconds": 3349.36
+        },
+        "answer": "在当前可检索的范围内未找到订单服务数据库备份操作的文档。检索到的runbook仅包含故障排查指引，未涉及备份流程。",
+        "impact": "svc-17",
+        "context": {
+          "plan": {
+            "end": "2026-09-24T21:00:43.034277Z",
+            "start": "2026-09-24T19:11:14.722934Z",
+            "steps": [
+              {
+                "path": [
+                  "Service",
+                  "deployments"
+                ],
+                "limit": 50,
+                "object": "Deployment",
+                "source": "deployments"
+              },
+              {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              },
+              {
+                "path": [
+                  "Service",
+                  "deployments",
+                  "commit"
+                ],
+                "limit": 50,
+                "object": "Commit",
+                "source": "git"
+              },
+              {
+                "path": [
+                  "Service",
+                  "runbook"
+                ],
+                "limit": 50,
+                "object": "Runbook",
+                "source": "runbook"
+              }
+            ],
+            "service": "svc-17",
+            "version": "1"
+          },
+          "facts": [
+            {
+              "id": "fact:deployments:dep-svc-17:744e6bc77038",
+              "kind": "observation",
+              "text": "发布版本 v2 指向提交 e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "deployments"
+                ],
+                "limit": 50,
+                "object": "Deployment",
+                "source": "deployments"
+              }
+            },
+            {
+              "id": "fact:git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+              "kind": "observation",
+              "text": "代码提交 e1925867e810fa1bacfb21a5cba711fdef2239be，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+              "evidence": [
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "deployments",
+                  "commit"
+                ],
+                "limit": 50,
+                "object": "Commit",
+                "source": "git"
+              }
+            },
+            {
+              "id": "fact:runbook:orders-runbook:72ff7bd64d97",
+              "kind": "observation",
+              "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+              "evidence": [
+                "runbook:orders-runbook:72ff7bd64d97"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "runbook"
+                ],
+                "limit": 50,
+                "object": "Runbook",
+                "source": "runbook"
+              }
+            },
+            {
+              "id": "fact:relation:deployments:dep-svc-17:744e6bc77038",
+              "kind": "computed",
+              "text": "发布记录与 Git 提交标识一致；这只确认变更归属，不证明故障因果。",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038",
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "transform": "commit-equality-v1",
+              "query_step": {
+                "relation": "Deployment.commit"
+              }
+            }
+          ],
+          "scope": {
+            "team": "orders",
+            "service": "svc-17",
+            "subject": "alice"
+          },
+          "missing": [
+            "logs: no accessible records in scope"
+          ],
+          "objects": [
+            {
+              "id": "svc-17",
+              "team": "orders",
+              "type": "Service"
+            },
+            {
+              "id": "dep-svc-17",
+              "type": "Deployment",
+              "service": "svc-17",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038"
+              ],
+              "valid_time": "2026-09-24T19:10:15.958646+00:00"
+            },
+            {
+              "id": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "type": "Commit",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038",
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "deployment": "dep-svc-17"
+            }
+          ],
+          "version": "1",
+          "evidence": [
+            {
+              "id": "deployments:dep-svc-17:744e6bc77038",
+              "team": "orders",
+              "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+              "source": "deployments",
+              "locator": "postgres://sources/deployments/dep-svc-17",
+              "snippet": {
+                "id": "dep-svc-17",
+                "app_id": "svc-17",
+                "deleted": false,
+                "service": "svc-17",
+                "version": "v2",
+                "watermark": 1,
+                "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+              },
+              "version": "1",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15.958646+00:00",
+              "collected_at": "2026-09-25T00:41:42.318734+00:00",
+              "source_record": "dep-svc-17"
+            },
+            {
+              "id": "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+              "team": "orders",
+              "sha256": "a0bdae97902c01ab77a2dfb41b772e98a550fdb57ebd95789f0694422e13d749",
+              "source": "git",
+              "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "snippet": {
+                "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+                "service": "svc-17",
+                "provenance": "local-demo",
+                "config_path": "config.json",
+                "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+              },
+              "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15+00:00",
+              "collected_at": "2026-09-25T00:41:42.383712+00:00",
+              "source_record": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+            },
+            {
+              "id": "runbook:orders-runbook:72ff7bd64d97",
+              "team": "orders",
+              "sha256": "72ff7bd64d9701e8672b5e0512060f2b89d0d2c67f866e9276167108689026e0",
+              "source": "runbook",
+              "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+              "snippet": {
+                "service": "svc-17",
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+                "provenance": "local-demo",
+                "valid_as_of": "2026-09-24T21:00:43.034277+00:00"
+              },
+              "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15+00:00",
+              "collected_at": "2026-09-25T00:41:42.416695+00:00",
+              "source_record": "orders-runbook"
+            }
+          ],
+          "memories": [],
+          "conflicts": [],
+          "freshness": [
+            {
+              "source": "deployments",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:42.318734+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "logs",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:42.348520+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "git",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:42.383712+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "runbook",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:42.416695+00:00",
+              "snapshot_consistency": "independent_source"
+            }
+          ],
+          "retrieval": {
+            "mode": "search",
+            "pages": 1,
+            "terms": [
+              "database backup",
+              "backup operation",
+              "documentation"
+            ],
+            "levels": {},
+            "matched": 0,
+            "sampled": false,
+            "selection": "rare-patterns-and-severity-keyset",
+            "provenance": "local-demo",
+            "labels_used": false,
+            "template_scan": 0,
+            "evidence_count": 0,
+            "total_in_query": 0
+          },
+          "token_budget": 12000,
+          "mapping_version": "2",
+          "ontology_version": "1"
+        },
+        "missing": [
+          "logs: no accessible records in scope"
+        ],
+        "evidence": [
+          {
+            "id": "deployments:dep-svc-17:744e6bc77038",
+            "team": "orders",
+            "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+            "source": "deployments",
+            "locator": "postgres://sources/deployments/dep-svc-17",
+            "snippet": {
+              "id": "dep-svc-17",
+              "app_id": "svc-17",
+              "deleted": false,
+              "service": "svc-17",
+              "version": "v2",
+              "watermark": 1,
+              "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+            },
+            "version": "1",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15.958646+00:00",
+            "collected_at": "2026-09-25T00:41:42.318734+00:00",
+            "source_record": "dep-svc-17"
+          },
+          {
+            "id": "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+            "team": "orders",
+            "sha256": "a0bdae97902c01ab77a2dfb41b772e98a550fdb57ebd95789f0694422e13d749",
+            "source": "git",
+            "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "snippet": {
+              "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+              "service": "svc-17",
+              "provenance": "local-demo",
+              "config_path": "config.json",
+              "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+            },
+            "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15+00:00",
+            "collected_at": "2026-09-25T00:41:42.383712+00:00",
+            "source_record": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+          },
+          {
+            "id": "runbook:orders-runbook:72ff7bd64d97",
+            "team": "orders",
+            "sha256": "72ff7bd64d9701e8672b5e0512060f2b89d0d2c67f866e9276167108689026e0",
+            "source": "runbook",
+            "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+            "snippet": {
+              "service": "svc-17",
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+              "provenance": "local-demo",
+              "valid_as_of": "2026-09-24T21:00:43.034277+00:00"
+            },
+            "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15+00:00",
+            "collected_at": "2026-09-25T00:41:42.416695+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:42.318734+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:42.348520+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:42.383712+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:42.416695+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "retrieval": {
+          "mode": "search",
+          "pages": 1,
+          "terms": [
+            "database backup",
+            "backup operation",
+            "documentation"
+          ],
+          "levels": {},
+          "matched": 0,
+          "sampled": false,
+          "selection": "rare-patterns-and-severity-keyset",
+          "provenance": "local-demo",
+          "labels_used": false,
+          "template_scan": 0,
+          "evidence_count": 0,
+          "total_in_query": 0
+        },
+        "candidates": [
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "备份操作文档可能在未被索引的外部系统（如Confluence或内部Wiki）中。",
+            "label": "有待验证",
+            "evidence": [
+              "runbook:orders-runbook:72ff7bd64d97"
+            ]
+          },
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "备份配置可能在应用配置文件（如config.json）中，但当前仅检索到连接池超时配置。",
+            "label": "有待验证",
+            "evidence": [
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ]
+          },
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "备份操作可能通过运维工具（如Ansible或K8s CronJob）执行，但未在部署清单或Git中体现。",
+            "label": "有待验证",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038"
+            ]
+          },
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "备份文档可能在服务的私有文档仓库中，当前检索范围未覆盖。",
+            "label": "有待验证",
+            "evidence": [
+              "runbook:orders-runbook:72ff7bd64d97"
+            ]
+          }
+        ],
+        "next_steps": [
+          "联系订单服务团队确认备份文档存放位置",
+          "检查Confluence/Wiki等外部文档系统",
+          "查询运维工具（如Ansible、K8s）的备份任务配置",
+          "核对服务的私有文档仓库或内部知识库"
+        ],
+        "answer_evidence": [],
+        "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+        "historical_memory": [],
+        "model_evidence_count": 3
+      },
+      "status": "waiting_information",
+      "service": "svc-17",
+      "subject": "alice",
+      "symptom": "订单服务的数据库备份操作文档在哪？",
+      "manifest": {
+        "code": "working-tree",
+        "cost": {
+          "unknown": "USD cost not calculated; interpretation usage is in queued event",
+          "estimated_usd": null,
+          "known_model_tokens": 2016
+        },
+        "model": "mistral-small-latest",
+        "prompt": "investigate-v1",
+        "skills": [
+          "release-compare@1",
+          "log-analysis@1"
+        ],
+        "version": "1",
+        "ontology": "1",
+        "evaluator": "rules-v1",
+        "retrieval": "indexed-stratified-3-pages-v2",
+        "snapshots": {
+          "git": {
+            "sync": "rescan",
+            "scope": {
+              "end": "2026-09-24T21:00:43.034277+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "database backup",
+                  "backup operation",
+                  "documentation"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T19:11:14.722934+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "content": {
+                  "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+                  "service": "svc-17",
+                  "provenance": "local-demo",
+                  "config_path": "config.json",
+                  "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+                },
+                "deleted": false,
+                "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "event_time": "2026-09-24T19:10:15+00:00"
+              }
+            ],
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:42.383712+00:00"
+          },
+          "logs": {
+            "sync": "indexed-keyset-v2",
+            "scope": {
+              "end": "2026-09-24T21:00:43.034277+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "database backup",
+                  "backup operation",
+                  "documentation"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T19:11:14.722934+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [],
+            "summary": {
+              "mode": "search",
+              "terms": [
+                "database backup",
+                "backup operation",
+                "documentation"
+              ],
+              "levels": {},
+              "matched": 0,
+              "selection": "rare-patterns-and-severity-keyset",
+              "labels_used": false,
+              "template_scan": 0,
+              "total_in_query": 0
+            },
+            "retrieval": {
+              "mode": "search",
+              "pages": 1,
+              "terms": [
+                "database backup",
+                "backup operation",
+                "documentation"
+              ],
+              "levels": {},
+              "matched": 0,
+              "sampled": false,
+              "selection": "rare-patterns-and-severity-keyset",
+              "provenance": "local-demo",
+              "labels_used": false,
+              "template_scan": 0,
+              "evidence_count": 0,
+              "total_in_query": 0
+            },
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:42.348520+00:00"
+          },
+          "runbook": {
+            "sync": "rescan",
+            "scope": {
+              "end": "2026-09-24T21:00:43.034277+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "database backup",
+                  "backup operation",
+                  "documentation"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T19:11:14.722934+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "orders-runbook",
+                "content": {
+                  "service": "svc-17",
+                  "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+                  "provenance": "local-demo",
+                  "valid_as_of": "2026-09-24T21:00:43.034277+00:00"
+                },
+                "deleted": false,
+                "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+                "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "event_time": "2026-09-24T19:10:15+00:00"
+              }
+            ],
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:42.416695+00:00"
+          },
+          "deployments": {
+            "scope": {
+              "end": "2026-09-24T21:00:43.034277+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "database backup",
+                  "backup operation",
+                  "documentation"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T19:11:14.722934+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "dep-svc-17",
+                "content": {
+                  "id": "dep-svc-17",
+                  "app_id": "svc-17",
+                  "deleted": false,
+                  "service": "svc-17",
+                  "version": "v2",
+                  "watermark": 1,
+                  "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+                },
+                "deleted": false,
+                "locator": "postgres://sources/deployments/dep-svc-17",
+                "version": "1",
+                "event_time": "2026-09-24T19:10:15.958646+00:00"
+              }
+            ],
+            "watermark": 4,
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:42.318734+00:00"
+          }
+        },
+        "generation": 1,
+        "tool_schema": "1",
+        "source_mapping": "2",
+        "model_parameters": {
+          "temperature": 0
+        },
+        "permission_policy": "go-v1"
+      },
+      "start_at": "2026-09-24T19:11:14.722934+00:00",
+      "timezone": "UTC",
+      "trace_id": "e3f87506099c14db785dce638f567009",
+      "created_at": "2026-09-25T00:41:42.209252+00:00",
+      "updated_at": "2026-09-25T00:41:45.825636+00:00",
+      "request_hash": "5a9e84095ffd5458c016b86aaaec9d1d024ac9d69139583ebde02055d37de592",
+      "evidence_stale": false,
+      "source_version": 4
+    }
+  }
+]

@@ -1,0 +1,385 @@
+File: server
+Build ID: 6bb927709f5a4112556a3cf292ca47f2b149d7b5
+Type: cpu
+Time: 2026-09-24 15:18:14 EDT
+Duration: 20s, Total samples = 1.72s ( 8.60%)
+Showing nodes accounting for 1.72s, 100% of 1.72s total
+      flat  flat%   sum%        cum   cum%
+     0.70s 40.70% 40.70%      0.70s 40.70%  internal/runtime/syscall/linux.Syscall6
+     0.23s 13.37% 54.07%      0.23s 13.37%  runtime.futex
+     0.05s  2.91% 56.98%      0.05s  2.91%  runtime.nanotime (inline)
+     0.03s  1.74% 58.72%      0.03s  1.74%  runtime.write1
+     0.02s  1.16% 59.88%      0.02s  1.16%  internal/bytealg.IndexByteString
+     0.02s  1.16% 61.05%      0.02s  1.16%  runtime.cheaprand (inline)
+     0.02s  1.16% 62.21%      0.30s 17.44%  runtime.findRunnable
+     0.02s  1.16% 63.37%      0.02s  1.16%  runtime.lock2
+     0.02s  1.16% 64.53%      0.05s  2.91%  runtime.mallocgc
+     0.02s  1.16% 65.70%      0.02s  1.16%  runtime.mallocgcTinySC2
+     0.02s  1.16% 66.86%      0.02s  1.16%  runtime.memclrNoHeapPointers
+     0.02s  1.16% 68.02%      0.07s  4.07%  runtime.netpoll
+     0.02s  1.16% 69.19%      0.02s  1.16%  sync.(*Pool).Get
+     0.01s  0.58% 69.77%      0.01s  0.58%  addMulVVWx
+     0.01s  0.58% 70.35%      0.04s  2.33%  bufio.(*Reader).fill
+     0.01s  0.58% 70.93%      0.01s  0.58%  context.(*valueCtx).Done
+     0.01s  0.58% 71.51%      0.01s  0.58%  context.removeChild
+     0.01s  0.58% 72.09%      0.01s  0.58%  context.value
+     0.01s  0.58% 72.67%      0.01s  0.58%  crypto/internal/fips140/sha256.blockSHA2
+     0.01s  0.58% 73.26%      0.01s  0.58%  encoding/json/internal/jsonwire.AppendQuote
+     0.01s  0.58% 73.84%      0.01s  0.58%  encoding/json/internal/jsonwire.ConsumeStringResumable
+     0.01s  0.58% 74.42%      0.02s  1.16%  encoding/json/jsontext.(*encoderState).WriteToken
+     0.01s  0.58% 75.00%      0.01s  0.58%  encoding/json/jsontext.String
+     0.01s  0.58% 75.58%      0.01s  0.58%  errors.Is
+     0.01s  0.58% 76.16%      0.01s  0.58%  fmt.(*pp).printArg
+     0.01s  0.58% 76.74%      0.01s  0.58%  github.com/jackc/pgx/v5.(*ExtendedQueryBuilder).reset (inline)
+     0.01s  0.58% 77.33%      0.02s  1.16%  github.com/jackc/pgx/v5/pgconn.(*PgConn).exitPotentialWriteReadDeadlock
+     0.01s  0.58% 77.91%      0.03s  1.74%  github.com/jackc/pgx/v5/pgconn.(*ResultReader).receiveMessage
+     0.01s  0.58% 78.49%      0.01s  0.58%  github.com/jackc/pgx/v5/pgproto3.(*Bind).Encode
+     0.01s  0.58% 79.07%      0.01s  0.58%  github.com/jackc/pgx/v5/pgproto3.(*Execute).Encode
+     0.01s  0.58% 79.65%      0.10s  5.81%  github.com/jackc/pgx/v5/pgproto3.(*Frontend).Receive
+     0.01s  0.58% 80.23%      0.01s  0.58%  github.com/jackc/pgx/v5/pgtype.isNilDriverValuer
+     0.01s  0.58% 80.81%      0.01s  0.58%  github.com/jackc/pgx/v5/pgxpool.(*Tx).Rollback
+     0.01s  0.58% 81.40%      0.01s  0.58%  github.com/jackc/puddle/v2.(*Resource[go.shape.*uint8]).Value (inline)
+     0.01s  0.58% 81.98%      0.99s 57.56%  incidentdesk/internal/app.(*App).route.func1
+     0.01s  0.58% 82.56%      0.01s  0.58%  internal/runtime/maps.(*groupReference).elem (inline)
+     0.01s  0.58% 83.14%      0.01s  0.58%  internal/runtime/maps.memHashAES
+     0.01s  0.58% 83.72%      0.01s  0.58%  internal/sync.(*HashTrieMap[go.shape.interface {},go.shape.interface {}]).Load
+     0.01s  0.58% 84.30%      0.09s  5.23%  io.ReadAtLeast
+     0.01s  0.58% 84.88%      0.14s  8.14%  net.(*conn).Read
+     0.01s  0.58% 85.47%      0.01s  0.58%  net/http.(*Request).wantsHttp10KeepAlive
+     0.01s  0.58% 86.05%      1.05s 61.05%  net/http.HandlerFunc.ServeHTTP
+     0.01s  0.58% 86.63%      0.01s  0.58%  net/http.StatusText
+     0.01s  0.58% 87.21%      0.01s  0.58%  runtime.(*mcache).prepareForSweep
+     0.01s  0.58% 87.79%      0.01s  0.58%  runtime.(*spanSet).reset
+     0.01s  0.58% 88.37%      0.01s  0.58%  runtime.(*timers).run
+     0.01s  0.58% 88.95%      0.01s  0.58%  runtime.arenaIndex (inline)
+     0.01s  0.58% 89.53%      0.01s  0.58%  runtime.checkTimersNoP
+     0.01s  0.58% 90.12%      0.02s  1.16%  runtime.entersyscall
+     0.01s  0.58% 90.70%      0.02s  1.16%  runtime.findnull
+     0.01s  0.58% 91.28%      0.01s  0.58%  runtime.freeDeadSpanSPMCs
+     0.01s  0.58% 91.86%      0.01s  0.58%  runtime.gopark
+     0.01s  0.58% 92.44%      0.03s  1.74%  runtime.isSystemGoroutine
+     0.01s  0.58% 93.02%      0.01s  0.58%  runtime.mallocgcSmallScanNoHeaderSC2
+     0.01s  0.58% 93.60%      0.02s  1.16%  runtime.mallocgcSmallScanNoHeaderSC7
+     0.01s  0.58% 94.19%      0.01s  0.58%  runtime.mapaccess2_faststr
+     0.01s  0.58% 94.77%      0.01s  0.58%  runtime.memmove
+     0.01s  0.58% 95.35%      0.01s  0.58%  runtime.pageIndexOf (inline)
+     0.01s  0.58% 95.93%      0.01s  0.58%  runtime.pcvalue
+     0.01s  0.58% 96.51%      0.01s  0.58%  runtime.scanblock
+     0.01s  0.58% 97.09%      0.01s  0.58%  runtime.stealWork
+     0.01s  0.58% 97.67%      0.01s  0.58%  runtime.unlock2
+     0.01s  0.58% 98.26%      0.11s  6.40%  syscall.Read (inline)
+     0.01s  0.58% 98.84%      0.02s  1.16%  time.Time.AppendFormat
+     0.01s  0.58% 99.42%      0.01s  0.58%  time.Time.appendFormat
+     0.01s  0.58%   100%      0.01s  0.58%  unicode/utf8.ValidString
+         0     0%   100%      0.05s  2.91%  _.goready.func1
+         0     0%   100%      0.04s  2.33%  bufio.(*Reader).Peek
+         0     0%   100%      0.02s  1.16%  bufio.(*Reader).Read
+         0     0%   100%      0.01s  0.58%  bufio.(*Reader).ReadLine
+         0     0%   100%      0.01s  0.58%  bufio.(*Reader).ReadSlice
+         0     0%   100%      0.09s  5.23%  bufio.(*Writer).Flush
+         0     0%   100%      0.01s  0.58%  bytes.IndexByte (inline)
+         0     0%   100%      0.02s  1.16%  context.(*cancelCtx).Value
+         0     0%   100%      0.01s  0.58%  context.(*cancelCtx).cancel
+         0     0%   100%      0.01s  0.58%  context.WithCancel.func1
+         0     0%   100%      0.01s  0.58%  crypto.Hash.New
+         0     0%   100%      0.01s  0.58%  crypto/internal/fips140/bigmod.(*Nat).montgomeryMul
+         0     0%   100%      0.01s  0.58%  crypto/internal/fips140/bigmod.NewModulus
+         0     0%   100%      0.01s  0.58%  crypto/internal/fips140/bigmod.newModulus
+         0     0%   100%      0.01s  0.58%  crypto/internal/fips140/bigmod.rr
+         0     0%   100%      0.01s  0.58%  crypto/internal/fips140/drbg.Read
+         0     0%   100%      0.01s  0.58%  crypto/internal/fips140/sha256.(*Digest).Write
+         0     0%   100%      0.01s  0.58%  crypto/internal/fips140/sha256.New (inline)
+         0     0%   100%      0.01s  0.58%  crypto/internal/fips140/sha256.block
+         0     0%   100%      0.01s  0.58%  crypto/internal/sysrand.Read
+         0     0%   100%      0.01s  0.58%  crypto/internal/sysrand.read
+         0     0%   100%      0.01s  0.58%  crypto/rand.Read
+         0     0%   100%      0.01s  0.58%  crypto/rsa.VerifyPKCS1v15
+         0     0%   100%      0.01s  0.58%  crypto/rsa.fipsPublicKey
+         0     0%   100%      0.01s  0.58%  crypto/sha256.New
+         0     0%   100%      0.01s  0.58%  crypto/sha256.Sum256
+         0     0%   100%      0.07s  4.07%  encoding/json.(*Decoder).Decode
+         0     0%   100%      0.03s  1.74%  encoding/json.(*Encoder).Encode
+         0     0%   100%      0.02s  1.16%  encoding/json.Marshal (inline)
+         0     0%   100%      0.01s  0.58%  encoding/json.Unmarshal (inline)
+         0     0%   100%      0.03s  1.74%  encoding/json/jsontext.(*Decoder).ReadValue (inline)
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*Encoder).WriteToken (inline)
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*Encoder).WriteValue (inline)
+         0     0%   100%      0.01s  0.58%  encoding/json/jsontext.(*decoderState).CheckNextValue
+         0     0%   100%      0.03s  1.74%  encoding/json/jsontext.(*decoderState).ReadValue
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*decoderState).consumeObject
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*decoderState).consumeString
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*decoderState).consumeValue
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*decoderState).consumeWhitespace
+         0     0%   100%      0.03s  1.74%  encoding/json/jsontext.(*decoderState).fetch
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*encoderState).WriteValue
+         0     0%   100%      0.01s  0.58%  encoding/json/jsontext.(*encoderState).reformatArray
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*encoderState).reformatObject
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.(*encoderState).reformatValue
+         0     0%   100%      0.01s  0.58%  encoding/json/jsontext.Token.appendString
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.export.GetBufferedDecoder (inline)
+         0     0%   100%      0.02s  1.16%  encoding/json/jsontext.getBufferedDecoder
+         0     0%   100%      0.01s  0.58%  encoding/json/v2.(*structFields).lookupByFoldedName
+         0     0%   100%      0.02s  1.16%  encoding/json/v2.Marshal
+         0     0%   100%      0.03s  1.74%  encoding/json/v2.MarshalEncode
+         0     0%   100%      0.05s  2.91%  encoding/json/v2.Unmarshal
+         0     0%   100%      0.01s  0.58%  encoding/json/v2.lookupArshaler
+         0     0%   100%      0.03s  1.74%  encoding/json/v2.makeMapArshaler.func2
+         0     0%   100%      0.02s  1.16%  encoding/json/v2.makeMethodArshaler.func3
+         0     0%   100%      0.01s  0.58%  encoding/json/v2.makeSliceArshaler.func3
+         0     0%   100%      0.01s  0.58%  encoding/json/v2.makeStringArshaler.func1
+         0     0%   100%      0.01s  0.58%  encoding/json/v2.makeStructArshaler.func3
+         0     0%   100%      0.05s  2.91%  encoding/json/v2.marshalEncode
+         0     0%   100%      0.03s  1.74%  encoding/json/v2.unmarshalDecode
+         0     0%   100%      0.01s  0.58%  fmt.(*pp).doPrintf
+         0     0%   100%      0.01s  0.58%  fmt.Sprintf
+         0     0%   100%      0.03s  1.74%  github.com/coreos/go-oidc/v3/oidc.(*IDTokenVerifier).Verify
+         0     0%   100%      0.03s  1.74%  github.com/coreos/go-oidc/v3/oidc.(*RemoteKeySet).VerifySignature
+         0     0%   100%      0.03s  1.74%  github.com/coreos/go-oidc/v3/oidc.(*RemoteKeySet).verify
+         0     0%   100%      0.03s  1.74%  github.com/go-jose/go-jose/v4.JSONWebSignature.DetachedVerify
+         0     0%   100%      0.03s  1.74%  github.com/go-jose/go-jose/v4.JSONWebSignature.Verify (inline)
+         0     0%   100%      0.01s  0.58%  github.com/go-jose/go-jose/v4.JSONWebSignature.computeAuthData
+         0     0%   100%      0.02s  1.16%  github.com/go-jose/go-jose/v4.rsaEncrypterVerifier.verifyPayload
+         0     0%   100%      0.01s  0.58%  github.com/go-jose/go-jose/v4/json.(*decodeState).object
+         0     0%   100%      0.01s  0.58%  github.com/go-jose/go-jose/v4/json.(*decodeState).unmarshal
+         0     0%   100%      0.01s  0.58%  github.com/go-jose/go-jose/v4/json.(*decodeState).value
+         0     0%   100%      0.01s  0.58%  github.com/go-jose/go-jose/v4/json.Unmarshal
+         0     0%   100%      0.08s  4.65%  github.com/jackc/pgx/v5.(*Conn).BeginTx
+         0     0%   100%      0.37s 21.51%  github.com/jackc/pgx/v5.(*Conn).Exec
+         0     0%   100%      0.39s 22.67%  github.com/jackc/pgx/v5.(*Conn).Query
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5.(*Conn).QueryRow (inline)
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5.(*Conn).deallocateInvalidatedCachedStatements
+         0     0%   100%      0.37s 21.51%  github.com/jackc/pgx/v5.(*Conn).exec
+         0     0%   100%      0.14s  8.14%  github.com/jackc/pgx/v5.(*Conn).execPrepared
+         0     0%   100%      0.23s 13.37%  github.com/jackc/pgx/v5.(*Conn).execSimpleProtocol
+         0     0%   100%      0.03s  1.74%  github.com/jackc/pgx/v5.(*ExtendedQueryBuilder).Build
+         0     0%   100%      0.02s  1.16%  github.com/jackc/pgx/v5.(*ExtendedQueryBuilder).appendParam
+         0     0%   100%      0.02s  1.16%  github.com/jackc/pgx/v5.(*ExtendedQueryBuilder).encodeExtendedParamValue
+         0     0%   100%      0.13s  7.56%  github.com/jackc/pgx/v5.(*dbTx).Commit
+         0     0%   100%      0.16s  9.30%  github.com/jackc/pgx/v5.(*dbTx).Exec
+         0     0%   100%      0.38s 22.09%  github.com/jackc/pgx/v5.(*dbTx).Query
+         0     0%   100%      0.38s 22.09%  github.com/jackc/pgx/v5.(*dbTx).QueryRow
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/internal/stmtcache.(*LRUCache).RemoveInvalidated
+         0     0%   100%      0.05s  2.91%  github.com/jackc/pgx/v5/pgconn.(*MultiResultReader).NextResult
+         0     0%   100%      0.05s  2.91%  github.com/jackc/pgx/v5/pgconn.(*MultiResultReader).receiveMessage
+         0     0%   100%      0.18s 10.47%  github.com/jackc/pgx/v5/pgconn.(*PgConn).Exec
+         0     0%   100%      0.46s 26.74%  github.com/jackc/pgx/v5/pgconn.(*PgConn).ExecPrepared
+         0     0%   100%      0.02s  1.16%  github.com/jackc/pgx/v5/pgconn.(*PgConn).convertRowDescription
+         0     0%   100%      0.02s  1.16%  github.com/jackc/pgx/v5/pgconn.(*PgConn).execExtendedPrefix
+         0     0%   100%      0.43s 25.00%  github.com/jackc/pgx/v5/pgconn.(*PgConn).execExtendedSuffix
+         0     0%   100%      0.49s 28.49%  github.com/jackc/pgx/v5/pgconn.(*PgConn).flushWithPotentialWriteReadDeadlock
+         0     0%   100%      0.10s  5.81%  github.com/jackc/pgx/v5/pgconn.(*PgConn).peekMessage
+         0     0%   100%      0.03s  1.74%  github.com/jackc/pgx/v5/pgconn.(*PgConn).receiveMessage
+         0     0%   100%      0.03s  1.74%  github.com/jackc/pgx/v5/pgconn.(*ResultReader).Close
+         0     0%   100%      0.03s  1.74%  github.com/jackc/pgx/v5/pgconn.(*ResultReader).Read
+         0     0%   100%      0.10s  5.81%  github.com/jackc/pgx/v5/pgconn.(*ResultReader).readUntilRowDescription
+         0     0%   100%      0.05s  2.91%  github.com/jackc/pgx/v5/pgconn/ctxwatch.(*ContextWatcher).Unwatch
+         0     0%   100%      0.02s  1.16%  github.com/jackc/pgx/v5/pgconn/ctxwatch.(*ContextWatcher).Watch
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgconn/ctxwatch.(*ContextWatcher).Watch.func1
+         0     0%   100%      0.08s  4.65%  github.com/jackc/pgx/v5/pgconn/internal/bgreader.(*BGReader).Read
+         0     0%   100%      0.47s 27.33%  github.com/jackc/pgx/v5/pgproto3.(*Frontend).Flush
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgproto3.(*Frontend).SendBind
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgproto3.(*Frontend).SendExecute
+         0     0%   100%      0.09s  5.23%  github.com/jackc/pgx/v5/pgproto3.(*chunkReader).Next
+         0     0%   100%      0.02s  1.16%  github.com/jackc/pgx/v5/pgtype.(*Map).Encode
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgtype.(*Map).PlanEncode (inline)
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgtype.(*Map).planEncodeDepth
+         0     0%   100%      0.08s  4.65%  github.com/jackc/pgx/v5/pgxpool.(*Conn).BeginTx
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgxpool.(*Conn).Conn (inline)
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgxpool.(*Conn).QueryRow
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgxpool.(*Conn).Release
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgxpool.(*Conn).connResource (inline)
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgxpool.(*Pool).Acquire
+         0     0%   100%      0.09s  5.23%  github.com/jackc/pgx/v5/pgxpool.(*Pool).Begin (inline)
+         0     0%   100%      0.09s  5.23%  github.com/jackc/pgx/v5/pgxpool.(*Pool).BeginTx
+         0     0%   100%      0.01s  0.58%  github.com/jackc/pgx/v5/pgxpool.(*Pool).QueryRow
+         0     0%   100%      0.14s  8.14%  github.com/jackc/pgx/v5/pgxpool.(*Tx).Commit
+         0     0%   100%      0.16s  9.30%  github.com/jackc/pgx/v5/pgxpool.(*Tx).Exec
+         0     0%   100%      0.38s 22.09%  github.com/jackc/pgx/v5/pgxpool.(*Tx).QueryRow
+         0     0%   100%      0.01s  0.58%  github.com/jackc/puddle/v2.(*Pool[go.shape.*uint8]).Acquire
+         0     0%   100%      0.01s  0.58%  github.com/jackc/puddle/v2.(*Pool[go.shape.*uint8]).acquire
+         0     0%   100%      0.01s  0.58%  github.com/jackc/puddle/v2.nanotime (inline)
+         0     0%   100%      0.01s  0.58%  github.com/prometheus/client_golang/prometheus.(*CounterVec).GetMetricWithLabelValues (inline)
+         0     0%   100%      0.01s  0.58%  github.com/prometheus/client_golang/prometheus.(*CounterVec).WithLabelValues
+         0     0%   100%      0.01s  0.58%  github.com/prometheus/client_golang/prometheus.(*MetricVec).GetMetricWithLabelValues
+         0     0%   100%      0.01s  0.58%  github.com/prometheus/client_golang/prometheus.(*MetricVec).hashLabelValues
+         0     0%   100%      0.01s  0.58%  github.com/prometheus/client_golang/prometheus.validateLabelValues
+         0     0%   100%      0.02s  1.16%  go.opentelemetry.io/otel/sdk/trace.(*tracer).Start
+         0     0%   100%      0.01s  0.58%  go.opentelemetry.io/otel/sdk/trace.(*tracer).newSpan
+         0     0%   100%      0.01s  0.58%  go.opentelemetry.io/otel/trace.SpanContextFromContext
+         0     0%   100%      0.02s  1.16%  go.opentelemetry.io/otel/trace.SpanFromContext
+         0     0%   100%      1.04s 60.47%  incidentdesk/internal/app.(*App).Handler.func1
+         0     0%   100%      0.74s 43.02%  incidentdesk/internal/app.(*App).callback
+         0     0%   100%      0.44s 25.58%  incidentdesk/internal/app.(*App).callback.func1
+         0     0%   100%      0.13s  7.56%  incidentdesk/internal/app.(*App).claim
+         0     0%   100%      0.10s  5.81%  incidentdesk/internal/app.(*App).claim.func1
+         0     0%   100%      0.08s  4.65%  incidentdesk/internal/app.(*App).create
+         0     0%   100%      0.04s  2.33%  incidentdesk/internal/app.(*App).create.func1
+         0     0%   100%      0.23s 13.37%  incidentdesk/internal/app.(*App).fence
+         0     0%   100%      0.02s  1.16%  incidentdesk/internal/app.(*App).list
+         0     0%   100%      0.13s  7.56%  incidentdesk/internal/app.(*App).member
+         0     0%   100%      0.82s 47.67%  incidentdesk/internal/app.(*App).transaction
+         0     0%   100%      0.03s  1.74%  incidentdesk/internal/app.(*App).user
+         0     0%   100%      0.01s  0.58%  incidentdesk/internal/app.Hash
+         0     0%   100%      0.02s  1.16%  incidentdesk/internal/app.ID
+         0     0%   100%      0.04s  2.33%  incidentdesk/internal/app.JSON
+         0     0%   100%      0.07s  4.07%  incidentdesk/internal/app.decode
+         0     0%   100%      0.19s 11.05%  incidentdesk/internal/app.event
+         0     0%   100%      0.03s  1.74%  incidentdesk/internal/app.queryJSON
+         0     0%   100%      0.01s  0.58%  incidentdesk/internal/app.validateReport
+         0     0%   100%      0.02s  1.16%  internal/poll.(*FD).Accept
+         0     0%   100%      0.01s  0.58%  internal/poll.(*FD).Close
+         0     0%   100%      0.12s  6.98%  internal/poll.(*FD).Read
+         0     0%   100%      0.02s  1.16%  internal/poll.(*FD).SetReadDeadline (inline)
+         0     0%   100%      0.53s 30.81%  internal/poll.(*FD).Write
+         0     0%   100%      0.01s  0.58%  internal/poll.(*FD).decref
+         0     0%   100%      0.01s  0.58%  internal/poll.(*FD).destroy
+         0     0%   100%      0.01s  0.58%  internal/poll.(*SysFile).destroy (inline)
+         0     0%   100%      0.01s  0.58%  internal/poll.(*pollDesc).wait
+         0     0%   100%      0.01s  0.58%  internal/poll.(*pollDesc).waitRead (inline)
+         0     0%   100%      0.02s  1.16%  internal/poll.accept
+         0     0%   100%      0.64s 37.21%  internal/poll.ignoringEINTRIO (inline)
+         0     0%   100%      0.02s  1.16%  internal/poll.runtime_pollSetDeadline
+         0     0%   100%      0.01s  0.58%  internal/poll.runtime_pollWait
+         0     0%   100%      0.02s  1.16%  internal/poll.setDeadlineImpl
+         0     0%   100%      0.01s  0.58%  internal/runtime/maps.(*Map).getWithKeySmall
+         0     0%   100%      0.01s  0.58%  internal/runtime/maps.(*Map).growToSmall
+         0     0%   100%      0.01s  0.58%  internal/runtime/maps.NewEmptyMap (inline)
+         0     0%   100%      0.01s  0.58%  internal/runtime/maps.newGroups (inline)
+         0     0%   100%      0.01s  0.58%  internal/runtime/maps.newarray
+         0     0%   100%      0.05s  2.91%  internal/runtime/syscall/linux.EpollWait
+         0     0%   100%      0.02s  1.16%  io.(*LimitedReader).Read
+         0     0%   100%      0.04s  2.33%  main.main.func1
+         0     0%   100%      0.03s  1.74%  net.(*TCPListener).Accept
+         0     0%   100%      0.03s  1.74%  net.(*TCPListener).accept
+         0     0%   100%      0.01s  0.58%  net.(*conn).Close
+         0     0%   100%      0.02s  1.16%  net.(*conn).SetReadDeadline
+         0     0%   100%      0.53s 30.81%  net.(*conn).Write
+         0     0%   100%      0.01s  0.58%  net.(*netFD).Close
+         0     0%   100%      0.12s  6.98%  net.(*netFD).Read
+         0     0%   100%      0.02s  1.16%  net.(*netFD).SetReadDeadline (inline)
+         0     0%   100%      0.53s 30.81%  net.(*netFD).Write
+         0     0%   100%      0.03s  1.74%  net.(*netFD).accept
+         0     0%   100%      0.99s 57.56%  net/http.(*ServeMux).ServeHTTP
+         0     0%   100%      0.04s  2.33%  net/http.(*Server).ListenAndServe
+         0     0%   100%      0.04s  2.33%  net/http.(*Server).Serve
+         0     0%   100%      0.03s  1.74%  net/http.(*body).Read
+         0     0%   100%      0.03s  1.74%  net/http.(*body).readLocked
+         0     0%   100%      0.03s  1.74%  net/http.(*chunkWriter).Write
+         0     0%   100%      0.03s  1.74%  net/http.(*chunkWriter).writeHeader
+         0     0%   100%      0.01s  0.58%  net/http.(*conn).close
+         0     0%   100%      0.03s  1.74%  net/http.(*conn).readRequest
+         0     0%   100%      1.26s 73.26%  net/http.(*conn).serve
+         0     0%   100%      0.01s  0.58%  net/http.(*conn).serve.func1
+         0     0%   100%      0.05s  2.91%  net/http.(*connReader).Read
+         0     0%   100%      0.01s  0.58%  net/http.(*connReader).abortPendingRead
+         0     0%   100%      0.01s  0.58%  net/http.(*connReader).backgroundRead
+         0     0%   100%      0.01s  0.58%  net/http.(*connReader).startBackgroundRead
+         0     0%   100%      0.03s  1.74%  net/http.(*maxBytesReader).Read
+         0     0%   100%      0.01s  0.58%  net/http.(*response).WriteHeader
+         0     0%   100%      0.10s  5.81%  net/http.(*response).finishRequest
+         0     0%   100%      0.01s  0.58%  net/http.Header.Clone (inline)
+         0     0%   100%      0.01s  0.58%  net/http.Header.Set
+         0     0%   100%      0.06s  3.49%  net/http.checkConnErrorWriter.Write
+         0     0%   100%      0.02s  1.16%  net/http.readRequestLimit
+         0     0%   100%      0.01s  0.58%  net/http.readTransfer
+         0     0%   100%      1.05s 61.05%  net/http.serverHandler.ServeHTTP
+         0     0%   100%      0.01s  0.58%  net/http.writeStatusLine
+         0     0%   100%      0.01s  0.58%  net/textproto.(*Reader).ReadLine (inline)
+         0     0%   100%      0.01s  0.58%  net/textproto.(*Reader).readLineSlice
+         0     0%   100%      0.01s  0.58%  net/textproto.MIMEHeader.Set (inline)
+         0     0%   100%      0.02s  1.16%  runtime.(*moduledata).funcName
+         0     0%   100%      0.01s  0.58%  runtime.(*timer).lock (inline)
+         0     0%   100%      0.01s  0.58%  runtime.(*timer).modify
+         0     0%   100%      0.01s  0.58%  runtime.(*timer).stop
+         0     0%   100%      0.03s  1.74%  runtime.(*timers).check
+         0     0%   100%      0.01s  0.58%  runtime.(*unwinder).next
+         0     0%   100%      0.01s  0.58%  runtime.(*unwinder).resolveInternal
+         0     0%   100%      0.01s  0.58%  runtime.acquirep
+         0     0%   100%      0.01s  0.58%  runtime.acquirepNoTrace
+         0     0%   100%      0.01s  0.58%  runtime.bgsweep
+         0     0%   100%      0.05s  2.91%  runtime.chansend
+         0     0%   100%      0.05s  2.91%  runtime.chansend1
+         0     0%   100%      0.01s  0.58%  runtime.cheaprandn (inline)
+         0     0%   100%      0.01s  0.58%  runtime.copystack
+         0     0%   100%      0.01s  0.58%  runtime.entersyscallWakeSysmon
+         0     0%   100%      0.01s  0.58%  runtime.finishsweep_m
+         0     0%   100%      0.02s  1.16%  runtime.funcname (inline)
+         0     0%   100%      0.01s  0.58%  runtime.funcspdelta (inline)
+         0     0%   100%      0.05s  2.91%  runtime.futexsleep
+         0     0%   100%      0.18s 10.47%  runtime.futexwakeup
+         0     0%   100%      0.03s  1.74%  runtime.gcBgMarkWorker
+         0     0%   100%      0.03s  1.74%  runtime.gcBgMarkWorker.func2
+         0     0%   100%      0.03s  1.74%  runtime.gcDrain
+         0     0%   100%      0.03s  1.74%  runtime.gcDrainMarkWorkerDedicated (inline)
+         0     0%   100%      0.01s  0.58%  runtime.gcStart
+         0     0%   100%      0.01s  0.58%  runtime.gcStart.func3
+         0     0%   100%      0.02s  1.16%  runtime.gdestroy
+         0     0%   100%      0.20s 11.63%  runtime.goexit0
+         0     0%   100%      0.05s  2.91%  runtime.goready (inline)
+         0     0%   100%      0.02s  1.16%  runtime.gostringnocopy (inline)
+         0     0%   100%      0.01s  0.58%  runtime.growslice
+         0     0%   100%      0.01s  0.58%  runtime.heapArenaOf (inline)
+         0     0%   100%      0.05s  2.91%  runtime.injectglist
+         0     0%   100%      0.03s  1.74%  runtime.injectglist.func1
+         0     0%   100%      0.02s  1.16%  runtime.lock (inline)
+         0     0%   100%      0.02s  1.16%  runtime.lockWithRank (inline)
+         0     0%   100%      0.05s  2.91%  runtime.mPark (inline)
+         0     0%   100%      0.01s  0.58%  runtime.makemap_small
+         0     0%   100%      0.01s  0.58%  runtime.mallocgcSmallScanNoHeader
+         0     0%   100%      0.01s  0.58%  runtime.mapaccess1
+         0     0%   100%      0.01s  0.58%  runtime.mapaccess1_faststr
+         0     0%   100%      0.01s  0.58%  runtime.mapaccess2
+         0     0%   100%      0.02s  1.16%  runtime.mapassign_faststr
+         0     0%   100%      0.01s  0.58%  runtime.markroot
+         0     0%   100%      0.01s  0.58%  runtime.markrootBlock
+         0     0%   100%      0.36s 20.93%  runtime.mcall
+         0     0%   100%      0.03s  1.74%  runtime.netpollBreak
+         0     0%   100%      0.01s  0.58%  runtime.netpollblock
+         0     0%   100%      0.01s  0.58%  runtime.newarray
+         0     0%   100%      0.02s  1.16%  runtime.newobject
+         0     0%   100%      0.04s  2.33%  runtime.newproc
+         0     0%   100%      0.04s  2.33%  runtime.newproc.func1
+         0     0%   100%      0.02s  1.16%  runtime.newproc1
+         0     0%   100%      0.01s  0.58%  runtime.newstack
+         0     0%   100%      0.05s  2.91%  runtime.notesleep
+         0     0%   100%      0.18s 10.47%  runtime.notewakeup
+         0     0%   100%      0.16s  9.30%  runtime.park_m
+         0     0%   100%      0.05s  2.91%  runtime.ready
+         0     0%   100%      0.01s  0.58%  runtime.reentersyscall
+         0     0%   100%      0.04s  2.33%  runtime.resetspinning
+         0     0%   100%      0.01s  0.58%  runtime.scanObjectsSmall
+         0     0%   100%      0.02s  1.16%  runtime.scanSpan
+         0     0%   100%      0.34s 19.77%  runtime.schedule
+         0     0%   100%      0.01s  0.58%  runtime.selectgo
+         0     0%   100%      0.05s  2.91%  runtime.send
+         0     0%   100%      0.02s  1.16%  runtime.slicebytetostring
+         0     0%   100%      0.01s  0.58%  runtime.spanSetScans
+         0     0%   100%      0.17s  9.88%  runtime.startm
+         0     0%   100%      0.06s  3.49%  runtime.stopm
+         0     0%   100%      0.14s  8.14%  runtime.systemstack
+         0     0%   100%      0.01s  0.58%  runtime.tryDeferToSpanScan
+         0     0%   100%      0.01s  0.58%  runtime.unlock (inline)
+         0     0%   100%      0.01s  0.58%  runtime.unlockWithRank (inline)
+         0     0%   100%      0.01s  0.58%  runtime.wakeNetPoller
+         0     0%   100%      0.14s  8.14%  runtime.wakep
+         0     0%   100%      0.03s  1.74%  runtime.write
+         0     0%   100%      0.01s  0.58%  sync.(*Map).Load (inline)
+         0     0%   100%      0.02s  1.16%  syscall.Accept4
+         0     0%   100%      0.01s  0.58%  syscall.Close
+         0     0%   100%      0.01s  0.58%  syscall.Getsockname
+         0     0%   100%      0.01s  0.58%  syscall.RawSyscall
+         0     0%   100%      0.65s 37.79%  syscall.RawSyscall6
+         0     0%   100%      0.64s 37.21%  syscall.Syscall
+         0     0%   100%      0.02s  1.16%  syscall.Syscall6
+         0     0%   100%      0.53s 30.81%  syscall.Write (inline)
+         0     0%   100%      0.02s  1.16%  syscall.accept4
+         0     0%   100%      0.01s  0.58%  syscall.getsockname
+         0     0%   100%      0.10s  5.81%  syscall.read
+         0     0%   100%      0.53s 30.81%  syscall.write
+         0     0%   100%      0.01s  0.58%  time.(*Timer).Stop (inline)
+         0     0%   100%      0.01s  0.58%  time.Now
+         0     0%   100%      0.01s  0.58%  time.Since
+         0     0%   100%      0.01s  0.58%  time.now
+         0     0%   100%      0.01s  0.58%  time.runtimeNano
+         0     0%   100%      0.01s  0.58%  time.runtimeNow
+         0     0%   100%      0.01s  0.58%  time.stopTimer

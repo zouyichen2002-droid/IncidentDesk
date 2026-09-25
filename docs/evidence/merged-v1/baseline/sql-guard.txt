@@ -1,0 +1,8 @@
+test_caps_rows_without_expanding_explicit_limit (test_sql_guard.SQLGuardTests.test_caps_rows_without_expanding_explicit_limit) ... ok
+test_read_only_business_queries (test_sql_guard.SQLGuardTests.test_read_only_business_queries) ... ok
+test_rejects_mutation_and_external_access (test_sql_guard.SQLGuardTests.test_rejects_mutation_and_external_access) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.007s
+
+OK

@@ -1,0 +1,711 @@
+[
+  {
+    "name": "短问候",
+    "passed": true,
+    "question": "你好",
+    "response": {
+      "answer": "您好！我是 IncidentDesk 助手（Mistral），基于 Mistral AI 的模型。\n\n我可以帮您：\n• 解答一般知识、概念解释、翻译、写作或编程建议。\n• 查询电商演示数仓中的销售额（GMV）、客单价（AOV）等指标，支持按地区、时间等维度统计。\n• 查询订单服务的日志或故障证据（如超时日志）。\n\n需要我做什么？可以直接提问，或告诉我您想查询的具体业务数据（如某时间段的销售额、各地区客单价等）。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 2.15
+  },
+  {
+    "name": "用户原始问题",
+    "passed": true,
+    "question": "你是谁",
+    "response": {
+      "answer": "我是 IncidentDesk 助手（Mistral AI），基于 Mistral AI 的大语言模型构建。\n\n我的主要功能是：\n1. **回答问题**：提供一般知识、概念解释、翻译、写作建议、编程建议等。\n2. **查询业务数据**：基于当前账号权限，查询电商演示数仓中的销售额（GMV）、客单价（AOV）等指标，支持按地区、时间等维度筛选。\n3. **调查问题**：查询服务日志、故障证据或运行手册（如订单服务日志等）。\n\n当前账号可查询的电商演示数仓覆盖时间为 2025-01-01 至 2025-03-31，包含订单、客户、商品、地区、日期等维度，但不包含成本或利润字段。如需查询具体数据，请告诉我时间、地区、指标等必要信息。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 2.28
+  },
+  {
+    "name": "单字输入",
+    "passed": true,
+    "question": "嗨",
+    "response": {
+      "answer": "您好！我是 IncidentDesk 助手（Mistral），可以帮您查询电商业务数据、分析问题或提供一般知识咨询。需要我做什么呢？",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 0.9
+  },
+  {
+    "name": "指标解释不是查数",
+    "passed": true,
+    "question": "客单价是什么意思？",
+    "response": {
+      "answer": "客单价（AOV, Average Order Value）是指每个订单的平均金额，计算公式为：\n\n**客单价 = 总销售额（GMV） ÷ 订单数**\n\n例如：某商家在某天的总销售额为 10,000 元，订单数为 100 笔，则客单价为 100 元。\n\n客单价是衡量商家或平台销售表现的重要指标，通常用于评估用户消费水平、营销效果或运营策略的有效性。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 1.61
+  },
+  {
+    "name": "能力介绍",
+    "passed": true,
+    "question": "你能做什么？",
+    "response": {
+      "answer": "我是 IncidentDesk 助手（Mistral），当前账号能力如下：\n\n1. **一般知识问答**：解释概念、公式、流程、编程建议、翻译、写作等，如客单价（AOV）的定义、销售额与利润的区别、排序算法优化等。\n2. **电商业务数据查询**：\n   - 查询演示数仓（115条订单，时间范围2025-01-01至2025-03-31）的销售额（GMV）、客单价（AOV）等指标。\n   - 支持按地区、时间（年/月/季度）、商品等维度筛选，并按需排序。\n   - 仅读取，最多返回500行数据，无成本/利润字段。\n   - 示例：\"2025年第一季度各地区销售额按金额从高到低排序\"。\n3. **日志/故障调查**：\n   - 查询指定服务（如\"订单服务\"）的日志或运行手册，用于故障排查或证据收集。\n   - 示例：\"查询订单服务最近24小时超时日志\"。\n\n**使用说明**：\n- 直接提出需求（如时间、指标、地区等），我会生成对应的查询请求。\n- 需求不明确时，会询问缺失信息（如时间范围、具体指标等）。\n- 不支持联网、文件写入、代码执行或数据修改，仅提供查询/分析/建议。\n\n如需具体查询，请直接说明需求（如\"查询2025年2月华东地区销售额\"）！",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 3.66
+  },
+  {
+    "name": "业务知识不是查数",
+    "passed": true,
+    "question": "销售额和利润有什么区别？",
+    "response": {
+      "answer": "销售额（GMV）和利润是电商业务中两个核心财务指标，区别如下：\n\n1. **销售额（GMV, Gross Merchandise Volume）**：\n   - 定义：指平台或商家在特定时间内（如某月、季度）完成的所有商品交易总额，即商品售价乘以销售数量的总和。\n   - 计算公式：GMV = Σ（商品单价 × 销售数量）。\n   - 特点：不扣除任何成本或费用，反映的是交易规模而非实际盈利。\n   - 举例：某商家3月卖出100件单价100元的商品，GMV=10,000元。\n\n2. **利润（Profit）**：\n   - 定义：指在扣除所有成本（如商品成本、运营费用、营销费用、税费等）后，实际赚取的金额。\n   - 计算公式：利润 = 销售额（GMV） - 总成本 - 总费用。\n   - 特点：反映的是企业的实际盈利能力，是衡量经营效果的关键指标。\n   - 举例：上述商家商品成本为60元/件，运营费用为1,000元，利润=10,000 - (60×100) - 1,000 = 3,000元。\n\n**关键区别**：\n- 销售额是「毛收入」，利润是「净收入」。\n- 销售额用于评估市场规模和增长趋势，利润用于评估企业的实际盈利能力和可持续性。\n- 两者之间的差距（如高销售额但低利润）可能反映成本控制或定价策略问题。\n\n如需查询具体时间段的销售额或利润数据，可提供时间范围和地区等条件，我将帮您查询演示数仓中的相关数据。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 4.17
+  },
+  {
+    "name": "编程帮助不是检索代码",
+    "passed": true,
+    "question": "写一个Python函数，把列表从小到大排序",
+    "response": {
+      "answer": "以下是一个简单的 Python 函数，使用内置的 `sorted()` 函数对列表进行从小到大排序（升序）：\n\n```python\n\ndef sort_list_ascending(input_list):\n    \"\"\"\n    将列表按从小到大的顺序排序（升序）。\n    \n    参数:\n        input_list (list): 需要排序的列表，元素应支持比较（如数字、字符串等）。\n    \n    返回:\n        list: 排序后的新列表。\n    \"\"\"\n    return sorted(input_list)\n\n# 示例用法：\nif __name__ == \"__main__\":\n    numbers = [3, 1, 4, 1, 5, 9, 2]\n    sorted_numbers = sort_list_ascending(numbers)\n    print(\"原列表:\", numbers)\n    print(\"排序后:\", sorted_numbers)\n```\n\n### 说明：\n1. **`sorted()`**：内置函数，返回一个新的排序后列表，不修改原列表。\n2. **原地排序**：如果希望直接修改原列表（不创建新列表），可以使用 `list.sort()` 方法（如 `input_list.sort()`）。\n3. **支持的元素类型**：列表中的元素必须支持比较（如数字、字符串等）。\n\n### 示例输出：\n```\n原列表: [3, 1, 4, 1, 5, 9, 2]\n排序后: [1, 1, 2, 3, 4, 5, 9]\n```\n\n需要其他排序方式（如降序）或自定义排序规则，可以进一步扩展。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 3.04
+  },
+  {
+    "name": "翻译",
+    "passed": true,
+    "question": "把“感谢你的帮助”翻译成英文",
+    "response": {
+      "answer": "Thank you for your help.",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 0.53
+  },
+  {
+    "name": "一般排障不是查日志",
+    "passed": true,
+    "question": "一般应该怎么排查接口超时？",
+    "response": {
+      "answer": "排查接口超时通常分为以下几个步骤，按顺序逐步深入：\n\n1. **定位超时接口与时间点**\n   - 通过监控系统（如Prometheus、Grafana、APM工具如SkyWalking、Jaeger）确认哪个接口在何时出现超时，超时时长是多少。\n   - 检查日志聚合平台（如ELK、Loki）的错误日志，查找对应时间段的超时异常。\n\n2. **分析网络层面**\n   - 检查网络延迟：使用`ping`、`traceroute`或`mtr`工具测试客户端到服务端的网络连通性和延迟。\n   - 检查带宽和丢包：使用`iftop`、`nload`或云服务商的网络监控工具，确认是否有带宽瓶颈或丢包。\n   - 检查DNS解析：确认DNS解析是否正常，可使用`nslookup`或`dig`工具。\n\n3. **检查服务器资源**\n   - CPU/内存使用率：使用`top`、`htop`、`vmstat`或云服务商的监控面板，确认服务器资源是否被占满。\n   - 磁盘I/O：使用`iostat`、`iotop`或`df -h`检查磁盘读写是否异常。\n   - 网络连接数：使用`netstat -an | grep :端口`或`ss -s`检查是否有大量TIME_WAIT或CLOSE_WAIT连接。\n\n4. **检查应用层面**\n   - 代码性能：检查接口对应的代码逻辑，特别是数据库查询、外部API调用、循环或递归操作是否有性能瓶颈。\n   - 数据库性能：检查慢查询日志（如MySQL的`slow_query_log`），优化SQL语句或索引。\n   - 外部依赖：确认第三方API、缓存（Redis/Memcached）或消息队列（Kafka/RabbitMQ）是否响应缓慢。\n\n5. **检查中间件和配置**\n   - Web服务器（如Nginx、Apache）：检查连接超时、读取超时、worker进程数等配置是否合理。\n   - 应用服务器（如Tomcat、Gunicorn）：检查线程池、连接池、JVM参数等配置。\n   - 负载均衡器（如Nginx、HAProxy、云LB）：检查健康检查、连接超时和后端服务器状态。\n\n6. **模拟和重现**\n   - 使用压力测试工具（如JMeter、Locust、ab）模拟高并发请求，重现超时问题。\n   - 通过分布式追踪（如Jaeger、Zipkin）定位瓶颈点。\n\n7. **优化和验证**\n   - 根据分析结果优化代码、配置或架构（如增加缓存、优化数据库、扩容服务器）。\n   - 重新测试并验证优化效果。\n\n**常见原因总结**：\n- 网络延迟或丢包\n- 服务器资源不足（CPU、内存、磁盘I/O）\n- 数据库查询缓慢或锁等待\n- 第三方API响应慢\n- 应用代码中的阻塞操作（如同步调用、无限循环）\n- 配置不当（如超时时间过短、连接池过小）\n\n如果你提供具体的接口、日志或代码片段，我可以给出更有针对性的建议。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 7.57
+  },
+  {
+    "name": "写作",
+    "passed": true,
+    "question": "帮我写两句关于秋天的小诗",
+    "response": {
+      "answer": "1. 秋风瑟瑟染黄叶，一地金黄醉人间。\n2. 枫红菊绽秋光好，稻熟瓜甜岁月长。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 1.23
+  },
+  {
+    "name": "实时信息不编造",
+    "passed": true,
+    "question": "波士顿现在天气怎么样",
+    "response": {
+      "answer": "我无法获取实时天气信息。建议您使用天气应用（如天气通、墨迹天气）或搜索引擎（如百度、Google）查询波士顿当前天气。如果您需要其他帮助，请告诉我！",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 1.23
+  },
+  {
+    "name": "模糊需求追问",
+    "passed": true,
+    "question": "销售怎么样",
+    "response": {
+      "answer": "",
+      "clarification": "请明确需要查询哪个时间段的销售数据？例如：2025年1月、今年第一季度、最近30天等。",
+      "status": "clarification"
+    },
+    "seconds": 0.76
+  },
+  {
+    "name": "没有上下文的指代",
+    "passed": false,
+    "question": "那华东呢",
+    "response": {
+      "id": "c393c81d-2815-47d7-a190-70c2ec55b8b4",
+      "kind": "warehouse",
+      "question": "那华东呢"
+    },
+    "seconds": 0.79
+  },
+  {
+    "name": "个人文件提供可行帮助",
+    "passed": true,
+    "question": "帮我找到电脑上的个人照片",
+    "response": {
+      "answer": "我无法直接访问您电脑上的文件或目录。您可以通过以下方式手动查找个人照片：\n\n1. **Windows系统**：\n   - 打开「文件资源管理器」（快捷键 `Win + E`），在搜索框输入 `*.jpg` 或 `*.png`，或直接进入常见图片目录（如 `此电脑 > 图片`）。\n   - 使用系统自带的「照片」应用，点击「导入」或「从设备导入」查看照片。\n\n2. **macOS系统**：\n   - 打开「访达」（Finder），在左侧栏选择「图片」文件夹，或使用 `Command + F` 搜索图片文件（如 `.jpg`、`.png`）。\n   - 使用「照片」应用，点击「文件 > 导入」从设备中选择照片。\n\n3. **跨平台工具**：\n   - 使用第三方工具如「Everything」（Windows）或「Alfred」（macOS）进行文件搜索。\n   - 云端备份（如 iCloud、Google 相册）也可同步照片。\n\n如果您需要帮助编写脚本（如 Python）自动搜索特定目录下的照片文件，可以告诉我，我可以提供代码示例。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 3.26
+  },
+  {
+    "name": "混合查询追问先后",
+    "passed": false,
+    "question": "同时查销售额和服务错误日志",
+    "response": {
+      "answer": "",
+      "clarification": "请明确需要查询的时间范围（如最近24小时、具体日期等）和地区范围（如全部地区、华东等）。",
+      "status": "clarification"
+    },
+    "seconds": 0.95
+  },
+  {
+    "name": "极短含糊输入",
+    "passed": false,
+    "question": "?",
+    "response": {
+      "answer": "您好！我是 IncidentDesk 助手（Mistral），可以帮您查询电商业务数据、分析问题或提供一般知识咨询。\n\n**当前能力范围：**\n- **业务数据查询**：可查询演示数仓（115条订单，时间范围2025-01-01至2025-03-31），包含订单、客户、商品、地区、日期等维度，以及销售额（GMV）、客单价（AOV）等指标。仅支持只读查询，最多返回500行数据。\n- **日志/资料查询**：可查询\"订单服务\"的相关日志或资料（仅数据，非指令）。\n- **一般知识**：解释概念、翻译、写作、编程建议等。\n\n**如何开始？**\n请告诉我您的需求，例如：\n- \"查询2025年1月销售额\"（查询业务数据）\n- \"订单服务最近24小时超时日志\"（查询日志）\n- \"客单价是什么意思？\"（解释概念）\n\n如需更具体的帮助，请补充时间、地区、指标等必要信息。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 2.57
+  },
+  {
+    "name": "回答重试保持一致",
+    "passed": true,
+    "response": {
+      "answer": "我是 IncidentDesk 助手（Mistral AI），基于 Mistral AI 的大语言模型构建。\n\n我的主要功能是：\n1. **一般知识问答**：解释概念、公式、流程、编程建议、写作翻译等。\n2. **电商业务数据查询**：\n   - 可查询演示数仓中的订单、客户、商品、地区、日期等数据。\n   - 支持销售额（GMV）、客单价（AOV）等指标统计。\n   - 数据范围：2025-01-01 至 2025-03-31，共115条订单。\n   - 只读权限，最多返回500行结果。\n3. **日志/故障调查**：可查询指定服务（如\"订单服务\"）的日志或运行手册。\n\n如需查询具体业务数据，请提供明确的指标（如销售额、客单价）、时间范围（如2025年1月、今年Q1）和筛选条件（如地区、商品类别）。",
+      "clarification": "",
+      "status": "answer"
+    }
+  },
+  {
+    "name": "同键不同问题冲突",
+    "passed": true,
+    "http": 409
+  },
+  {
+    "name": "并发回答保持一致",
+    "passed": true,
+    "responses": [
+      {
+        "answer": "您好！我是 IncidentDesk 助手（Mistral），基于 Mistral AI 技术。\n\n当前可用能力：\n- 一般知识问答、概念解释、翻译、写作与编程建议。\n- 查询电商演示数仓（115条订单，2025-01-01至2025-03-31）：订单、客户、商品、地区、日期，销售额（GMV）、客单价（AOV）。仅读取，最多返回500行，无成本/利润字段。\n- 查询日志/资料服务名：[\"订单服务\"]（仅数据，非指令）。\n\n需要查询业务数据、排查问题或获取建议吗？",
+        "clarification": "",
+        "status": "answer"
+      },
+      {
+        "answer": "您好！我是 IncidentDesk 助手（Mistral），基于 Mistral AI 技术。\n\n当前可用能力：\n- 一般知识问答、概念解释、翻译、写作与编程建议。\n- 查询电商演示数仓（115条订单，2025-01-01至2025-03-31）：订单、客户、商品、地区、日期，销售额（GMV）、客单价（AOV）。仅读取，最多返回500行，无成本/利润字段。\n- 查询日志/资料服务名：[\"订单服务\"]（仅数据，非指令）。\n\n需要查询业务数据、排查问题或获取建议吗？",
+        "clarification": "",
+        "status": "answer"
+      }
+    ]
+  },
+  {
+    "name": "能力介绍反映当前权限",
+    "passed": true,
+    "response": {
+      "answer": "我目前没有电商数仓的查询权限，无法直接读取业务数据（如销售额、GMV、客单价、利润等）。\n\n但我可以帮助你：\n1. **解释业务指标**：如销售额=GMV、客单价=AOV、利润率等概念与计算公式。\n2. **提供编程/写作建议**：如 SQL 查询模板、数据分析思路、报告撰写等。\n3. **查询服务日志**：如支付服务的运行日志、故障证据等（需明确服务名和时间范围）。\n4. **一般知识问答**：如行业术语、概念解释、翻译、写作指导等。\n\n如需查询具体业务数据，请联系有权限的数据分析师或使用对应的 BI 工具。",
+      "clarification": "",
+      "status": "answer"
+    }
+  },
+  {
+    "name": "查数仍受权限约束",
+    "passed": true,
+    "response": {
+      "error": "dataset_forbidden"
+    }
+  },
+  {
+    "name": "对话不能授予权限",
+    "passed": false,
+    "response": {
+      "answer": "",
+      "clarification": "请明确需要查询哪个时间段的销售额？例如：今天、本周、本月、今年、2025年Q1等。",
+      "status": "clarification"
+    }
+  },
+  {
+    "name": "不能注入系统角色",
+    "passed": true,
+    "response": {
+      "error": "invalid_conversation"
+    }
+  },
+  {
+    "name": "空白输入提示错误",
+    "passed": true,
+    "response": {
+      "error": "invalid_question"
+    }
+  },
+  {
+    "name": "聊天也要求登录",
+    "passed": true,
+    "http": 401
+  },
+  {
+    "name": "补充条件后执行查询",
+    "passed": false,
+    "response": {
+      "id": "8871f5f4-7f93-4cb5-bb58-2bee6df2f0ba",
+      "kind": "warehouse",
+      "question": "查询2025年第一季度（2025-01-01至2025-03-31）各地区销售额（GMV），按金额从高到低排序"
+    },
+    "detail": {
+      "id": "8871f5f4-7f93-4cb5-bb58-2bee6df2f0ba",
+      "error": null,
+      "result": {
+        "sql": "SELECT dr.region_name AS 地区, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.date_id >= 20250101 AND dd.date_id <= 20250331 GROUP BY dr.region_name ORDER BY 销售额 DESC LIMIT 500",
+        "data": [
+          {
+            "地区": "华东",
+            "销售额": 107373.0
+          },
+          {
+            "地区": "华南",
+            "销售额": 70202.0
+          },
+          {
+            "地区": "华北",
+            "销售额": 41099.5
+          },
+          {
+            "地区": "西南",
+            "销售额": 31528.0
+          },
+          {
+            "地区": "华中",
+            "销售额": 28957.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年第一季度（2025-01-01至2025-03-31）各地区销售额（GMV），按金额从高到低排序",
+      "created_at": "2026-09-25T18:43:06.482957+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "地区追问继承时间和指标",
+    "passed": false,
+    "response": {
+      "id": "223a819b-30df-421c-a642-5c295e144ff7",
+      "kind": "warehouse",
+      "question": "查询2025年第一季度（2025-01-01至2025-03-31）华东地区销售额（GMV）"
+    },
+    "detail": {
+      "id": "223a819b-30df-421c-a642-5c295e144ff7",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(fo.order_amount) AS 销售额, COUNT(DISTINCT fo.order_id) AS 订单数, AVG(fo.order_amount) AS 客单价 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' AND dr.region_name = '华东' LIMIT 500",
+        "data": [
+          {
+            "客单价": 2440.2954545454545,
+            "订单数": 44,
+            "销售额": 107373.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年第一季度（2025-01-01至2025-03-31）华东地区销售额（GMV）",
+      "created_at": "2026-09-25T18:43:18.257766+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "第三轮改月份保留地区",
+    "passed": false,
+    "response": {
+      "id": "bcf73a9d-d46b-4088-ad52-34a07a928dff",
+      "kind": "warehouse",
+      "question": "查询2025年2月华东地区销售额（GMV）"
+    },
+    "detail": {
+      "id": "bcf73a9d-d46b-4088-ad52-34a07a928dff",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(fo.order_amount) AS 销售额, COUNT(DISTINCT fo.order_id) AS 订单数, AVG(fo.order_amount) AS 客单价 FROM fact_order AS fo JOIN dim_date AS dd ON fo.date_id = dd.date_id JOIN dim_region AS dr ON fo.region_id = dr.region_id WHERE dd.year = 2025 AND dd.month = 2 AND dr.region_name IN ('华东') LIMIT 500",
+        "data": [
+          {
+            "客单价": 1591.6363636363637,
+            "订单数": 11,
+            "销售额": 17508.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年2月华东地区销售额（GMV）",
+      "created_at": "2026-09-25T18:43:25.944345+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "切换话题不继承查询条件",
+    "passed": true,
+    "response": {
+      "answer": "春风轻拂柳枝绿，\n桃花红透半山坡。\n燕子呢喃归来早，\n溪水潺潺唱新歌。\n\n——\n\n春天是一首温柔的诗，\n每一句都藏着希望的色彩。\n万物苏醒，生命律动，\n仿佛大地在低语：\n\"一切都会好起来的。\"",
+      "clarification": "",
+      "status": "answer"
+    }
+  },
+  {
+    "name": "有查询上下文仍可解释概念",
+    "passed": true,
+    "response": {
+      "answer": "客单价（AOV，Average Order Value）是指每个订单的平均金额，计算公式为：\n\n**客单价 = 总销售额（GMV） ÷ 订单数**\n\n例如：某商家在某天成交了100个订单，总销售额为50,000元，那么当天的客单价就是500元。\n\n客单价常用于衡量消费者购买力和订单价值高低，是电商运营中的重要指标之一。",
+      "clarification": "",
+      "status": "answer"
+    }
+  }
+]

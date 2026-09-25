@@ -1,0 +1,44 @@
+{
+  "after_submit": {
+    "task": "2b9c2b1f-c22a-4afc-ab56-4d9ff5c55cad",
+    "terminal": "partial"
+  },
+  "after_claim": {
+    "task": "bc688119-6ff7-46c1-90c0-b2cec4bf2985",
+    "claims": [
+      {
+        "seq": 2,
+        "kind": "claimed",
+        "payload": {
+          "worker": "worker-6b4b4c459f-wv4xb:d63d09bc-8940-47c7-b4d1-3b504f4fc54d"
+        },
+        "created_at": "2026-09-24T19:49:39.32731+00:00"
+      },
+      {
+        "seq": 3,
+        "kind": "claimed",
+        "payload": {
+          "worker": "worker-6b4b4c459f-mdgch:2e4e3904-58ad-4831-9903-c57a6bc18c23"
+        },
+        "created_at": "2026-09-24T19:49:54.331027+00:00"
+      }
+    ],
+    "terminal": "partial"
+  },
+  "waiting_approval": {
+    "task": "bc688119-6ff7-46c1-90c0-b2cec4bf2985",
+    "state": "draft"
+  },
+  "lost_response": {
+    "task": "bc688119-6ff7-46c1-90c0-b2cec4bf2985",
+    "matching_issues": 1,
+    "result": {
+      "body": "Reviewed local stub action\n\n<!-- incidentdesk:af8a7e1d-4708-4150-a995-df23aae068f5 -->",
+      "title": "Worker recovery demonstration",
+      "number": 1,
+      "html_url": "http://localhost:8090/github/repos/local/incident-demo/issues/1",
+      "integration": "local-github-stub"
+    }
+  },
+  "pass": true
+}

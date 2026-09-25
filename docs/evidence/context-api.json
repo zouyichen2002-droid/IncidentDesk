@@ -1,0 +1,14 @@
+{
+  "task": "68dc2c12-2e91-48f8-8fbc-ef539183d40d",
+  "ordinary_api_sources": [
+    "cluster",
+    "deployments",
+    "git",
+    "logs",
+    "runbook"
+  ],
+  "invalid_identity": 401,
+  "cross_scope": 403,
+  "cancelled_status": 409,
+  "pass": true
+}

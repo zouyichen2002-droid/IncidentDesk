@@ -1,0 +1,21 @@
+{
+  "base_commit": "51779fa13dc861e496726ff17f5592eaf3737288",
+  "host": "macOS-15.6-arm64-arm-64bit",
+  "cpu_count": 10,
+  "host_ram_bytes": 34359738368,
+  "compose": "Docker Compose version v5.1.4",
+  "docker": {
+    "ServerVersion": "29.6.1",
+    "Architecture": "aarch64",
+    "NCPU": 10,
+    "MemTotal": 8321515520,
+    "OperatingSystem": "Docker Desktop"
+  },
+  "images": {
+    "api": "sha256:141aa43c33b3ae60b62bfb5e5e5711394557eb3efc3b191c3bc06b8974fa6b0e",
+    "demo": "sha256:7c9953f1ac2dcb215c12e428680ea48dc512e3ed93ca17433f0440da80ff7452",
+    "worker": "sha256:4b6c7c011cbe004af65c355163ade006e44a089ce464f9196c34978719d29641",
+    "web": "sha256:081250e61c70fa68170c804cd43ec5b74aee5b97de3519d4f1bfa4cb73b68693"
+  },
+  "other_workloads": "Original Compose and local k3d workloads remained running; results are this local shared-machine run, not a dedicated production benchmark."
+}

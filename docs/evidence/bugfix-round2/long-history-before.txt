@@ -1,0 +1,5 @@
+--- FAIL: TestConversationHistoryPreservesTrailingConstraints (0.07s)
+    conversations_test.go:225: decisive trailing constraint silently truncated
+FAIL
+FAIL	incidentdesk/internal/app	0.282s
+FAIL

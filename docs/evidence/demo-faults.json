@@ -1,0 +1,86 @@
+[
+  {
+    "fault": "healthy",
+    "http_status": 200,
+    "observed": {
+      "service_name": "checkout-api",
+      "level": "INFO",
+      "message": "request completed",
+      "error_class": null,
+      "duration_ms": 0.04,
+      "release": "v2",
+      "commit": "3969b018ac345cd7a403abac982e8ce2bf5bd0c1"
+    },
+    "pass": true
+  },
+  {
+    "fault": "pool_exhaustion",
+    "http_status": 503,
+    "observed": {
+      "service_name": "checkout-api",
+      "level": "ERROR",
+      "message": "database pool exhausted: active=1 max=1",
+      "error_class": "PoolAcquireTimeout",
+      "duration_ms": 52.42,
+      "release": "v2",
+      "commit": "3969b018ac345cd7a403abac982e8ce2bf5bd0c1"
+    },
+    "pass": true
+  },
+  {
+    "fault": "dependency_timeout",
+    "http_status": 503,
+    "observed": {
+      "service_name": "checkout-api",
+      "level": "ERROR",
+      "message": "upstream inventory timed out after 50ms",
+      "error_class": "DependencyReadTimeout",
+      "duration_ms": 64.08,
+      "release": "v2",
+      "commit": "3969b018ac345cd7a403abac982e8ce2bf5bd0c1"
+    },
+    "pass": true
+  },
+  {
+    "fault": "bad_config",
+    "http_status": 503,
+    "observed": {
+      "service_name": "checkout-api",
+      "level": "ERROR",
+      "message": "invalid DB_POOL_SIZE configuration",
+      "error_class": "InvalidConfiguration",
+      "duration_ms": 0.0,
+      "release": "v2",
+      "commit": "3969b018ac345cd7a403abac982e8ce2bf5bd0c1"
+    },
+    "pass": true
+  },
+  {
+    "fault": "release_error",
+    "http_status": 503,
+    "observed": {
+      "service_name": "checkout-api",
+      "level": "ERROR",
+      "message": "upstream inventory timed out after 50ms after release",
+      "error_class": "DependencyReadTimeout",
+      "duration_ms": 63.54,
+      "release": "v2",
+      "commit": "3969b018ac345cd7a403abac982e8ce2bf5bd0c1"
+    },
+    "pass": true
+  },
+  {
+    "fault": "missing_logs",
+    "http_status": 200,
+    "observed": {
+      "service_name": "checkout-api",
+      "level": "INFO",
+      "message": "request completed",
+      "error_class": null,
+      "duration_ms": 0.03,
+      "release": "v2",
+      "commit": "3969b018ac345cd7a403abac982e8ce2bf5bd0c1"
+    },
+    "pass": true
+  }
+]

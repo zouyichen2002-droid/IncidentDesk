@@ -1,0 +1,63 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "source": {
+      "title": "Source",
+      "type": "string"
+    },
+    "locator": {
+      "title": "Locator",
+      "type": "string"
+    },
+    "collected_at": {
+      "title": "Collected At",
+      "type": "string"
+    },
+    "event_time": {
+      "title": "Event Time",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "sha256": {
+      "title": "Sha256",
+      "type": "string"
+    },
+    "snippet": {
+      "title": "Snippet"
+    },
+    "team": {
+      "title": "Team",
+      "type": "string"
+    },
+    "source_record": {
+      "title": "Source Record",
+      "type": "string"
+    },
+    "available": {
+      "default": true,
+      "title": "Available",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "source",
+    "locator",
+    "collected_at",
+    "event_time",
+    "version",
+    "sha256",
+    "snippet",
+    "team",
+    "source_record"
+  ],
+  "title": "Evidence",
+  "type": "object"
+}

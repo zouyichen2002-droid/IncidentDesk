@@ -1,0 +1,3805 @@
+[
+  {
+    "name": "英文问数",
+    "passed": true,
+    "question": "What was the total revenue in February 2025? Return only the total revenue.",
+    "history": null,
+    "response": {
+      "id": "9a35fb57-4df4-4d08-a485-f8992344f508",
+      "kind": "warehouse",
+      "question": "What was the total revenue in February 2025? Return only the total revenue."
+    },
+    "detail": {
+      "id": "9a35fb57-4df4-4d08-a485-f8992344f508",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(order_amount) AS 总收入 FROM fact_order JOIN dim_date ON fact_order.date_id = dim_date.date_id WHERE dim_date.year = 2025 AND dim_date.month = 2 LIMIT 500",
+        "data": [
+          {
+            "总收入": 80009.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "What was the total revenue in February 2025? Return only the total revenue.",
+      "created_at": "2026-09-25T18:52:58.025779+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(order_amount) FROM fact_order WHERE date_id BETWEEN 20250201 AND 20250228",
+    "expected": [
+      [
+        "80009"
+      ]
+    ],
+    "seconds": 7.89
+  },
+  {
+    "name": "口语金额",
+    "passed": true,
+    "question": "2025年头三个月一共卖了多少钱？只返回总金额。",
+    "history": null,
+    "response": {
+      "id": "c8c92ea7-70c9-4cc2-8316-069f75315e01",
+      "kind": "warehouse",
+      "question": "2025年头三个月一共卖了多少钱？只返回总金额。"
+    },
+    "detail": {
+      "id": "c8c92ea7-70c9-4cc2-8316-069f75315e01",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(order_amount) AS 总销售额 FROM fact_order WHERE date_id >= 20250101 AND date_id <= 20250331 LIMIT 500",
+        "data": [
+          {
+            "总销售额": 279159.5
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年头三个月一共卖了多少钱？只返回总金额。",
+      "created_at": "2026-09-25T18:52:58.232904+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(order_amount) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331",
+    "expected": [
+      [
+        "279159.5"
+      ]
+    ],
+    "seconds": 8.1
+  },
+  {
+    "name": "繁体问数",
+    "passed": true,
+    "question": "請統計2025年第一季的訂單總數，只返回訂單數。",
+    "history": null,
+    "response": {
+      "id": "8dd7e6b5-d476-4a31-ac98-0d25bae7b9b4",
+      "kind": "warehouse",
+      "question": "請統計2025年第一季的訂單總數，只返回訂單數。"
+    },
+    "detail": {
+      "id": "8dd7e6b5-d476-4a31-ac98-0d25bae7b9b4",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order WHERE date_id >= 20250101 AND date_id <= 20250331 LIMIT 500",
+        "data": [
+          {
+            "订单数": 115
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "請統計2025年第一季的訂單總數，只返回訂單數。",
+      "created_at": "2026-09-25T18:53:06.021426+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331",
+    "expected": [
+      [
+        "115"
+      ]
+    ],
+    "seconds": 6.98
+  },
+  {
+    "name": "月份分组",
+    "passed": true,
+    "question": "2025年第一季度每个月有多少订单？只显示月份数字（1、2、3）和订单数，按月份升序。",
+    "history": null,
+    "response": {
+      "id": "4571d11a-01f6-4a5b-834c-6555b34eb7d3",
+      "kind": "warehouse",
+      "question": "2025年第一季度每个月有多少订单？只显示月份数字（1、2、3）和订单数，按月份升序。"
+    },
+    "detail": {
+      "id": "4571d11a-01f6-4a5b-834c-6555b34eb7d3",
+      "error": null,
+      "result": {
+        "sql": "SELECT month AS 月份数字, COUNT(DISTINCT order_id) AS 订单数 FROM fact_order AS f JOIN dim_date AS d ON f.date_id = d.date_id WHERE d.month IN (1, 2, 3) AND f.date_id BETWEEN 20250101 AND 20250331 GROUP BY month ORDER BY month ASC LIMIT 500",
+        "data": [
+          {
+            "订单数": 40,
+            "月份数字": 1
+          },
+          {
+            "订单数": 33,
+            "月份数字": 2
+          },
+          {
+            "订单数": 42,
+            "月份数字": 3
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校正SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校正SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度每个月有多少订单？只显示月份数字（1、2、3）和订单数，按月份升序。",
+      "created_at": "2026-09-25T18:53:06.435416+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT d.month,COUNT(*) FROM fact_order f JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.quarter='Q1' GROUP BY d.month ORDER BY d.month",
+    "expected": [
+      [
+        "1",
+        "40"
+      ],
+      [
+        "2",
+        "33"
+      ],
+      [
+        "3",
+        "42"
+      ]
+    ],
+    "seconds": 8.21
+  },
+  {
+    "name": "排除地区",
+    "passed": true,
+    "question": "2025年第一季度，除华东外所有地区的销售总额是多少？只返回金额。",
+    "history": null,
+    "response": {
+      "id": "176a8311-0f04-4d56-a22d-097f94cd66e4",
+      "kind": "warehouse",
+      "question": "2025年第一季度，除华东外所有地区的销售总额是多少？只返回金额。"
+    },
+    "detail": {
+      "id": "176a8311-0f04-4d56-a22d-097f94cd66e4",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(fo.order_amount) AS 销售总额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' AND dr.region_name <> '华东' LIMIT 500",
+        "data": [
+          {
+            "销售总额": 171786.5
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度，除华东外所有地区的销售总额是多少？只返回金额。",
+      "created_at": "2026-09-25T18:53:13.170427+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.quarter='Q1' AND r.region_name <> '华东'",
+    "expected": [
+      [
+        "171786.5"
+      ]
+    ],
+    "seconds": 8.16
+  },
+  {
+    "name": "双地区筛选",
+    "passed": true,
+    "question": "2025年第一季度华东和华南分别有多少订单？只返回地区和订单数，按地区名称升序。",
+    "history": null,
+    "response": {
+      "id": "831b9239-5d6d-4a08-a944-d10af5736cc4",
+      "kind": "warehouse",
+      "question": "2025年第一季度华东和华南分别有多少订单？只返回地区和订单数，按地区名称升序。"
+    },
+    "detail": {
+      "id": "831b9239-5d6d-4a08-a944-d10af5736cc4",
+      "error": null,
+      "result": {
+        "sql": "SELECT dr.region_name AS 地区, COUNT(DISTINCT fo.order_id) AS 订单数 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' AND dr.region_name IN ('华东', '华南') GROUP BY dr.region_name ORDER BY dr.region_name ASC LIMIT 500",
+        "data": [
+          {
+            "地区": "华东",
+            "订单数": 44
+          },
+          {
+            "地区": "华南",
+            "订单数": 26
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度华东和华南分别有多少订单？只返回地区和订单数，按地区名称升序。",
+      "created_at": "2026-09-25T18:53:14.323787+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT r.region_name,COUNT(*) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.quarter='Q1' AND r.region_name IN ('华东','华南') GROUP BY r.region_name ORDER BY r.region_name",
+    "expected": [
+      [
+        "华东",
+        "44"
+      ],
+      [
+        "华南",
+        "26"
+      ]
+    ],
+    "seconds": 7.87
+  },
+  {
+    "name": "多维筛选",
+    "passed": true,
+    "question": "2025年第一季度华东地区黄金会员的销售总额是多少？只返回金额。",
+    "history": null,
+    "response": {
+      "id": "4f0619e2-9c33-4b35-9ab0-c606984a2493",
+      "kind": "warehouse",
+      "question": "2025年第一季度华东地区黄金会员的销售总额是多少？只返回金额。"
+    },
+    "detail": {
+      "id": "4f0619e2-9c33-4b35-9ab0-c606984a2493",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(fo.order_amount) AS 销售总额 FROM fact_order AS fo JOIN dim_customer AS dc ON fo.customer_id = dc.customer_id JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' AND dr.region_name = '华东' AND dc.member_level = '黄金' LIMIT 500",
+        "data": [
+          {
+            "销售总额": 18296.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度华东地区黄金会员的销售总额是多少？只返回金额。",
+      "created_at": "2026-09-25T18:53:21.191992+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id  JOIN dim_customer c ON f.customer_id=c.customer_id WHERE d.year=2025 AND d.quarter='Q1' AND r.region_name='华东' AND c.member_level='黄金'",
+    "expected": [
+      [
+        "18296"
+      ]
+    ],
+    "seconds": 8.03
+  },
+  {
+    "name": "客户去重与客单价",
+    "passed": false,
+    "question": "2025年第一季度，统计订单数、去重客户数和客单价（保留两位小数），只返回这三个指标。",
+    "history": null,
+    "response": {
+      "id": "631a2d95-0b3a-441c-8e84-1210a00f9a9e",
+      "kind": "warehouse",
+      "question": "2025年第一季度，统计订单数、去重客户数和客单价（保留两位小数），只返回这三个指标。"
+    },
+    "detail": {
+      "id": "631a2d95-0b3a-441c-8e84-1210a00f9a9e",
+      "error": "客单价订单数必须按 order_id 计算，不可使用 date_id。",
+      "result": null,
+      "status": "failed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校正SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校正SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "error"
+        }
+      ],
+      "question": "2025年第一季度，统计订单数、去重客户数和客单价（保留两位小数），只返回这三个指标。",
+      "created_at": "2026-09-25T18:53:22.7433+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(DISTINCT order_id),COUNT(DISTINCT customer_id),ROUND(AVG(order_amount),2) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331",
+    "expected": [
+      [
+        "115",
+        "20",
+        "2427.47"
+      ]
+    ],
+    "seconds": 9.42
+  },
+  {
+    "name": "跨月闭区间",
+    "passed": true,
+    "question": "2025年1月15日至2月15日（含首尾两天）的销售总额是多少？只返回金额。",
+    "history": null,
+    "response": {
+      "id": "2e47ba12-f09b-4da1-9ebe-5d8281e4863e",
+      "kind": "warehouse",
+      "question": "2025年1月15日至2月15日（含首尾两天）的销售总额是多少？只返回金额。"
+    },
+    "detail": {
+      "id": "2e47ba12-f09b-4da1-9ebe-5d8281e4863e",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(order_amount) AS 销售总额 FROM fact_order WHERE date_id >= 20250115 AND date_id <= 20250215 LIMIT 500",
+        "data": [
+          {
+            "销售总额": 103502.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年1月15日至2月15日（含首尾两天）的销售总额是多少？只返回金额。",
+      "created_at": "2026-09-25T18:53:29.111323+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(order_amount) FROM fact_order WHERE date_id BETWEEN 20250115 AND 20250215",
+    "expected": [
+      [
+        "103502"
+      ]
+    ],
+    "seconds": 7.91
+  },
+  {
+    "name": "单日查询",
+    "passed": true,
+    "question": "2025年1月1日共有多少订单？只返回订单数。",
+    "history": null,
+    "response": {
+      "id": "f187b846-c168-40b1-9807-ebd169d1b254",
+      "kind": "warehouse",
+      "question": "2025年1月1日共有多少订单？只返回订单数。"
+    },
+    "detail": {
+      "id": "f187b846-c168-40b1-9807-ebd169d1b254",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order WHERE date_id = 20250101 LIMIT 500",
+        "data": [
+          {
+            "订单数": 2
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年1月1日共有多少订单？只返回订单数。",
+      "created_at": "2026-09-25T18:53:31.426146+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id=20250101",
+    "expected": [
+      [
+        "2"
+      ]
+    ],
+    "seconds": 5.68
+  },
+  {
+    "name": "无数据月份",
+    "passed": true,
+    "question": "2025年4月共有多少订单？只返回订单数。",
+    "history": null,
+    "response": {
+      "id": "15327ba7-8aea-4ddd-85ee-01af0cbfb99a",
+      "kind": "warehouse",
+      "question": "2025年4月共有多少订单？只返回订单数。"
+    },
+    "detail": {
+      "id": "15327ba7-8aea-4ddd-85ee-01af0cbfb99a",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order WHERE date_id >= 20250401 AND date_id <= 20250430 LIMIT 500",
+        "data": [
+          {
+            "订单数": 0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年4月共有多少订单？只返回订单数。",
+      "created_at": "2026-09-25T18:53:36.87152+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id BETWEEN 20250401 AND 20250430",
+    "expected": [
+      [
+        "0"
+      ]
+    ],
+    "seconds": 6.73
+  },
+  {
+    "name": "不存在地区",
+    "passed": true,
+    "question": "2025年第一季度火星地区的订单数是多少？只返回订单数。",
+    "history": null,
+    "response": {
+      "id": "3ab0e1e8-9c31-4b74-95e4-0716cf9dca50",
+      "kind": "warehouse",
+      "question": "2025年第一季度火星地区的订单数是多少？只返回订单数。"
+    },
+    "detail": {
+      "id": "3ab0e1e8-9c31-4b74-95e4-0716cf9dca50",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' AND dr.region_name = '火星地区' LIMIT 500",
+        "data": [
+          {
+            "订单数": 0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度火星地区的订单数是多少？只返回订单数。",
+      "created_at": "2026-09-25T18:53:37.166956+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.quarter='Q1' AND r.region_name='火星'",
+    "expected": [
+      [
+        "0"
+      ]
+    ],
+    "seconds": 6.73
+  },
+  {
+    "name": "最低排名",
+    "passed": true,
+    "question": "2025年第一季度销售额最低的两个地区是哪些？只显示地区和销售额，按销售额升序。",
+    "history": null,
+    "response": {
+      "id": "bad08143-3f40-4301-9646-40977755ff2d",
+      "kind": "warehouse",
+      "question": "2025年第一季度销售额最低的两个地区是哪些？只显示地区和销售额，按销售额升序。"
+    },
+    "detail": {
+      "id": "bad08143-3f40-4301-9646-40977755ff2d",
+      "error": null,
+      "result": {
+        "sql": "SELECT dr.region_name AS 地区, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dr.region_name ORDER BY 销售额 ASC LIMIT 2",
+        "data": [
+          {
+            "地区": "华中",
+            "销售额": 28957.0
+          },
+          {
+            "地区": "西南",
+            "销售额": 31528.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度销售额最低的两个地区是哪些？只显示地区和销售额，按销售额升序。",
+      "created_at": "2026-09-25T18:53:43.832442+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT r.region_name,SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.quarter='Q1' GROUP BY r.region_name ORDER BY SUM(f.order_amount) ASC LIMIT 2",
+    "expected": [
+      [
+        "华中",
+        "28957"
+      ],
+      [
+        "西南",
+        "31528"
+      ]
+    ],
+    "seconds": 7.97
+  },
+  {
+    "name": "聚合后筛选",
+    "passed": true,
+    "question": "2025年第一季度哪些地区销售额超过50000？只返回地区和销售额，按销售额降序。",
+    "history": null,
+    "response": {
+      "id": "21412c72-7946-4254-8cdf-8b22e36868d2",
+      "kind": "warehouse",
+      "question": "2025年第一季度哪些地区销售额超过50000？只返回地区和销售额，按销售额降序。"
+    },
+    "detail": {
+      "id": "21412c72-7946-4254-8cdf-8b22e36868d2",
+      "error": null,
+      "result": {
+        "sql": "SELECT dr.region_name AS 地区, SUM(fo.order_amount) AS 销售额 FROM dim_region AS dr JOIN fact_order AS fo ON dr.region_id = fo.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dr.region_name HAVING SUM(fo.order_amount) > 50000 ORDER BY 销售额 DESC LIMIT 500",
+        "data": [
+          {
+            "地区": "华东",
+            "销售额": 107373.0
+          },
+          {
+            "地区": "华南",
+            "销售额": 70202.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度哪些地区销售额超过50000？只返回地区和销售额，按销售额降序。",
+      "created_at": "2026-09-25T18:53:44.697082+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT r.region_name,SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.quarter='Q1' GROUP BY r.region_name HAVING SUM(f.order_amount)>50000 ORDER BY SUM(f.order_amount) DESC",
+    "expected": [
+      [
+        "华东",
+        "107373"
+      ],
+      [
+        "华南",
+        "70202"
+      ]
+    ],
+    "seconds": 8.54
+  },
+  {
+    "name": "去年同期",
+    "passed": true,
+    "question": "去年第一季度的订单数是多少？只返回订单数。",
+    "history": null,
+    "response": {
+      "id": "a9096299-7a1a-4753-9c69-5f1911f45bc5",
+      "kind": "warehouse",
+      "question": "去年第一季度的订单数是多少？只返回订单数。"
+    },
+    "detail": {
+      "id": "a9096299-7a1a-4753-9c69-5f1911f45bc5",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order JOIN dim_date ON fact_order.date_id = dim_date.date_id WHERE dim_date.year = 2025 AND dim_date.quarter = 'Q1' LIMIT 500",
+        "data": [
+          {
+            "订单数": 115
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "去年第一季度的订单数是多少？只返回订单数。",
+      "created_at": "2026-09-25T18:53:52.505058+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331",
+    "expected": [
+      [
+        "115"
+      ]
+    ],
+    "seconds": 6.79
+  },
+  {
+    "name": "销售额占比",
+    "passed": true,
+    "question": "2025年第一季度华东销售额占全国的百分之多少？只返回百分数数值，保留两位小数，不带百分号。",
+    "history": null,
+    "response": {
+      "id": "90cf564c-6826-4b37-b8e6-349dc9374698",
+      "kind": "warehouse",
+      "question": "2025年第一季度华东销售额占全国的百分之多少？只返回百分数数值，保留两位小数，不带百分号。"
+    },
+    "detail": {
+      "id": "90cf564c-6826-4b37-b8e6-349dc9374698",
+      "error": null,
+      "result": {
+        "sql": "SELECT ROUND(SUM(CASE WHEN dr.region_name = '华东' THEN fo.order_amount ELSE 0 END) / SUM(fo.order_amount) * 100, 2) AS 华东销售额占比 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' LIMIT 500",
+        "data": [
+          {
+            "华东销售额占比": 38.46
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度华东销售额占全国的百分之多少？只返回百分数数值，保留两位小数，不带百分号。",
+      "created_at": "2026-09-25T18:53:51.722412+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT ROUND(100.0*SUM(CASE WHEN r.region_name='华东' THEN f.order_amount ELSE 0 END)/SUM(f.order_amount),2) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.quarter='Q1'",
+    "expected": [
+      [
+        "38.46"
+      ]
+    ],
+    "seconds": 8.89
+  },
+  {
+    "name": "错别字表达",
+    "passed": true,
+    "question": "2025年一季度销受额总共多少？只返回总金额。",
+    "history": null,
+    "response": {
+      "id": "b12c38c0-05e5-4f6e-b371-09ee1672086a",
+      "kind": "warehouse",
+      "question": "2025年一季度销受额总共多少？只返回总金额。"
+    },
+    "detail": {
+      "id": "b12c38c0-05e5-4f6e-b371-09ee1672086a",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(order_amount) AS 销售额 FROM fact_order JOIN dim_date ON fact_order.date_id = dim_date.date_id WHERE dim_date.year = 2025 AND dim_date.quarter = 'Q1' LIMIT 500",
+        "data": [
+          {
+            "销售额": 279159.5
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年一季度销受额总共多少？只返回总金额。",
+      "created_at": "2026-09-25T18:53:59.42815+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(order_amount) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331",
+    "expected": [
+      [
+        "279159.5"
+      ]
+    ],
+    "seconds": 6.92
+  },
+  {
+    "name": "订单金额阈值",
+    "passed": true,
+    "question": "2025年第一季度单笔订单金额大于5000的订单共有多少？只返回订单数。",
+    "history": null,
+    "response": {
+      "id": "0e855edb-7d4f-406d-8110-58f87c8f1c49",
+      "kind": "warehouse",
+      "question": "2025年第一季度单笔订单金额大于5000的订单共有多少？只返回订单数。"
+    },
+    "detail": {
+      "id": "0e855edb-7d4f-406d-8110-58f87c8f1c49",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order JOIN dim_date ON fact_order.date_id = dim_date.date_id WHERE dim_date.year = 2025 AND dim_date.quarter = 'Q1' AND fact_order.order_amount > 5000 LIMIT 500",
+        "data": [
+          {
+            "订单数": 28
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度单笔订单金额大于5000的订单共有多少？只返回订单数。",
+      "created_at": "2026-09-25T18:54:00.535843+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331 AND order_amount>5000",
+    "expected": [
+      [
+        "28"
+      ]
+    ],
+    "seconds": 7.81
+  },
+  {
+    "name": "英文解释",
+    "passed": true,
+    "question": "What is average order value? Explain briefly.",
+    "response": {
+      "answer": "平均订单价值（Average Order Value, AOV）是指每个订单的平均金额，用于衡量客户在单次购买中消费的金额水平。计算公式为：\n\n**AOV = 总销售额（GMV） ÷ 订单总数**\n\n例如：某商家在某天的总销售额为 10,000 元，共产生 200 个订单，则当天的 AOV 为 10,000 ÷ 200 = 50 元。AOV 越高，通常表示客户平均消费水平越高或客单价策略（如捆绑销售、满减）效果较好。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "detail": null
+  },
+  {
+    "name": "代码中的日志关键词",
+    "passed": true,
+    "question": "解释这行Python代码：logger.error(\"timeout\")，不要查询任何日志。",
+    "response": {
+      "answer": "这行 Python 代码的作用是：\n\n- `logger.error(...)`：调用名为 `logger` 的日志记录器（通常是通过 `logging` 模块创建的实例），并调用其 `error` 方法，用于记录一条**错误级别**的日志消息。\n- `\"timeout\"`：传递给 `error` 方法的日志消息内容，表示发生了超时（timeout）事件。\n\n**执行结果**：系统会将这条错误日志写入日志文件或输出到控制台（取决于 `logger` 的配置），便于后续排查问题。\n\n**常见用途**：\n- 网络请求超时、数据库连接超时等异常场景。\n- 与 `try-except` 捕获异常后的错误日志记录结合使用。\n\n**示例**：\n```python\nimport logging\n\n# 配置日志记录器\nlogging.basicConfig(level=logging.ERROR)\nlogger = logging.getLogger(__name__)\n\n# 记录超时错误\nlogger.error(\"timeout\")\n```\n输出可能为：`ERROR:__main__:timeout`。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "detail": null
+  },
+  {
+    "name": "假设数字计算",
+    "passed": true,
+    "question": "假设销售额1000元，有10个订单，客单价是多少？这是算术题，不要查数据库。",
+    "response": {
+      "answer": "客单价（AOV）= 销售额 ÷ 订单数 = 1000元 ÷ 10 = 100元。\n\n解释：客单价是衡量每个订单平均金额的指标，公式为：\n**客单价 = 销售额（GMV） ÷ 订单数**。\n\n示例中，1000元销售额分摊到10个订单，每个订单平均金额为100元。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "detail": null
+  },
+  {
+    "name": "SQL知识",
+    "passed": true,
+    "question": "SQL的GROUP BY和WHERE有什么区别？",
+    "response": {
+      "answer": "在 SQL 中，`WHERE` 和 `GROUP BY` 的作用和使用场景完全不同，但可以结合使用。\n\n1. **WHERE**：\n   - 用于**筛选行**。在数据分组（`GROUP BY`）之前，先用 `WHERE` 过滤出满足条件的行。\n   - 语法：`SELECT ... FROM ... WHERE 条件`\n   - 示例：`SELECT * FROM orders WHERE order_date > '2025-01-01'`（筛选出 2025 年 1 月 1 日后的订单）。\n   - 条件中不能使用聚合函数（如 `SUM`、`COUNT` 等）。\n\n2. **GROUP BY**：\n   - 用于**分组数据**。将查询结果按指定列（或多列）的值进行分组，通常与聚合函数（如 `SUM`、`AVG`、`COUNT`）结合使用。\n   - 语法：`SELECT 列1, 聚合函数(列2) FROM ... GROUP BY 列1`\n   - 示例：`SELECT region, SUM(amount) FROM orders GROUP BY region`（按地区统计销售额）。\n   - 如果查询中包含聚合函数，必须使用 `GROUP BY` 对非聚合列进行分组。\n\n**关键区别**：\n- `WHERE` 先筛选行，`GROUP BY` 后分组数据。\n- `WHERE` 不能与聚合函数一起使用，而 `GROUP BY` 通常需要聚合函数。\n- `WHERE` 影响的是原始行，`GROUP BY` 影响的是分组后的结果。\n\n**结合使用示例**：\n```sql\nSELECT region, SUM(amount)\nFROM orders\nWHERE order_date > '2025-01-01'  -- 先筛选 2025 年后的订单\nGROUP BY region  -- 再按地区分组统计\nORDER BY SUM(amount) DESC;  -- 按销售额降序排列\n```",
+      "clarification": "",
+      "status": "answer"
+    },
+    "detail": null
+  },
+  {
+    "name": "上下文不足",
+    "passed": true,
+    "question": "改成前三名",
+    "response": {
+      "answer": "",
+      "clarification": "请明确：1) 需要查询哪个指标（如销售额/GMV、客单价/AOV等）？2) 时间范围（如2025年1-3月、2025年2月等）？3) 地区范围（如全部地区、华东等）？",
+      "status": "clarification"
+    },
+    "detail": null
+  },
+  {
+    "name": "明确不查数",
+    "passed": true,
+    "question": "不要查询数据，只告诉我应该怎样描述一个销售分析问题。",
+    "response": {
+      "answer": "描述一个销售分析问题时，通常需要包含以下关键要素，以确保问题的清晰性和可执行性：\n\n1. **时间范围**：明确查询的起止时间（如\"2025年第一季度\"、\"去年同期\"、\"最近12个月\"等）。若未指定，可默认查询全部可用数据。\n2. **地域范围**：明确地区（如\"华东地区\"、\"全国\"、\"各省份\"等）。若未指定，可默认查询所有地区。\n3. **指标定义**：明确需要分析的核心指标（如\"销售额（GMV）\"、\"客单价（AOV）\"、\"订单量\"、\"转化率\"等）。\n4. **维度细分**：说明是否需要按特定维度拆分（如\"按商品类目\"、\"按客户群体\"、\"按渠道来源\"等）。\n5. **排序或对比**：是否需要按金额、数量等排序，或与历史同期/目标值进行对比。\n6. **筛选条件**：是否有额外的筛选条件（如\"仅线上订单\"、\"仅 VIP 客户\"、\"排除退款订单\"等）。\n\n**示例模板**：\n- \"2025年第一季度各地区销售额，按金额从高到低排序。\"\n- \"2025年2月华东地区销售额与去年同期对比，按商品类目拆分。\"\n- \"最近12个月各省份客单价，仅包含完成订单，按季度汇总。\"\n\n这样描述后，系统可以直接生成对应的查询语句或调用工具获取数据。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "detail": null
+  },
+  {
+    "name": "中英混合帮助",
+    "passed": true,
+    "question": "Explain 客单价 in English, in one sentence.",
+    "response": {
+      "answer": "Average Order Value (AOV), or 客单价, is the average amount of money spent per order, calculated as total sales revenue divided by the number of orders.",
+      "clarification": "",
+      "status": "answer"
+    },
+    "detail": null
+  },
+  {
+    "name": "不知道问什么",
+    "passed": true,
+    "question": "我不知道怎么开始",
+    "response": {
+      "answer": "IncidentDesk 助手（Mistral）可以帮你查询电商业务数据或解答一般问题。\n\n**开始使用的方法：**\n1. **查询业务数据**：直接告诉我你想了解的指标（如销售额、客单价、地区分布等）、时间范围（如2025年1月、今年Q1等），我会帮你查询演示数仓。例如：\n   - 「2025年1月各地区销售额」\n   - 「今年第一季度客单价」\n   - 「华东地区2025年2月销售额」\n\n2. **一般问题**：可以问我概念解释（如「客单价是什么意思？」）、使用方法、编程建议、写作翻译等，我会直接回答。\n\n3. **不明确需求**：如果问题不具体（如「销售怎么样？」），我会追问时间和指标。\n\n**当前能力范围：**\n- 电商演示数仓：订单、客户、商品、地区、日期，销售额（GMV）、客单价（AOV）等指标，时间覆盖2025-01-01至2025-03-31，最多返回500行数据。\n- 可查询「订单服务」的日志/资料（仅数据查询，无修改功能）。\n\n你想先查询什么数据，或者有其他问题吗？",
+      "clarification": "",
+      "status": "answer"
+    },
+    "detail": null
+  },
+  {
+    "name": "越界执行说明",
+    "passed": true,
+    "question": "帮我运行Python代码 print(1+1)，并告诉我是否真的执行了。",
+    "response": {
+      "answer": "我无法直接执行或运行Python代码。IncidentDesk 助手仅支持：\n1. 一般知识问答、解释、翻译、写作和编程建议；\n2. 查询电商演示数仓（只读，无代码执行）；\n3. 查询服务日志/资料（仅数据，不是指令）。\n\n要运行 `print(1+1)`，你可以：\n- 在本地 Python 环境中执行：打开终端或 IDE，输入代码并运行，结果会输出 `2`；\n- 在线工具如 [Replit](https://replit.com/) 或 [Python Tutor](https://pythontutor.com/) 中运行。\n\n如果你需要编程建议或代码示例，我可以为你提供！",
+      "clarification": "",
+      "status": "answer"
+    },
+    "detail": null
+  },
+  {
+    "name": "缺少退货字段",
+    "passed": true,
+    "question": "2025年第一季度退货率是多少？",
+    "response": {
+      "id": "f7ab310b-a1ed-4012-9ca0-9fb8f984ea0d",
+      "kind": "warehouse",
+      "question": "2025年第一季度退货率是多少？"
+    },
+    "detail": {
+      "id": "f7ab310b-a1ed-4012-9ca0-9fb8f984ea0d",
+      "error": "无法计算退货率，缺少退货相关事实表或字段",
+      "result": null,
+      "status": "failed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "error"
+        }
+      ],
+      "question": "2025年第一季度退货率是多少？",
+      "created_at": "2026-09-25T18:54:18.026687+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "追问撤销地区",
+    "passed": false,
+    "question": "不限制地区了，查全国，其他条件不变",
+    "history": [
+      {
+        "role": "user",
+        "content": "2025年1月华东地区的销售额是多少？只返回金额。"
+      },
+      {
+        "role": "assistant",
+        "content": "已提交查询：2025年1月华东地区的销售总额"
+      }
+    ],
+    "response": {
+      "id": "10a81a4a-7645-4e8f-80a8-85aa743e4e6b",
+      "kind": "warehouse",
+      "question": "查询2025年1月全国销售额（GMV）"
+    },
+    "detail": {
+      "id": "10a81a4a-7645-4e8f-80a8-85aa743e4e6b",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(fo.order_amount) AS GMV, COUNT(DISTINCT fo.order_id) AS 订单数, AVG(fo.order_amount) AS 客单价 FROM fact_order AS fo JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.month = 1 LIMIT 500",
+        "data": [
+          {
+            "GMV": 109030.5,
+            "客单价": 2725.7625,
+            "订单数": 40
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年1月全国销售额（GMV）",
+      "created_at": "2026-09-25T18:54:24.031548+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(order_amount) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250131",
+    "expected": [
+      [
+        "109030.5"
+      ]
+    ],
+    "seconds": 5.99
+  },
+  {
+    "name": "追问换地区",
+    "passed": false,
+    "question": "换成华南，其他不变",
+    "history": [
+      {
+        "role": "user",
+        "content": "2025年1月华东地区的销售额是多少？只返回金额。"
+      },
+      {
+        "role": "assistant",
+        "content": "已提交查询：2025年1月华东地区的销售总额"
+      }
+    ],
+    "response": {
+      "id": "8bca24c7-849a-4c94-a337-6ec54a7b5366",
+      "kind": "warehouse",
+      "question": "查询2025年1月华南地区销售额"
+    },
+    "detail": {
+      "id": "8bca24c7-849a-4c94-a337-6ec54a7b5366",
+      "error": null,
+      "result": {
+        "sql": "SELECT dr.region_name AS 地区, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华南' AND dd.year = 2025 AND MONTH(dd.date_id) = 1 GROUP BY dr.region_name LIMIT 500",
+        "data": [
+          {
+            "地区": "华南",
+            "销售额": 28096.5
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年1月华南地区销售额",
+      "created_at": "2026-09-25T18:54:24.216188+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.month=1 AND r.region_name='华南'",
+    "expected": [
+      [
+        "28096.5"
+      ]
+    ],
+    "seconds": 7.19
+  },
+  {
+    "name": "追问换指标",
+    "passed": false,
+    "question": "金额不看了，改查订单数，其他条件不变",
+    "history": [
+      {
+        "role": "user",
+        "content": "2025年1月华东地区的销售额是多少？只返回金额。"
+      },
+      {
+        "role": "assistant",
+        "content": "已提交查询：2025年1月华东地区的销售总额"
+      }
+    ],
+    "response": {
+      "id": "6e227ca0-c1ac-4d92-b3ce-ae6ac2b796d2",
+      "kind": "warehouse",
+      "question": "查询2025年1月华东地区的订单数"
+    },
+    "detail": {
+      "id": "6e227ca0-c1ac-4d92-b3ce-ae6ac2b796d2",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT fo.order_id) AS 订单数 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dr.region_name = '华东' LIMIT 500",
+        "data": [
+          {
+            "订单数": 44
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2025年1月华东地区的订单数",
+      "created_at": "2026-09-25T18:54:29.841338+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2025 AND d.month=1 AND r.region_name='华东'",
+    "expected": [
+      [
+        "16"
+      ]
+    ],
+    "seconds": 5.8
+  },
+  {
+    "name": "纠正年份",
+    "passed": true,
+    "question": "年份说错了，是2026年，月份和地区不变，查订单数",
+    "history": [
+      {
+        "role": "user",
+        "content": "2025年1月华东地区的销售额是多少？只返回金额。"
+      },
+      {
+        "role": "assistant",
+        "content": "已提交查询：2025年1月华东地区的销售总额"
+      }
+    ],
+    "response": {
+      "id": "f220e28f-1e94-4aad-a03c-d4e814c3b9c0",
+      "kind": "warehouse",
+      "question": "查询2026年1月华东地区的订单数"
+    },
+    "detail": {
+      "id": "f220e28f-1e94-4aad-a03c-d4e814c3b9c0",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT fo.order_id) AS 订单数 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.year = 2026 AND dd.date_id BETWEEN 20260101 AND 20260131 LIMIT 500",
+        "data": [
+          {
+            "订单数": 0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2026年1月华东地区的订单数",
+      "created_at": "2026-09-25T18:54:31.028469+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id JOIN dim_date d ON f.date_id=d.date_id WHERE d.year=2026 AND d.month=1 AND r.region_name='华东'",
+    "expected": [
+      [
+        "0"
+      ]
+    ],
+    "seconds": 5.79
+  },
+  {
+    "name": "新问题不带旧筛选",
+    "passed": true,
+    "question": "另一个问题：统计全部可用订单的总数，只返回订单数",
+    "history": [
+      {
+        "role": "user",
+        "content": "2025年1月华东地区的销售额是多少？只返回金额。"
+      },
+      {
+        "role": "assistant",
+        "content": "已提交查询：2025年1月华东地区的销售总额"
+      }
+    ],
+    "response": {
+      "id": "23e4591b-46c1-4380-b40e-5fb659b96c12",
+      "kind": "warehouse",
+      "question": "统计2025-01-01至2025-03-31全部可用订单的总数"
+    },
+    "detail": {
+      "id": "23e4591b-46c1-4380-b40e-5fb659b96c12",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331 LIMIT 500",
+        "data": [
+          {
+            "订单数": 115
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "统计2025-01-01至2025-03-31全部可用订单的总数",
+      "created_at": "2026-09-25T18:54:35.627762+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order",
+    "expected": [
+      [
+        "115"
+      ]
+    ],
+    "seconds": 6.81
+  },
+  {
+    "name": "超长输入",
+    "passed": true,
+    "http": 400,
+    "response": {
+      "error": "invalid_question"
+    }
+  },
+  {
+    "name": "无效时区",
+    "passed": true,
+    "http": 400,
+    "response": {
+      "error": "invalid_timezone"
+    }
+  },
+  {
+    "name": "无效模式",
+    "passed": true,
+    "http": 400,
+    "response": {
+      "error": "invalid_query_mode"
+    }
+  },
+  {
+    "name": "过长历史",
+    "passed": true,
+    "http": 400,
+    "response": {
+      "error": "invalid_question"
+    }
+  },
+  {
+    "name": "空历史消息",
+    "passed": true,
+    "http": 400,
+    "response": {
+      "error": "invalid_conversation"
+    }
+  },
+  {
+    "name": "不存在记录",
+    "passed": true,
+    "http": 404,
+    "response": {
+      "error": "not_found"
+    }
+  },
+  {
+    "name": "无效记录ID",
+    "passed": false,
+    "http": 500,
+    "response": {
+      "error": "internal_error"
+    }
+  }
+]

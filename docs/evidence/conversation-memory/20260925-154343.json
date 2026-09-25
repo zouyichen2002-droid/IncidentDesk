@@ -1,0 +1,1261 @@
+[
+  {
+    "name": "创建对话幂等",
+    "passed": true,
+    "id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed"
+  },
+  {
+    "name": "首轮查数",
+    "passed": true,
+    "response": {
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+      "kind": "warehouse",
+      "question": "2025年1月华东地区销售总额是多少？只返回金额。",
+      "revision": 1,
+      "turn_id": "d109bfba-75af-41b1-9692-73782ee40530"
+    },
+    "detail": {
+      "id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(fo.order_amount) AS 销售总额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.year = 2025 AND dd.month = 1 LIMIT 500",
+        "data": [
+          {
+            "销售总额": 54924.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500,
+        "elapsed_ms": 3151,
+        "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 6,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 6,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 0
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 10,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 10,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 11,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 749,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 738
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1322,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 1312
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1638,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 1628
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1640,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1648,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 8
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1660,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1660,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2097,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 437
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2297,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 636
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2298,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2299,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 1
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2304,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3128,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 824
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3137,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3140,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 3
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3147,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3151,
+          "request_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+          "duration_ms": 4
+        }
+      ],
+      "question": "2025年1月华东地区销售总额是多少？只返回金额。",
+      "created_at": "2026-09-25T19:43:44.623965+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id WHERE f.date_id BETWEEN 20250101 AND 20250131 AND r.region_name='华东'",
+    "expected": [
+      [
+        "54924"
+      ]
+    ]
+  },
+  {
+    "name": "重新登录恢复记录",
+    "passed": true,
+    "summary": {
+      "kind": "warehouse",
+      "task_id": "ee6d5f65-d7b3-425c-a327-113109ec6a4b",
+      "timezone": "America/New_York",
+      "dataset_id": "commerce",
+      "captured_at": "2026-09-25T19:43:43Z",
+      "schema_version": 1,
+      "dataset_version": "teaching-2025q1-v1",
+      "resolved_question": "2025年1月华东地区销售总额是多少？只返回金额。",
+      "contains_current_result": false
+    }
+  },
+  {
+    "name": "恢复后改月份",
+    "passed": true,
+    "response": {
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "id": "17286192-f98e-468d-ae67-5505762dca83",
+      "kind": "warehouse",
+      "question": "2025年2月华东地区销售总额，只返回金额",
+      "revision": 2,
+      "turn_id": "be4b6119-a267-4ad2-9428-7907ef8ff55d"
+    },
+    "detail": {
+      "id": "17286192-f98e-468d-ae67-5505762dca83",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(fo.order_amount) AS 销售总额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.year = 2025 AND dd.month = 2 LIMIT 500",
+        "data": [
+          {
+            "销售总额": 17508.0
+          }
+        ],
+        "type": "result",
+        "row_limit": 500,
+        "elapsed_ms": 3093,
+        "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 4,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 4,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 0
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 6,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 6,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 7,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 491,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 485
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 937,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 931
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1582,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 1576
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1583,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1588,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 6
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1596,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1596,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2249,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 653
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2292,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 696
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2293,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2294,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 1
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2298,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3073,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 775
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3076,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3079,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 4
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3090,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3093,
+          "request_id": "17286192-f98e-468d-ae67-5505762dca83",
+          "duration_ms": 3
+        }
+      ],
+      "question": "2025年2月华东地区销售总额，只返回金额",
+      "created_at": "2026-09-25T19:43:49.456819+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id WHERE f.date_id BETWEEN 20250201 AND 20250228 AND r.region_name='华东'",
+    "expected": [
+      [
+        "17508"
+      ]
+    ]
+  },
+  {
+    "name": "插入知识问答1",
+    "passed": true,
+    "response": {
+      "answer": "数据库索引是一种用于加速数据检索的数据结构，类似于书籍的目录，能够快速定位表中特定行的位置，从而提高查询效率。",
+      "clarification": "",
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "revision": 3,
+      "status": "answer",
+      "turn_id": "4ff481b6-8987-4d00-90d3-aef75ab3ad4b"
+    }
+  },
+  {
+    "name": "插入知识问答2",
+    "passed": true,
+    "response": {
+      "answer": "数据库索引是一种专门用于提高数据检索速度的结构，通过为表中某些列建立有序的指针（如B树），让查询能快速定位数据而无需扫描全表。",
+      "clarification": "",
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "revision": 4,
+      "status": "answer",
+      "turn_id": "6372a71a-fbdc-434a-a833-3d2d92a2ce0d"
+    }
+  },
+  {
+    "name": "插入知识问答3",
+    "passed": true,
+    "response": {
+      "answer": "数据库索引是一种用于加速数据查询的结构，它通过为表中特定列建立有序的排列（如B树），让数据库引擎能快速定位数据行，从而避免全表扫描提升检索效率。",
+      "clarification": "",
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "revision": 5,
+      "status": "answer",
+      "turn_id": "a03ac57e-52d9-4674-a4a5-bdd0d4d4b5b2"
+    }
+  },
+  {
+    "name": "插入知识问答4",
+    "passed": true,
+    "response": {
+      "answer": "数据库索引是一种用于加速数据检索的有序数据结构（如B树或哈希表），通过为表中特定列建立键值与记录位置的映射，让查询能高效定位数据而无需扫描整张表。",
+      "clarification": "",
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "revision": 6,
+      "status": "answer",
+      "turn_id": "4f9600dc-1797-49f0-96e4-fab5f11bf3f9"
+    }
+  },
+  {
+    "name": "插入知识问答5",
+    "passed": true,
+    "response": {
+      "answer": "数据库索引是一种用于提高数据检索效率的有序数据结构（如B树、哈希等），通过为表中特定列建立键值与记录位置的映射，让查询能快速定位数据而无需全表扫描。",
+      "clarification": "",
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "revision": 7,
+      "status": "answer",
+      "turn_id": "ddf57aea-0b7e-4011-99a1-741a1adbd218"
+    }
+  },
+  {
+    "name": "超出短窗口后保留查询锚点",
+    "passed": true,
+    "response": {
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+      "kind": "warehouse",
+      "question": "2025年2月华南地区销售额，只返回金额",
+      "revision": 8,
+      "turn_id": "e823c871-9288-4cd1-afd1-3ebac35a1269"
+    },
+    "detail": {
+      "id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.month = 2 AND dr.region_name = '华南' LIMIT 500",
+        "data": [
+          {
+            "销售额": 29352.5
+          }
+        ],
+        "type": "result",
+        "row_limit": 500,
+        "elapsed_ms": 3670,
+        "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 0
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 7,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 8,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 8,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 895,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 887
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1417,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 1410
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1910,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 1903
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1911,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1915,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 4
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1920,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1920,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2508,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 588
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2878,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 958
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2879,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2880,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 1
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2885,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3654,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 769
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3659,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3661,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 2
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3667,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3670,
+          "request_id": "6e0b2998-7384-43d9-ad50-4192f12e929a",
+          "duration_ms": 3
+        }
+      ],
+      "question": "2025年2月华南地区销售额，只返回金额",
+      "created_at": "2026-09-25T19:43:59.5423+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT SUM(f.order_amount) FROM fact_order f JOIN dim_region r ON f.region_id=r.region_id WHERE f.date_id BETWEEN 20250201 AND 20250228 AND r.region_name='华南'",
+    "expected": [
+      [
+        "29352.5"
+      ]
+    ]
+  },
+  {
+    "name": "新话题清除旧筛选",
+    "passed": true,
+    "response": {
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+      "kind": "warehouse",
+      "question": "统计全部可用订单的总数，不限制时间或地区，只返回订单数",
+      "revision": 9,
+      "turn_id": "899c2f9d-d5ac-4e03-86fb-8efe3b74ad24"
+    },
+    "detail": {
+      "id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order LIMIT 500",
+        "data": [
+          {
+            "订单数": 115
+          }
+        ],
+        "type": "result",
+        "row_limit": 500,
+        "elapsed_ms": 2941,
+        "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 0
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 3,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 4,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 721,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 718
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1290,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 1287
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1767,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 1764
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1769,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1775,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 6
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1781,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1782,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2308,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 526
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2371,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 589
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2372,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2373,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 1
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2375,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2926,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 551
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2930,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2933,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 3
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2937,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2941,
+          "request_id": "1e9199bf-8a35-427c-98ba-17958a671e50",
+          "duration_ms": 4
+        }
+      ],
+      "question": "统计全部可用订单的总数，不限制时间或地区，只返回订单数",
+      "created_at": "2026-09-25T19:44:04.369099+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order",
+    "expected": [
+      [
+        "115"
+      ]
+    ]
+  },
+  {
+    "name": "强制业务模式也能承接追问",
+    "passed": true,
+    "response": {
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+      "kind": "warehouse",
+      "question": "2025年1月全部地区的订单总数，只返回订单数",
+      "revision": 10,
+      "turn_id": "a93fdff8-fb35-4f44-9817-043ca58c6483"
+    },
+    "detail": {
+      "id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+      "error": null,
+      "result": {
+        "sql": "SELECT COUNT(DISTINCT order_id) AS 订单数 FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250131 LIMIT 500",
+        "data": [
+          {
+            "订单数": 40
+          }
+        ],
+        "type": "result",
+        "row_limit": 500,
+        "elapsed_ms": 2746,
+        "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 3,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 0
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 5,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 5,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 5,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 537,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 532
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1174,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 1169
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1420,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 1416
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1421,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1426,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 5
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1432,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 1432,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 1911,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 479
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2092,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 660
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2092,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2093,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 1
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2095,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2731,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 636
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2737,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2739,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 3
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running",
+          "elapsed_ms": 2743,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success",
+          "elapsed_ms": 2746,
+          "request_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+          "duration_ms": 3
+        }
+      ],
+      "question": "2025年1月全部地区的订单总数，只返回订单数",
+      "created_at": "2026-09-25T19:44:09.4639+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "gold_sql": "SELECT COUNT(*) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250131",
+    "expected": [
+      [
+        "40"
+      ]
+    ]
+  },
+  {
+    "name": "记忆不保存SQL结果为当前事实",
+    "passed": true,
+    "summary": {
+      "kind": "warehouse",
+      "task_id": "899e25fd-cc45-4812-9f1c-97f23e0aed30",
+      "timezone": "America/New_York",
+      "dataset_id": "commerce",
+      "captured_at": "2026-09-25T19:44:08Z",
+      "schema_version": 1,
+      "dataset_version": "teaching-2025q1-v1",
+      "resolved_question": "2025年1月全部地区的订单总数，只返回订单数",
+      "contains_current_result": false
+    }
+  },
+  {
+    "name": "新对话不继承其他对话",
+    "passed": true,
+    "response": {
+      "answer": "",
+      "clarification": "请明确查询指标（如销售额、订单数、客单价等）和时间范围（如2025年1月、2025年第一季度等）？",
+      "conversation_id": "7b8b4524-6571-4bc2-8567-0efdc1277a25",
+      "revision": 1,
+      "status": "clarification",
+      "turn_id": "23d1d1fb-0500-4136-8cc5-3b67dc61edaa"
+    }
+  },
+  {
+    "name": "bob不能读取他人对话",
+    "passed": true,
+    "http": 404
+  },
+  {
+    "name": "bob不能续写他人对话",
+    "passed": true,
+    "http": 404
+  },
+  {
+    "name": "bob列表不含他人对话",
+    "passed": true
+  },
+  {
+    "name": "carol不能读取他人对话",
+    "passed": true,
+    "http": 404
+  },
+  {
+    "name": "carol不能续写他人对话",
+    "passed": true,
+    "http": 404
+  },
+  {
+    "name": "carol列表不含他人对话",
+    "passed": true
+  },
+  {
+    "name": "同轮重试返回同一响应",
+    "passed": true,
+    "response": {
+      "answer": "您好！我是 IncidentDesk 助手（Mistral），可以帮您查询电商演示数仓的销售数据（如销售额、客单价、订单数等）、解释概念、提供编程建议或协助分析问题。需要查询具体数据时，请告诉我时间、地区、指标等条件。",
+      "clarification": "",
+      "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+      "revision": 11,
+      "status": "answer",
+      "turn_id": "9553c854-0108-4cb6-922c-b90c8f3c1885"
+    }
+  },
+  {
+    "name": "同键不同输入拒绝",
+    "passed": true,
+    "response": {
+      "error": "idempotency_payload_conflict"
+    }
+  },
+  {
+    "name": "旧版本并发写入拒绝",
+    "passed": true,
+    "response": {
+      "error": "conversation_changed"
+    }
+  },
+  {
+    "name": "不接受客户端伪造历史",
+    "passed": true,
+    "response": {
+      "error": "invalid_json"
+    }
+  },
+  {
+    "name": "同版本并发只有一次提交成功",
+    "passed": true,
+    "responses": [
+      {
+        "answer": "您好！我是 IncidentDesk 助手（Mistral），可以帮您查询电商演示数仓的销售数据（如销售额、客单价、订单数等）、解释概念、提供编程建议或协助分析问题。需要查询具体数据时，请告诉我时间、地区、指标等条件。",
+        "clarification": "",
+        "conversation_id": "3684f2c4-7ece-40eb-a4e6-777f5cc038ed",
+        "revision": 12,
+        "status": "answer",
+        "turn_id": "d7866b48-d0f8-4563-b5f9-ee4387c92995"
+      },
+      {
+        "error": "conversation_busy"
+      }
+    ]
+  },
+  {
+    "name": "消息游标分页",
+    "passed": true
+  },
+  {
+    "name": "非法游标?before=0",
+    "passed": true
+  },
+  {
+    "name": "非法游标?before=abc",
+    "passed": true
+  },
+  {
+    "name": "非法列表分页拒绝",
+    "passed": true
+  },
+  {
+    "name": "非法ID拒绝",
+    "passed": true
+  },
+  {
+    "name": "准备权限回归对话",
+    "passed": true,
+    "response": {
+      "conversation_id": "4d23fee2-aa74-4f7f-82ca-6e41a99149fa",
+      "id": "4bfa634a-fcd6-428e-a578-d0a4284a8624",
+      "kind": "warehouse",
+      "question": "2025年第一季度订单数是多少？",
+      "revision": 1,
+      "turn_id": "aa281920-388f-4bf2-a45b-9ea4e753972a"
+    }
+  },
+  {
+    "name": "权限撤销后旧对话不可读",
+    "passed": true
+  },
+  {
+    "name": "权限撤销后旧记忆不可续用",
+    "passed": true
+  },
+  {
+    "name": "权限撤销后列表隐藏旧对话",
+    "passed": true
+  }
+]

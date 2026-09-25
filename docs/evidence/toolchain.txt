@@ -1,0 +1,5 @@
+Darwin arm64
+go version go1.27.1 darwin/arm64
+v24.18.0
+uv 0.11.26 (396ef7ce4 2026-06-30 aarch64-apple-darwin)
+v4.3.0+gbec5b06

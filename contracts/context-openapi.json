@@ -1,0 +1,554 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "IncidentDesk Context API",
+    "version": "1"
+  },
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_healthz_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/context/v1/query": {
+      "post": {
+        "summary": "Query",
+        "operationId": "query_context_v1_query_post",
+        "parameters": [
+          {
+            "name": "x-worker-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "X-Worker-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Query"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/context/v1/interpret": {
+      "post": {
+        "summary": "Natural Query",
+        "operationId": "natural_query_context_v1_interpret_post",
+        "parameters": [
+          {
+            "name": "x-worker-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "X-Worker-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NaturalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Budget": {
+        "properties": {
+          "steps": {
+            "type": "integer",
+            "maximum": 32.0,
+            "minimum": 1.0,
+            "title": "Steps"
+          },
+          "seconds": {
+            "type": "integer",
+            "maximum": 300.0,
+            "minimum": 1.0,
+            "title": "Seconds"
+          },
+          "output_bytes": {
+            "type": "integer",
+            "maximum": 1048576.0,
+            "minimum": 100.0,
+            "title": "Output Bytes"
+          },
+          "model_calls": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 0.0,
+            "title": "Model Calls"
+          },
+          "tokens": {
+            "type": "integer",
+            "maximum": 32000.0,
+            "minimum": 1.0,
+            "title": "Tokens"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "steps",
+          "seconds",
+          "output_bytes",
+          "model_calls",
+          "tokens"
+        ],
+        "title": "Budget"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LogQuery": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": [
+              "anomalies",
+              "search",
+              "all"
+            ],
+            "title": "Mode",
+            "default": "anomalies"
+          },
+          "terms": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "title": "Terms"
+          },
+          "levels": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "ERROR",
+                "FATAL",
+                "SEVERE",
+                "FAILURE",
+                "WARN",
+                "WARNING",
+                "CRITICAL",
+                "ALERT",
+                "EMERG",
+                "INFO",
+                "DEBUG",
+                "TRACE",
+                "UNKNOWN"
+              ]
+            },
+            "type": "array",
+            "maxItems": 12,
+            "title": "Levels"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "LogQuery"
+      },
+      "NaturalRequest": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 3,
+            "title": "Text"
+          },
+          "timezone": {
+            "type": "string",
+            "title": "Timezone",
+            "default": "UTC"
+          },
+          "now": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Now"
+          },
+          "services": {
+            "items": {
+              "$ref": "#/components/schemas/ServiceOption"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "title": "Services"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "text",
+          "now",
+          "services"
+        ],
+        "title": "NaturalRequest"
+      },
+      "PlanStep": {
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": [
+              "logs",
+              "deployments",
+              "git",
+              "runbook",
+              "cluster"
+            ],
+            "title": "Source"
+          },
+          "object": {
+            "type": "string",
+            "enum": [
+              "Service",
+              "Deployment",
+              "Commit",
+              "Runbook",
+              "Incident"
+            ],
+            "title": "Object"
+          },
+          "path": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Path"
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 1.0,
+            "title": "Limit",
+            "default": 50
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source",
+          "object",
+          "path"
+        ],
+        "title": "PlanStep"
+      },
+      "Query": {
+        "properties": {
+          "run": {
+            "$ref": "#/components/schemas/RunContext"
+          },
+          "plan": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/QueryPlan"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "run"
+        ],
+        "title": "Query"
+      },
+      "QueryPlan": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "1",
+            "title": "Version",
+            "default": "1"
+          },
+          "service": {
+            "type": "string",
+            "title": "Service"
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Start"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "title": "End"
+          },
+          "steps": {
+            "items": {
+              "$ref": "#/components/schemas/PlanStep"
+            },
+            "type": "array",
+            "maxItems": 12,
+            "title": "Steps"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "service",
+          "start",
+          "end",
+          "steps"
+        ],
+        "title": "QueryPlan"
+      },
+      "RunContext": {
+        "properties": {
+          "protocol_version": {
+            "type": "integer",
+            "const": 1,
+            "title": "Protocol Version"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "team": {
+            "type": "string",
+            "title": "Team"
+          },
+          "service": {
+            "type": "string",
+            "title": "Service"
+          },
+          "symptom": {
+            "type": "string",
+            "title": "Symptom"
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Start"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "title": "End"
+          },
+          "source_version": {
+            "type": "integer",
+            "title": "Source Version"
+          },
+          "generation": {
+            "type": "integer",
+            "title": "Generation"
+          },
+          "attempt": {
+            "type": "integer",
+            "title": "Attempt",
+            "default": 1
+          },
+          "owner": {
+            "type": "string",
+            "title": "Owner"
+          },
+          "lease_seconds": {
+            "type": "integer",
+            "title": "Lease Seconds"
+          },
+          "query": {
+            "$ref": "#/components/schemas/LogQuery"
+          },
+          "budget": {
+            "$ref": "#/components/schemas/Budget"
+          }
+        },
+        "type": "object",
+        "required": [
+          "protocol_version",
+          "id",
+          "subject",
+          "team",
+          "service",
+          "symptom",
+          "start",
+          "end",
+          "source_version",
+          "generation",
+          "owner",
+          "lease_seconds",
+          "budget"
+        ],
+        "title": "RunContext"
+      },
+      "ServiceOption": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "aliases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Aliases",
+            "default": []
+          },
+          "available_from": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Available From"
+          },
+          "available_to": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Available To"
+          },
+          "provenance": {
+            "type": "string",
+            "title": "Provenance",
+            "default": "local-demo"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "title": "ServiceOption"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

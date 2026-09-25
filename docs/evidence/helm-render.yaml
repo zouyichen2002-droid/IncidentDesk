@@ -1,0 +1,581 @@
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: v1
+kind: Namespace
+metadata: {name: incident-demo}
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: v1
+kind: Namespace
+metadata: {name: incident-sandbox}
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: default-deny}
+spec:
+  podSelector: {}
+  policyTypes: [Ingress, Egress]
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: app-internal}
+spec:
+  podSelector: {matchLabels: {incidentdesk: "true"}}
+  policyTypes: [Ingress, Egress]
+  ingress:
+    - from: [{podSelector: {matchLabels: {incidentdesk: "true"}}}]
+  egress:
+    - to: [{podSelector: {matchLabels: {incidentdesk: "true"}}}]
+    - to: [{namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: kube-system}}}]
+      ports: [{port: 53, protocol: UDP}, {port: 53, protocol: TCP}]
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: demo-cluster-observer}
+spec:
+  podSelector: {matchLabels: {app: demo}}
+  policyTypes: [Egress]
+  egress:
+    - ports: [{port: 443, protocol: TCP}, {port: 6443, protocol: TCP}]
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: sandbox-deny-all, namespace: incident-sandbox}
+spec:
+  podSelector: {}
+  policyTypes: [Ingress, Egress]
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: api-sandbox-control}
+spec:
+  podSelector: {matchLabels: {app: api}}
+  policyTypes: [Egress]
+  egress:
+    - ports: [{port: 443, protocol: TCP}, {port: 6443, protocol: TCP}]
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: api}
+spec:
+  minAvailable: 1
+  selector: {matchLabels: {app: api}}
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: api
+automountServiceAccountToken: true
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: worker
+automountServiceAccountToken: false
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: demo
+automountServiceAccountToken: true
+
+---
+# Source: incidentdesk/templates/config.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: incident-secrets
+type: Opaque
+stringData:
+  POSTGRES_PASSWORD: "local-bootstrap"
+  DATABASE_URL: "postgres://incident_api:local-api@postgres/incidentdesk?search_path=business"
+  CHECKPOINT_DATABASE_URL: "postgres://incident_agent:local-agent@postgres/incidentdesk?options=-csearch_path%3Dagent"
+  SOURCE_DATABASE_URL: "postgres://incident_source:local-source@postgres/incidentdesk"
+  SEED_DATABASE_URL: "postgres://postgres:local-bootstrap@postgres/incidentdesk"
+  INTERNAL_KEY: "local-worker-key"
+
+---
+# Source: incidentdesk/templates/config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: incident-config
+data:
+  API_URL: http://api:8080
+  SOURCE_URL: http://demo:8090
+  OIDC_ISSUER: http://demo:8090
+  GITHUB_API_URL: http://demo:8090/github
+  HARNESS: langgraph
+  OBSERVE_NAMESPACE: incident-demo
+  S3_ENDPOINT: http://objects:9000
+  WORKER_SLOTS: "3"
+
+---
+# Source: incidentdesk/templates/config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-init
+data:
+  001_init.sql: |
+    CREATE ROLE incident_api LOGIN PASSWORD 'local-api';
+    CREATE ROLE incident_agent LOGIN PASSWORD 'local-agent';
+    CREATE ROLE incident_source LOGIN PASSWORD 'local-source';
+    CREATE SCHEMA business AUTHORIZATION incident_api;
+    CREATE SCHEMA agent AUTHORIZATION incident_agent;
+    CREATE SCHEMA sources;
+    REVOKE CREATE ON SCHEMA public FROM PUBLIC;
+    GRANT USAGE ON SCHEMA sources TO incident_source, incident_api;
+    SET ROLE incident_api;
+    SET search_path=business;
+    CREATE TABLE schema_version(version int PRIMARY KEY);
+    INSERT INTO schema_version VALUES(1);
+    CREATE TABLE members(subject text, team text, role text NOT NULL CHECK(role IN ('investigator','approver')), PRIMARY KEY(subject,team));
+    CREATE TABLE admins(subject text PRIMARY KEY);
+    CREATE TABLE services(id text PRIMARY KEY, team text NOT NULL, name text NOT NULL, repo text NOT NULL, watermark bigint NOT NULL DEFAULT 1, enabled bool NOT NULL DEFAULT true);
+    CREATE TABLE investigations(id uuid PRIMARY KEY, team text NOT NULL, service text REFERENCES services(id), subject text NOT NULL, symptom text NOT NULL, start_at timestamptz NOT NULL, end_at timestamptz NOT NULL, timezone text NOT NULL, status text NOT NULL, idem text NOT NULL, request_hash text NOT NULL, report jsonb, manifest jsonb, source_version bigint NOT NULL, seq bigint NOT NULL DEFAULT 0, created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now(), UNIQUE(subject,idem));
+    CREATE INDEX inv_team_list ON investigations(team,created_at DESC,id);
+    CREATE TABLE jobs(id uuid PRIMARY KEY REFERENCES investigations(id), state text NOT NULL DEFAULT 'queued', owner text, generation int NOT NULL DEFAULT 0, lease_until timestamptz, available_at timestamptz NOT NULL DEFAULT now(), attempts int NOT NULL DEFAULT 0, last_error text, last_callback text, result_hash text);
+    CREATE INDEX job_claim ON jobs(state,available_at,lease_until);
+    CREATE TABLE events(investigation uuid REFERENCES investigations(id), seq bigint NOT NULL, kind text NOT NULL, payload jsonb NOT NULL DEFAULT '{}', created_at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY(investigation,seq));
+    CREATE TABLE actions(id uuid PRIMARY KEY, investigation uuid NOT NULL REFERENCES investigations(id), version int NOT NULL, state text NOT NULL, target text NOT NULL, title text NOT NULL, body text NOT NULL, digest text NOT NULL, evidence_hash text NOT NULL, source_version bigint NOT NULL, approved_by text, approved_digest text, approved_version int, result jsonb, marker text UNIQUE NOT NULL, updated_at timestamptz NOT NULL DEFAULT now(), UNIQUE(investigation));
+    CREATE INDEX actions_state ON actions(state,updated_at);
+    CREATE TABLE approvals(id uuid PRIMARY KEY, action uuid REFERENCES actions(id), version int, digest text, evidence_hash text, subject text, decision text, created_at timestamptz DEFAULT now());
+    CREATE TABLE feedback(id uuid PRIMARY KEY, investigation uuid REFERENCES investigations(id), subject text, helpful bool, confirmed bool, final_cause text, created_at timestamptz DEFAULT now());
+    CREATE TABLE memories(id uuid PRIMARY KEY, investigation uuid REFERENCES investigations(id), service text REFERENCES services(id), team text, content text, status text DEFAULT 'candidate', reviewer text, source_version bigint, expires_at timestamptz, created_at timestamptz DEFAULT now());
+    CREATE TABLE badcases(id uuid PRIMARY KEY, investigation uuid REFERENCES investigations(id), category text NOT NULL, label text, reviewer text, status text DEFAULT 'candidate', manifest jsonb, created_at timestamptz DEFAULT now());
+    INSERT INTO members VALUES ('alice','orders','approver'),('bob','orders','investigator'),('carol','payments','approver');
+    INSERT INTO admins VALUES('admin');
+    INSERT INTO services VALUES ('svc-17','orders','订单服务','local/incident-demo',1,true),('svc-23','payments','支付服务','local/incident-demo',1,true);
+    RESET ROLE;
+    CREATE TABLE sources.deployments(id text PRIMARY KEY, service text NOT NULL, app_id text NOT NULL, version text NOT NULL, commit_sha text NOT NULL, event_time timestamptz NOT NULL, watermark bigint NOT NULL, deleted bool DEFAULT false);
+    GRANT SELECT ON ALL TABLES IN SCHEMA sources TO incident_source, incident_api;
+    ALTER DEFAULT PRIVILEGES IN SCHEMA sources GRANT SELECT ON TABLES TO incident_source, incident_api;
+    
+  002_runtime.sql: |
+    SET ROLE incident_api;
+    SET search_path=business;
+    ALTER TABLE investigations ADD COLUMN IF NOT EXISTS trace_id text;
+    CREATE TABLE IF NOT EXISTS rate_limits(subject text,window_start bigint,count int,PRIMARY KEY(subject,window_start));
+    CREATE TABLE IF NOT EXISTS source_changes(service text REFERENCES services(id),watermark bigint,kind text,created_at timestamptz DEFAULT now(),PRIMARY KEY(service,watermark));
+    INSERT INTO schema_version VALUES(2) ON CONFLICT DO NOTHING;
+    RESET ROLE;
+    
+
+---
+# Source: incidentdesk/templates/storage.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: postgres-data}
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 2Gi}}
+
+---
+# Source: incidentdesk/templates/storage.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: demo-data}
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 2Gi}}
+
+---
+# Source: incidentdesk/templates/storage.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: objects-data}
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 2Gi}}
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata: {name: observer, namespace: incident-demo}
+rules:
+  - apiGroups: ['']
+    resources: [pods, events]
+    verbs: [get, list]
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata: {name: sandbox-runner, namespace: incident-sandbox}
+rules:
+  - apiGroups: ['']
+    resources: [configmaps]
+    verbs: [create, delete]
+  - apiGroups: ['']
+    resources: [pods, pods/log]
+    verbs: [get, list]
+  - apiGroups: [batch]
+    resources: [jobs]
+    verbs: [create, get, delete]
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: {name: observer, namespace: incident-demo}
+subjects:
+  - kind: ServiceAccount
+    name: demo
+    namespace: default
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: Role, name: observer}
+
+---
+# Source: incidentdesk/templates/network.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: {name: sandbox-runner, namespace: incident-sandbox}
+subjects:
+  - kind: ServiceAccount
+    name: api
+    namespace: default
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: Role, name: sandbox-runner}
+
+---
+# Source: incidentdesk/templates/context.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: context}
+spec:
+  selector: {app: context}
+  ports: [{port: 8091, targetPort: 8091}]
+
+---
+# Source: incidentdesk/templates/storage.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: postgres}
+spec:
+  selector: {app: postgres}
+  ports: [{port: 5432}]
+
+---
+# Source: incidentdesk/templates/storage.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: objects}
+spec:
+  selector: {app: objects}
+  ports: [{port: 9000}]
+
+---
+# Source: incidentdesk/templates/web.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: web}
+spec:
+  selector: {app: web}
+  ports: [{port: 80}]
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: api
+spec:
+  selector: {app: api}
+  ports: [{port: 8080, targetPort: 8080}]
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo
+spec:
+  selector: {app: demo}
+  ports: [{port: 8090, targetPort: 8090}]
+
+---
+# Source: incidentdesk/templates/context.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: context}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: context}}
+  template:
+    metadata:
+      labels: {app: context, incidentdesk: "true"}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: context
+          image: incidentdesk-worker:0.7.0
+          command: ["uvicorn", "incident_worker.context_api:app", "--host", "0.0.0.0", "--port", "8091"]
+          envFrom: [{configMapRef: {name: incident-config}}]
+          env:
+            - name: CHECKPOINT_DATABASE_URL
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: CHECKPOINT_DATABASE_URL}}
+            - name: SOURCE_DATABASE_URL
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: SOURCE_DATABASE_URL}}
+            - name: INTERNAL_KEY
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: INTERNAL_KEY}}
+          ports: [{containerPort: 8091}]
+          resources:
+            requests: {cpu: "100m", memory: "128Mi"}
+            limits: {cpu: "1", memory: "768Mi"}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: ["ALL"]}
+          readinessProbe: {httpGet: {path: /healthz, port: 8091}, periodSeconds: 3}
+          livenessProbe: {httpGet: {path: /healthz, port: 8091}, periodSeconds: 10}
+
+---
+# Source: incidentdesk/templates/storage.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: objects}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: objects}}
+  template:
+    metadata: {labels: {app: objects, incidentdesk: "true"}}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: objects
+          image: chrislusf/seaweedfs:3.97
+          args: [server, '-dir=/data', '-s3', '-s3.port=9000', '-ip=127.0.0.1', '-ip.bind=0.0.0.0']
+          ports: [{containerPort: 9000}]
+          resources: {requests: {cpu: 100m, memory: 128Mi}, limits: {cpu: '1', memory: 512Mi}}
+          volumeMounts: [{name: data, mountPath: /data}]
+      volumes: [{name: data, persistentVolumeClaim: {claimName: objects-data}}]
+
+---
+# Source: incidentdesk/templates/web.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: web}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: web}}
+  template:
+    metadata: {labels: {app: web, incidentdesk: "true"}}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: web
+          image: incidentdesk-web:0.7.1
+          imagePullPolicy: IfNotPresent
+          ports: [{containerPort: 80}]
+          resources: {requests: {cpu: 25m, memory: 32Mi}, limits: {cpu: 200m, memory: 96Mi}}
+          readinessProbe: {httpGet: {path: /, port: 80}, periodSeconds: 3}
+          livenessProbe: {httpGet: {path: /, port: 80}, periodSeconds: 10}
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 2
+  selector:
+    matchLabels: {app: api}
+  strategy:
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  template:
+    metadata:
+      labels: {app: api, incidentdesk: "true"}
+    spec:
+      serviceAccountName: api
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: api
+          image: incidentdesk-api:0.7.0
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef: {name: incident-config}
+          env:
+            - name: DATABASE_URL
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: DATABASE_URL}}
+            - name: INTERNAL_KEY
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: INTERNAL_KEY}}
+          resources:
+            requests: {cpu: "50m", memory: "128Mi"}
+            limits: {cpu: "1", memory: "768Mi"}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: ["ALL"]}
+          ports: [{containerPort: 8080}]
+          startupProbe:
+            httpGet: {path: /healthz, port: 8080}
+            failureThreshold: 60
+            periodSeconds: 2
+          livenessProbe:
+            httpGet: {path: /healthz, port: 8080}
+            periodSeconds: 10
+          readinessProbe:
+            httpGet: {path: /readyz, port: 8080}
+            periodSeconds: 3
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
+spec:
+  replicas: 3
+  selector:
+    matchLabels: {app: worker}
+  strategy:
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  template:
+    metadata:
+      labels: {app: worker, incidentdesk: "true"}
+    spec:
+      serviceAccountName: worker
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: worker
+          image: incidentdesk-worker:0.7.0
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef: {name: incident-config}
+          env:
+            - name: CHECKPOINT_DATABASE_URL
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: CHECKPOINT_DATABASE_URL}}
+            - name: SOURCE_DATABASE_URL
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: SOURCE_DATABASE_URL}}
+            - name: INTERNAL_KEY
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: INTERNAL_KEY}}
+          resources:
+            requests: {cpu: "100m", memory: "128Mi"}
+            limits: {cpu: "1", memory: "768Mi"}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: ["ALL"]}
+          startupProbe:
+            exec: {command: ["python", "-c", "import pathlib; assert pathlib.Path('/tmp/worker-alive').exists()"]}
+            failureThreshold: 60
+            periodSeconds: 2
+          livenessProbe:
+            exec: {command: ["python", "-c", "import pathlib,time; assert time.time()-pathlib.Path('/tmp/worker-alive').stat().st_mtime<30"]}
+            periodSeconds: 10
+          readinessProbe:
+            exec: {command: ["python", "-c", "import pathlib; assert pathlib.Path('/tmp/worker-alive').exists()"]}
+            periodSeconds: 5
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: demo}
+  strategy:
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  template:
+    metadata:
+      labels: {app: demo, incidentdesk: "true"}
+    spec:
+      serviceAccountName: demo
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: demo
+          image: incidentdesk-demo:0.7.0
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef: {name: incident-config}
+          env:
+            - name: SEED_DATABASE_URL
+              valueFrom: {secretKeyRef: {name: incident-secrets, key: SEED_DATABASE_URL}}
+          resources:
+            requests: {cpu: "100m", memory: "128Mi"}
+            limits: {cpu: "1", memory: "768Mi"}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: ["ALL"]}
+          ports: [{containerPort: 8090}]
+          startupProbe:
+            httpGet: {path: /healthz, port: 8090}
+            failureThreshold: 60
+            periodSeconds: 2
+          livenessProbe:
+            httpGet: {path: /healthz, port: 8090}
+            periodSeconds: 10
+          readinessProbe:
+            httpGet: {path: /healthz, port: 8090}
+            periodSeconds: 3
+          volumeMounts: [{name: data, mountPath: /data}]
+      volumes: [{name: data, persistentVolumeClaim: {claimName: demo-data}}]
+
+---
+# Source: incidentdesk/templates/workloads.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: api}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: api}
+  minReplicas: 2
+  maxReplicas: 4
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 30}
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target: {type: Utilization, averageUtilization: 60}
+
+---
+# Source: incidentdesk/templates/storage.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: {name: postgres}
+spec:
+  serviceName: postgres
+  replicas: 1
+  selector: {matchLabels: {app: postgres}}
+  template:
+    metadata: {labels: {app: postgres, incidentdesk: "true"}}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: postgres
+          image: postgres:17.6-bookworm
+          env:
+            - {name: POSTGRES_DB, value: incidentdesk}
+            - {name: POSTGRES_USER, value: postgres}
+            - {name: POSTGRES_PASSWORD, valueFrom: {secretKeyRef: {name: incident-secrets, key: POSTGRES_PASSWORD}}}
+            - {name: PGDATA, value: /var/lib/postgresql/data/pgdata}
+          ports: [{containerPort: 5432}]
+          resources: {requests: {cpu: 100m, memory: 128Mi}, limits: {cpu: '1', memory: 512Mi}}
+          readinessProbe: {exec: {command: [pg_isready, '-U', postgres, '-d', incidentdesk]}, periodSeconds: 3}
+          livenessProbe: {exec: {command: [pg_isready, '-U', postgres]}, initialDelaySeconds: 30, periodSeconds: 10}
+          volumeMounts:
+            - {name: data, mountPath: /var/lib/postgresql/data}
+            - {name: init, mountPath: /docker-entrypoint-initdb.d}
+      volumes:
+        - {name: data, persistentVolumeClaim: {claimName: postgres-data}}
+        - {name: init, configMap: {name: database-init}}

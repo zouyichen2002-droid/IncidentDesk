@@ -1,0 +1,14 @@
+{
+  "expired_cursor_snapshot": [
+    "id: 37",
+    "event: snapshot",
+    "data: {\"kind\":\"snapshot\",\"payload\":{\"reload\":true},\"seq\":37}"
+  ],
+  "invalid_cursor_status": 400,
+  "prometheus_up": true,
+  "grafana_dashboard": {
+    "title": "IncidentDesk Operations",
+    "panels": 4
+  },
+  "pass": true
+}

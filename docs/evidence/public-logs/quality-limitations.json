@@ -1,0 +1,332 @@
+{
+  "note": "Historical public logs have no corresponding release, Git or runbook dataset. The unmodified demo source still emits its two local fixture records; these are not historical evidence for BGL/HDFS.",
+  "sequential_reports": 18,
+  "reports_with_fixture_git_or_runbook": 18,
+  "reports_with_any_root_cause_candidate": 0,
+  "reports": [
+    {
+      "id": "f3339cbf-2832-41f8-ba86-c23fd6b7e6f3",
+      "start": "2008-11-11T07:00:00+00:00",
+      "end": "2008-11-11T07:59:59.000015+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "bab2af02-ba1d-424c-91fa-c4db64a74044",
+      "start": "2005-07-27T00:00:00+00:00",
+      "end": "2005-07-27T23:59:59.000004+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "6c7b0c57-9283-49c7-9022-00ab45dc4b77",
+      "start": "2008-11-10T06:00:00+00:00",
+      "end": "2008-11-10T06:59:59.000012+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "e8d4bad0-ecb4-4681-a62c-75251ca832b0",
+      "start": "2020-01-01T00:00:00+00:00",
+      "end": "2020-01-01T00:59:59.000018+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "b98bb7ea-af8d-43d4-92b4-696a10e08ff6",
+      "start": "2005-06-24T00:00:00+00:00",
+      "end": "2005-06-24T23:59:59.000003+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "612905a7-f736-4195-a0b4-ddf2df9a02b4",
+      "start": "2008-11-10T00:00:00+00:00",
+      "end": "2008-11-10T00:59:59.000011+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "ca8e52fb-b0e3-4703-b838-2f61d3a3adcb",
+      "start": "2008-11-09T20:00:00+00:00",
+      "end": "2008-11-09T20:59:59.00001+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "65da55c2-8e63-4d7f-bacf-e2efbd65526a",
+      "start": "2020-01-01T00:00:00+00:00",
+      "end": "2020-01-01T00:59:59.000017+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "dce4ec09-9bc2-4b56-9f91-d93791e72b3e",
+      "start": "2006-01-04T00:00:00+00:00",
+      "end": "2006-01-04T23:59:59.000009+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "3a333091-e75b-479c-a627-628d9d684282",
+      "start": "2008-11-11T11:00:00+00:00",
+      "end": "2008-11-11T11:59:59.000016+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "b96faba0-1f48-4eb9-92ff-0ebbdfe46d11",
+      "start": "2005-06-12T00:00:00+00:00",
+      "end": "2005-06-12T23:59:59.000002+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "af99ea0b-41ae-432a-9a34-023d9b043091",
+      "start": "2005-11-03T00:00:00+00:00",
+      "end": "2005-11-03T23:59:59.000006+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "67b9db2d-93f1-43e4-95e0-12111cf34138",
+      "start": "2005-11-11T00:00:00+00:00",
+      "end": "2005-11-11T23:59:59.000007+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "7144bf9d-9d98-4d30-acd7-7f472da4d8bf",
+      "start": "2005-06-03T00:00:00+00:00",
+      "end": "2005-06-03T23:59:59.000001+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "7b014db9-ed23-4bac-b5ce-cc0b7faac904",
+      "start": "2005-09-19T00:00:00+00:00",
+      "end": "2005-09-19T23:59:59.000005+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "009844c3-f84a-4e8c-a18e-de1d2edfdd1e",
+      "start": "2005-12-14T00:00:00+00:00",
+      "end": "2005-12-14T23:59:59.000008+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "e2632ee5-c91a-438c-b9d2-365f0df38ac9",
+      "start": "2008-11-11T01:00:00+00:00",
+      "end": "2008-11-11T01:59:59.000014+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    },
+    {
+      "id": "903851c4-666c-48f7-9419-f03cc3aaf7fc",
+      "start": "2008-11-10T16:00:00+00:00",
+      "end": "2008-11-10T16:59:59.000013+00:00",
+      "non_log_sources": [
+        {
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        },
+        {
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "event_time": "2026-09-24T20:23:46+00:00"
+        }
+      ],
+      "candidates": 0
+    }
+  ]
+}

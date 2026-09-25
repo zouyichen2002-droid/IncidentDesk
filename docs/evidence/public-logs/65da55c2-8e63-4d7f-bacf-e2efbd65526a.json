@@ -1,0 +1,757 @@
+{
+  "investigation": {
+    "id": "65da55c2-8e63-4d7f-bacf-e2efbd65526a",
+    "seq": 31,
+    "idem": "a9f889c0-0ca6-478f-93f9-eeb6e3371eab",
+    "team": "orders",
+    "action": null,
+    "end_at": "2020-01-01T00:59:59.000017+00:00",
+    "report": {
+      "mode": "deterministic-baseline",
+      "facts": [
+        {
+          "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "kind": "observation",
+          "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+          "evidence": [
+            "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "deployments",
+              "commit"
+            ],
+            "limit": 50,
+            "object": "Commit",
+            "source": "git"
+          }
+        },
+        {
+          "id": "fact:runbook:orders-runbook:3fd079fe1881",
+          "kind": "observation",
+          "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+          "evidence": [
+            "runbook:orders-runbook:3fd079fe1881"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "runbook"
+            ],
+            "limit": 50,
+            "object": "Runbook",
+            "source": "runbook"
+          }
+        }
+      ],
+      "impact": "svc-17",
+      "context": {
+        "plan": {
+          "end": "2020-01-01T00:59:59.000017Z",
+          "start": "2020-01-01T00:00:00Z",
+          "steps": [
+            {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            },
+            {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            },
+            {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            },
+            {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          ],
+          "service": "svc-17",
+          "version": "1"
+        },
+        "facts": [
+          {
+            "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "kind": "observation",
+            "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:3fd079fe1881",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+            "evidence": [
+              "runbook:orders-runbook:3fd079fe1881"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          }
+        ],
+        "scope": {
+          "team": "orders",
+          "service": "svc-17",
+          "subject": "alice"
+        },
+        "missing": [
+          "deployments: no accessible records in scope",
+          "logs: no accessible records in scope"
+        ],
+        "objects": [
+          {
+            "id": "svc-17",
+            "team": "orders",
+            "type": "Service"
+          }
+        ],
+        "version": "1",
+        "evidence": [
+          {
+            "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "team": "orders",
+            "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+            "source": "git",
+            "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "snippet": {
+              "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+            },
+            "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:28:52.598732+00:00",
+            "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+          },
+          {
+            "id": "runbook:orders-runbook:3fd079fe1881",
+            "team": "orders",
+            "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+            "source": "runbook",
+            "locator": "demo-git://repo/RUNBOOK.md",
+            "snippet": {
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+            },
+            "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:28:52.630092+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "memories": [],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:28:50.830034+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:28:52.564950+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:28:52.598732+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:28:52.630092+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "token_budget": 12000,
+        "mapping_version": "1",
+        "ontology_version": "1"
+      },
+      "missing": [
+        "deployments: no accessible records in scope",
+        "logs: no accessible records in scope"
+      ],
+      "evidence": [
+        {
+          "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "team": "orders",
+          "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "snippet": {
+            "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+            "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+          },
+          "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:28:52.598732+00:00",
+          "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+        },
+        {
+          "id": "runbook:orders-runbook:3fd079fe1881",
+          "team": "orders",
+          "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "snippet": {
+            "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+          },
+          "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:28:52.630092+00:00",
+          "source_record": "orders-runbook"
+        }
+      ],
+      "conflicts": [],
+      "freshness": [
+        {
+          "source": "deployments",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:28:50.830034+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "logs",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:28:52.564950+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "git",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:28:52.598732+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "runbook",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:28:52.630092+00:00",
+          "snapshot_consistency": "independent_source"
+        }
+      ],
+      "candidates": [],
+      "next_steps": [
+        "核对实际部署版本与日志时间窗口。",
+        "检查连接池和依赖延迟指标，补齐缺失来源后确认原因。"
+      ],
+      "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+      "historical_memory": []
+    },
+    "status": "waiting_information",
+    "service": "svc-17",
+    "subject": "alice",
+    "symptom": "[Loghub sequential 16] Investigate public BGL system logs in this historical window; identify observations, uncertainty and missing sources.",
+    "manifest": {
+      "code": "b2a6c2e5acbbf4372279e4a9a991d3d53e68f4fa",
+      "cost": {
+        "unknown": "provider usage unavailable in baseline",
+        "estimated_usd": null,
+        "known_model_tokens": null
+      },
+      "model": "none-deterministic",
+      "prompt": "investigate-v1",
+      "skills": [
+        "release-compare@1",
+        "log-analysis@1"
+      ],
+      "version": "1",
+      "ontology": "1",
+      "evaluator": "rules-v1",
+      "retrieval": "bounded-50",
+      "snapshots": {
+        "git": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2020-01-01T00:59:59.000017+00:00",
+            "team": "orders",
+            "start": "2020-01-01T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "content": {
+                "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:28:52.598732+00:00"
+        },
+        "logs": {
+          "sync": "monotonic_id",
+          "scope": {
+            "end": "2020-01-01T00:59:59.000017+00:00",
+            "team": "orders",
+            "start": "2020-01-01T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:28:52.564950+00:00"
+        },
+        "runbook": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2020-01-01T00:59:59.000017+00:00",
+            "team": "orders",
+            "start": "2020-01-01T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "orders-runbook",
+              "content": {
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/RUNBOOK.md",
+              "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:28:52.630092+00:00"
+        },
+        "deployments": {
+          "scope": {
+            "end": "2020-01-01T00:59:59.000017+00:00",
+            "team": "orders",
+            "start": "2020-01-01T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:28:50.830034+00:00"
+        }
+      },
+      "generation": 1,
+      "tool_schema": "1",
+      "source_mapping": "1",
+      "model_parameters": {
+        "temperature": "provider-default"
+      },
+      "permission_policy": "go-v1"
+    },
+    "start_at": "2020-01-01T00:00:00+00:00",
+    "timezone": "UTC",
+    "trace_id": "54158fa24aafea9fe8f49b8a565f1c0c",
+    "created_at": "2026-09-24T20:28:50.712628+00:00",
+    "updated_at": "2026-09-24T20:28:52.660002+00:00",
+    "request_hash": "c62f1eb3c6ade684e3ae449543079def0c18ca0853f1c5cd34adb94e6f3ba0a5",
+    "evidence_stale": false,
+    "source_version": 1
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "queued",
+      "payload": {
+        "request_id": "23a5ebec-928f-4fdd-9cc8-1cda9c9e275d"
+      },
+      "created_at": "2026-09-24T20:28:50.712628+00:00"
+    },
+    {
+      "seq": 2,
+      "kind": "claimed",
+      "payload": {
+        "worker": "2b313c724b60:ff50d046-68ee-4a0c-93df-45e5701d34da"
+      },
+      "created_at": "2026-09-24T20:28:50.789025+00:00"
+    },
+    {
+      "seq": 3,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:50.818609+00:00"
+    },
+    {
+      "seq": 4,
+      "kind": "hook",
+      "payload": {
+        "name": "plan_validated",
+        "status": "pass",
+        "summary": {
+          "steps": 4
+        }
+      },
+      "created_at": "2026-09-24T20:28:50.823504+00:00"
+    },
+    {
+      "seq": 5,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:28:50.82453+00:00"
+    },
+    {
+      "seq": 6,
+      "kind": "authorized",
+      "payload": {
+        "tool": "deployments",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:50.825805+00:00"
+    },
+    {
+      "seq": 7,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:28:50.830294+00:00"
+    },
+    {
+      "seq": 8,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "deployments",
+          "status": "ok",
+          "milliseconds": 6.56
+        }
+      },
+      "created_at": "2026-09-24T20:28:50.831127+00:00"
+    },
+    {
+      "seq": 9,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:28:50.831738+00:00"
+    },
+    {
+      "seq": 10,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:50.832287+00:00"
+    },
+    {
+      "seq": 11,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:50.857229+00:00"
+    },
+    {
+      "seq": 12,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.565938+00:00"
+    },
+    {
+      "seq": 13,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "logs",
+          "status": "ok",
+          "milliseconds": 1735.38
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.567235+00:00"
+    },
+    {
+      "seq": 14,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.568198+00:00"
+    },
+    {
+      "seq": 15,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.569003+00:00"
+    },
+    {
+      "seq": 16,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.595863+00:00"
+    },
+    {
+      "seq": 17,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.599406+00:00"
+    },
+    {
+      "seq": 18,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "git",
+          "status": "ok",
+          "milliseconds": 32.16
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.60037+00:00"
+    },
+    {
+      "seq": 19,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.601307+00:00"
+    },
+    {
+      "seq": 20,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.602988+00:00"
+    },
+    {
+      "seq": 21,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.62756+00:00"
+    },
+    {
+      "seq": 22,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.630692+00:00"
+    },
+    {
+      "seq": 23,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "runbook",
+          "status": "ok",
+          "milliseconds": 30.53
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.631752+00:00"
+    },
+    {
+      "seq": 24,
+      "kind": "authorized",
+      "payload": {
+        "tool": "memory",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.632403+00:00"
+    },
+    {
+      "seq": 25,
+      "kind": "hook",
+      "payload": {
+        "name": "context_assembled",
+        "status": "pass",
+        "summary": {
+          "facts": 2,
+          "evidence": 2,
+          "conflicts": 0
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.632988+00:00"
+    },
+    {
+      "seq": 26,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.633484+00:00"
+    },
+    {
+      "seq": 27,
+      "kind": "checkpoint_saved",
+      "payload": {
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.639947+00:00"
+    },
+    {
+      "seq": 28,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.649407+00:00"
+    },
+    {
+      "seq": 29,
+      "kind": "artifact_saved",
+      "payload": {
+        "key": "orders/65da55c2-8e63-4d7f-bacf-e2efbd65526a/778fe864-1dbb-4829-988d-64d170116fb6",
+        "state": "ready",
+        "sha256": "2620298da4d96051591cf457f24a0ef147927be9e47f7feabde2be86273d9a58"
+      },
+      "created_at": "2026-09-24T20:28:52.658579+00:00"
+    },
+    {
+      "seq": 30,
+      "kind": "hook",
+      "payload": {
+        "name": "run_finished",
+        "status": "pass",
+        "summary": {
+          "mode": "deterministic-baseline",
+          "facts": 2
+        }
+      },
+      "created_at": "2026-09-24T20:28:52.65929+00:00"
+    },
+    {
+      "seq": 31,
+      "kind": "result",
+      "payload": {
+        "status": "waiting_information",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:52.660002+00:00"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "logs": {
+    "checkout-api": [
+      "svc-17"
+    ],
+    "payment-api": [
+      "svc-23"
+    ],
+    "ambiguous": [
+      "svc-17",
+      "svc-23"
+    ]
+  },
+  "deployments": {
+    "svc-17": [
+      "svc-17"
+    ],
+    "svc-23": [
+      "svc-23"
+    ]
+  }
+}

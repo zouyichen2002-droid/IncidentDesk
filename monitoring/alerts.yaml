@@ -1,0 +1,15 @@
+groups:
+  - name: incidentdesk
+    rules:
+      - alert: TaskBacklog
+        expr: incident_queue_depth > 20
+        for: 30s
+        annotations: {summary: 'Queued tasks exceed 20; inspect worker readiness, leases and downstream latency.'}
+      - alert: WorkerUnavailable
+        expr: incident_queue_depth > 0 and incident_active_jobs == 0
+        for: 30s
+        annotations: {summary: 'Work is queued but no worker has an active lease.'}
+      - alert: APIErrors
+        expr: sum(rate(incident_http_requests_total{code="error"}[1m])) > 1
+        for: 30s
+        annotations: {summary: 'Sustained API errors; inspect request IDs and dependency health.'}

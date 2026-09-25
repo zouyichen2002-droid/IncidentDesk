@@ -1,0 +1,5058 @@
+{
+  "investigation": {
+    "id": "f3339cbf-2832-41f8-ba86-c23fd6b7e6f3",
+    "seq": 31,
+    "idem": "c5caa530-7d37-4902-aa17-34f6b80392a5",
+    "team": "payments",
+    "action": null,
+    "end_at": "2008-11-11T07:59:59.000015+00:00",
+    "report": {
+      "mode": "deterministic-baseline",
+      "facts": [
+        {
+          "id": "fact:logs:13422108:090dd7a276f5",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 19 INFO dfs.FSDataset: Deleting block blk_2665640213652568005 file /mnt/hadoop/dfs/data/current/subdir12/blk_2665640213652568005",
+          "evidence": [
+            "logs:13422108:090dd7a276f5"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422109:0ea1121f99d3",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22229 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8673098692195848093 terminating",
+          "evidence": [
+            "logs:13422109:0ea1121f99d3"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422110:ffe508599a6d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22229 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+          "evidence": [
+            "logs:13422110:ffe508599a6d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422111:55e9dd9b4d7a",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22336 INFO dfs.DataNode$DataXceiver: Receiving block blk_-7774828757985761818 src: /10.251.90.239:51380 dest: /10.251.90.239:50010",
+          "evidence": [
+            "logs:13422111:55e9dd9b4d7a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422112:bf0a5a26c226",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22369 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4597934548559358389 terminating",
+          "evidence": [
+            "logs:13422112:bf0a5a26c226"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422113:987122a7e40b",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22369 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+          "evidence": [
+            "logs:13422113:987122a7e40b"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422114:62a952f2e3b3",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22374 INFO dfs.DataNode$DataXceiver: Receiving block blk_-5653136497881550316 src: /10.251.75.163:34780 dest: /10.251.75.163:50010",
+          "evidence": [
+            "logs:13422114:62a952f2e3b3"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422115:9a8b8b9c2456",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22455 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-7061937701449400690 terminating",
+          "evidence": [
+            "logs:13422115:9a8b8b9c2456"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422116:ef1b1565ff7c",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22455 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.123.132",
+          "evidence": [
+            "logs:13422116:ef1b1565ff7c"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422117:effd827376b9",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22485 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.250.5.161:56159 dest: /10.250.5.161:50010",
+          "evidence": [
+            "logs:13422117:effd827376b9"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422118:459d88d96244",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22503 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8673098692195848093 terminating",
+          "evidence": [
+            "logs:13422118:459d88d96244"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422119:699ae63966b6",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22503 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+          "evidence": [
+            "logs:13422119:699ae63966b6"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422120:cdae78f16978",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22505 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8210006558057770969 terminating",
+          "evidence": [
+            "logs:13422120:cdae78f16978"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422121:1051bf5e4cd6",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22505 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+          "evidence": [
+            "logs:13422121:1051bf5e4cd6"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422122:602a5dfd1656",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22516 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:34763 dest: /10.251.30.6:50010",
+          "evidence": [
+            "logs:13422122:602a5dfd1656"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422123:30ead77b0e18",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22520 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:41189 dest: /10.251.106.214:50010",
+          "evidence": [
+            "logs:13422123:30ead77b0e18"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422124:89d315cc2e92",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22556 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-2451498942692592989 terminating",
+          "evidence": [
+            "logs:13422124:89d315cc2e92"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422125:ec076f3d28ae",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22556 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.130",
+          "evidence": [
+            "logs:13422125:ec076f3d28ae"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422126:6405eff549ed",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22557 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4803590459508022970 terminating",
+          "evidence": [
+            "logs:13422126:6405eff549ed"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422127:1ffc86ecc825",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22557 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+          "evidence": [
+            "logs:13422127:1ffc86ecc825"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422128:f0a7c1fce3bf",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22564 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_8210006558057770969 terminating",
+          "evidence": [
+            "logs:13422128:f0a7c1fce3bf"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422129:050d74682afe",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22564 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.250.10.213",
+          "evidence": [
+            "logs:13422129:050d74682afe"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422130:2b0bb94b5506",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22574 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2269104486450870577 src: /10.251.39.209:40765 dest: /10.251.39.209:50010",
+          "evidence": [
+            "logs:13422130:2b0bb94b5506"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422131:d7d21325292b",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22576 INFO dfs.DataNode$DataXceiver: Receiving block blk_-3404677770014852260 src: /10.251.42.16:58507 dest: /10.251.42.16:50010",
+          "evidence": [
+            "logs:13422131:d7d21325292b"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422132:b114c559c18a",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22624 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-7061937701449400690 terminating",
+          "evidence": [
+            "logs:13422132:b114c559c18a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422133:74dab41516ba",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22624 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.107.242",
+          "evidence": [
+            "logs:13422133:74dab41516ba"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422134:80443c88bf31",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22625 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4597934548559358389 terminating",
+          "evidence": [
+            "logs:13422134:80443c88bf31"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422135:85f2bf1122ff",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22625 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+          "evidence": [
+            "logs:13422135:85f2bf1122ff"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422136:40c9f590cb5d",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22634 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:44061 dest: /10.251.30.6:50010",
+          "evidence": [
+            "logs:13422136:40c9f590cb5d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422137:8b89ac69282b",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22636 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:42163 dest: /10.250.7.244:50010",
+          "evidence": [
+            "logs:13422137:8b89ac69282b"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422138:f96d2cfbf588",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22646 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_3525357734834676511 terminating",
+          "evidence": [
+            "logs:13422138:f96d2cfbf588"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422139:d7ae000bd8b8",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22646 INFO dfs.DataNode$PacketResponder: Received block blk_3525357734834676511 of size 67108864 from /10.250.7.230",
+          "evidence": [
+            "logs:13422139:d7ae000bd8b8"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422140:eddc24677fe0",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22669 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8210006558057770969 terminating",
+          "evidence": [
+            "logs:13422140:eddc24677fe0"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422141:995e57a5bde6",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22669 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+          "evidence": [
+            "logs:13422141:995e57a5bde6"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422142:41e585076d89",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22673 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-2451498942692592989 terminating",
+          "evidence": [
+            "logs:13422142:41e585076d89"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422143:726fd078550a",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22673 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.228",
+          "evidence": [
+            "logs:13422143:726fd078550a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422144:0d10e6506c2f",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22690 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:47725 dest: /10.251.106.214:50010",
+          "evidence": [
+            "logs:13422144:0d10e6506c2f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422145:40959d9fa56c",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22699 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.251.90.134:38515 dest: /10.251.90.134:50010",
+          "evidence": [
+            "logs:13422145:40959d9fa56c"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422146:e6bf3e763a39",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22706 INFO dfs.DataNode$DataXceiver: Receiving block blk_8083507517600226381 src: /10.251.43.192:57460 dest: /10.251.43.192:50010",
+          "evidence": [
+            "logs:13422146:e6bf3e763a39"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422147:98eab5f60955",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22725 INFO dfs.DataNode$DataXceiver: Receiving block blk_-6197128444424166853 src: /10.251.67.211:40557 dest: /10.251.67.211:50010",
+          "evidence": [
+            "logs:13422147:98eab5f60955"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422148:d7ba6c1da3b8",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22736 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-4597934548559358389 terminating",
+          "evidence": [
+            "logs:13422148:d7ba6c1da3b8"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422149:5823edaef491",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22736 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.251.111.37",
+          "evidence": [
+            "logs:13422149:5823edaef491"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422150:eec02e4f8131",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22805 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4803590459508022970 terminating",
+          "evidence": [
+            "logs:13422150:eec02e4f8131"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422151:5216421a9680",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22805 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+          "evidence": [
+            "logs:13422151:5216421a9680"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422152:bce7709732d8",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22841 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_6169498208511399392 terminating",
+          "evidence": [
+            "logs:13422152:bce7709732d8"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422153:fffdbe1811e0",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22841 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+          "evidence": [
+            "logs:13422153:fffdbe1811e0"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422154:71aef0a5c139",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22846 INFO dfs.DataNode$DataXceiver: Receiving block blk_-1017156709313498792 src: /10.251.26.8:47849 dest: /10.251.26.8:50010",
+          "evidence": [
+            "logs:13422154:71aef0a5c139"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422155:f16a01e8f6c4",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22855 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_6169498208511399392 terminating",
+          "evidence": [
+            "logs:13422155:f16a01e8f6c4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422156:1898aa3212a5",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22855 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+          "evidence": [
+            "logs:13422156:1898aa3212a5"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:13422157:5dd2a3aa9bb4",
+          "kind": "observation",
+          "text": "日志记录 INFO: 081111 070000 22860 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:57562 dest: /10.250.7.244:50010",
+          "evidence": [
+            "logs:13422157:5dd2a3aa9bb4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "kind": "observation",
+          "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+          "evidence": [
+            "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "deployments",
+              "commit"
+            ],
+            "limit": 50,
+            "object": "Commit",
+            "source": "git"
+          }
+        },
+        {
+          "id": "fact:runbook:orders-runbook:3fd079fe1881",
+          "kind": "observation",
+          "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+          "evidence": [
+            "runbook:orders-runbook:3fd079fe1881"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "runbook"
+            ],
+            "limit": 50,
+            "object": "Runbook",
+            "source": "runbook"
+          }
+        }
+      ],
+      "impact": "svc-23",
+      "context": {
+        "plan": {
+          "end": "2008-11-11T07:59:59.000015Z",
+          "start": "2008-11-11T07:00:00Z",
+          "steps": [
+            {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            },
+            {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            },
+            {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            },
+            {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          ],
+          "service": "svc-23",
+          "version": "1"
+        },
+        "facts": [
+          {
+            "id": "fact:logs:13422108:090dd7a276f5",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 19 INFO dfs.FSDataset: Deleting block blk_2665640213652568005 file /mnt/hadoop/dfs/data/current/subdir12/blk_2665640213652568005",
+            "evidence": [
+              "logs:13422108:090dd7a276f5"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422109:0ea1121f99d3",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22229 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8673098692195848093 terminating",
+            "evidence": [
+              "logs:13422109:0ea1121f99d3"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422110:ffe508599a6d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22229 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+            "evidence": [
+              "logs:13422110:ffe508599a6d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422111:55e9dd9b4d7a",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22336 INFO dfs.DataNode$DataXceiver: Receiving block blk_-7774828757985761818 src: /10.251.90.239:51380 dest: /10.251.90.239:50010",
+            "evidence": [
+              "logs:13422111:55e9dd9b4d7a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422112:bf0a5a26c226",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22369 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4597934548559358389 terminating",
+            "evidence": [
+              "logs:13422112:bf0a5a26c226"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422113:987122a7e40b",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22369 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+            "evidence": [
+              "logs:13422113:987122a7e40b"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422114:62a952f2e3b3",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22374 INFO dfs.DataNode$DataXceiver: Receiving block blk_-5653136497881550316 src: /10.251.75.163:34780 dest: /10.251.75.163:50010",
+            "evidence": [
+              "logs:13422114:62a952f2e3b3"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422115:9a8b8b9c2456",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22455 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-7061937701449400690 terminating",
+            "evidence": [
+              "logs:13422115:9a8b8b9c2456"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422116:ef1b1565ff7c",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22455 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.123.132",
+            "evidence": [
+              "logs:13422116:ef1b1565ff7c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422117:effd827376b9",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22485 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.250.5.161:56159 dest: /10.250.5.161:50010",
+            "evidence": [
+              "logs:13422117:effd827376b9"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422118:459d88d96244",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22503 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8673098692195848093 terminating",
+            "evidence": [
+              "logs:13422118:459d88d96244"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422119:699ae63966b6",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22503 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+            "evidence": [
+              "logs:13422119:699ae63966b6"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422120:cdae78f16978",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22505 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8210006558057770969 terminating",
+            "evidence": [
+              "logs:13422120:cdae78f16978"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422121:1051bf5e4cd6",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22505 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+            "evidence": [
+              "logs:13422121:1051bf5e4cd6"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422122:602a5dfd1656",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22516 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:34763 dest: /10.251.30.6:50010",
+            "evidence": [
+              "logs:13422122:602a5dfd1656"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422123:30ead77b0e18",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22520 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:41189 dest: /10.251.106.214:50010",
+            "evidence": [
+              "logs:13422123:30ead77b0e18"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422124:89d315cc2e92",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22556 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-2451498942692592989 terminating",
+            "evidence": [
+              "logs:13422124:89d315cc2e92"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422125:ec076f3d28ae",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22556 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.130",
+            "evidence": [
+              "logs:13422125:ec076f3d28ae"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422126:6405eff549ed",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22557 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4803590459508022970 terminating",
+            "evidence": [
+              "logs:13422126:6405eff549ed"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422127:1ffc86ecc825",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22557 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+            "evidence": [
+              "logs:13422127:1ffc86ecc825"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422128:f0a7c1fce3bf",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22564 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_8210006558057770969 terminating",
+            "evidence": [
+              "logs:13422128:f0a7c1fce3bf"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422129:050d74682afe",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22564 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.250.10.213",
+            "evidence": [
+              "logs:13422129:050d74682afe"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422130:2b0bb94b5506",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22574 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2269104486450870577 src: /10.251.39.209:40765 dest: /10.251.39.209:50010",
+            "evidence": [
+              "logs:13422130:2b0bb94b5506"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422131:d7d21325292b",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22576 INFO dfs.DataNode$DataXceiver: Receiving block blk_-3404677770014852260 src: /10.251.42.16:58507 dest: /10.251.42.16:50010",
+            "evidence": [
+              "logs:13422131:d7d21325292b"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422132:b114c559c18a",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22624 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-7061937701449400690 terminating",
+            "evidence": [
+              "logs:13422132:b114c559c18a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422133:74dab41516ba",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22624 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.107.242",
+            "evidence": [
+              "logs:13422133:74dab41516ba"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422134:80443c88bf31",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22625 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4597934548559358389 terminating",
+            "evidence": [
+              "logs:13422134:80443c88bf31"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422135:85f2bf1122ff",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22625 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+            "evidence": [
+              "logs:13422135:85f2bf1122ff"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422136:40c9f590cb5d",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22634 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:44061 dest: /10.251.30.6:50010",
+            "evidence": [
+              "logs:13422136:40c9f590cb5d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422137:8b89ac69282b",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22636 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:42163 dest: /10.250.7.244:50010",
+            "evidence": [
+              "logs:13422137:8b89ac69282b"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422138:f96d2cfbf588",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22646 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_3525357734834676511 terminating",
+            "evidence": [
+              "logs:13422138:f96d2cfbf588"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422139:d7ae000bd8b8",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22646 INFO dfs.DataNode$PacketResponder: Received block blk_3525357734834676511 of size 67108864 from /10.250.7.230",
+            "evidence": [
+              "logs:13422139:d7ae000bd8b8"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422140:eddc24677fe0",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22669 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8210006558057770969 terminating",
+            "evidence": [
+              "logs:13422140:eddc24677fe0"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422141:995e57a5bde6",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22669 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+            "evidence": [
+              "logs:13422141:995e57a5bde6"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422142:41e585076d89",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22673 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-2451498942692592989 terminating",
+            "evidence": [
+              "logs:13422142:41e585076d89"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422143:726fd078550a",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22673 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.228",
+            "evidence": [
+              "logs:13422143:726fd078550a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422144:0d10e6506c2f",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22690 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:47725 dest: /10.251.106.214:50010",
+            "evidence": [
+              "logs:13422144:0d10e6506c2f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422145:40959d9fa56c",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22699 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.251.90.134:38515 dest: /10.251.90.134:50010",
+            "evidence": [
+              "logs:13422145:40959d9fa56c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422146:e6bf3e763a39",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22706 INFO dfs.DataNode$DataXceiver: Receiving block blk_8083507517600226381 src: /10.251.43.192:57460 dest: /10.251.43.192:50010",
+            "evidence": [
+              "logs:13422146:e6bf3e763a39"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422147:98eab5f60955",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22725 INFO dfs.DataNode$DataXceiver: Receiving block blk_-6197128444424166853 src: /10.251.67.211:40557 dest: /10.251.67.211:50010",
+            "evidence": [
+              "logs:13422147:98eab5f60955"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422148:d7ba6c1da3b8",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22736 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-4597934548559358389 terminating",
+            "evidence": [
+              "logs:13422148:d7ba6c1da3b8"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422149:5823edaef491",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22736 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.251.111.37",
+            "evidence": [
+              "logs:13422149:5823edaef491"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422150:eec02e4f8131",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22805 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4803590459508022970 terminating",
+            "evidence": [
+              "logs:13422150:eec02e4f8131"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422151:5216421a9680",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22805 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+            "evidence": [
+              "logs:13422151:5216421a9680"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422152:bce7709732d8",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22841 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_6169498208511399392 terminating",
+            "evidence": [
+              "logs:13422152:bce7709732d8"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422153:fffdbe1811e0",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22841 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+            "evidence": [
+              "logs:13422153:fffdbe1811e0"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422154:71aef0a5c139",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22846 INFO dfs.DataNode$DataXceiver: Receiving block blk_-1017156709313498792 src: /10.251.26.8:47849 dest: /10.251.26.8:50010",
+            "evidence": [
+              "logs:13422154:71aef0a5c139"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422155:f16a01e8f6c4",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22855 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_6169498208511399392 terminating",
+            "evidence": [
+              "logs:13422155:f16a01e8f6c4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422156:1898aa3212a5",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22855 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+            "evidence": [
+              "logs:13422156:1898aa3212a5"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:13422157:5dd2a3aa9bb4",
+            "kind": "observation",
+            "text": "日志记录 INFO: 081111 070000 22860 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:57562 dest: /10.250.7.244:50010",
+            "evidence": [
+              "logs:13422157:5dd2a3aa9bb4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "kind": "observation",
+            "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:3fd079fe1881",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+            "evidence": [
+              "runbook:orders-runbook:3fd079fe1881"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          }
+        ],
+        "scope": {
+          "team": "payments",
+          "service": "svc-23",
+          "subject": "carol"
+        },
+        "missing": [
+          "deployments: no accessible records in scope",
+          "logs: truncated at bounded page; more records exist"
+        ],
+        "objects": [
+          {
+            "id": "svc-23",
+            "team": "payments",
+            "type": "Service"
+          }
+        ],
+        "version": "1",
+        "evidence": [
+          {
+            "id": "logs:13422108:090dd7a276f5",
+            "team": "payments",
+            "sha256": "090dd7a276f58d889e973eac9045bf6debc9a5571b9a376b510c5ae35ecdf527",
+            "source": "logs",
+            "locator": "demo://logs/13422108",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 19 INFO dfs.FSDataset: Deleting block blk_2665640213652568005 file /mnt/hadoop/dfs/data/current/subdir12/blk_2665640213652568005",
+              "service_name": "payment-api",
+              "original_line": 8674145
+            },
+            "version": "13422108",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422108"
+          },
+          {
+            "id": "logs:13422109:0ea1121f99d3",
+            "team": "payments",
+            "sha256": "0ea1121f99d3c117332c117bf67d369343b1ad63ee13b5260a8a8486bb011b17",
+            "source": "logs",
+            "locator": "demo://logs/13422109",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22229 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8673098692195848093 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674146
+            },
+            "version": "13422109",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422109"
+          },
+          {
+            "id": "logs:13422110:ffe508599a6d",
+            "team": "payments",
+            "sha256": "ffe508599a6da4c8b5f76d19b0152f145a3a0e416c2cd150924f9c5c27196d1a",
+            "source": "logs",
+            "locator": "demo://logs/13422110",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22229 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+              "service_name": "payment-api",
+              "original_line": 8674147
+            },
+            "version": "13422110",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422110"
+          },
+          {
+            "id": "logs:13422111:55e9dd9b4d7a",
+            "team": "payments",
+            "sha256": "55e9dd9b4d7afc9cede87333eb2eac015acaa020994c82d9e60ec40b1b6d9288",
+            "source": "logs",
+            "locator": "demo://logs/13422111",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22336 INFO dfs.DataNode$DataXceiver: Receiving block blk_-7774828757985761818 src: /10.251.90.239:51380 dest: /10.251.90.239:50010",
+              "service_name": "payment-api",
+              "original_line": 8674148
+            },
+            "version": "13422111",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422111"
+          },
+          {
+            "id": "logs:13422112:bf0a5a26c226",
+            "team": "payments",
+            "sha256": "bf0a5a26c226b1bcb7d93451c3ed307a8d38816c38c7e2aa00531e3a4b458d44",
+            "source": "logs",
+            "locator": "demo://logs/13422112",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22369 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4597934548559358389 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674149
+            },
+            "version": "13422112",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422112"
+          },
+          {
+            "id": "logs:13422113:987122a7e40b",
+            "team": "payments",
+            "sha256": "987122a7e40be4384109901da320e51d12a0b8c44bd3dbee4ee7167307758dc1",
+            "source": "logs",
+            "locator": "demo://logs/13422113",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22369 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+              "service_name": "payment-api",
+              "original_line": 8674150
+            },
+            "version": "13422113",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422113"
+          },
+          {
+            "id": "logs:13422114:62a952f2e3b3",
+            "team": "payments",
+            "sha256": "62a952f2e3b31f0f2eccac70661f05988c60e685f4e54a43d93b9ac640a9c21b",
+            "source": "logs",
+            "locator": "demo://logs/13422114",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22374 INFO dfs.DataNode$DataXceiver: Receiving block blk_-5653136497881550316 src: /10.251.75.163:34780 dest: /10.251.75.163:50010",
+              "service_name": "payment-api",
+              "original_line": 8674151
+            },
+            "version": "13422114",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422114"
+          },
+          {
+            "id": "logs:13422115:9a8b8b9c2456",
+            "team": "payments",
+            "sha256": "9a8b8b9c2456ff3e0ca8ac18cf4837348a6ff8e2285ae5f313c9069532ad4382",
+            "source": "logs",
+            "locator": "demo://logs/13422115",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22455 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-7061937701449400690 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674152
+            },
+            "version": "13422115",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422115"
+          },
+          {
+            "id": "logs:13422116:ef1b1565ff7c",
+            "team": "payments",
+            "sha256": "ef1b1565ff7cb04dacb8a06c4cff89de824fcf6c255e06879c914fa367e7ad62",
+            "source": "logs",
+            "locator": "demo://logs/13422116",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22455 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.123.132",
+              "service_name": "payment-api",
+              "original_line": 8674153
+            },
+            "version": "13422116",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422116"
+          },
+          {
+            "id": "logs:13422117:effd827376b9",
+            "team": "payments",
+            "sha256": "effd827376b9cfd88a5974105072411b8c263de258e7a2827bb2888d6829feef",
+            "source": "logs",
+            "locator": "demo://logs/13422117",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22485 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.250.5.161:56159 dest: /10.250.5.161:50010",
+              "service_name": "payment-api",
+              "original_line": 8674154
+            },
+            "version": "13422117",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422117"
+          },
+          {
+            "id": "logs:13422118:459d88d96244",
+            "team": "payments",
+            "sha256": "459d88d96244125381984ac997ddc00413915ff667d083825ea2fa25467ec1b5",
+            "source": "logs",
+            "locator": "demo://logs/13422118",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22503 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8673098692195848093 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674155
+            },
+            "version": "13422118",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422118"
+          },
+          {
+            "id": "logs:13422119:699ae63966b6",
+            "team": "payments",
+            "sha256": "699ae63966b65072745264a0f2adec17570c20fdc734b165e9dd65c8a713301f",
+            "source": "logs",
+            "locator": "demo://logs/13422119",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22503 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+              "service_name": "payment-api",
+              "original_line": 8674156
+            },
+            "version": "13422119",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422119"
+          },
+          {
+            "id": "logs:13422120:cdae78f16978",
+            "team": "payments",
+            "sha256": "cdae78f1697844c045f7474955f0681472f9c6fd1260556125088ee0bc4234db",
+            "source": "logs",
+            "locator": "demo://logs/13422120",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22505 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8210006558057770969 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674157
+            },
+            "version": "13422120",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422120"
+          },
+          {
+            "id": "logs:13422121:1051bf5e4cd6",
+            "team": "payments",
+            "sha256": "1051bf5e4cd688d07325621c7577492bdfe918ba29b0c1acd34502661eb0d78b",
+            "source": "logs",
+            "locator": "demo://logs/13422121",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22505 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+              "service_name": "payment-api",
+              "original_line": 8674158
+            },
+            "version": "13422121",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422121"
+          },
+          {
+            "id": "logs:13422122:602a5dfd1656",
+            "team": "payments",
+            "sha256": "602a5dfd16564380b413d041af7a840589857feecebf33c559c426c7b7d7d595",
+            "source": "logs",
+            "locator": "demo://logs/13422122",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22516 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:34763 dest: /10.251.30.6:50010",
+              "service_name": "payment-api",
+              "original_line": 8674159
+            },
+            "version": "13422122",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422122"
+          },
+          {
+            "id": "logs:13422123:30ead77b0e18",
+            "team": "payments",
+            "sha256": "30ead77b0e1833e4ec9d61845cf18fea8e936b195860233811d8cdce85bc411a",
+            "source": "logs",
+            "locator": "demo://logs/13422123",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22520 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:41189 dest: /10.251.106.214:50010",
+              "service_name": "payment-api",
+              "original_line": 8674160
+            },
+            "version": "13422123",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422123"
+          },
+          {
+            "id": "logs:13422124:89d315cc2e92",
+            "team": "payments",
+            "sha256": "89d315cc2e9244a6cb89a1338454285d379d24dd323941f88e0973098eb57323",
+            "source": "logs",
+            "locator": "demo://logs/13422124",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22556 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-2451498942692592989 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674161
+            },
+            "version": "13422124",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422124"
+          },
+          {
+            "id": "logs:13422125:ec076f3d28ae",
+            "team": "payments",
+            "sha256": "ec076f3d28ae64527236777e8f40e1d6ed7c3b7c32bfe0253431c3c5742fad90",
+            "source": "logs",
+            "locator": "demo://logs/13422125",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22556 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.130",
+              "service_name": "payment-api",
+              "original_line": 8674162
+            },
+            "version": "13422125",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422125"
+          },
+          {
+            "id": "logs:13422126:6405eff549ed",
+            "team": "payments",
+            "sha256": "6405eff549ed5691895ebebdb554d0012113ac644a8ce237f60535e121c33c2e",
+            "source": "logs",
+            "locator": "demo://logs/13422126",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22557 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4803590459508022970 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674163
+            },
+            "version": "13422126",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422126"
+          },
+          {
+            "id": "logs:13422127:1ffc86ecc825",
+            "team": "payments",
+            "sha256": "1ffc86ecc82555138d5812fcbaf465b5b6830ae0e9ae0bbc33bb2046c29e05c4",
+            "source": "logs",
+            "locator": "demo://logs/13422127",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22557 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+              "service_name": "payment-api",
+              "original_line": 8674164
+            },
+            "version": "13422127",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422127"
+          },
+          {
+            "id": "logs:13422128:f0a7c1fce3bf",
+            "team": "payments",
+            "sha256": "f0a7c1fce3bff834eef7c9329d6429d365be670efb5c89920f080d032ccd3920",
+            "source": "logs",
+            "locator": "demo://logs/13422128",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22564 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_8210006558057770969 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674165
+            },
+            "version": "13422128",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422128"
+          },
+          {
+            "id": "logs:13422129:050d74682afe",
+            "team": "payments",
+            "sha256": "050d74682afeb7ac4395d17c9fcf5df97561fd0fe8c72ace0d99fd14239061e7",
+            "source": "logs",
+            "locator": "demo://logs/13422129",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22564 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.250.10.213",
+              "service_name": "payment-api",
+              "original_line": 8674166
+            },
+            "version": "13422129",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422129"
+          },
+          {
+            "id": "logs:13422130:2b0bb94b5506",
+            "team": "payments",
+            "sha256": "2b0bb94b5506386538fecde8bc845cc2cec7f48e8dbc6fa327d2df4b819c5490",
+            "source": "logs",
+            "locator": "demo://logs/13422130",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22574 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2269104486450870577 src: /10.251.39.209:40765 dest: /10.251.39.209:50010",
+              "service_name": "payment-api",
+              "original_line": 8674167
+            },
+            "version": "13422130",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422130"
+          },
+          {
+            "id": "logs:13422131:d7d21325292b",
+            "team": "payments",
+            "sha256": "d7d21325292b476ecf01048b0cd8a2a38695f13c59e66f266735bd1e070c46b0",
+            "source": "logs",
+            "locator": "demo://logs/13422131",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22576 INFO dfs.DataNode$DataXceiver: Receiving block blk_-3404677770014852260 src: /10.251.42.16:58507 dest: /10.251.42.16:50010",
+              "service_name": "payment-api",
+              "original_line": 8674168
+            },
+            "version": "13422131",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422131"
+          },
+          {
+            "id": "logs:13422132:b114c559c18a",
+            "team": "payments",
+            "sha256": "b114c559c18ad6b1ac18b5d8fcd909bad16274eac7b70dd0a1049be01780f4b9",
+            "source": "logs",
+            "locator": "demo://logs/13422132",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22624 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-7061937701449400690 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674169
+            },
+            "version": "13422132",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422132"
+          },
+          {
+            "id": "logs:13422133:74dab41516ba",
+            "team": "payments",
+            "sha256": "74dab41516bac604428efceb17ed37591d275830caaab992f312545fdf00426a",
+            "source": "logs",
+            "locator": "demo://logs/13422133",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22624 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.107.242",
+              "service_name": "payment-api",
+              "original_line": 8674170
+            },
+            "version": "13422133",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422133"
+          },
+          {
+            "id": "logs:13422134:80443c88bf31",
+            "team": "payments",
+            "sha256": "80443c88bf31edc413704a7d07ff9ddf1ba9691c0ccce8fd40e4c13bc9525f5b",
+            "source": "logs",
+            "locator": "demo://logs/13422134",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22625 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4597934548559358389 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674171
+            },
+            "version": "13422134",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422134"
+          },
+          {
+            "id": "logs:13422135:85f2bf1122ff",
+            "team": "payments",
+            "sha256": "85f2bf1122ff73d2502be54648c6f0da60e716a26e7700e12a672e5646c2f536",
+            "source": "logs",
+            "locator": "demo://logs/13422135",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22625 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+              "service_name": "payment-api",
+              "original_line": 8674172
+            },
+            "version": "13422135",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422135"
+          },
+          {
+            "id": "logs:13422136:40c9f590cb5d",
+            "team": "payments",
+            "sha256": "40c9f590cb5d2d5f631e60237449ad3f1e7071e174042a39b402b337441c1797",
+            "source": "logs",
+            "locator": "demo://logs/13422136",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22634 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:44061 dest: /10.251.30.6:50010",
+              "service_name": "payment-api",
+              "original_line": 8674173
+            },
+            "version": "13422136",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422136"
+          },
+          {
+            "id": "logs:13422137:8b89ac69282b",
+            "team": "payments",
+            "sha256": "8b89ac69282b03730e710098b8044306c42e150de9c56304c274e334d73f43ee",
+            "source": "logs",
+            "locator": "demo://logs/13422137",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22636 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:42163 dest: /10.250.7.244:50010",
+              "service_name": "payment-api",
+              "original_line": 8674174
+            },
+            "version": "13422137",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422137"
+          },
+          {
+            "id": "logs:13422138:f96d2cfbf588",
+            "team": "payments",
+            "sha256": "f96d2cfbf58804defe32f4f1230782eb8955dcd2ca8f9577ce5e906fd264b189",
+            "source": "logs",
+            "locator": "demo://logs/13422138",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22646 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_3525357734834676511 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674175
+            },
+            "version": "13422138",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422138"
+          },
+          {
+            "id": "logs:13422139:d7ae000bd8b8",
+            "team": "payments",
+            "sha256": "d7ae000bd8b88cdd8d6a6357ed0a9d0f2d7fbab69f4877fc3f59e5fc5e5514ce",
+            "source": "logs",
+            "locator": "demo://logs/13422139",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22646 INFO dfs.DataNode$PacketResponder: Received block blk_3525357734834676511 of size 67108864 from /10.250.7.230",
+              "service_name": "payment-api",
+              "original_line": 8674176
+            },
+            "version": "13422139",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422139"
+          },
+          {
+            "id": "logs:13422140:eddc24677fe0",
+            "team": "payments",
+            "sha256": "eddc24677fe04310c82157339b3e5a85c652c867b5c3e2f04468235c330f572e",
+            "source": "logs",
+            "locator": "demo://logs/13422140",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22669 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8210006558057770969 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674177
+            },
+            "version": "13422140",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422140"
+          },
+          {
+            "id": "logs:13422141:995e57a5bde6",
+            "team": "payments",
+            "sha256": "995e57a5bde65034a718978960c5cbd2a8718442d5dd9704cfd7758df3c45779",
+            "source": "logs",
+            "locator": "demo://logs/13422141",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22669 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+              "service_name": "payment-api",
+              "original_line": 8674178
+            },
+            "version": "13422141",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422141"
+          },
+          {
+            "id": "logs:13422142:41e585076d89",
+            "team": "payments",
+            "sha256": "41e585076d896132c6916acc29e32fed8ebed2daa9a0fb872d87529b4c6ec890",
+            "source": "logs",
+            "locator": "demo://logs/13422142",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22673 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-2451498942692592989 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674179
+            },
+            "version": "13422142",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422142"
+          },
+          {
+            "id": "logs:13422143:726fd078550a",
+            "team": "payments",
+            "sha256": "726fd078550a7abe5b4b157309077cff7e30f714e396c0b9f83ccc8918c4f42b",
+            "source": "logs",
+            "locator": "demo://logs/13422143",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22673 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.228",
+              "service_name": "payment-api",
+              "original_line": 8674180
+            },
+            "version": "13422143",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422143"
+          },
+          {
+            "id": "logs:13422144:0d10e6506c2f",
+            "team": "payments",
+            "sha256": "0d10e6506c2f0ffb9b5ab4ef46cfaa3da82d1f6d2ab472877ff4decd1ca9a78e",
+            "source": "logs",
+            "locator": "demo://logs/13422144",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22690 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:47725 dest: /10.251.106.214:50010",
+              "service_name": "payment-api",
+              "original_line": 8674181
+            },
+            "version": "13422144",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422144"
+          },
+          {
+            "id": "logs:13422145:40959d9fa56c",
+            "team": "payments",
+            "sha256": "40959d9fa56c7d66707a2acaa240508445dfb72b94d07bb9a8a8bd260ebad752",
+            "source": "logs",
+            "locator": "demo://logs/13422145",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22699 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.251.90.134:38515 dest: /10.251.90.134:50010",
+              "service_name": "payment-api",
+              "original_line": 8674182
+            },
+            "version": "13422145",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422145"
+          },
+          {
+            "id": "logs:13422146:e6bf3e763a39",
+            "team": "payments",
+            "sha256": "e6bf3e763a39c7521c7cf06b3c29bb467c644bce489a93a05a48c79e78eef214",
+            "source": "logs",
+            "locator": "demo://logs/13422146",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22706 INFO dfs.DataNode$DataXceiver: Receiving block blk_8083507517600226381 src: /10.251.43.192:57460 dest: /10.251.43.192:50010",
+              "service_name": "payment-api",
+              "original_line": 8674183
+            },
+            "version": "13422146",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422146"
+          },
+          {
+            "id": "logs:13422147:98eab5f60955",
+            "team": "payments",
+            "sha256": "98eab5f6095562646230e921446c802b25f1b6a3f7e3dcf777e24830f5a47bf0",
+            "source": "logs",
+            "locator": "demo://logs/13422147",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22725 INFO dfs.DataNode$DataXceiver: Receiving block blk_-6197128444424166853 src: /10.251.67.211:40557 dest: /10.251.67.211:50010",
+              "service_name": "payment-api",
+              "original_line": 8674184
+            },
+            "version": "13422147",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422147"
+          },
+          {
+            "id": "logs:13422148:d7ba6c1da3b8",
+            "team": "payments",
+            "sha256": "d7ba6c1da3b88f461ba4391761ed919836a2cb9461c0497f6a11dd22843c9495",
+            "source": "logs",
+            "locator": "demo://logs/13422148",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22736 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-4597934548559358389 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674185
+            },
+            "version": "13422148",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422148"
+          },
+          {
+            "id": "logs:13422149:5823edaef491",
+            "team": "payments",
+            "sha256": "5823edaef49156ee7721781e2f7e7528a3aaba925768bc8d5c576a942e72fbc8",
+            "source": "logs",
+            "locator": "demo://logs/13422149",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22736 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.251.111.37",
+              "service_name": "payment-api",
+              "original_line": 8674186
+            },
+            "version": "13422149",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422149"
+          },
+          {
+            "id": "logs:13422150:eec02e4f8131",
+            "team": "payments",
+            "sha256": "eec02e4f8131beb7a9e0c11a813e04f22d0fc418b3b7ed5f07b4b8c0a381be38",
+            "source": "logs",
+            "locator": "demo://logs/13422150",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22805 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4803590459508022970 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674187
+            },
+            "version": "13422150",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422150"
+          },
+          {
+            "id": "logs:13422151:5216421a9680",
+            "team": "payments",
+            "sha256": "5216421a968070ea3c41af570bde5e8b41b67382b132ae7093c6b6cc14a8f380",
+            "source": "logs",
+            "locator": "demo://logs/13422151",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22805 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+              "service_name": "payment-api",
+              "original_line": 8674188
+            },
+            "version": "13422151",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422151"
+          },
+          {
+            "id": "logs:13422152:bce7709732d8",
+            "team": "payments",
+            "sha256": "bce7709732d8321f5d597924862c5d44b5d91f2967c6c47d329ad87ab4344898",
+            "source": "logs",
+            "locator": "demo://logs/13422152",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22841 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_6169498208511399392 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674189
+            },
+            "version": "13422152",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422152"
+          },
+          {
+            "id": "logs:13422153:fffdbe1811e0",
+            "team": "payments",
+            "sha256": "fffdbe1811e0e066b719b0761527a1600d8c580b6323ed0844441d4ca1ebf84e",
+            "source": "logs",
+            "locator": "demo://logs/13422153",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22841 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+              "service_name": "payment-api",
+              "original_line": 8674190
+            },
+            "version": "13422153",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422153"
+          },
+          {
+            "id": "logs:13422154:71aef0a5c139",
+            "team": "payments",
+            "sha256": "71aef0a5c139c294816e6da13c4f95cf6c48e1a2c89bc188c83e4101d04fd063",
+            "source": "logs",
+            "locator": "demo://logs/13422154",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22846 INFO dfs.DataNode$DataXceiver: Receiving block blk_-1017156709313498792 src: /10.251.26.8:47849 dest: /10.251.26.8:50010",
+              "service_name": "payment-api",
+              "original_line": 8674191
+            },
+            "version": "13422154",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422154"
+          },
+          {
+            "id": "logs:13422155:f16a01e8f6c4",
+            "team": "payments",
+            "sha256": "f16a01e8f6c4bac5b29371ca7970b25be86b2a4c910f1c1acf2d52563e4b0c1d",
+            "source": "logs",
+            "locator": "demo://logs/13422155",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22855 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_6169498208511399392 terminating",
+              "service_name": "payment-api",
+              "original_line": 8674192
+            },
+            "version": "13422155",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422155"
+          },
+          {
+            "id": "logs:13422156:1898aa3212a5",
+            "team": "payments",
+            "sha256": "1898aa3212a5b07878f80ccc95a271b787fb906a9b7095715ffcd4274da4695c",
+            "source": "logs",
+            "locator": "demo://logs/13422156",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22855 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+              "service_name": "payment-api",
+              "original_line": 8674193
+            },
+            "version": "13422156",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422156"
+          },
+          {
+            "id": "logs:13422157:5dd2a3aa9bb4",
+            "team": "payments",
+            "sha256": "5dd2a3aa9bb418aad1a16a359226a44259512faabcea997dc301a7804f7cdbc6",
+            "source": "logs",
+            "locator": "demo://logs/13422157",
+            "snippet": {
+              "level": "INFO",
+              "dataset": "HDFS",
+              "message": "081111 070000 22860 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:57562 dest: /10.250.7.244:50010",
+              "service_name": "payment-api",
+              "original_line": 8674194
+            },
+            "version": "13422157",
+            "available": true,
+            "event_time": "2008-11-11T07:00:00+00:00",
+            "collected_at": "2026-09-24T20:28:48.140235+00:00",
+            "source_record": "13422157"
+          },
+          {
+            "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "team": "payments",
+            "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+            "source": "git",
+            "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "snippet": {
+              "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+            },
+            "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:28:48.175920+00:00",
+            "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+          },
+          {
+            "id": "runbook:orders-runbook:3fd079fe1881",
+            "team": "payments",
+            "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+            "source": "runbook",
+            "locator": "demo-git://repo/RUNBOOK.md",
+            "snippet": {
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+            },
+            "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:28:48.205244+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "memories": [],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:28:46.676010+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:28:48.140235+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:28:48.175920+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:28:48.205244+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "token_budget": 12000,
+        "mapping_version": "1",
+        "ontology_version": "1"
+      },
+      "missing": [
+        "deployments: no accessible records in scope",
+        "logs: truncated at bounded page; more records exist"
+      ],
+      "evidence": [
+        {
+          "id": "logs:13422108:090dd7a276f5",
+          "team": "payments",
+          "sha256": "090dd7a276f58d889e973eac9045bf6debc9a5571b9a376b510c5ae35ecdf527",
+          "source": "logs",
+          "locator": "demo://logs/13422108",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 19 INFO dfs.FSDataset: Deleting block blk_2665640213652568005 file /mnt/hadoop/dfs/data/current/subdir12/blk_2665640213652568005",
+            "service_name": "payment-api",
+            "original_line": 8674145
+          },
+          "version": "13422108",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422108"
+        },
+        {
+          "id": "logs:13422109:0ea1121f99d3",
+          "team": "payments",
+          "sha256": "0ea1121f99d3c117332c117bf67d369343b1ad63ee13b5260a8a8486bb011b17",
+          "source": "logs",
+          "locator": "demo://logs/13422109",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22229 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8673098692195848093 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674146
+          },
+          "version": "13422109",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422109"
+        },
+        {
+          "id": "logs:13422110:ffe508599a6d",
+          "team": "payments",
+          "sha256": "ffe508599a6da4c8b5f76d19b0152f145a3a0e416c2cd150924f9c5c27196d1a",
+          "source": "logs",
+          "locator": "demo://logs/13422110",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22229 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+            "service_name": "payment-api",
+            "original_line": 8674147
+          },
+          "version": "13422110",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422110"
+        },
+        {
+          "id": "logs:13422111:55e9dd9b4d7a",
+          "team": "payments",
+          "sha256": "55e9dd9b4d7afc9cede87333eb2eac015acaa020994c82d9e60ec40b1b6d9288",
+          "source": "logs",
+          "locator": "demo://logs/13422111",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22336 INFO dfs.DataNode$DataXceiver: Receiving block blk_-7774828757985761818 src: /10.251.90.239:51380 dest: /10.251.90.239:50010",
+            "service_name": "payment-api",
+            "original_line": 8674148
+          },
+          "version": "13422111",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422111"
+        },
+        {
+          "id": "logs:13422112:bf0a5a26c226",
+          "team": "payments",
+          "sha256": "bf0a5a26c226b1bcb7d93451c3ed307a8d38816c38c7e2aa00531e3a4b458d44",
+          "source": "logs",
+          "locator": "demo://logs/13422112",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22369 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4597934548559358389 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674149
+          },
+          "version": "13422112",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422112"
+        },
+        {
+          "id": "logs:13422113:987122a7e40b",
+          "team": "payments",
+          "sha256": "987122a7e40be4384109901da320e51d12a0b8c44bd3dbee4ee7167307758dc1",
+          "source": "logs",
+          "locator": "demo://logs/13422113",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22369 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+            "service_name": "payment-api",
+            "original_line": 8674150
+          },
+          "version": "13422113",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422113"
+        },
+        {
+          "id": "logs:13422114:62a952f2e3b3",
+          "team": "payments",
+          "sha256": "62a952f2e3b31f0f2eccac70661f05988c60e685f4e54a43d93b9ac640a9c21b",
+          "source": "logs",
+          "locator": "demo://logs/13422114",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22374 INFO dfs.DataNode$DataXceiver: Receiving block blk_-5653136497881550316 src: /10.251.75.163:34780 dest: /10.251.75.163:50010",
+            "service_name": "payment-api",
+            "original_line": 8674151
+          },
+          "version": "13422114",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422114"
+        },
+        {
+          "id": "logs:13422115:9a8b8b9c2456",
+          "team": "payments",
+          "sha256": "9a8b8b9c2456ff3e0ca8ac18cf4837348a6ff8e2285ae5f313c9069532ad4382",
+          "source": "logs",
+          "locator": "demo://logs/13422115",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22455 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-7061937701449400690 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674152
+          },
+          "version": "13422115",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422115"
+        },
+        {
+          "id": "logs:13422116:ef1b1565ff7c",
+          "team": "payments",
+          "sha256": "ef1b1565ff7cb04dacb8a06c4cff89de824fcf6c255e06879c914fa367e7ad62",
+          "source": "logs",
+          "locator": "demo://logs/13422116",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22455 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.123.132",
+            "service_name": "payment-api",
+            "original_line": 8674153
+          },
+          "version": "13422116",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422116"
+        },
+        {
+          "id": "logs:13422117:effd827376b9",
+          "team": "payments",
+          "sha256": "effd827376b9cfd88a5974105072411b8c263de258e7a2827bb2888d6829feef",
+          "source": "logs",
+          "locator": "demo://logs/13422117",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22485 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.250.5.161:56159 dest: /10.250.5.161:50010",
+            "service_name": "payment-api",
+            "original_line": 8674154
+          },
+          "version": "13422117",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422117"
+        },
+        {
+          "id": "logs:13422118:459d88d96244",
+          "team": "payments",
+          "sha256": "459d88d96244125381984ac997ddc00413915ff667d083825ea2fa25467ec1b5",
+          "source": "logs",
+          "locator": "demo://logs/13422118",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22503 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8673098692195848093 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674155
+          },
+          "version": "13422118",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422118"
+        },
+        {
+          "id": "logs:13422119:699ae63966b6",
+          "team": "payments",
+          "sha256": "699ae63966b65072745264a0f2adec17570c20fdc734b165e9dd65c8a713301f",
+          "source": "logs",
+          "locator": "demo://logs/13422119",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22503 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+            "service_name": "payment-api",
+            "original_line": 8674156
+          },
+          "version": "13422119",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422119"
+        },
+        {
+          "id": "logs:13422120:cdae78f16978",
+          "team": "payments",
+          "sha256": "cdae78f1697844c045f7474955f0681472f9c6fd1260556125088ee0bc4234db",
+          "source": "logs",
+          "locator": "demo://logs/13422120",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22505 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8210006558057770969 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674157
+          },
+          "version": "13422120",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422120"
+        },
+        {
+          "id": "logs:13422121:1051bf5e4cd6",
+          "team": "payments",
+          "sha256": "1051bf5e4cd688d07325621c7577492bdfe918ba29b0c1acd34502661eb0d78b",
+          "source": "logs",
+          "locator": "demo://logs/13422121",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22505 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+            "service_name": "payment-api",
+            "original_line": 8674158
+          },
+          "version": "13422121",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422121"
+        },
+        {
+          "id": "logs:13422122:602a5dfd1656",
+          "team": "payments",
+          "sha256": "602a5dfd16564380b413d041af7a840589857feecebf33c559c426c7b7d7d595",
+          "source": "logs",
+          "locator": "demo://logs/13422122",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22516 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:34763 dest: /10.251.30.6:50010",
+            "service_name": "payment-api",
+            "original_line": 8674159
+          },
+          "version": "13422122",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422122"
+        },
+        {
+          "id": "logs:13422123:30ead77b0e18",
+          "team": "payments",
+          "sha256": "30ead77b0e1833e4ec9d61845cf18fea8e936b195860233811d8cdce85bc411a",
+          "source": "logs",
+          "locator": "demo://logs/13422123",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22520 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:41189 dest: /10.251.106.214:50010",
+            "service_name": "payment-api",
+            "original_line": 8674160
+          },
+          "version": "13422123",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422123"
+        },
+        {
+          "id": "logs:13422124:89d315cc2e92",
+          "team": "payments",
+          "sha256": "89d315cc2e9244a6cb89a1338454285d379d24dd323941f88e0973098eb57323",
+          "source": "logs",
+          "locator": "demo://logs/13422124",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22556 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-2451498942692592989 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674161
+          },
+          "version": "13422124",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422124"
+        },
+        {
+          "id": "logs:13422125:ec076f3d28ae",
+          "team": "payments",
+          "sha256": "ec076f3d28ae64527236777e8f40e1d6ed7c3b7c32bfe0253431c3c5742fad90",
+          "source": "logs",
+          "locator": "demo://logs/13422125",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22556 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.130",
+            "service_name": "payment-api",
+            "original_line": 8674162
+          },
+          "version": "13422125",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422125"
+        },
+        {
+          "id": "logs:13422126:6405eff549ed",
+          "team": "payments",
+          "sha256": "6405eff549ed5691895ebebdb554d0012113ac644a8ce237f60535e121c33c2e",
+          "source": "logs",
+          "locator": "demo://logs/13422126",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22557 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4803590459508022970 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674163
+          },
+          "version": "13422126",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422126"
+        },
+        {
+          "id": "logs:13422127:1ffc86ecc825",
+          "team": "payments",
+          "sha256": "1ffc86ecc82555138d5812fcbaf465b5b6830ae0e9ae0bbc33bb2046c29e05c4",
+          "source": "logs",
+          "locator": "demo://logs/13422127",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22557 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+            "service_name": "payment-api",
+            "original_line": 8674164
+          },
+          "version": "13422127",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422127"
+        },
+        {
+          "id": "logs:13422128:f0a7c1fce3bf",
+          "team": "payments",
+          "sha256": "f0a7c1fce3bff834eef7c9329d6429d365be670efb5c89920f080d032ccd3920",
+          "source": "logs",
+          "locator": "demo://logs/13422128",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22564 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_8210006558057770969 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674165
+          },
+          "version": "13422128",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422128"
+        },
+        {
+          "id": "logs:13422129:050d74682afe",
+          "team": "payments",
+          "sha256": "050d74682afeb7ac4395d17c9fcf5df97561fd0fe8c72ace0d99fd14239061e7",
+          "source": "logs",
+          "locator": "demo://logs/13422129",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22564 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.250.10.213",
+            "service_name": "payment-api",
+            "original_line": 8674166
+          },
+          "version": "13422129",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422129"
+        },
+        {
+          "id": "logs:13422130:2b0bb94b5506",
+          "team": "payments",
+          "sha256": "2b0bb94b5506386538fecde8bc845cc2cec7f48e8dbc6fa327d2df4b819c5490",
+          "source": "logs",
+          "locator": "demo://logs/13422130",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22574 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2269104486450870577 src: /10.251.39.209:40765 dest: /10.251.39.209:50010",
+            "service_name": "payment-api",
+            "original_line": 8674167
+          },
+          "version": "13422130",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422130"
+        },
+        {
+          "id": "logs:13422131:d7d21325292b",
+          "team": "payments",
+          "sha256": "d7d21325292b476ecf01048b0cd8a2a38695f13c59e66f266735bd1e070c46b0",
+          "source": "logs",
+          "locator": "demo://logs/13422131",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22576 INFO dfs.DataNode$DataXceiver: Receiving block blk_-3404677770014852260 src: /10.251.42.16:58507 dest: /10.251.42.16:50010",
+            "service_name": "payment-api",
+            "original_line": 8674168
+          },
+          "version": "13422131",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422131"
+        },
+        {
+          "id": "logs:13422132:b114c559c18a",
+          "team": "payments",
+          "sha256": "b114c559c18ad6b1ac18b5d8fcd909bad16274eac7b70dd0a1049be01780f4b9",
+          "source": "logs",
+          "locator": "demo://logs/13422132",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22624 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-7061937701449400690 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674169
+          },
+          "version": "13422132",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422132"
+        },
+        {
+          "id": "logs:13422133:74dab41516ba",
+          "team": "payments",
+          "sha256": "74dab41516bac604428efceb17ed37591d275830caaab992f312545fdf00426a",
+          "source": "logs",
+          "locator": "demo://logs/13422133",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22624 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.107.242",
+            "service_name": "payment-api",
+            "original_line": 8674170
+          },
+          "version": "13422133",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422133"
+        },
+        {
+          "id": "logs:13422134:80443c88bf31",
+          "team": "payments",
+          "sha256": "80443c88bf31edc413704a7d07ff9ddf1ba9691c0ccce8fd40e4c13bc9525f5b",
+          "source": "logs",
+          "locator": "demo://logs/13422134",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22625 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4597934548559358389 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674171
+          },
+          "version": "13422134",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422134"
+        },
+        {
+          "id": "logs:13422135:85f2bf1122ff",
+          "team": "payments",
+          "sha256": "85f2bf1122ff73d2502be54648c6f0da60e716a26e7700e12a672e5646c2f536",
+          "source": "logs",
+          "locator": "demo://logs/13422135",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22625 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+            "service_name": "payment-api",
+            "original_line": 8674172
+          },
+          "version": "13422135",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422135"
+        },
+        {
+          "id": "logs:13422136:40c9f590cb5d",
+          "team": "payments",
+          "sha256": "40c9f590cb5d2d5f631e60237449ad3f1e7071e174042a39b402b337441c1797",
+          "source": "logs",
+          "locator": "demo://logs/13422136",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22634 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:44061 dest: /10.251.30.6:50010",
+            "service_name": "payment-api",
+            "original_line": 8674173
+          },
+          "version": "13422136",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422136"
+        },
+        {
+          "id": "logs:13422137:8b89ac69282b",
+          "team": "payments",
+          "sha256": "8b89ac69282b03730e710098b8044306c42e150de9c56304c274e334d73f43ee",
+          "source": "logs",
+          "locator": "demo://logs/13422137",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22636 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:42163 dest: /10.250.7.244:50010",
+            "service_name": "payment-api",
+            "original_line": 8674174
+          },
+          "version": "13422137",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422137"
+        },
+        {
+          "id": "logs:13422138:f96d2cfbf588",
+          "team": "payments",
+          "sha256": "f96d2cfbf58804defe32f4f1230782eb8955dcd2ca8f9577ce5e906fd264b189",
+          "source": "logs",
+          "locator": "demo://logs/13422138",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22646 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_3525357734834676511 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674175
+          },
+          "version": "13422138",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422138"
+        },
+        {
+          "id": "logs:13422139:d7ae000bd8b8",
+          "team": "payments",
+          "sha256": "d7ae000bd8b88cdd8d6a6357ed0a9d0f2d7fbab69f4877fc3f59e5fc5e5514ce",
+          "source": "logs",
+          "locator": "demo://logs/13422139",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22646 INFO dfs.DataNode$PacketResponder: Received block blk_3525357734834676511 of size 67108864 from /10.250.7.230",
+            "service_name": "payment-api",
+            "original_line": 8674176
+          },
+          "version": "13422139",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422139"
+        },
+        {
+          "id": "logs:13422140:eddc24677fe0",
+          "team": "payments",
+          "sha256": "eddc24677fe04310c82157339b3e5a85c652c867b5c3e2f04468235c330f572e",
+          "source": "logs",
+          "locator": "demo://logs/13422140",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22669 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8210006558057770969 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674177
+          },
+          "version": "13422140",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422140"
+        },
+        {
+          "id": "logs:13422141:995e57a5bde6",
+          "team": "payments",
+          "sha256": "995e57a5bde65034a718978960c5cbd2a8718442d5dd9704cfd7758df3c45779",
+          "source": "logs",
+          "locator": "demo://logs/13422141",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22669 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+            "service_name": "payment-api",
+            "original_line": 8674178
+          },
+          "version": "13422141",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422141"
+        },
+        {
+          "id": "logs:13422142:41e585076d89",
+          "team": "payments",
+          "sha256": "41e585076d896132c6916acc29e32fed8ebed2daa9a0fb872d87529b4c6ec890",
+          "source": "logs",
+          "locator": "demo://logs/13422142",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22673 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-2451498942692592989 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674179
+          },
+          "version": "13422142",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422142"
+        },
+        {
+          "id": "logs:13422143:726fd078550a",
+          "team": "payments",
+          "sha256": "726fd078550a7abe5b4b157309077cff7e30f714e396c0b9f83ccc8918c4f42b",
+          "source": "logs",
+          "locator": "demo://logs/13422143",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22673 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.228",
+            "service_name": "payment-api",
+            "original_line": 8674180
+          },
+          "version": "13422143",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422143"
+        },
+        {
+          "id": "logs:13422144:0d10e6506c2f",
+          "team": "payments",
+          "sha256": "0d10e6506c2f0ffb9b5ab4ef46cfaa3da82d1f6d2ab472877ff4decd1ca9a78e",
+          "source": "logs",
+          "locator": "demo://logs/13422144",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22690 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:47725 dest: /10.251.106.214:50010",
+            "service_name": "payment-api",
+            "original_line": 8674181
+          },
+          "version": "13422144",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422144"
+        },
+        {
+          "id": "logs:13422145:40959d9fa56c",
+          "team": "payments",
+          "sha256": "40959d9fa56c7d66707a2acaa240508445dfb72b94d07bb9a8a8bd260ebad752",
+          "source": "logs",
+          "locator": "demo://logs/13422145",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22699 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.251.90.134:38515 dest: /10.251.90.134:50010",
+            "service_name": "payment-api",
+            "original_line": 8674182
+          },
+          "version": "13422145",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422145"
+        },
+        {
+          "id": "logs:13422146:e6bf3e763a39",
+          "team": "payments",
+          "sha256": "e6bf3e763a39c7521c7cf06b3c29bb467c644bce489a93a05a48c79e78eef214",
+          "source": "logs",
+          "locator": "demo://logs/13422146",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22706 INFO dfs.DataNode$DataXceiver: Receiving block blk_8083507517600226381 src: /10.251.43.192:57460 dest: /10.251.43.192:50010",
+            "service_name": "payment-api",
+            "original_line": 8674183
+          },
+          "version": "13422146",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422146"
+        },
+        {
+          "id": "logs:13422147:98eab5f60955",
+          "team": "payments",
+          "sha256": "98eab5f6095562646230e921446c802b25f1b6a3f7e3dcf777e24830f5a47bf0",
+          "source": "logs",
+          "locator": "demo://logs/13422147",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22725 INFO dfs.DataNode$DataXceiver: Receiving block blk_-6197128444424166853 src: /10.251.67.211:40557 dest: /10.251.67.211:50010",
+            "service_name": "payment-api",
+            "original_line": 8674184
+          },
+          "version": "13422147",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422147"
+        },
+        {
+          "id": "logs:13422148:d7ba6c1da3b8",
+          "team": "payments",
+          "sha256": "d7ba6c1da3b88f461ba4391761ed919836a2cb9461c0497f6a11dd22843c9495",
+          "source": "logs",
+          "locator": "demo://logs/13422148",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22736 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-4597934548559358389 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674185
+          },
+          "version": "13422148",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422148"
+        },
+        {
+          "id": "logs:13422149:5823edaef491",
+          "team": "payments",
+          "sha256": "5823edaef49156ee7721781e2f7e7528a3aaba925768bc8d5c576a942e72fbc8",
+          "source": "logs",
+          "locator": "demo://logs/13422149",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22736 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.251.111.37",
+            "service_name": "payment-api",
+            "original_line": 8674186
+          },
+          "version": "13422149",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422149"
+        },
+        {
+          "id": "logs:13422150:eec02e4f8131",
+          "team": "payments",
+          "sha256": "eec02e4f8131beb7a9e0c11a813e04f22d0fc418b3b7ed5f07b4b8c0a381be38",
+          "source": "logs",
+          "locator": "demo://logs/13422150",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22805 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4803590459508022970 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674187
+          },
+          "version": "13422150",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422150"
+        },
+        {
+          "id": "logs:13422151:5216421a9680",
+          "team": "payments",
+          "sha256": "5216421a968070ea3c41af570bde5e8b41b67382b132ae7093c6b6cc14a8f380",
+          "source": "logs",
+          "locator": "demo://logs/13422151",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22805 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+            "service_name": "payment-api",
+            "original_line": 8674188
+          },
+          "version": "13422151",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422151"
+        },
+        {
+          "id": "logs:13422152:bce7709732d8",
+          "team": "payments",
+          "sha256": "bce7709732d8321f5d597924862c5d44b5d91f2967c6c47d329ad87ab4344898",
+          "source": "logs",
+          "locator": "demo://logs/13422152",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22841 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_6169498208511399392 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674189
+          },
+          "version": "13422152",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422152"
+        },
+        {
+          "id": "logs:13422153:fffdbe1811e0",
+          "team": "payments",
+          "sha256": "fffdbe1811e0e066b719b0761527a1600d8c580b6323ed0844441d4ca1ebf84e",
+          "source": "logs",
+          "locator": "demo://logs/13422153",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22841 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+            "service_name": "payment-api",
+            "original_line": 8674190
+          },
+          "version": "13422153",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422153"
+        },
+        {
+          "id": "logs:13422154:71aef0a5c139",
+          "team": "payments",
+          "sha256": "71aef0a5c139c294816e6da13c4f95cf6c48e1a2c89bc188c83e4101d04fd063",
+          "source": "logs",
+          "locator": "demo://logs/13422154",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22846 INFO dfs.DataNode$DataXceiver: Receiving block blk_-1017156709313498792 src: /10.251.26.8:47849 dest: /10.251.26.8:50010",
+            "service_name": "payment-api",
+            "original_line": 8674191
+          },
+          "version": "13422154",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422154"
+        },
+        {
+          "id": "logs:13422155:f16a01e8f6c4",
+          "team": "payments",
+          "sha256": "f16a01e8f6c4bac5b29371ca7970b25be86b2a4c910f1c1acf2d52563e4b0c1d",
+          "source": "logs",
+          "locator": "demo://logs/13422155",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22855 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_6169498208511399392 terminating",
+            "service_name": "payment-api",
+            "original_line": 8674192
+          },
+          "version": "13422155",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422155"
+        },
+        {
+          "id": "logs:13422156:1898aa3212a5",
+          "team": "payments",
+          "sha256": "1898aa3212a5b07878f80ccc95a271b787fb906a9b7095715ffcd4274da4695c",
+          "source": "logs",
+          "locator": "demo://logs/13422156",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22855 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+            "service_name": "payment-api",
+            "original_line": 8674193
+          },
+          "version": "13422156",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422156"
+        },
+        {
+          "id": "logs:13422157:5dd2a3aa9bb4",
+          "team": "payments",
+          "sha256": "5dd2a3aa9bb418aad1a16a359226a44259512faabcea997dc301a7804f7cdbc6",
+          "source": "logs",
+          "locator": "demo://logs/13422157",
+          "snippet": {
+            "level": "INFO",
+            "dataset": "HDFS",
+            "message": "081111 070000 22860 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:57562 dest: /10.250.7.244:50010",
+            "service_name": "payment-api",
+            "original_line": 8674194
+          },
+          "version": "13422157",
+          "available": true,
+          "event_time": "2008-11-11T07:00:00+00:00",
+          "collected_at": "2026-09-24T20:28:48.140235+00:00",
+          "source_record": "13422157"
+        },
+        {
+          "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "team": "payments",
+          "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "snippet": {
+            "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+            "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+          },
+          "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:28:48.175920+00:00",
+          "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+        },
+        {
+          "id": "runbook:orders-runbook:3fd079fe1881",
+          "team": "payments",
+          "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "snippet": {
+            "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+          },
+          "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:28:48.205244+00:00",
+          "source_record": "orders-runbook"
+        }
+      ],
+      "conflicts": [],
+      "freshness": [
+        {
+          "source": "deployments",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:28:46.676010+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "logs",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:28:48.140235+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "git",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:28:48.175920+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "runbook",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:28:48.205244+00:00",
+          "snapshot_consistency": "independent_source"
+        }
+      ],
+      "candidates": [],
+      "next_steps": [
+        "核对实际部署版本与日志时间窗口。",
+        "检查连接池和依赖延迟指标，补齐缺失来源后确认原因。"
+      ],
+      "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+      "historical_memory": []
+    },
+    "status": "partial",
+    "service": "svc-23",
+    "subject": "carol",
+    "symptom": "[Loghub sequential 14] Investigate public HDFS system logs in this historical window; identify observations, uncertainty and missing sources.",
+    "manifest": {
+      "code": "b2a6c2e5acbbf4372279e4a9a991d3d53e68f4fa",
+      "cost": {
+        "unknown": "provider usage unavailable in baseline",
+        "estimated_usd": null,
+        "known_model_tokens": null
+      },
+      "model": "none-deterministic",
+      "prompt": "investigate-v1",
+      "skills": [
+        "release-compare@1",
+        "log-analysis@1"
+      ],
+      "version": "1",
+      "ontology": "1",
+      "evaluator": "rules-v1",
+      "retrieval": "bounded-50",
+      "snapshots": {
+        "git": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2008-11-11T07:59:59.000015+00:00",
+            "team": "payments",
+            "start": "2008-11-11T07:00:00+00:00",
+            "service": "svc-23",
+            "subject": "carol",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "content": {
+                "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:28:48.175920+00:00"
+        },
+        "logs": {
+          "sync": "monotonic_id",
+          "scope": {
+            "end": "2008-11-11T07:59:59.000015+00:00",
+            "team": "payments",
+            "start": "2008-11-11T07:00:00+00:00",
+            "service": "svc-23",
+            "subject": "carol",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "13422108",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 19 INFO dfs.FSDataset: Deleting block blk_2665640213652568005 file /mnt/hadoop/dfs/data/current/subdir12/blk_2665640213652568005",
+                "service_name": "payment-api",
+                "original_line": 8674145
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422108",
+              "version": "13422108",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422109",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22229 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8673098692195848093 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674146
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422109",
+              "version": "13422109",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422110",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22229 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+                "service_name": "payment-api",
+                "original_line": 8674147
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422110",
+              "version": "13422110",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422111",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22336 INFO dfs.DataNode$DataXceiver: Receiving block blk_-7774828757985761818 src: /10.251.90.239:51380 dest: /10.251.90.239:50010",
+                "service_name": "payment-api",
+                "original_line": 8674148
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422111",
+              "version": "13422111",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422112",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22369 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4597934548559358389 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674149
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422112",
+              "version": "13422112",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422113",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22369 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+                "service_name": "payment-api",
+                "original_line": 8674150
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422113",
+              "version": "13422113",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422114",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22374 INFO dfs.DataNode$DataXceiver: Receiving block blk_-5653136497881550316 src: /10.251.75.163:34780 dest: /10.251.75.163:50010",
+                "service_name": "payment-api",
+                "original_line": 8674151
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422114",
+              "version": "13422114",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422115",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22455 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-7061937701449400690 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674152
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422115",
+              "version": "13422115",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422116",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22455 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.123.132",
+                "service_name": "payment-api",
+                "original_line": 8674153
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422116",
+              "version": "13422116",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422117",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22485 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.250.5.161:56159 dest: /10.250.5.161:50010",
+                "service_name": "payment-api",
+                "original_line": 8674154
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422117",
+              "version": "13422117",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422118",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22503 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8673098692195848093 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674155
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422118",
+              "version": "13422118",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422119",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22503 INFO dfs.DataNode$PacketResponder: Received block blk_8673098692195848093 of size 67108864 from /10.251.30.6",
+                "service_name": "payment-api",
+                "original_line": 8674156
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422119",
+              "version": "13422119",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422120",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22505 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_8210006558057770969 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674157
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422120",
+              "version": "13422120",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422121",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22505 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+                "service_name": "payment-api",
+                "original_line": 8674158
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422121",
+              "version": "13422121",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422122",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22516 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:34763 dest: /10.251.30.6:50010",
+                "service_name": "payment-api",
+                "original_line": 8674159
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422122",
+              "version": "13422122",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422123",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22520 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:41189 dest: /10.251.106.214:50010",
+                "service_name": "payment-api",
+                "original_line": 8674160
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422123",
+              "version": "13422123",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422124",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22556 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-2451498942692592989 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674161
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422124",
+              "version": "13422124",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422125",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22556 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.130",
+                "service_name": "payment-api",
+                "original_line": 8674162
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422125",
+              "version": "13422125",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422126",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22557 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4803590459508022970 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674163
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422126",
+              "version": "13422126",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422127",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22557 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+                "service_name": "payment-api",
+                "original_line": 8674164
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422127",
+              "version": "13422127",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422128",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22564 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_8210006558057770969 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674165
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422128",
+              "version": "13422128",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422129",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22564 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.250.10.213",
+                "service_name": "payment-api",
+                "original_line": 8674166
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422129",
+              "version": "13422129",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422130",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22574 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2269104486450870577 src: /10.251.39.209:40765 dest: /10.251.39.209:50010",
+                "service_name": "payment-api",
+                "original_line": 8674167
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422130",
+              "version": "13422130",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422131",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22576 INFO dfs.DataNode$DataXceiver: Receiving block blk_-3404677770014852260 src: /10.251.42.16:58507 dest: /10.251.42.16:50010",
+                "service_name": "payment-api",
+                "original_line": 8674168
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422131",
+              "version": "13422131",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422132",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22624 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-7061937701449400690 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674169
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422132",
+              "version": "13422132",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422133",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22624 INFO dfs.DataNode$PacketResponder: Received block blk_-7061937701449400690 of size 67108864 from /10.251.107.242",
+                "service_name": "payment-api",
+                "original_line": 8674170
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422133",
+              "version": "13422133",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422134",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22625 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_-4597934548559358389 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674171
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422134",
+              "version": "13422134",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422135",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22625 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.250.7.244",
+                "service_name": "payment-api",
+                "original_line": 8674172
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422135",
+              "version": "13422135",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422136",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22634 INFO dfs.DataNode$DataXceiver: Receiving block blk_-4804930256298593083 src: /10.251.30.6:44061 dest: /10.251.30.6:50010",
+                "service_name": "payment-api",
+                "original_line": 8674173
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422136",
+              "version": "13422136",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422137",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22636 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:42163 dest: /10.250.7.244:50010",
+                "service_name": "payment-api",
+                "original_line": 8674174
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422137",
+              "version": "13422137",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422138",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22646 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_3525357734834676511 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674175
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422138",
+              "version": "13422138",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422139",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22646 INFO dfs.DataNode$PacketResponder: Received block blk_3525357734834676511 of size 67108864 from /10.250.7.230",
+                "service_name": "payment-api",
+                "original_line": 8674176
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422139",
+              "version": "13422139",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422140",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22669 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_8210006558057770969 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674177
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422140",
+              "version": "13422140",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422141",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22669 INFO dfs.DataNode$PacketResponder: Received block blk_8210006558057770969 of size 67108864 from /10.251.106.214",
+                "service_name": "payment-api",
+                "original_line": 8674178
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422141",
+              "version": "13422141",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422142",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22673 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-2451498942692592989 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674179
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422142",
+              "version": "13422142",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422143",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22673 INFO dfs.DataNode$PacketResponder: Received block blk_-2451498942692592989 of size 67108864 from /10.251.111.228",
+                "service_name": "payment-api",
+                "original_line": 8674180
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422143",
+              "version": "13422143",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422144",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22690 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8840647207914383674 src: /10.251.106.214:47725 dest: /10.251.106.214:50010",
+                "service_name": "payment-api",
+                "original_line": 8674181
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422144",
+              "version": "13422144",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422145",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22699 INFO dfs.DataNode$DataXceiver: Receiving block blk_4961030909726785270 src: /10.251.90.134:38515 dest: /10.251.90.134:50010",
+                "service_name": "payment-api",
+                "original_line": 8674182
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422145",
+              "version": "13422145",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422146",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22706 INFO dfs.DataNode$DataXceiver: Receiving block blk_8083507517600226381 src: /10.251.43.192:57460 dest: /10.251.43.192:50010",
+                "service_name": "payment-api",
+                "original_line": 8674183
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422146",
+              "version": "13422146",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422147",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22725 INFO dfs.DataNode$DataXceiver: Receiving block blk_-6197128444424166853 src: /10.251.67.211:40557 dest: /10.251.67.211:50010",
+                "service_name": "payment-api",
+                "original_line": 8674184
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422147",
+              "version": "13422147",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422148",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22736 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-4597934548559358389 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674185
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422148",
+              "version": "13422148",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422149",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22736 INFO dfs.DataNode$PacketResponder: Received block blk_-4597934548559358389 of size 67108864 from /10.251.111.37",
+                "service_name": "payment-api",
+                "original_line": 8674186
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422149",
+              "version": "13422149",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422150",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22805 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_-4803590459508022970 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674187
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422150",
+              "version": "13422150",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422151",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22805 INFO dfs.DataNode$PacketResponder: Received block blk_-4803590459508022970 of size 67108864 from /10.251.42.16",
+                "service_name": "payment-api",
+                "original_line": 8674188
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422151",
+              "version": "13422151",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422152",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22841 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_6169498208511399392 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674189
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422152",
+              "version": "13422152",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422153",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22841 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+                "service_name": "payment-api",
+                "original_line": 8674190
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422153",
+              "version": "13422153",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422154",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22846 INFO dfs.DataNode$DataXceiver: Receiving block blk_-1017156709313498792 src: /10.251.26.8:47849 dest: /10.251.26.8:50010",
+                "service_name": "payment-api",
+                "original_line": 8674191
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422154",
+              "version": "13422154",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422155",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22855 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_6169498208511399392 terminating",
+                "service_name": "payment-api",
+                "original_line": 8674192
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422155",
+              "version": "13422155",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422156",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22855 INFO dfs.DataNode$PacketResponder: Received block blk_6169498208511399392 of size 67108864 from /10.251.106.37",
+                "service_name": "payment-api",
+                "original_line": 8674193
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422156",
+              "version": "13422156",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            },
+            {
+              "id": "13422157",
+              "content": {
+                "level": "INFO",
+                "dataset": "HDFS",
+                "message": "081111 070000 22860 INFO dfs.DataNode$DataXceiver: Receiving block blk_-2293210512492599400 src: /10.250.7.244:57562 dest: /10.250.7.244:50010",
+                "service_name": "payment-api",
+                "original_line": 8674194
+              },
+              "deleted": false,
+              "locator": "demo://logs/13422157",
+              "version": "13422157",
+              "event_time": "2008-11-11T07:00:00+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": "13422157",
+          "observed_at": "2026-09-24T20:28:48.140235+00:00"
+        },
+        "runbook": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2008-11-11T07:59:59.000015+00:00",
+            "team": "payments",
+            "start": "2008-11-11T07:00:00+00:00",
+            "service": "svc-23",
+            "subject": "carol",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "orders-runbook",
+              "content": {
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/RUNBOOK.md",
+              "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:28:48.205244+00:00"
+        },
+        "deployments": {
+          "scope": {
+            "end": "2008-11-11T07:59:59.000015+00:00",
+            "team": "payments",
+            "start": "2008-11-11T07:00:00+00:00",
+            "service": "svc-23",
+            "subject": "carol",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:28:46.676010+00:00"
+        }
+      },
+      "generation": 1,
+      "tool_schema": "1",
+      "source_mapping": "1",
+      "model_parameters": {
+        "temperature": "provider-default"
+      },
+      "permission_policy": "go-v1"
+    },
+    "start_at": "2008-11-11T07:00:00+00:00",
+    "timezone": "UTC",
+    "trace_id": "afead01968723761ad63a1e8011f2a71",
+    "created_at": "2026-09-24T20:28:46.597927+00:00",
+    "updated_at": "2026-09-24T20:28:48.241252+00:00",
+    "request_hash": "db6f8b153a6dd245ca0eabe16301670b74bb9e46dcd0df6eef43ea00a665e620",
+    "evidence_stale": false,
+    "source_version": 1
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "queued",
+      "payload": {
+        "request_id": "d1431759-2908-41ef-96ee-a1bc2f7d5b03"
+      },
+      "created_at": "2026-09-24T20:28:46.597927+00:00"
+    },
+    {
+      "seq": 2,
+      "kind": "claimed",
+      "payload": {
+        "worker": "dbd2b36e2ba6:db7d1e2c-d9b3-4cc8-b255-9b166683ff0f"
+      },
+      "created_at": "2026-09-24T20:28:46.629636+00:00"
+    },
+    {
+      "seq": 3,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:46.66459+00:00"
+    },
+    {
+      "seq": 4,
+      "kind": "hook",
+      "payload": {
+        "name": "plan_validated",
+        "status": "pass",
+        "summary": {
+          "steps": 4
+        }
+      },
+      "created_at": "2026-09-24T20:28:46.669907+00:00"
+    },
+    {
+      "seq": 5,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:28:46.670902+00:00"
+    },
+    {
+      "seq": 6,
+      "kind": "authorized",
+      "payload": {
+        "tool": "deployments",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:46.671766+00:00"
+    },
+    {
+      "seq": 7,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:28:46.6763+00:00"
+    },
+    {
+      "seq": 8,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "deployments",
+          "status": "ok",
+          "milliseconds": 6.27
+        }
+      },
+      "created_at": "2026-09-24T20:28:46.677205+00:00"
+    },
+    {
+      "seq": 9,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:28:46.677873+00:00"
+    },
+    {
+      "seq": 10,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:46.678475+00:00"
+    },
+    {
+      "seq": 11,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:46.703182+00:00"
+    },
+    {
+      "seq": 12,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 50,
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.144454+00:00"
+    },
+    {
+      "seq": 13,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "logs",
+          "status": "ok",
+          "milliseconds": 1468.06
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.145954+00:00"
+    },
+    {
+      "seq": 14,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.146735+00:00"
+    },
+    {
+      "seq": 15,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.147513+00:00"
+    },
+    {
+      "seq": 16,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.172979+00:00"
+    },
+    {
+      "seq": 17,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.176668+00:00"
+    },
+    {
+      "seq": 18,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "git",
+          "status": "ok",
+          "milliseconds": 30.65
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.177435+00:00"
+    },
+    {
+      "seq": 19,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.178071+00:00"
+    },
+    {
+      "seq": 20,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.178652+00:00"
+    },
+    {
+      "seq": 21,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.202794+00:00"
+    },
+    {
+      "seq": 22,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.206397+00:00"
+    },
+    {
+      "seq": 23,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "runbook",
+          "status": "ok",
+          "milliseconds": 29.12
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.207237+00:00"
+    },
+    {
+      "seq": 24,
+      "kind": "authorized",
+      "payload": {
+        "tool": "memory",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.208086+00:00"
+    },
+    {
+      "seq": 25,
+      "kind": "hook",
+      "payload": {
+        "name": "context_assembled",
+        "status": "pass",
+        "summary": {
+          "facts": 52,
+          "evidence": 52,
+          "conflicts": 0
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.208826+00:00"
+    },
+    {
+      "seq": 26,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.209394+00:00"
+    },
+    {
+      "seq": 27,
+      "kind": "checkpoint_saved",
+      "payload": {
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.220104+00:00"
+    },
+    {
+      "seq": 28,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.229303+00:00"
+    },
+    {
+      "seq": 29,
+      "kind": "artifact_saved",
+      "payload": {
+        "key": "payments/f3339cbf-2832-41f8-ba86-c23fd6b7e6f3/bff33307-94cc-4e6d-876e-9d6bcdca5541",
+        "state": "ready",
+        "sha256": "70044d46b1bbf4ee54b5243b6cef3b2d03e823a3ed14b6265d2cccd64771cb5c"
+      },
+      "created_at": "2026-09-24T20:28:48.239088+00:00"
+    },
+    {
+      "seq": 30,
+      "kind": "hook",
+      "payload": {
+        "name": "run_finished",
+        "status": "pass",
+        "summary": {
+          "mode": "deterministic-baseline",
+          "facts": 52
+        }
+      },
+      "created_at": "2026-09-24T20:28:48.239821+00:00"
+    },
+    {
+      "seq": 31,
+      "kind": "result",
+      "payload": {
+        "status": "partial",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:28:48.241252+00:00"
+    }
+  ]
+}

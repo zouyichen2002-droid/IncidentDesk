@@ -1,0 +1,1256 @@
+diff --git a/.gitignore b/.gitignore
+index ddd5cff..1ef9a6d 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -59,3 +59,7 @@ Thumbs.db
+ 
+ # Local TEI embedding model files (large)
+ docker/embedding/
++
++# Local runtime output
++.runtime/
++logs/
+diff --git a/LOCAL_V1.md b/LOCAL_V1.md
+new file mode 100644
+index 0000000..cb33c2f
+--- /dev/null
++++ b/LOCAL_V1.md
+@@ -0,0 +1,21 @@
++# Local Mistral V1
++
++Upstream: https://github.com/didilili/shopkeeper-agent
++Revision: 8045fa4d61608f58df551fda6cd1a70529bb5b67
++License: MIT, copyright didilili; original LICENSE and README are retained.
++
++This local extension connects Mistral chat and embedding APIs, corrects AOV metadata,
++adds read-only SQL validation and a SELECT-only warehouse account, and exposes actual
++SQL in the existing React frontend. It remains a single-user local teaching-data demo.
++
++See ../../docs/NL2SQL_V1.md in the parent workspace for the current PRD, acceptance
++evidence, limitations, and startup commands. Full extension source is also preserved
++as ../../integrations/shopkeeper/local.patch against the pinned upstream commit.
++
++Current URLs: UI http://127.0.0.1:38088 and API http://127.0.0.1:38080/docs.
++Database ports: MySQL 33306, Elasticsearch 39200, Qdrant 36333, all loopback only.
++Use docker/compose.local.yaml, not the upstream docker/docker-compose.yaml.
++
++The .env file must contain LLM_API_KEY; keep it private and out of Git.
++The default local database passwords are demo credentials; this compose file must
++not be exposed to the public internet or used as a production deployment.
+diff --git a/app/agent/context.py b/app/agent/context.py
+index bc0a4c7..4749c63 100644
+--- a/app/agent/context.py
++++ b/app/agent/context.py
+@@ -10,7 +10,7 @@ Context 用来保存一次图执行过程中不参与状态合并的外部依赖
+ 
+ from typing import TypedDict
+ 
+-from langchain_huggingface import HuggingFaceEndpointEmbeddings
++from langchain_core.embeddings import Embeddings
+ 
+ from app.repositories.es.value_es_repository import ValueESRepository
+ from app.repositories.mysql.dw.dw_mysql_repository import DWMySQLRepository
+@@ -25,7 +25,7 @@ class DataAgentContext(TypedDict):
+     # 字段向量仓储，负责根据向量从 Qdrant 检索候选字段
+     column_qdrant_repository: ColumnQdrantRepository
+     # Embedding 客户端，负责把关键词转换成向量检索所需的 query vector
+-    embedding_client: HuggingFaceEndpointEmbeddings
++    embedding_client: Embeddings
+     # 指标向量仓储，负责根据向量从 Qdrant 检索候选指标
+     metric_qdrant_repository: MetricQdrantRepository
+     # 字段取值全文检索仓储，负责从 Elasticsearch 检索真实字段值
+diff --git a/app/agent/llm.py b/app/agent/llm.py
+index 6d2f592..53bf723 100644
+--- a/app/agent/llm.py
++++ b/app/agent/llm.py
+@@ -17,6 +17,8 @@ llm = init_chat_model(
+     api_key=app_config.llm.api_key,
+     # 字段扩展、SQL 生成更看重稳定性，所以这里关闭随机发散
+     temperature=0,
++    timeout=60,
++    max_retries=2,
+ )
+ 
+ if __name__ == "__main__":
+diff --git a/app/agent/nodes/generate_sql.py b/app/agent/nodes/generate_sql.py
+index 6b0349a..9f4f045 100644
+--- a/app/agent/nodes/generate_sql.py
++++ b/app/agent/nodes/generate_sql.py
+@@ -60,6 +60,8 @@ async def generate_sql(state: DataAgentState, runtime: Runtime[DataAgentContext]
+                 "query": query,
+             }
+         )
++        if result.strip().startswith("UNSUPPORTED:"):
++            raise ValueError(result.strip().removeprefix("UNSUPPORTED:").strip())
+         logger.info(f"生成的SQL：{result}")
+         writer({"type": "progress", "step": step, "status": "success"})
+         return {"sql": result}
+diff --git a/app/agent/nodes/run_sql.py b/app/agent/nodes/run_sql.py
+index 1d32252..e7ee5c1 100644
+--- a/app/agent/nodes/run_sql.py
++++ b/app/agent/nodes/run_sql.py
+@@ -6,6 +6,7 @@ SQL 执行节点
+ """
+ 
+ from langgraph.runtime import Runtime
++from app.core.sql_guard import safe_sql, MAX_ROWS
+ 
+ from app.agent.context import DataAgentContext
+ from app.agent.state import DataAgentState
+@@ -21,14 +22,15 @@ async def run_sql(state: DataAgentState, runtime: Runtime[DataAgentContext]):
+ 
+     try:
+         # 这里拿到的可能是 generate_sql 直接通过校验的 SQL，也可能是 correct_sql 覆盖后的 SQL
+-        sql = state["sql"]
++        sql = safe_sql(state["sql"])
+         dw_mysql_repository = runtime.context["dw_mysql_repository"]
+ 
+         # 真实数据库访问统一封装在仓储层，节点只负责从状态取 SQL 并触发执行
++        await dw_mysql_repository.validate(sql)
+         result = await dw_mysql_repository.run(sql)
+-        logger.info(f"SQL执行结果：{result}")
++        logger.info(f"SQL返回行数：{len(result)}")
+         writer({"type": "progress", "step": step, "status": "success"})
+-        writer({"type": "result", "data": result})
++        writer({"type": "result", "data": result, "sql": sql, "row_limit": MAX_ROWS})
+ 
+     except Exception as e:
+         logger.error(f"{step} failed: {e}")
+diff --git a/app/api/dependencies.py b/app/api/dependencies.py
+index 871768d..9a910d3 100644
+--- a/app/api/dependencies.py
++++ b/app/api/dependencies.py
+@@ -9,7 +9,7 @@ FastAPI 依赖组装
+ from typing import Annotated
+ 
+ from fastapi import Depends
+-from langchain_huggingface import HuggingFaceEndpointEmbeddings
++from langchain_core.embeddings import Embeddings
+ from sqlalchemy.ext.asyncio import AsyncSession
+ 
+ from app.clients.embedding_client_manager import embedding_client_manager
+@@ -43,7 +43,7 @@ async def get_meta_mysql_repository(
+     return MetaMySQLRepository(session)
+ 
+ 
+-async def get_embedding_client() -> HuggingFaceEndpointEmbeddings:
++async def get_embedding_client() -> Embeddings:
+     """获取应用启动阶段初始化好的 Embedding 客户端"""
+ 
+     return embedding_client_manager.client
+@@ -87,7 +87,7 @@ async def get_query_service(
+         MetaMySQLRepository, Depends(get_meta_mysql_repository)
+     ],
+     embedding_client: Annotated[
+-        HuggingFaceEndpointEmbeddings, Depends(get_embedding_client)
++        Embeddings, Depends(get_embedding_client)
+     ],
+     dw_mysql_repository: Annotated[DWMySQLRepository, Depends(get_dw_mysql_repository)],
+     column_qdrant_repository: Annotated[
+diff --git a/app/api/schemas/query_schema.py b/app/api/schemas/query_schema.py
+index 81f2724..f1930f9 100644
+--- a/app/api/schemas/query_schema.py
++++ b/app/api/schemas/query_schema.py
+@@ -5,11 +5,18 @@
+ 字段校验和 OpenAPI 文档生成交给 Pydantic 与 FastAPI 完成。
+ """
+ 
+-from pydantic import BaseModel
++from pydantic import BaseModel, Field, field_validator
+ 
+ 
+ class QuerySchema(BaseModel):
+     """`/api/query` 请求体，承载用户输入的自然语言问题"""
+ 
+     # 前端请求体中的 query 字段，例如 {"query": "统计华北地区销售额"}
+-    query: str
++    query: str = Field(min_length=1, max_length=2000)
++
++    @field_validator("query")
++    @classmethod
++    def nonempty(cls, value: str):
++        if not value.strip():
++            raise ValueError("请输入查询问题")
++        return value.strip()
+diff --git a/app/clients/embedding_client_manager.py b/app/clients/embedding_client_manager.py
+index b268058..65e2afe 100644
+--- a/app/clients/embedding_client_manager.py
++++ b/app/clients/embedding_client_manager.py
+@@ -1,46 +1,25 @@
+-"""
+-Embedding 客户端管理器
++"""Mistral embeddings through its OpenAI-compatible API (1024 dimensions)."""
+ 
+-负责按配置初始化 Embedding 服务客户端，并为字段、指标和用户问题的向量化
+-提供统一访问入口
+-"""
+-
+-import asyncio
+-from typing import Optional
+-
+-from langchain_huggingface import HuggingFaceEndpointEmbeddings
++from langchain_openai import OpenAIEmbeddings
+ 
+ from app.conf.app_config import EmbeddingConfig, app_config
+ 
+ 
+ class EmbeddingClientManager:
+-    """管理 Embedding 服务客户端的初始化与复用"""
+-
+     def __init__(self, config: EmbeddingConfig):
+-        self.client: Optional[HuggingFaceEndpointEmbeddings] = None
++        self.client = None
+         self.config = config
+ 
+-    def _get_url(self) -> str:
+-        """拼接 Embedding 服务地址"""
+-        return f"http://{self.config.host}:{self.config.port}"
+-
+     def init(self):
+-        """显式初始化客户端，避免模块导入时立即建立外部连接"""
+-        self.client = HuggingFaceEndpointEmbeddings(model=self._get_url())
++        self.client = OpenAIEmbeddings(
++            model=self.config.model,
++            base_url=app_config.llm.base_url,
++            api_key=app_config.llm.api_key,
++            check_embedding_ctx_length=False,
++            model_kwargs={"encoding_format": "float"},
++            request_timeout=45,
++            max_retries=2,
++        )
+ 
+ 
+-# 模块级单例，供整个项目复用同一套 Embedding 客户端管理器
+ embedding_client_manager = EmbeddingClientManager(app_config.embedding)
+-
+-
+-if __name__ == "__main__":
+-    embedding_client_manager.init()
+-    client = embedding_client_manager.client
+-
+-    async def test():
+-        """执行一次最小化向量化调用，验证服务是否可用"""
+-        text = "What is deep learning?"
+-        query_result = await client.aembed_query(text)
+-        print(query_result[:3])
+-
+-    asyncio.run(test())
+diff --git a/app/core/sql_guard.py b/app/core/sql_guard.py
+new file mode 100644
+index 0000000..a9a8c9e
+--- /dev/null
++++ b/app/core/sql_guard.py
+@@ -0,0 +1,64 @@
++"""Limit generated SQL to the five-table, read-only local warehouse."""
++
++import sqlglot
++from sqlglot import exp
++
++TABLES = {"fact_order", "dim_region", "dim_customer", "dim_product", "dim_date"}
++MAX_ROWS = 500
++
++
++def safe_sql(sql: str) -> str:
++    try:
++        statements = sqlglot.parse(sql, read="mysql")
++    except sqlglot.errors.ParseError as exc:
++        raise ValueError("SQL 无法解析，请明确查询条件后重试。") from exc
++    if len(statements) != 1 or not isinstance(statements[0], (exp.Select, exp.Union)):
++        raise ValueError("只允许一条 SELECT 查询。")
++    tree = statements[0]
++    forbidden = (
++        exp.Insert,
++        exp.Update,
++        exp.Delete,
++        exp.Create,
++        exp.Drop,
++        exp.Command,
++        exp.Into,
++        exp.Lock,
++        exp.Transaction,
++        exp.Set,
++        exp.Merge,
++    )
++    if any(isinstance(node, forbidden) for node in tree.walk()):
++        raise ValueError("查询不能修改数据、写文件或加锁。")
++    ctes = {node.alias_or_name.lower() for node in tree.find_all(exp.CTE)}
++    for table in tree.find_all(exp.Table):
++        if table.catalog or table.db or table.name.lower() not in TABLES | ctes:
++            raise ValueError("查询只能访问当前电商数仓的五张业务表。")
++    for node in tree.find_all(exp.Func):
++        name = node.name if isinstance(node, exp.Anonymous) else node.sql_name()
++        if name.lower() in {
++            "sleep",
++            "benchmark",
++            "load_file",
++            "get_lock",
++            "release_lock",
++            "release_all_locks",
++            "master_pos_wait",
++            "source_pos_wait",
++        }:
++            raise ValueError("查询包含不允许的函数。")
++    if any(
++        isinstance(node, (exp.Parameter, exp.SessionParameter)) for node in tree.walk()
++    ):
++        raise ValueError("查询不能访问数据库系统变量。")
++    limit = tree.args.get("limit")
++    if limit is None:
++        tree = tree.limit(MAX_ROWS)
++    else:
++        try:
++            count = int(limit.expression.name)
++        except ValueError, AttributeError:
++            raise ValueError("LIMIT 必须是整数。") from None
++        if count < 0 or count > MAX_ROWS:
++            tree = tree.limit(MAX_ROWS)
++    return tree.sql(dialect="mysql")
+diff --git a/app/repositories/mysql/dw/dw_mysql_repository.py b/app/repositories/mysql/dw/dw_mysql_repository.py
+index 4c579fe..5b76530 100644
+--- a/app/repositories/mysql/dw/dw_mysql_repository.py
++++ b/app/repositories/mysql/dw/dw_mysql_repository.py
+@@ -7,6 +7,7 @@
+ SQL 生成闭环中的数据库环境读取 SQL 校验和最终查询执行也集中放在这里
+ """
+ 
++from app.core.sql_guard import safe_sql
+ from sqlalchemy import text
+ from sqlalchemy.ext.asyncio import AsyncSession
+ 
+@@ -45,10 +46,12 @@ class DWMySQLRepository:
+ 
+     async def validate(self, sql: str):
+         """用 EXPLAIN 让数据库提前解析 SQL，发现语法 表名 字段名等错误"""
+-        sql = f"explain {sql}"
++        sql = f"explain {safe_sql(sql)}"
+         await self.session.execute(text(sql))
+ 
+     async def run(self, sql: str) -> list[dict]:
+         """执行最终 SQL，并把 SQLAlchemy 行对象转换成前端更易消费的字典列表"""
++        sql = safe_sql(sql)
++        await self.session.execute(text("SET SESSION MAX_EXECUTION_TIME=5000"))
+         result = await self.session.execute(text(sql))
+         return [dict(row) for row in result.mappings().fetchall()]
+diff --git a/app/services/meta_knowledge_service.py b/app/services/meta_knowledge_service.py
+index b55d15c..eb09b69 100644
+--- a/app/services/meta_knowledge_service.py
++++ b/app/services/meta_knowledge_service.py
+@@ -12,7 +12,7 @@ import uuid
+ from dataclasses import asdict
+ from pathlib import Path
+ 
+-from langchain_huggingface import HuggingFaceEndpointEmbeddings
++from langchain_core.embeddings import Embeddings
+ from omegaconf import OmegaConf
+ 
+ from app.conf.meta_config import MetaConfig
+@@ -37,7 +37,7 @@ class MetaKnowledgeService:
+         meta_mysql_repository: MetaMySQLRepository,
+         dw_mysql_repository: DWMySQLRepository,
+         column_qdrant_repository: ColumnQdrantRepository,
+-        embedding_client: HuggingFaceEndpointEmbeddings,
++        embedding_client: Embeddings,
+         value_es_repository: ValueESRepository,
+         metric_qdrant_repository: MetricQdrantRepository,
+     ):
+@@ -48,7 +48,7 @@ class MetaKnowledgeService:
+         # 字段向量集合的创建和写入统一交给 Qdrant Repository
+         self.column_qdrant_repository: ColumnQdrantRepository = column_qdrant_repository
+         # 向量化动作放在 Service 层
+-        self.embedding_client: HuggingFaceEndpointEmbeddings = embedding_client
++        self.embedding_client: Embeddings = embedding_client
+         # 字段值全文索引的写入统一交给 ES Repository
+         self.value_es_repository: ValueESRepository = value_es_repository
+         # 指标向量集合和字段向量集合分开管理，便于后续按对象类型独立召回
+diff --git a/app/services/query_service.py b/app/services/query_service.py
+index abdf479..d6cecca 100644
+--- a/app/services/query_service.py
++++ b/app/services/query_service.py
+@@ -8,7 +8,7 @@
+ 
+ import json
+ 
+-from langchain_huggingface import HuggingFaceEndpointEmbeddings
++from langchain_core.embeddings import Embeddings
+ 
+ from app.agent.context import DataAgentContext
+ from app.agent.graph import graph
+@@ -26,7 +26,7 @@ class QueryService:
+     def __init__(
+         self,
+         meta_mysql_repository: MetaMySQLRepository,
+-        embedding_client: HuggingFaceEndpointEmbeddings,
++        embedding_client: Embeddings,
+         dw_mysql_repository: DWMySQLRepository,
+         column_qdrant_repository: ColumnQdrantRepository,
+         metric_qdrant_repository: MetricQdrantRepository,
+diff --git a/conf/app_config.yaml b/conf/app_config.yaml
+index b3423c9..90330e8 100644
+--- a/conf/app_config.yaml
++++ b/conf/app_config.yaml
+@@ -11,34 +11,34 @@ logging:
+ 
+ db_meta:
+   host: localhost
+-  port: 3306
++  port: 33306
+   user: didilili
+   password: dili123
+   database: meta
+ 
+ db_dw:
+   host: localhost
+-  port: 3306
+-  user: didilili
+-  password: dili123
++  port: 33306
++  user: shopkeeper_reader
++  password: local-reader-only
+   database: dw
+ 
+ qdrant:
+   host: localhost
+-  port: 6333
++  port: 36333
+   embedding_size: 1024
+ 
+ embedding:
+   host: localhost
+   port: 8081
+-  model: BAAI/bge-large-zh-v1.5
++  model: mistral-embed
+ 
+ es:
+   host: localhost
+-  port: 9200
++  port: 39200
+   index_name: data_agent
+ 
+ llm:
+-  model_name: Pro/zai-org/GLM-5.1
++  model_name: mistral-small-latest
+   api_key: ${oc.env:LLM_API_KEY}
+-  base_url: https://api.siliconflow.cn/v1
++  base_url: https://api.mistral.ai/v1
+diff --git a/conf/meta_config.yaml b/conf/meta_config.yaml
+index fac149e..4938cb3 100644
+--- a/conf/meta_config.yaml
++++ b/conf/meta_config.yaml
+@@ -1,176 +1,176 @@
+-tables:
+-  - name: dim_region
+-    role: dim
+-    description: 地区维度表，用于描述订单发生的地理区域信息。
+-    columns:
+-      - name: region_id
+-        role: primary_key
+-        description: 地区唯一标识。
+-        alias: [地区ID, 区域ID]
+-        sync: false
+-
+-      - name: province
+-        role: dimension
+-        description: 订单所属的省份名称。
+-        alias: [省份, 省, 所在省份]
+-        sync: true
+-
+-      - name: region_name
+-        role: dimension
+-        description: 订单所属的大区名称，如华东、华南等。
+-        alias: [地区, 区域, 大区]
+-        sync: true
+-
+-      - name: country
+-        role: dimension
+-        description: 地区所属国家名称。
+-        alias: [国家, 国家名称]
+-        sync: true
+-
+-  - name: dim_customer
+-    role: dim
+-    description: 客户维度表，描述下单客户的基本属性。
+-    columns:
+-      - name: customer_id
+-        role: primary_key
+-        description: 客户唯一标识。
+-        alias: [客户ID, 用户ID]
+-        sync: false
+-
+-      - name: customer_name
+-        role: dimension
+-        description: 客户名称。
+-        alias: [客户名称, 用户名称]
+-        sync: true
+-
+-      - name: gender
+-        role: dimension
+-        description: 客户性别。
+-        alias: [性别]
+-        sync: true
+-
+-      - name: member_level
+-        role: dimension
+-        description: 客户会员等级。
+-        alias: [会员等级, 用户等级]
+-        sync: true
+-
+-  - name: dim_product
+-    role: dim
+-    description: 商品维度表，描述商品的基本属性信息。
+-    columns:
+-      - name: product_id
+-        role: primary_key
+-        description: 商品唯一标识。
+-        alias: [商品ID, 产品ID]
+-        sync: false
+-
+-      - name: product_name
+-        role: dimension
+-        description: 商品名称。
+-        alias: [商品名称, 产品名称]
+-        sync: true
+-
+-      - name: category
+-        role: dimension
+-        description: 商品所属品类。
+-        alias: [商品类别, 品类, 分类]
+-        sync: true
+-
+-      - name: brand
+-        role: dimension
+-        description: 商品品牌名称。
+-        alias: [品牌, 品牌名称]
+-        sync: true
+-
+-  - name: dim_date
+-    role: dim
+-    description: 时间维度表，用于多时间粒度分析。
+-    columns:
+-      - name: date_id
+-        role: primary_key
+-        description: 日期唯一标识，格式 yyyyMMdd。
+-        alias: [日期ID, 日期]
+-        sync: false
+-
+-      - name: year
+-        role: dimension
+-        description: 年份。
+-        alias: [年, 年份]
+-        sync: false
+-
+-      - name: quarter
+-        role: dimension
+-        description: 季度。
+-        alias: [季度]
+-        sync: true
+-
+-      - name: month
+-        role: dimension
+-        description: 月份。
+-        alias: [月, 月份]
+-        sync: false
+-
+-      - name: day
+-        role: dimension
+-        description: 日。
+-        alias: [日, 天]
+-        sync: false
+-
+-  - name: fact_order
+-    role: fact
+-    description: 订单事实表，记录订单数量和金额等核心指标。
+-    columns:
+-      - name: order_id
+-        role: primary_key
+-        description: 订单唯一标识。
+-        alias: [订单ID]
+-        sync: false
+-
+-      - name: customer_id
+-        role: foreign_key
+-        description: 关联客户维度的外键。
+-        alias: [客户ID, 用户ID]
+-        sync: false
+-
+-      - name: product_id
+-        role: foreign_key
+-        description: 关联商品维度的外键。
+-        alias: [商品ID, 产品ID]
+-        sync: false
+-
+-      - name: date_id
+-        role: foreign_key
+-        description: 关联时间维度的外键。
+-        alias: [日期, 下单日期]
+-        sync: false
+-
+-      - name: region_id
+-        role: foreign_key
+-        description: 关联地区维度的外键。
+-        alias: [地区ID, 区域ID]
+-        sync: false
+-
+-      - name: order_quantity
+-        role: measure
+-        description: 订单中商品的购买数量。
+-        alias: [销量, 购买数量, 件数]
+-        sync: false
+-
+-      - name: order_amount
+-        role: measure
+-        description: 订单金额。
+-        alias: [销售额, 订单金额, 收入]
+-        sync: false
+-
+-metrics:
+-  - name: GMV
+-    description: 全称Gross Merchandise Value，表示所有订单的成交金额总和。
+-    relevant_columns:
+-      - fact_order.order_amount
+-    alias: [成交总额, 订单总额]
+-  - name: AOV
+-    description: 全称Average Order Value，表示所有订单的成交金额平均值。
+-    relevant_columns:
+-      - fact_order.order_quantity
+-    alias: [平均单价, 平均订单金额]
++tables:
++  - name: dim_region
++    role: dim
++    description: 地区维度表，用于描述订单发生的地理区域信息。
++    columns:
++      - name: region_id
++        role: primary_key
++        description: 地区唯一标识。
++        alias: [地区ID, 区域ID]
++        sync: false
++
++      - name: province
++        role: dimension
++        description: 订单所属的省份名称。
++        alias: [省份, 省, 所在省份]
++        sync: true
++
++      - name: region_name
++        role: dimension
++        description: 订单所属的大区名称，如华东、华南等。
++        alias: [地区, 区域, 大区]
++        sync: true
++
++      - name: country
++        role: dimension
++        description: 地区所属国家名称。
++        alias: [国家, 国家名称]
++        sync: true
++
++  - name: dim_customer
++    role: dim
++    description: 客户维度表，描述下单客户的基本属性。
++    columns:
++      - name: customer_id
++        role: primary_key
++        description: 客户唯一标识。
++        alias: [客户ID, 用户ID]
++        sync: false
++
++      - name: customer_name
++        role: dimension
++        description: 客户名称。
++        alias: [客户名称, 用户名称]
++        sync: true
++
++      - name: gender
++        role: dimension
++        description: 客户性别。
++        alias: [性别]
++        sync: true
++
++      - name: member_level
++        role: dimension
++        description: 客户会员等级。
++        alias: [会员等级, 用户等级]
++        sync: true
++
++  - name: dim_product
++    role: dim
++    description: 商品维度表，描述商品的基本属性信息。
++    columns:
++      - name: product_id
++        role: primary_key
++        description: 商品唯一标识。
++        alias: [商品ID, 产品ID]
++        sync: false
++
++      - name: product_name
++        role: dimension
++        description: 商品名称。
++        alias: [商品名称, 产品名称]
++        sync: true
++
++      - name: category
++        role: dimension
++        description: 商品所属品类。
++        alias: [商品类别, 品类, 分类]
++        sync: true
++
++      - name: brand
++        role: dimension
++        description: 商品品牌名称。
++        alias: [品牌, 品牌名称]
++        sync: true
++
++  - name: dim_date
++    role: dim
++    description: 时间维度表，用于多时间粒度分析。
++    columns:
++      - name: date_id
++        role: primary_key
++        description: 日期唯一标识，格式 yyyyMMdd。
++        alias: [日期ID, 日期]
++        sync: false
++
++      - name: year
++        role: dimension
++        description: 年份。
++        alias: [年, 年份]
++        sync: false
++
++      - name: quarter
++        role: dimension
++        description: 季度。
++        alias: [季度]
++        sync: true
++
++      - name: month
++        role: dimension
++        description: 月份。
++        alias: [月, 月份]
++        sync: false
++
++      - name: day
++        role: dimension
++        description: 日。
++        alias: [日, 天]
++        sync: false
++
++  - name: fact_order
++    role: fact
++    description: 订单事实表，记录订单数量和金额等核心指标。
++    columns:
++      - name: order_id
++        role: primary_key
++        description: 订单唯一标识。
++        alias: [订单ID]
++        sync: false
++
++      - name: customer_id
++        role: foreign_key
++        description: 关联客户维度的外键。
++        alias: [客户ID, 用户ID]
++        sync: false
++
++      - name: product_id
++        role: foreign_key
++        description: 关联商品维度的外键。
++        alias: [商品ID, 产品ID]
++        sync: false
++
++      - name: date_id
++        role: foreign_key
++        description: 关联时间维度的外键。
++        alias: [日期, 下单日期]
++        sync: false
++
++      - name: region_id
++        role: foreign_key
++        description: 关联地区维度的外键。
++        alias: [地区ID, 区域ID]
++        sync: false
++
++      - name: order_quantity
++        role: measure
++        description: 订单中商品的购买数量。
++        alias: [销量, 购买数量, 件数]
++        sync: false
++
++      - name: order_amount
++        role: measure
++        description: 订单金额。
++        alias: [销售额, 订单金额, 收入]
++        sync: false
++
++metrics:
++  - name: GMV
++    description: 全称Gross Merchandise Value，表示所有订单的成交金额总和。
++    relevant_columns:
++      - fact_order.order_amount
++    alias: [成交总额, 订单总额]
++  - name: AOV
++    description: 全称Average Order Value，表示订单平均成交金额，计算公式 SUM(order_amount) / COUNT(DISTINCT order_id)。当前事实表一行一个订单。
++    relevant_columns:
++      - fact_order.order_amount
++    alias: [客单价, 平均订单金额]
+diff --git a/docker/compose.local.yaml b/docker/compose.local.yaml
+new file mode 100644
+index 0000000..9dd023f
+--- /dev/null
++++ b/docker/compose.local.yaml
+@@ -0,0 +1,33 @@
++name: shopkeeper-v1
++services:
++  mysql:
++    image: mysql:8.0
++    environment:
++      MYSQL_ROOT_PASSWORD: local-shopkeeper-root
++      MYSQL_USER: didilili
++      MYSQL_PASSWORD: dili123
++    ports: ["127.0.0.1:33306:3306"]
++    volumes:
++      - mysql_v1:/var/lib/mysql
++      - ./mysql:/docker-entrypoint-initdb.d:ro
++    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
++    healthcheck:
++      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
++      interval: 5s
++      retries: 30
++  elasticsearch:
++    build: ./elasticsearch
++    environment:
++      discovery.type: single-node
++      xpack.security.enabled: "false"
++      ES_JAVA_OPTS: -Xms384m -Xmx384m
++    ports: ["127.0.0.1:39200:9200"]
++    volumes: ["es_v1:/usr/share/elasticsearch/data"]
++  qdrant:
++    image: qdrant/qdrant:v1.16
++    ports: ["127.0.0.1:36333:6333"]
++    volumes: ["qdrant_v1:/qdrant/storage"]
++volumes:
++  mysql_v1:
++  es_v1:
++  qdrant_v1:
+diff --git a/docker/mysql/zz_readonly.sql b/docker/mysql/zz_readonly.sql
+new file mode 100644
+index 0000000..770c70c
+--- /dev/null
++++ b/docker/mysql/zz_readonly.sql
+@@ -0,0 +1,2 @@
++CREATE USER IF NOT EXISTS 'shopkeeper_reader'@'%' IDENTIFIED BY 'local-reader-only';
++GRANT SELECT ON dw.* TO 'shopkeeper_reader'@'%';
+diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
+index d221011..d6e0896 100644
+--- a/frontend/src/App.tsx
++++ b/frontend/src/App.tsx
+@@ -26,7 +26,7 @@ const examples = [
+   "按会员等级统计 2025 年第一季度的订单数和销售额",
+ ];
+ 
+-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "Vite /api proxy";
++const MODEL_LABEL = "Mistral";
+ 
+ function makeId() {
+   return crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+@@ -108,6 +108,8 @@ export default function App() {
+               status: "done",
+               content: summarizeResult(event.data),
+               result: event.data,
++              sql: event.sql,
++              rowLimit: event.row_limit,
+             };
+           }
+ 
+@@ -215,9 +217,9 @@ export default function App() {
+               <div className="flex items-center justify-between gap-3">
+                 <span className="inline-flex items-center gap-2">
+                   <Server className="h-3.5 w-3.5" aria-hidden="true" />
+-                  API
++                  模型
+                 </span>
+-                <span className="truncate font-mono">{API_BASE_URL}</span>
++                <span className="truncate font-mono">{MODEL_LABEL}</span>
+               </div>
+               <div className="flex items-center justify-between">
+                 <span className="inline-flex items-center gap-2">
+@@ -238,7 +240,7 @@ export default function App() {
+               </div>
+               <div className="min-w-0">
+                 <div className="truncate text-sm font-semibold text-ink">智能数据分析 Agent</div>
+-                <div className="truncate text-xs text-ink/45">FastAPI SSE / LangGraph</div>
++                <div className="truncate text-xs text-ink/45">自然语言查询 · 课程演示数据</div>
+               </div>
+             </div>
+             <button
+diff --git a/frontend/src/components/EmptyState.tsx b/frontend/src/components/EmptyState.tsx
+index ca37986..067542b 100644
+--- a/frontend/src/components/EmptyState.tsx
++++ b/frontend/src/components/EmptyState.tsx
+@@ -26,6 +26,7 @@ export function EmptyState({ examples, onUseExample }: EmptyStateProps) {
+         <h1 className="text-balance text-4xl font-semibold leading-tight text-ink sm:text-6xl">
+           电商问数
+         </h1>
++        <p className="mt-4 text-base leading-7 text-ink/65">用一句话查询订单、商品、地区和销售额。当前连接课程演示数据（2025 年第一季度），每次提问独立查询，明细最多返回 500 行。</p>
+       </div>
+ 
+       <div className="grid gap-3 sm:grid-cols-3">
+diff --git a/frontend/src/components/MessageBubble.tsx b/frontend/src/components/MessageBubble.tsx
+index 0e083fe..f914341 100644
+--- a/frontend/src/components/MessageBubble.tsx
++++ b/frontend/src/components/MessageBubble.tsx
+@@ -57,6 +57,13 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
+           {!isUser && <StepRail steps={message.steps} />}
+           {!isUser && message.result !== undefined && <ResultTable data={message.result} />}
+ 
++          {!isUser && message.sql && (
++            <details className="mt-4 text-sm">
++              <summary className="cursor-pointer text-moss">查看执行 SQL（最多 {message.rowLimit ?? 500} 行）</summary>
++              <pre className="mt-2 overflow-auto whitespace-pre-wrap border border-ink/10 bg-white/60 p-3 text-xs">{message.sql}</pre>
++            </details>
++          )}
++
+           <div
+             className={cn(
+               "mt-3 text-xs",
+diff --git a/frontend/src/components/StepRail.tsx b/frontend/src/components/StepRail.tsx
+index a829ad4..1012b22 100644
+--- a/frontend/src/components/StepRail.tsx
++++ b/frontend/src/components/StepRail.tsx
+@@ -23,7 +23,7 @@ const nodes: FlowNode[] = [
+   { step: "合并召回信息", x: 410, y: 214 },
+   { step: "过滤指标信息", x: 290, y: 318 },
+   { step: "过滤表信息", x: 530, y: 318 },
+-  { step: "增加额外上下文", x: 410, y: 422, w: 176 },
++  { step: "添加额外上下文", x: 410, y: 422, w: 176 },
+   { step: "生成SQL", x: 410, y: 526 },
+   { step: "校验SQL", x: 410, y: 630 },
+   { step: "校正SQL", x: 670, y: 630 },
+diff --git a/frontend/src/types/agent.ts b/frontend/src/types/agent.ts
+index 7ee07e7..6a8e92d 100644
+--- a/frontend/src/types/agent.ts
++++ b/frontend/src/types/agent.ts
+@@ -13,6 +13,8 @@ export type ProgressEvent = {
+ export type ResultEvent = {
+   type: "result";
+   data: unknown;
++  sql?: string;
++  row_limit?: number;
+ };
+ 
+ export type ErrorEvent = {
+@@ -36,5 +38,7 @@ export type ChatMessage = {
+   status?: "streaming" | "done" | "error";
+   steps?: StepState[];
+   result?: unknown;
++  sql?: string;
++  rowLimit?: number;
+   error?: string;
+ };
+diff --git a/prompts/generate_sql.prompt b/prompts/generate_sql.prompt
+index 308429a..7d58537 100644
+--- a/prompts/generate_sql.prompt
++++ b/prompts/generate_sql.prompt
+@@ -1,29 +1,31 @@
+-【角色】
+-你是一个资深的数据库专家和数据分析师。你的任务是根据提供的【上下文信息】，将用户的自然语言查询转换为语法正确、性能优化的 SQL 语句。
+-
+-【上下文信息】
+-可用数据表信息如下：
+-{table_infos}
+-
+-可参考的指标信息如下：
+-{metric_infos}
+-
+-当前的时间信息如下：
+-{date_info}
+-
+-数据库环境如下：
+-{db_info}
+-
+-【任务要求】
+-1. 仅允许使用数据表信息中真实存在的表与字段名称，禁止编造、猜测或引入未提供的表和字段。
+-2. 若指标信息中存在相关指标定义，必须严格遵循其业务口径、计算逻辑、过滤规则与时间口径，不得偏离或重解释，若指标信息未覆盖用户问题中的指标或口径，则基于用户问题语义与通用业务常识进行。
++【角色】
++你是一个资深的数据库专家和数据分析师。你的任务是根据提供的【上下文信息】，将用户的自然语言查询转换为语法正确、性能优化的 SQL 语句。
++
++【上下文信息】
++可用数据表信息如下：
++{table_infos}
++
++可参考的指标信息如下：
++{metric_infos}
++
++当前的时间信息如下：
++{date_info}
++
++数据库环境如下：
++{db_info}
++
++【任务要求】
++1. 仅允许使用数据表信息中真实存在的表与字段名称，禁止编造、猜测或引入未提供的表和字段。
++2. 若指标信息中存在相关指标定义，必须严格遵循其业务口径、计算逻辑、过滤规则与时间口径，不得偏离或重解释，若现有字段不能支持指标（例如没有成本就不能计算利润），不得使用常识猜测口径。
+ 3. 生成的SQL只能用于查询，不能涉及数据写入、更新、删除等操作。
+ 4. 生成的SQL的语法必须严格符合数据库环境中指定的数据库类型与版本。
+ 5. 默认只生成一条SQL，不可生成多条SQL。
+ 6. SELECT 中的聚合字段、计算字段和函数表达式必须使用 AS 指定清晰、稳定的结果列别名，优先使用用户问题中的业务名称或指标名称，避免返回 `SUM(...)` 这类表达式列名。
+ 7. 输出必须仅包含一条完整 SQL 语句的纯文本，严禁使用```、```sql 等 Markdown代码块或任何格式化符号。
+-
+-用户查询如下：
+-{query}
+-
++
++8. 如果用户要求写入/删除数据、缺少必需的业务字段或问题含糊到无法确定查询口径，输出以 UNSUPPORTED: 开头的简短中文原因，不生成替代查询。无数据的日期仍按原日期查询，禁止偷偷换年份。
++
++用户查询如下：
++{query}
++
+ 输出：
+diff --git a/pyproject.toml b/pyproject.toml
+index 17474a6..3fddc19 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -15,6 +15,7 @@ dependencies = [
+     "langchain>=1.2.15",
+     "langchain-deepseek>=1.0.1",
+     "langchain-huggingface>=1.2.1",
++    "langchain-openai>=1.1.12",
+     "langgraph>=1.1.6",
+     "loguru>=0.7.3",
+     "omegaconf>=2.3.0",
+@@ -22,6 +23,7 @@ dependencies = [
+     "pyyaml>=6.0.3",
+     "qdrant-client>=1.17.1",
+     "sqlalchemy>=2.0.49",
++    "sqlglot>=30.19.0",
+ ]
+ 
+ [dependency-groups]
+diff --git a/tests/evaluate_live.py b/tests/evaluate_live.py
+new file mode 100644
+index 0000000..9cec5b0
+--- /dev/null
++++ b/tests/evaluate_live.py
+@@ -0,0 +1,127 @@
++"""Run Mistral questions and compare result values with independently written SQL."""
++
++import asyncio
++import json
++import re
++import time
++from decimal import Decimal
++from pathlib import Path
++
++import httpx
++from sqlalchemy import text
++
++from app.clients.mysql_client_manager import dw_mysql_client_manager as manager
++
++CASES = [
++    (
++        "地区GMV",
++        "统计 2025 年第一季度各大区的 GMV，并按 GMV 从高到低排序",
++        "SELECT r.region_name, SUM(o.order_amount) FROM fact_order o JOIN dim_region r USING(region_id) WHERE o.date_id BETWEEN 20250101 AND 20250331 GROUP BY r.region_name ORDER BY SUM(o.order_amount) DESC",
++    ),
++    (
++        "品类销量销售额",
++        "统计 2025 年 3 月各商品品类的销量和销售额",
++        "SELECT p.category, SUM(o.order_quantity), SUM(o.order_amount) FROM fact_order o JOIN dim_product p USING(product_id) WHERE o.date_id BETWEEN 20250301 AND 20250331 GROUP BY p.category",
++    ),
++    (
++        "地区商品排行",
++        "查询华东地区 2025 年第一季度销售额最高的前 5 个商品",
++        "SELECT p.product_name, SUM(o.order_amount) FROM fact_order o JOIN dim_product p USING(product_id) JOIN dim_region r USING(region_id) WHERE r.region_name='华东' AND o.date_id BETWEEN 20250101 AND 20250331 GROUP BY p.product_id,p.product_name ORDER BY SUM(o.order_amount) DESC LIMIT 5",
++    ),
++    (
++        "会员订单销售额",
++        "按会员等级统计 2025 年第一季度的订单数和销售额",
++        "SELECT c.member_level, COUNT(*), SUM(o.order_amount) FROM fact_order o JOIN dim_customer c USING(customer_id) WHERE o.date_id BETWEEN 20250101 AND 20250331 GROUP BY c.member_level",
++    ),
++    (
++        "客单价",
++        "2025年第一季度的客单价是多少？保留两位小数",
++        "SELECT ROUND(SUM(order_amount)/COUNT(DISTINCT order_id),2) FROM fact_order WHERE date_id BETWEEN 20250101 AND 20250331",
++    ),
++    (
++        "空结果",
++        "查询2026年9月订单明细",
++        "SELECT * FROM fact_order WHERE date_id BETWEEN 20260901 AND 20260930",
++    ),
++    ("缺少成本字段", "2025年第一季度利润是多少？", None),
++    ("拒绝删除", "删除所有订单", None),
++]
++
++
++def normalized(rows):
++    def cell(v):
++        if isinstance(v, (float, int, Decimal)) or (
++            isinstance(v, str) and re.fullmatch(r"-?\d+(?:\.\d+)?", v)
++        ):
++            return str(Decimal(str(v)).quantize(Decimal("0.01")))
++        return str(v)
++
++    return sorted(tuple(cell(v) for v in row.values()) for row in rows)
++
++
++def assess(name, final, expected):
++    if name in ("缺少成本字段", "拒绝删除"):
++        reason = "利润" if name == "缺少成本字段" else "删除"
++        return final.get("type") == "error" and reason in final.get("message", "")
++    if final.get("type") != "result":
++        return False
++    actual = final["data"]
++    if name == "客单价":
++        # An extra quarter label is valid; compare the requested metric itself.
++        actual = [{"aov": row.get("客单价")} for row in actual]
++    if normalized(actual) != normalized(expected):
++        return False
++    if name in ("地区GMV", "地区商品排行"):
++        return [next(iter(row.values())) for row in actual] == [
++            next(iter(row.values())) for row in expected
++        ]
++    return True
++
++
++async def main():
++    manager.init()
++    records = []
++    async with (
++        httpx.AsyncClient(timeout=180) as client,
++        manager.session_factory() as session,
++    ):
++        for name, query, expected_sql in CASES:
++            start = time.monotonic()
++            response = await client.post(
++                "http://127.0.0.1:38080/api/query", json={"query": query}
++            )
++            events = [
++                json.loads(line[5:])
++                for line in response.text.splitlines()
++                if line.startswith("data:")
++            ]
++            final = next(
++                (e for e in reversed(events) if e["type"] in ("result", "error")), {}
++            )
++            expected = []
++            if expected_sql:
++                expected = [
++                    dict(r)
++                    for r in (await session.execute(text(expected_sql))).mappings()
++                ]
++            passed = assess(name, final, expected)
++            record = dict(
++                name=name,
++                query=query,
++                passed=passed,
++                seconds=round(time.monotonic() - start, 2),
++                expected_sql=expected_sql,
++                expected=expected,
++                actual=final,
++            )
++            records.append(record)
++            print(json.dumps(record, ensure_ascii=False, default=str), flush=True)
++    await manager.close()
++    Path(".runtime/evaluation.json").write_text(
++        json.dumps(records, ensure_ascii=False, indent=2, default=str)
++    )
++    print("PASS", sum(r["passed"] for r in records), "/", len(records))
++
++
++if __name__ == "__main__":
++    asyncio.run(main())
+diff --git a/tests/test_sql_guard.py b/tests/test_sql_guard.py
+new file mode 100644
+index 0000000..9ee8e38
+--- /dev/null
++++ b/tests/test_sql_guard.py
+@@ -0,0 +1,41 @@
++import unittest
++
++from app.core.sql_guard import safe_sql
++
++
++class SQLGuardTests(unittest.TestCase):
++    def test_read_only_business_queries(self):
++        for query in [
++            "SELECT SUM(order_amount) AS GMV FROM fact_order",
++            "SELECT r.region_name, SUM(o.order_amount) FROM fact_order o JOIN dim_region r ON o.region_id=r.region_id GROUP BY r.region_name",
++            "WITH totals AS (SELECT SUM(order_amount) AS gmv FROM fact_order) SELECT * FROM totals",
++            "SELECT order_id FROM fact_order UNION SELECT order_id FROM fact_order",
++        ]:
++            with self.subTest(query=query):
++                self.assertIn("LIMIT 500", safe_sql(query))
++
++    def test_rejects_mutation_and_external_access(self):
++        for query in [
++            "DELETE FROM fact_order",
++            "DROP TABLE fact_order",
++            "SELECT * FROM fact_order; DELETE FROM fact_order",
++            "SELECT * FROM mysql.user",
++            "SELECT * FROM information_schema.tables",
++            "SELECT * FROM fact_order INTO OUTFILE '/tmp/orders'",
++            "SELECT * FROM fact_order FOR UPDATE",
++            "SELECT SLEEP(100) FROM fact_order",
++            "SELECT LOAD_FILE('/etc/passwd')",
++            "SELECT @@version",
++            "SELECT * FROM unknown_table",
++            "WITH secret AS (SELECT * FROM mysql.user) SELECT * FROM secret",
++        ]:
++            with self.subTest(query=query), self.assertRaises(ValueError):
++                safe_sql(query)
++
++    def test_caps_rows_without_expanding_explicit_limit(self):
++        self.assertIn("LIMIT 5", safe_sql("SELECT * FROM fact_order LIMIT 5"))
++        self.assertIn("LIMIT 500", safe_sql("SELECT * FROM fact_order LIMIT 999999"))
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/uv.lock b/uv.lock
+index 4272569..c34cc3c 100644
+--- a/uv.lock
++++ b/uv.lock
+@@ -1671,6 +1671,7 @@ dependencies = [
+     { name = "langchain" },
+     { name = "langchain-deepseek" },
+     { name = "langchain-huggingface" },
++    { name = "langchain-openai" },
+     { name = "langgraph" },
+     { name = "loguru" },
+     { name = "omegaconf" },
+@@ -1678,6 +1679,7 @@ dependencies = [
+     { name = "pyyaml" },
+     { name = "qdrant-client" },
+     { name = "sqlalchemy" },
++    { name = "sqlglot" },
+ ]
+ 
+ [package.dev-dependencies]
+@@ -1698,6 +1700,7 @@ requires-dist = [
+     { name = "langchain", specifier = ">=1.2.15" },
+     { name = "langchain-deepseek", specifier = ">=1.0.1" },
+     { name = "langchain-huggingface", specifier = ">=1.2.1" },
++    { name = "langchain-openai", specifier = ">=1.1.12" },
+     { name = "langgraph", specifier = ">=1.1.6" },
+     { name = "loguru", specifier = ">=0.7.3" },
+     { name = "omegaconf", specifier = ">=2.3.0" },
+@@ -1705,6 +1708,7 @@ requires-dist = [
+     { name = "pyyaml", specifier = ">=6.0.3" },
+     { name = "qdrant-client", specifier = ">=1.17.1" },
+     { name = "sqlalchemy", specifier = ">=2.0.49" },
++    { name = "sqlglot", specifier = ">=30.19.0" },
+ ]
+ 
+ [package.metadata.requires-dev]
+@@ -1757,6 +1761,15 @@ wheels = [
+     { url = "https://files.pythonhosted.org/packages/e5/30/8519fdde58a7bdf155b714359791ad1dc018b47d60269d5d160d311fdc36/sqlalchemy-2.0.49-py3-none-any.whl", hash = "sha256:ec44cfa7ef1a728e88ad41674de50f6db8cfdb3e2af84af86e0041aaf02d43d0", size = 1942158, upload-time = "2026-04-03T16:53:44.135Z" },
+ ]
+ 
++[[package]]
++name = "sqlglot"
++version = "30.19.0"
++source = { registry = "https://pypi.org/simple" }
++sdist = { url = "https://files.pythonhosted.org/packages/fe/48/996687ba146c07deee6cc3528738e645d2e72805e023ed9672b483648378/sqlglot-30.19.0.tar.gz", hash = "sha256:6fcfbe93c5ee76e07faadf0930dd119eebb545c4f317f8e4f205f177305d8b08", size = 6042945, upload-time = "2026-09-22T15:19:58.64Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/10/94/094d83ec808b50374f33a3024c9e60ca3074595e1f9581c1692591fda81e/sqlglot-30.19.0-py3-none-any.whl", hash = "sha256:b4500fcced395359feea582f09d2d4433bf1f36362a3a9d0d6d5ebbc1f84242e", size = 756203, upload-time = "2026-09-22T15:19:56.761Z" },
++]
++
+ [[package]]
+ name = "starlette"
+ version = "1.0.0"

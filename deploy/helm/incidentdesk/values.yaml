@@ -1,0 +1,23 @@
+apiReplicas: 2
+workerReplicas: 1
+imageTag: '0.1.0'
+webImageTag: ''
+workerSlots: 3
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 4
+  cpu: 60
+localSecrets:
+  databasePassword: local-bootstrap
+  apiPassword: local-api
+  agentPassword: local-agent
+  sourcePassword: local-source
+  workerKey: local-worker-key
+
+model:
+  harness: langgraph
+  name: mistral-small-latest
+  baseURL: https://api.mistral.ai/v1
+  # Existing secret containing MISTRAL_API_KEY. Never put credentials in values.
+  existingSecret: ''

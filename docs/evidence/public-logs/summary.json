@@ -1,0 +1,135 @@
+{
+  "source": "Loghub / Zenodo 8196385",
+  "raw_lines": 15923592,
+  "baseline": {
+    "source_sql_queries": 54,
+    "source_p50_ms": 447.762,
+    "source_p95_ms": 1888.952,
+    "source_max_ms": 1954.913,
+    "investigations": {
+      "sequential": {
+        "tasks": 18,
+        "statuses": {
+          "partial": 16,
+          "waiting_information": 2
+        },
+        "p50_s": 1.026,
+        "p95_s": 2.524,
+        "max_s": 2.524,
+        "exact_page_success": 18,
+        "with_log_evidence": 16,
+        "check_failures": {},
+        "transport_or_runner_errors": 0
+      },
+      "concurrent-4": {
+        "tasks": 24,
+        "statuses": {
+          "partial": 22,
+          "waiting_information": 2
+        },
+        "p50_s": 2.044,
+        "p95_s": 12.155,
+        "max_s": 12.155,
+        "exact_page_success": 22,
+        "with_log_evidence": 22,
+        "check_failures": {
+          "exact_first_page": 2
+        },
+        "transport_or_runner_errors": 0
+      }
+    }
+  },
+  "indexed": {
+    "source_sql_queries": 54,
+    "source_p50_ms": 1.801,
+    "source_p95_ms": 51.664,
+    "source_max_ms": 52.64,
+    "investigations": {
+      "sequential": {
+        "tasks": 18,
+        "statuses": {
+          "partial": 16,
+          "waiting_information": 2
+        },
+        "p50_s": 0.513,
+        "p95_s": 0.523,
+        "max_s": 0.523,
+        "exact_page_success": 18,
+        "with_log_evidence": 16,
+        "check_failures": {},
+        "transport_or_runner_errors": 0
+      },
+      "concurrent-4": {
+        "tasks": 24,
+        "statuses": {
+          "partial": 24
+        },
+        "p50_s": 0.521,
+        "p95_s": 1.039,
+        "max_s": 1.039,
+        "exact_page_success": 24,
+        "with_log_evidence": 24,
+        "check_failures": {},
+        "transport_or_runner_errors": 0
+      }
+    }
+  },
+  "index_preserved_first_pages": true,
+  "coverage": {
+    "metric": "BGL alert-bearing window coverage in the first log page; not anomaly-classification accuracy or root-cause recall",
+    "positive_windows": 8,
+    "positive_windows_with_any_alert_in_first_page": 1,
+    "sampled_window_alert_rows": 154288,
+    "first_page_alert_rows": 50,
+    "selection": "Nine BGL calendar-day windows: seven temporal spread points, highest alert count day, lowest nonzero alert ratio day; not a random/unbiased test set",
+    "missed_windows": [
+      {
+        "case": "BGL:2005-06-24",
+        "log_rows": 12219,
+        "alert_rows": 16,
+        "retrieved_alert_rows": 0
+      },
+      {
+        "case": "BGL:2005-07-27",
+        "log_rows": 51806,
+        "alert_rows": 5,
+        "retrieved_alert_rows": 0
+      },
+      {
+        "case": "BGL:2005-09-19",
+        "log_rows": 4276,
+        "alert_rows": 20,
+        "retrieved_alert_rows": 0
+      },
+      {
+        "case": "BGL:2005-11-03",
+        "log_rows": 162695,
+        "alert_rows": 1,
+        "retrieved_alert_rows": 0
+      },
+      {
+        "case": "BGL:2005-11-11",
+        "log_rows": 16958,
+        "alert_rows": 1031,
+        "retrieved_alert_rows": 0
+      },
+      {
+        "case": "BGL:2005-12-14",
+        "log_rows": 4312,
+        "alert_rows": 1024,
+        "retrieved_alert_rows": 0
+      },
+      {
+        "case": "BGL:2006-01-04",
+        "log_rows": 171,
+        "alert_rows": 8,
+        "retrieved_alert_rows": 0
+      }
+    ]
+  },
+  "limitations": [
+    "Only 50 log rows enter each investigation; a full database is not a full-dataset investigation.",
+    "No real LLM or matching deployment, Git and runbook ground truth.",
+    "Single local run, warmed/shared machine; not a production SLA."
+  ]
+}

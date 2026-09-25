@@ -1,0 +1,16 @@
+重置前有明确旧条件 FAIL
+明确要求忘记查询上下文 FAIL
+服务端保存重置动作 FAIL
+重置后闲聊1 FAIL
+重置后闲聊2 FAIL
+重置后闲聊3 FAIL
+重置后闲聊4 FAIL
+重置后闲聊5 FAIL
+重置超过短窗口后不恢复旧条件 FAIL
+重置后重新给完整问题 FAIL
+否定重置不误触发 FAIL
+否定重置保留查询意图 FAIL
+否定重置后地区追问 FAIL
+重置并提出完整新需求 FAIL
+再次追问只继承新条件 FAIL
+TOTAL 0 / 15 docs/evidence/bugfix-round3/20260925-161958-reset.json

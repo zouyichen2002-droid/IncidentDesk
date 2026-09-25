@@ -1,0 +1,1561 @@
+{
+  "mode": "local-stub-and-deterministic",
+  "results": [
+    {
+      "test": "create_202",
+      "pass": true,
+      "detail": "{\"id\":\"ec7a4f01-5146-415d-9e72-ad62f5022a84\",\"status\":\"accepted\"}\n"
+    },
+    {
+      "test": "idempotent_create",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "idempotency_conflict",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "investigation_terminal",
+      "pass": true,
+      "detail": {
+        "id": "ec7a4f01-5146-415d-9e72-ad62f5022a84",
+        "seq": 31,
+        "idem": "e59419d4-5be8-49a5-b595-e12f60d024d8",
+        "team": "orders",
+        "action": null,
+        "end_at": "2026-09-24T19:53:05.180571+00:00",
+        "report": {
+          "mode": "deterministic-baseline",
+          "facts": [
+            {
+              "id": "fact:deployments:dep-svc-17:744e6bc77038",
+              "kind": "observation",
+              "text": "\u53d1\u5e03\u7248\u672c v2 \u6307\u5411\u63d0\u4ea4 e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "deployments"
+                ],
+                "limit": 50,
+                "object": "Deployment",
+                "source": "deployments"
+              }
+            },
+            {
+              "id": "fact:logs:1:35e25a778bff",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:1:35e25a778bff"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:2:5b74dc48e26c",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:2:5b74dc48e26c"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:3:7e9dc3719f2c",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:3:7e9dc3719f2c"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:4:f207a12b4c2d",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:4:f207a12b4c2d"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:5:4e7e509fc579",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:5:4e7e509fc579"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:6:c309d777ce65",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:6:c309d777ce65"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:7:67e3a6f10213",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:7:67e3a6f10213"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:8:860056d421ee",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:8:860056d421ee"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:logs:9:8bb75203e558",
+              "kind": "observation",
+              "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+              "evidence": [
+                "logs:9:8bb75203e558"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 50,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c",
+              "kind": "observation",
+              "text": "\u4ee3\u7801\u63d0\u4ea4 8533cad59ea1d855baeaa3c37426ff32357e4f30\uff0c\u914d\u7f6e\u5dee\u5f02\uff1a{\"pool_size\":1,\"timeout_ms\":50}",
+              "evidence": [
+                "git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "deployments",
+                  "commit"
+                ],
+                "limit": 50,
+                "object": "Commit",
+                "source": "git"
+              }
+            },
+            {
+              "id": "fact:runbook:orders-runbook:3fd079fe1881",
+              "kind": "observation",
+              "text": "\u8fd0\u884c\u624b\u518c\u6458\u5f55\uff1a# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+              "evidence": [
+                "runbook:orders-runbook:3fd079fe1881"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "runbook"
+                ],
+                "limit": 50,
+                "object": "Runbook",
+                "source": "runbook"
+              }
+            }
+          ],
+          "impact": "svc-17",
+          "context": {
+            "plan": {
+              "end": "2026-09-24T19:53:05.180571Z",
+              "start": "2026-09-23T19:53:05.180571Z",
+              "steps": [
+                {
+                  "path": [
+                    "Service",
+                    "deployments"
+                  ],
+                  "limit": 50,
+                  "object": "Deployment",
+                  "source": "deployments"
+                },
+                {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                },
+                {
+                  "path": [
+                    "Service",
+                    "deployments",
+                    "commit"
+                  ],
+                  "limit": 50,
+                  "object": "Commit",
+                  "source": "git"
+                },
+                {
+                  "path": [
+                    "Service",
+                    "runbook"
+                  ],
+                  "limit": 50,
+                  "object": "Runbook",
+                  "source": "runbook"
+                }
+              ],
+              "service": "svc-17",
+              "version": "1"
+            },
+            "facts": [
+              {
+                "id": "fact:deployments:dep-svc-17:744e6bc77038",
+                "kind": "observation",
+                "text": "\u53d1\u5e03\u7248\u672c v2 \u6307\u5411\u63d0\u4ea4 e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "evidence": [
+                  "deployments:dep-svc-17:744e6bc77038"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service",
+                    "deployments"
+                  ],
+                  "limit": 50,
+                  "object": "Deployment",
+                  "source": "deployments"
+                }
+              },
+              {
+                "id": "fact:logs:1:35e25a778bff",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:1:35e25a778bff"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:logs:2:5b74dc48e26c",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:2:5b74dc48e26c"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:logs:3:7e9dc3719f2c",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:3:7e9dc3719f2c"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:logs:4:f207a12b4c2d",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:4:f207a12b4c2d"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:logs:5:4e7e509fc579",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:5:4e7e509fc579"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:logs:6:c309d777ce65",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:6:c309d777ce65"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:logs:7:67e3a6f10213",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:7:67e3a6f10213"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:logs:8:860056d421ee",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:8:860056d421ee"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:logs:9:8bb75203e558",
+                "kind": "observation",
+                "text": "\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1",
+                "evidence": [
+                  "logs:9:8bb75203e558"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service"
+                  ],
+                  "limit": 50,
+                  "object": "Service",
+                  "source": "logs"
+                }
+              },
+              {
+                "id": "fact:git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c",
+                "kind": "observation",
+                "text": "\u4ee3\u7801\u63d0\u4ea4 8533cad59ea1d855baeaa3c37426ff32357e4f30\uff0c\u914d\u7f6e\u5dee\u5f02\uff1a{\"pool_size\":1,\"timeout_ms\":50}",
+                "evidence": [
+                  "git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service",
+                    "deployments",
+                    "commit"
+                  ],
+                  "limit": 50,
+                  "object": "Commit",
+                  "source": "git"
+                }
+              },
+              {
+                "id": "fact:runbook:orders-runbook:3fd079fe1881",
+                "kind": "observation",
+                "text": "\u8fd0\u884c\u624b\u518c\u6458\u5f55\uff1a# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+                "evidence": [
+                  "runbook:orders-runbook:3fd079fe1881"
+                ],
+                "transform": "normalize-v1",
+                "query_step": {
+                  "path": [
+                    "Service",
+                    "runbook"
+                  ],
+                  "limit": 50,
+                  "object": "Runbook",
+                  "source": "runbook"
+                }
+              }
+            ],
+            "scope": {
+              "team": "orders",
+              "service": "svc-17",
+              "subject": "alice"
+            },
+            "missing": [],
+            "objects": [
+              {
+                "id": "svc-17",
+                "team": "orders",
+                "type": "Service"
+              },
+              {
+                "id": "dep-svc-17",
+                "type": "Deployment",
+                "service": "svc-17",
+                "evidence": [
+                  "deployments:dep-svc-17:744e6bc77038"
+                ],
+                "valid_time": "2026-09-24T19:10:15.958646+00:00"
+              }
+            ],
+            "version": "1",
+            "evidence": [
+              {
+                "id": "deployments:dep-svc-17:744e6bc77038",
+                "team": "orders",
+                "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+                "source": "deployments",
+                "locator": "postgres://sources/deployments/dep-svc-17",
+                "snippet": {
+                  "id": "dep-svc-17",
+                  "app_id": "svc-17",
+                  "deleted": false,
+                  "service": "svc-17",
+                  "version": "v2",
+                  "watermark": 1,
+                  "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+                },
+                "version": "1",
+                "available": true,
+                "event_time": "2026-09-24T19:10:15.958646+00:00",
+                "collected_at": "2026-09-24T19:53:05.764719+00:00",
+                "source_record": "dep-svc-17"
+              },
+              {
+                "id": "logs:1:35e25a778bff",
+                "team": "orders",
+                "sha256": "35e25a778bff69f48eca7fbd9b64dd88349149d0015c2436d8fff559d903c457",
+                "source": "logs",
+                "locator": "demo://logs/1",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 76.67,
+                  "service_name": "checkout-api"
+                },
+                "version": "1",
+                "available": true,
+                "event_time": "2026-09-24T19:11:14.722934+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "1"
+              },
+              {
+                "id": "logs:2:5b74dc48e26c",
+                "team": "orders",
+                "sha256": "5b74dc48e26c18d94776d5688f2286612d46698a3bd79086195eb58c960a160c",
+                "source": "logs",
+                "locator": "demo://logs/2",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 81.67,
+                  "service_name": "checkout-api"
+                },
+                "version": "2",
+                "available": true,
+                "event_time": "2026-09-24T19:11:14.813295+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "2"
+              },
+              {
+                "id": "logs:3:7e9dc3719f2c",
+                "team": "orders",
+                "sha256": "7e9dc3719f2c8f6fb9023b882ddcd5a826a796c6109f9c6d9a81a4900b09f02c",
+                "source": "logs",
+                "locator": "demo://logs/3",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 79.54,
+                  "service_name": "checkout-api"
+                },
+                "version": "3",
+                "available": true,
+                "event_time": "2026-09-24T19:11:14.907093+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "3"
+              },
+              {
+                "id": "logs:4:f207a12b4c2d",
+                "team": "orders",
+                "sha256": "f207a12b4c2d24c7c637c4c6cdd96d447dd4ffc5fe3927bcab4bcf36949dea00",
+                "source": "logs",
+                "locator": "demo://logs/4",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 51.57,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "version": "4",
+                "available": true,
+                "event_time": "2026-09-24T19:43:41.958902+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "4"
+              },
+              {
+                "id": "logs:5:4e7e509fc579",
+                "team": "orders",
+                "sha256": "4e7e509fc579334f8c0f83f088ac4acacdc4a33215f5364c437dde4f16393a7d",
+                "source": "logs",
+                "locator": "demo://logs/5",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 50.43,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "version": "5",
+                "available": true,
+                "event_time": "2026-09-24T19:43:42.020279+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "5"
+              },
+              {
+                "id": "logs:6:c309d777ce65",
+                "team": "orders",
+                "sha256": "c309d777ce6571c34d3b68d2167386f7daf5e3ac502fd8fc7472c8bc04840fd3",
+                "source": "logs",
+                "locator": "demo://logs/6",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 61.04,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "version": "6",
+                "available": true,
+                "event_time": "2026-09-24T19:43:42.093701+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "6"
+              },
+              {
+                "id": "logs:7:67e3a6f10213",
+                "team": "orders",
+                "sha256": "67e3a6f10213bc5928227143f3ceeec89c173d73c0bb622d64c073760a7baa9d",
+                "source": "logs",
+                "locator": "demo://logs/7",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 53.53,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "version": "7",
+                "available": true,
+                "event_time": "2026-09-24T19:53:05.054034+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "7"
+              },
+              {
+                "id": "logs:8:860056d421ee",
+                "team": "orders",
+                "sha256": "860056d421ee9ff079150beb4bccf320837088fa0656771e99824a5c0fd559f2",
+                "source": "logs",
+                "locator": "demo://logs/8",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 50.77,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "version": "8",
+                "available": true,
+                "event_time": "2026-09-24T19:53:05.113454+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "8"
+              },
+              {
+                "id": "logs:9:8bb75203e558",
+                "team": "orders",
+                "sha256": "8bb75203e558d0469c00ca66c5f514665211facf17ca8718f9e5215298cd0783",
+                "source": "logs",
+                "locator": "demo://logs/9",
+                "snippet": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "database pool exhausted: active=1 max=1",
+                  "release": "v2",
+                  "duration_ms": 51.16,
+                  "error_class": "PoolAcquireTimeout",
+                  "service_name": "checkout-api"
+                },
+                "version": "9",
+                "available": true,
+                "event_time": "2026-09-24T19:53:05.175255+00:00",
+                "collected_at": "2026-09-24T19:53:05.822276+00:00",
+                "source_record": "9"
+              },
+              {
+                "id": "git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c",
+                "team": "orders",
+                "sha256": "5c3f6efdbb3cad5f7fcaa7e523d7d019fe5dfa6ffe57be2da3ea7d814859c360",
+                "source": "git",
+                "locator": "demo-git://repo/commit/8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "snippet": {
+                  "diff": "commit 8533cad59ea1d855baeaa3c37426ff32357e4f30\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    docs: add versioned demo runbook\n\n RUNBOOK.md | 2 ++\n 1 file changed, 2 insertions(+)",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+                },
+                "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "available": true,
+                "event_time": "2026-09-24T19:10:15+00:00",
+                "collected_at": "2026-09-24T19:53:05.851513+00:00",
+                "source_record": "8533cad59ea1d855baeaa3c37426ff32357e4f30"
+              },
+              {
+                "id": "runbook:orders-runbook:3fd079fe1881",
+                "team": "orders",
+                "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+                "source": "runbook",
+                "locator": "demo-git://repo/RUNBOOK.md",
+                "snippet": {
+                  "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+                },
+                "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "available": true,
+                "event_time": "2026-09-24T19:10:15+00:00",
+                "collected_at": "2026-09-24T19:53:05.880262+00:00",
+                "source_record": "orders-runbook"
+              }
+            ],
+            "memories": [],
+            "conflicts": [
+              {
+                "text": "\u53d1\u5e03\u6307\u5411\u7684\u63d0\u4ea4\u672a\u5339\u914d\u5df2\u8bfb\u53d6\u7684 Git \u8bb0\u5f55\u3002",
+                "evidence": [
+                  "deployments:dep-svc-17:744e6bc77038",
+                  "git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c"
+                ]
+              }
+            ],
+            "freshness": [
+              {
+                "source": "deployments",
+                "watermark": "2",
+                "observed_at": "2026-09-24T19:53:05.764719+00:00",
+                "snapshot_consistency": "independent_source"
+              },
+              {
+                "source": "logs",
+                "watermark": "2",
+                "observed_at": "2026-09-24T19:53:05.822276+00:00",
+                "snapshot_consistency": "independent_source"
+              },
+              {
+                "source": "git",
+                "watermark": "2",
+                "observed_at": "2026-09-24T19:53:05.851513+00:00",
+                "snapshot_consistency": "independent_source"
+              },
+              {
+                "source": "runbook",
+                "watermark": "2",
+                "observed_at": "2026-09-24T19:53:05.880262+00:00",
+                "snapshot_consistency": "independent_source"
+              }
+            ],
+            "token_budget": 12000,
+            "mapping_version": "1",
+            "ontology_version": "1"
+          },
+          "missing": [],
+          "evidence": [
+            {
+              "id": "deployments:dep-svc-17:744e6bc77038",
+              "team": "orders",
+              "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+              "source": "deployments",
+              "locator": "postgres://sources/deployments/dep-svc-17",
+              "snippet": {
+                "id": "dep-svc-17",
+                "app_id": "svc-17",
+                "deleted": false,
+                "service": "svc-17",
+                "version": "v2",
+                "watermark": 1,
+                "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+              },
+              "version": "1",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15.958646+00:00",
+              "collected_at": "2026-09-24T19:53:05.764719+00:00",
+              "source_record": "dep-svc-17"
+            },
+            {
+              "id": "logs:1:35e25a778bff",
+              "team": "orders",
+              "sha256": "35e25a778bff69f48eca7fbd9b64dd88349149d0015c2436d8fff559d903c457",
+              "source": "logs",
+              "locator": "demo://logs/1",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 76.67,
+                "service_name": "checkout-api"
+              },
+              "version": "1",
+              "available": true,
+              "event_time": "2026-09-24T19:11:14.722934+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "1"
+            },
+            {
+              "id": "logs:2:5b74dc48e26c",
+              "team": "orders",
+              "sha256": "5b74dc48e26c18d94776d5688f2286612d46698a3bd79086195eb58c960a160c",
+              "source": "logs",
+              "locator": "demo://logs/2",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 81.67,
+                "service_name": "checkout-api"
+              },
+              "version": "2",
+              "available": true,
+              "event_time": "2026-09-24T19:11:14.813295+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "2"
+            },
+            {
+              "id": "logs:3:7e9dc3719f2c",
+              "team": "orders",
+              "sha256": "7e9dc3719f2c8f6fb9023b882ddcd5a826a796c6109f9c6d9a81a4900b09f02c",
+              "source": "logs",
+              "locator": "demo://logs/3",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 79.54,
+                "service_name": "checkout-api"
+              },
+              "version": "3",
+              "available": true,
+              "event_time": "2026-09-24T19:11:14.907093+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "3"
+            },
+            {
+              "id": "logs:4:f207a12b4c2d",
+              "team": "orders",
+              "sha256": "f207a12b4c2d24c7c637c4c6cdd96d447dd4ffc5fe3927bcab4bcf36949dea00",
+              "source": "logs",
+              "locator": "demo://logs/4",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 51.57,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "4",
+              "available": true,
+              "event_time": "2026-09-24T19:43:41.958902+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "4"
+            },
+            {
+              "id": "logs:5:4e7e509fc579",
+              "team": "orders",
+              "sha256": "4e7e509fc579334f8c0f83f088ac4acacdc4a33215f5364c437dde4f16393a7d",
+              "source": "logs",
+              "locator": "demo://logs/5",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 50.43,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "5",
+              "available": true,
+              "event_time": "2026-09-24T19:43:42.020279+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "5"
+            },
+            {
+              "id": "logs:6:c309d777ce65",
+              "team": "orders",
+              "sha256": "c309d777ce6571c34d3b68d2167386f7daf5e3ac502fd8fc7472c8bc04840fd3",
+              "source": "logs",
+              "locator": "demo://logs/6",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 61.04,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "6",
+              "available": true,
+              "event_time": "2026-09-24T19:43:42.093701+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "6"
+            },
+            {
+              "id": "logs:7:67e3a6f10213",
+              "team": "orders",
+              "sha256": "67e3a6f10213bc5928227143f3ceeec89c173d73c0bb622d64c073760a7baa9d",
+              "source": "logs",
+              "locator": "demo://logs/7",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 53.53,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "7",
+              "available": true,
+              "event_time": "2026-09-24T19:53:05.054034+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "7"
+            },
+            {
+              "id": "logs:8:860056d421ee",
+              "team": "orders",
+              "sha256": "860056d421ee9ff079150beb4bccf320837088fa0656771e99824a5c0fd559f2",
+              "source": "logs",
+              "locator": "demo://logs/8",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 50.77,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "8",
+              "available": true,
+              "event_time": "2026-09-24T19:53:05.113454+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "8"
+            },
+            {
+              "id": "logs:9:8bb75203e558",
+              "team": "orders",
+              "sha256": "8bb75203e558d0469c00ca66c5f514665211facf17ca8718f9e5215298cd0783",
+              "source": "logs",
+              "locator": "demo://logs/9",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "database pool exhausted: active=1 max=1",
+                "release": "v2",
+                "duration_ms": 51.16,
+                "error_class": "PoolAcquireTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "9",
+              "available": true,
+              "event_time": "2026-09-24T19:53:05.175255+00:00",
+              "collected_at": "2026-09-24T19:53:05.822276+00:00",
+              "source_record": "9"
+            },
+            {
+              "id": "git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c",
+              "team": "orders",
+              "sha256": "5c3f6efdbb3cad5f7fcaa7e523d7d019fe5dfa6ffe57be2da3ea7d814859c360",
+              "source": "git",
+              "locator": "demo-git://repo/commit/8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "snippet": {
+                "diff": "commit 8533cad59ea1d855baeaa3c37426ff32357e4f30\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    docs: add versioned demo runbook\n\n RUNBOOK.md | 2 ++\n 1 file changed, 2 insertions(+)",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+              },
+              "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15+00:00",
+              "collected_at": "2026-09-24T19:53:05.851513+00:00",
+              "source_record": "8533cad59ea1d855baeaa3c37426ff32357e4f30"
+            },
+            {
+              "id": "runbook:orders-runbook:3fd079fe1881",
+              "team": "orders",
+              "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+              "source": "runbook",
+              "locator": "demo-git://repo/RUNBOOK.md",
+              "snippet": {
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+              },
+              "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15+00:00",
+              "collected_at": "2026-09-24T19:53:05.880262+00:00",
+              "source_record": "orders-runbook"
+            }
+          ],
+          "conflicts": [
+            {
+              "text": "\u53d1\u5e03\u6307\u5411\u7684\u63d0\u4ea4\u672a\u5339\u914d\u5df2\u8bfb\u53d6\u7684 Git \u8bb0\u5f55\u3002",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038",
+                "git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c"
+              ]
+            }
+          ],
+          "freshness": [
+            {
+              "source": "deployments",
+              "watermark": "2",
+              "observed_at": "2026-09-24T19:53:05.764719+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "logs",
+              "watermark": "2",
+              "observed_at": "2026-09-24T19:53:05.822276+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "git",
+              "watermark": "2",
+              "observed_at": "2026-09-24T19:53:05.851513+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "runbook",
+              "watermark": "2",
+              "observed_at": "2026-09-24T19:53:05.880262+00:00",
+              "snapshot_consistency": "independent_source"
+            }
+          ],
+          "candidates": [
+            {
+              "rule": "\u65e5\u5fd7\u76f4\u63a5\u89c2\u6d4b\u652f\u6301\u5019\u9009\uff1b\u65f6\u95f4\u76f8\u5173\u4e0d\u8bc1\u660e\u56e0\u679c\u3002",
+              "text": "\u8fde\u63a5\u6c60\u8017\u5c3d\u53ef\u80fd\u5bfc\u81f4\u8bf7\u6c42\u7b49\u5f85\uff1b\u6838\u5bf9\u6d3b\u8dc3\u8fde\u63a5\u3001\u6c60\u4e0a\u9650\u548c\u7b49\u5f85\u65f6\u95f4\u3002",
+              "label": "\u6709\u5f85\u9a8c\u8bc1",
+              "evidence": [
+                "logs:1:35e25a778bff",
+                "logs:2:5b74dc48e26c",
+                "logs:3:7e9dc3719f2c",
+                "logs:4:f207a12b4c2d",
+                "logs:5:4e7e509fc579",
+                "logs:6:c309d777ce65",
+                "logs:7:67e3a6f10213",
+                "logs:8:860056d421ee",
+                "logs:9:8bb75203e558"
+              ]
+            }
+          ],
+          "next_steps": [
+            "\u6838\u5bf9\u5b9e\u9645\u90e8\u7f72\u7248\u672c\u4e0e\u65e5\u5fd7\u65f6\u95f4\u7a97\u53e3\u3002",
+            "\u68c0\u67e5\u8fde\u63a5\u6c60\u548c\u4f9d\u8d56\u5ef6\u8fdf\u6307\u6807\uff0c\u8865\u9f50\u7f3a\u5931\u6765\u6e90\u540e\u786e\u8ba4\u539f\u56e0\u3002"
+          ],
+          "confidence_rule": "\u4e8b\u5b9e\u6709\u76f4\u63a5\u6765\u6e90\uff1b\u5019\u9009\u6709\u5f85\u9a8c\u8bc1\uff1b\u65e0\u65e5\u5fd7\u65f6\u4e0d\u63a8\u65ad\u6839\u56e0\u3002",
+          "historical_memory": []
+        },
+        "status": "completed",
+        "service": "svc-17",
+        "subject": "alice",
+        "symptom": "Investigate pool exhaustion after deployment",
+        "manifest": {
+          "code": "b736a1c71ccdda91df4f51640510b546b29a09a6",
+          "cost": {
+            "unknown": "provider usage unavailable in baseline",
+            "estimated_usd": null,
+            "known_model_tokens": null
+          },
+          "model": "",
+          "prompt": "investigate-v1",
+          "skills": [
+            "release-compare@1",
+            "log-analysis@1"
+          ],
+          "version": "1",
+          "ontology": "1",
+          "evaluator": "rules-v1",
+          "retrieval": "bounded-50",
+          "snapshots": {
+            "git": {
+              "sync": "rescan",
+              "scope": {
+                "end": "2026-09-24T19:53:05.180571+00:00",
+                "team": "orders",
+                "start": "2026-09-23T19:53:05.180571+00:00",
+                "service": "svc-17",
+                "subject": "alice",
+                "watermark": 2,
+                "generation": 1
+              },
+              "records": [
+                {
+                  "id": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "content": {
+                    "diff": "commit 8533cad59ea1d855baeaa3c37426ff32357e4f30\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    docs: add versioned demo runbook\n\n RUNBOOK.md | 2 ++\n 1 file changed, 2 insertions(+)",
+                    "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                    "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+                  },
+                  "deleted": false,
+                  "locator": "demo-git://repo/commit/8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "event_time": "2026-09-24T19:10:15+00:00"
+                }
+              ],
+              "watermark": 2,
+              "next_cursor": null,
+              "observed_at": "2026-09-24T19:53:05.851513+00:00"
+            },
+            "logs": {
+              "sync": "monotonic_id",
+              "scope": {
+                "end": "2026-09-24T19:53:05.180571+00:00",
+                "team": "orders",
+                "start": "2026-09-23T19:53:05.180571+00:00",
+                "service": "svc-17",
+                "subject": "alice",
+                "watermark": 2,
+                "generation": 1
+              },
+              "records": [
+                {
+                  "id": "1",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 76.67,
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/1",
+                  "version": "1",
+                  "event_time": "2026-09-24T19:11:14.722934+00:00"
+                },
+                {
+                  "id": "2",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 81.67,
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/2",
+                  "version": "2",
+                  "event_time": "2026-09-24T19:11:14.813295+00:00"
+                },
+                {
+                  "id": "3",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 79.54,
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/3",
+                  "version": "3",
+                  "event_time": "2026-09-24T19:11:14.907093+00:00"
+                },
+                {
+                  "id": "4",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 51.57,
+                    "error_class": "PoolAcquireTimeout",
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/4",
+                  "version": "4",
+                  "event_time": "2026-09-24T19:43:41.958902+00:00"
+                },
+                {
+                  "id": "5",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 50.43,
+                    "error_class": "PoolAcquireTimeout",
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/5",
+                  "version": "5",
+                  "event_time": "2026-09-24T19:43:42.020279+00:00"
+                },
+                {
+                  "id": "6",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 61.04,
+                    "error_class": "PoolAcquireTimeout",
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/6",
+                  "version": "6",
+                  "event_time": "2026-09-24T19:43:42.093701+00:00"
+                },
+                {
+                  "id": "7",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 53.53,
+                    "error_class": "PoolAcquireTimeout",
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/7",
+                  "version": "7",
+                  "event_time": "2026-09-24T19:53:05.054034+00:00"
+                },
+                {
+                  "id": "8",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 50.77,
+                    "error_class": "PoolAcquireTimeout",
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/8",
+                  "version": "8",
+                  "event_time": "2026-09-24T19:53:05.113454+00:00"
+                },
+                {
+                  "id": "9",
+                  "content": {
+                    "level": "ERROR",
+                    "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                    "message": "database pool exhausted: active=1 max=1",
+                    "release": "v2",
+                    "duration_ms": 51.16,
+                    "error_class": "PoolAcquireTimeout",
+                    "service_name": "checkout-api"
+                  },
+                  "deleted": false,
+                  "locator": "demo://logs/9",
+                  "version": "9",
+                  "event_time": "2026-09-24T19:53:05.175255+00:00"
+                }
+              ],
+              "watermark": 2,
+              "next_cursor": null,
+              "observed_at": "2026-09-24T19:53:05.822276+00:00"
+            },
+            "runbook": {
+              "sync": "rescan",
+              "scope": {
+                "end": "2026-09-24T19:53:05.180571+00:00",
+                "team": "orders",
+                "start": "2026-09-23T19:53:05.180571+00:00",
+                "service": "svc-17",
+                "subject": "alice",
+                "watermark": 2,
+                "generation": 1
+              },
+              "records": [
+                {
+                  "id": "orders-runbook",
+                  "content": {
+                    "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+                  },
+                  "deleted": false,
+                  "locator": "demo-git://repo/RUNBOOK.md",
+                  "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "event_time": "2026-09-24T19:10:15+00:00"
+                }
+              ],
+              "watermark": 2,
+              "next_cursor": null,
+              "observed_at": "2026-09-24T19:53:05.880262+00:00"
+            },
+            "deployments": {
+              "scope": {
+                "end": "2026-09-24T19:53:05.180571+00:00",
+                "team": "orders",
+                "start": "2026-09-23T19:53:05.180571+00:00",
+                "service": "svc-17",
+                "subject": "alice",
+                "watermark": 2,
+                "generation": 1
+              },
+              "records": [
+                {
+                  "id": "dep-svc-17",
+                  "content": {
+                    "id": "dep-svc-17",
+                    "app_id": "svc-17",
+                    "deleted": false,
+                    "service": "svc-17",
+                    "version": "v2",
+                    "watermark": 1,
+                    "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+                  },
+                  "deleted": false,
+                  "locator": "postgres://sources/deployments/dep-svc-17",
+                  "version": "1",
+                  "event_time": "2026-09-24T19:10:15.958646+00:00"
+                }
+              ],
+              "watermark": 2,
+              "next_cursor": null,
+              "observed_at": "2026-09-24T19:53:05.764719+00:00"
+            }
+          },
+          "generation": 1,
+          "tool_schema": "1",
+          "source_mapping": "1",
+          "model_parameters": {
+            "temperature": "provider-default"
+          },
+          "permission_policy": "go-v1"
+        },
+        "start_at": "2026-09-23T19:53:05.180571+00:00",
+        "timezone": "UTC",
+        "trace_id": "b81ccbfeda7c9b955c40be178f8cebae",
+        "created_at": "2026-09-24T19:53:05.182084+00:00",
+        "updated_at": "2026-09-24T19:53:05.91206+00:00",
+        "request_hash": "fe1d46a3224502dcddb77e2f040900ca234834e1a3b7bc4eeef24da14a089d28",
+        "evidence_stale": false,
+        "source_version": 2
+      }
+    },
+    {
+      "test": "four_sources",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "test": "candidates_grounded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "cross_team_report_denied",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "admin_not_business_reader",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "draft_created",
+      "pass": true,
+      "detail": "{\"id\":\"ec7a4f01-5146-415d-9e72-ad62f5022a84\",\"seq\":32,\"idem\":\"e59419d4-5be8-49a5-b595-e12f60d024d8\",\"team\":\"orders\",\"action\":{\"id\":\"411a3531-c300-429f-90b0-d10e4086f05d\",\"body\":\"Evidence-backed investigation. Verify deployed pool config.\",\"state\":\"draft\",\"title\":\"Investigate database pool\",\"digest\":\"a9a72824f0b5277956532d8e27a30b8b7a7d1a31c57d3c4793a49baeb9def148\",\"marker\":\"incidentdesk:411a3531-c300-429f-90b0-d10e4086f05d\",\"result\":null,\"target\":\"local/incident-demo\",\"version\":1,\"updated_at\":\"2026-09-24T19:53:05.989465+00:00\",\"approved_by\":null,\"evidence_hash\":\"fb091382ccaf37b1e240c022eec0367e299972de30da945940cd9f33d97edc65\",\"investigation\":\"ec7a4f01-5146-415d-9e72-ad62f5022a84\",\"source_version\":2,\"approved_digest\":null,\"approved_version\":null},\"end_at\":\"2026-09-24T19:53:05.180571+00:00\",\"report\":{\"mode\":\"deterministic-baseline\",\"facts\":[{\"id\":\"fact:deployments:dep-svc-17:744e6bc77038\",\"kind\":\"observation\",\"text\":\"\u53d1\u5e03\u7248\u672c v2 \u6307\u5411\u63d0\u4ea4 e1925867e810fa1bacfb21a5cba711fdef2239be\",\"evidence\":[\"deployments:dep-svc-17:744e6bc77038\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\",\"deployments\"],\"limit\":50,\"object\":\"Deployment\",\"source\":\"deployments\"}},{\"id\":\"fact:logs:1:35e25a778bff\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:1:35e25a778bff\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:2:5b74dc48e26c\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:2:5b74dc48e26c\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:3:7e9dc3719f2c\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:3:7e9dc3719f2c\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:4:f207a12b4c2d\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:4:f207a12b4c2d\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:5:4e7e509fc579\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:5:4e7e509fc579\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:6:c309d777ce65\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:6:c309d777ce65\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:7:67e3a6f10213\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:7:67e3a6f10213\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:8:860056d421ee\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:8:860056d421ee\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:9:8bb75203e558\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:9:8bb75203e558\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c\",\"kind\":\"observation\",\"text\":\"\u4ee3\u7801\u63d0\u4ea4 8533cad59ea1d855baeaa3c37426ff32357e4f30\uff0c\u914d\u7f6e\u5dee\u5f02\uff1a{\\\"pool_size\\\":1,\\\"timeout_ms\\\":50}\",\"evidence\":[\"git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\",\"deployments\",\"commit\"],\"limit\":50,\"object\":\"Commit\",\"source\":\"git\"}},{\"id\":\"fact:runbook:orders-runbook:3fd079fe1881\",\"kind\":\"observation\",\"text\":\"\u8fd0\u884c\u624b\u518c\u6458\u5f55\uff1a# Demo order service\\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\\n\",\"evidence\":[\"runbook:orders-runbook:3fd079fe1881\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\",\"runbook\"],\"limit\":50,\"object\":\"Runbook\",\"source\":\"runbook\"}}],\"impact\":\"svc-17\",\"context\":{\"plan\":{\"end\":\"2026-09-24T19:53:05.180571Z\",\"start\":\"2026-09-23T19:53:05.180571Z\",\"steps\":[{\"path\":[\"Service\",\"deployments\"],\"limit\":50,\"object\":\"Deployment\",\"source\":\"deployments\"},{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"},{\"path\":[\"Service\",\"deployments\",\"commit\"],\"limit\":50,\"object\":\"Commit\",\"source\":\"git\"},{\"path\":[\"Service\",\"runbook\"],\"limit\":50,\"object\":\"Runbook\",\"source\":\"runbook\"}],\"service\":\"svc-17\",\"version\":\"1\"},\"facts\":[{\"id\":\"fact:deployments:dep-svc-17:744e6bc77038\",\"kind\":\"observation\",\"text\":\"\u53d1\u5e03\u7248\u672c v2 \u6307\u5411\u63d0\u4ea4 e1925867e810fa1bacfb21a5cba711fdef2239be\",\"evidence\":[\"deployments:dep-svc-17:744e6bc77038\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\",\"deployments\"],\"limit\":50,\"object\":\"Deployment\",\"source\":\"deployments\"}},{\"id\":\"fact:logs:1:35e25a778bff\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:1:35e25a778bff\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:2:5b74dc48e26c\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:2:5b74dc48e26c\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:3:7e9dc3719f2c\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:3:7e9dc3719f2c\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:4:f207a12b4c2d\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:4:f207a12b4c2d\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:5:4e7e509fc579\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:5:4e7e509fc579\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:6:c309d777ce65\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:6:c309d777ce65\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:7:67e3a6f10213\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:7:67e3a6f10213\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:8:860056d421ee\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:8:860056d421ee\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:logs:9:8bb75203e558\",\"kind\":\"observation\",\"text\":\"\u65e5\u5fd7\u8bb0\u5f55 ERROR: database pool exhausted: active=1 max=1\",\"evidence\":[\"logs:9:8bb75203e558\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\"],\"limit\":50,\"object\":\"Service\",\"source\":\"logs\"}},{\"id\":\"fact:git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c\",\"kind\":\"observation\",\"text\":\"\u4ee3\u7801\u63d0\u4ea4 8533cad59ea1d855baeaa3c37426ff32357e4f30\uff0c\u914d\u7f6e\u5dee\u5f02\uff1a{\\\"pool_size\\\":1,\\\"timeout_ms\\\":50}\",\"evidence\":[\"git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\",\"deployments\",\"commit\"],\"limit\":50,\"object\":\"Commit\",\"source\":\"git\"}},{\"id\":\"fact:runbook:orders-runbook:3fd079fe1881\",\"kind\":\"observation\",\"text\":\"\u8fd0\u884c\u624b\u518c\u6458\u5f55\uff1a# Demo order service\\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\\n\",\"evidence\":[\"runbook:orders-runbook:3fd079fe1881\"],\"transform\":\"normalize-v1\",\"query_step\":{\"path\":[\"Service\",\"runbook\"],\"limit\":50,\"object\":\"Runbook\",\"source\":\"runbook\"}}],\"scope\":{\"team\":\"orders\",\"service\":\"svc-17\",\"subject\":\"alice\"},\"missing\":[],\"objects\":[{\"id\":\"svc-17\",\"team\":\"orders\",\"type\":\"Service\"},{\"id\":\"dep-svc-17\",\"type\":\"Deployment\",\"service\":\"svc-17\",\"evidence\":[\"deployments:dep-svc-17:744e6bc77038\"],\"valid_time\":\"2026-09-24T19:10:15.958646+00:00\"}],\"version\":\"1\",\"evidence\":[{\"id\":\"deployments:dep-svc-17:744e6bc77038\",\"team\":\"orders\",\"sha256\":\"744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050\",\"source\":\"deployments\",\"locator\":\"postgres://sources/deployments/dep-svc-17\",\"snippet\":{\"id\":\"dep-svc-17\",\"app_id\":\"svc-17\",\"deleted\":false,\"service\":\"svc-17\",\"version\":\"v2\",\"watermark\":1,\"commit_sha\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\"},\"version\":\"1\",\"available\":true,\"event_time\":\"2026-09-24T19:10:15.958646+00:00\",\"collected_at\":\"2026-09-24T19:53:05.764719+00:00\",\"source_record\":\"dep-svc-17\"},{\"id\":\"logs:1:35e25a778bff\",\"team\":\"orders\",\"sha256\":\"35e25a778bff69f48eca7fbd9b64dd88349149d0015c2436d8fff559d903c457\",\"source\":\"logs\",\"locator\":\"demo://logs/1\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":76.67,\"service_name\":\"checkout-api\"},\"version\":\"1\",\"available\":true,\"event_time\":\"2026-09-24T19:11:14.722934+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"1\"},{\"id\":\"logs:2:5b74dc48e26c\",\"team\":\"orders\",\"sha256\":\"5b74dc48e26c18d94776d5688f2286612d46698a3bd79086195eb58c960a160c\",\"source\":\"logs\",\"locator\":\"demo://logs/2\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":81.67,\"service_name\":\"checkout-api\"},\"version\":\"2\",\"available\":true,\"event_time\":\"2026-09-24T19:11:14.813295+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"2\"},{\"id\":\"logs:3:7e9dc3719f2c\",\"team\":\"orders\",\"sha256\":\"7e9dc3719f2c8f6fb9023b882ddcd5a826a796c6109f9c6d9a81a4900b09f02c\",\"source\":\"logs\",\"locator\":\"demo://logs/3\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":79.54,\"service_name\":\"checkout-api\"},\"version\":\"3\",\"available\":true,\"event_time\":\"2026-09-24T19:11:14.907093+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"3\"},{\"id\":\"logs:4:f207a12b4c2d\",\"team\":\"orders\",\"sha256\":\"f207a12b4c2d24c7c637c4c6cdd96d447dd4ffc5fe3927bcab4bcf36949dea00\",\"source\":\"logs\",\"locator\":\"demo://logs/4\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":51.57,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"4\",\"available\":true,\"event_time\":\"2026-09-24T19:43:41.958902+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"4\"},{\"id\":\"logs:5:4e7e509fc579\",\"team\":\"orders\",\"sha256\":\"4e7e509fc579334f8c0f83f088ac4acacdc4a33215f5364c437dde4f16393a7d\",\"source\":\"logs\",\"locator\":\"demo://logs/5\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":50.43,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"5\",\"available\":true,\"event_time\":\"2026-09-24T19:43:42.020279+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"5\"},{\"id\":\"logs:6:c309d777ce65\",\"team\":\"orders\",\"sha256\":\"c309d777ce6571c34d3b68d2167386f7daf5e3ac502fd8fc7472c8bc04840fd3\",\"source\":\"logs\",\"locator\":\"demo://logs/6\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":61.04,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"6\",\"available\":true,\"event_time\":\"2026-09-24T19:43:42.093701+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"6\"},{\"id\":\"logs:7:67e3a6f10213\",\"team\":\"orders\",\"sha256\":\"67e3a6f10213bc5928227143f3ceeec89c173d73c0bb622d64c073760a7baa9d\",\"source\":\"logs\",\"locator\":\"demo://logs/7\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":53.53,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"7\",\"available\":true,\"event_time\":\"2026-09-24T19:53:05.054034+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"7\"},{\"id\":\"logs:8:860056d421ee\",\"team\":\"orders\",\"sha256\":\"860056d421ee9ff079150beb4bccf320837088fa0656771e99824a5c0fd559f2\",\"source\":\"logs\",\"locator\":\"demo://logs/8\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":50.77,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"8\",\"available\":true,\"event_time\":\"2026-09-24T19:53:05.113454+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"8\"},{\"id\":\"logs:9:8bb75203e558\",\"team\":\"orders\",\"sha256\":\"8bb75203e558d0469c00ca66c5f514665211facf17ca8718f9e5215298cd0783\",\"source\":\"logs\",\"locator\":\"demo://logs/9\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":51.16,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"9\",\"available\":true,\"event_time\":\"2026-09-24T19:53:05.175255+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"9\"},{\"id\":\"git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c\",\"team\":\"orders\",\"sha256\":\"5c3f6efdbb3cad5f7fcaa7e523d7d019fe5dfa6ffe57be2da3ea7d814859c360\",\"source\":\"git\",\"locator\":\"demo-git://repo/commit/8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"snippet\":{\"diff\":\"commit 8533cad59ea1d855baeaa3c37426ff32357e4f30\\nAuthor:     IncidentDesk Demo \\u003cdemo@incidentdesk.invalid\\u003e\\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\\nCommit:     IncidentDesk Demo \\u003cdemo@incidentdesk.invalid\\u003e\\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\\n\\n    docs: add versioned demo runbook\\n\\n RUNBOOK.md | 2 ++\\n 1 file changed, 2 insertions(+)\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"config\":\"{\\\"pool_size\\\":1,\\\"timeout_ms\\\":50}\"},\"version\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"available\":true,\"event_time\":\"2026-09-24T19:10:15+00:00\",\"collected_at\":\"2026-09-24T19:53:05.851513+00:00\",\"source_record\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\"},{\"id\":\"runbook:orders-runbook:3fd079fe1881\",\"team\":\"orders\",\"sha256\":\"3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b\",\"source\":\"runbook\",\"locator\":\"demo-git://repo/RUNBOOK.md\",\"snippet\":{\"markdown\":\"# Demo order service\\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\\n\"},\"version\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"available\":true,\"event_time\":\"2026-09-24T19:10:15+00:00\",\"collected_at\":\"2026-09-24T19:53:05.880262+00:00\",\"source_record\":\"orders-runbook\"}],\"memories\":[],\"conflicts\":[{\"text\":\"\u53d1\u5e03\u6307\u5411\u7684\u63d0\u4ea4\u672a\u5339\u914d\u5df2\u8bfb\u53d6\u7684 Git \u8bb0\u5f55\u3002\",\"evidence\":[\"deployments:dep-svc-17:744e6bc77038\",\"git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c\"]}],\"freshness\":[{\"source\":\"deployments\",\"watermark\":\"2\",\"observed_at\":\"2026-09-24T19:53:05.764719+00:00\",\"snapshot_consistency\":\"independent_source\"},{\"source\":\"logs\",\"watermark\":\"2\",\"observed_at\":\"2026-09-24T19:53:05.822276+00:00\",\"snapshot_consistency\":\"independent_source\"},{\"source\":\"git\",\"watermark\":\"2\",\"observed_at\":\"2026-09-24T19:53:05.851513+00:00\",\"snapshot_consistency\":\"independent_source\"},{\"source\":\"runbook\",\"watermark\":\"2\",\"observed_at\":\"2026-09-24T19:53:05.880262+00:00\",\"snapshot_consistency\":\"independent_source\"}],\"token_budget\":12000,\"mapping_version\":\"1\",\"ontology_version\":\"1\"},\"missing\":[],\"evidence\":[{\"id\":\"deployments:dep-svc-17:744e6bc77038\",\"team\":\"orders\",\"sha256\":\"744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050\",\"source\":\"deployments\",\"locator\":\"postgres://sources/deployments/dep-svc-17\",\"snippet\":{\"id\":\"dep-svc-17\",\"app_id\":\"svc-17\",\"deleted\":false,\"service\":\"svc-17\",\"version\":\"v2\",\"watermark\":1,\"commit_sha\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\"},\"version\":\"1\",\"available\":true,\"event_time\":\"2026-09-24T19:10:15.958646+00:00\",\"collected_at\":\"2026-09-24T19:53:05.764719+00:00\",\"source_record\":\"dep-svc-17\"},{\"id\":\"logs:1:35e25a778bff\",\"team\":\"orders\",\"sha256\":\"35e25a778bff69f48eca7fbd9b64dd88349149d0015c2436d8fff559d903c457\",\"source\":\"logs\",\"locator\":\"demo://logs/1\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":76.67,\"service_name\":\"checkout-api\"},\"version\":\"1\",\"available\":true,\"event_time\":\"2026-09-24T19:11:14.722934+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"1\"},{\"id\":\"logs:2:5b74dc48e26c\",\"team\":\"orders\",\"sha256\":\"5b74dc48e26c18d94776d5688f2286612d46698a3bd79086195eb58c960a160c\",\"source\":\"logs\",\"locator\":\"demo://logs/2\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":81.67,\"service_name\":\"checkout-api\"},\"version\":\"2\",\"available\":true,\"event_time\":\"2026-09-24T19:11:14.813295+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"2\"},{\"id\":\"logs:3:7e9dc3719f2c\",\"team\":\"orders\",\"sha256\":\"7e9dc3719f2c8f6fb9023b882ddcd5a826a796c6109f9c6d9a81a4900b09f02c\",\"source\":\"logs\",\"locator\":\"demo://logs/3\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":79.54,\"service_name\":\"checkout-api\"},\"version\":\"3\",\"available\":true,\"event_time\":\"2026-09-24T19:11:14.907093+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"3\"},{\"id\":\"logs:4:f207a12b4c2d\",\"team\":\"orders\",\"sha256\":\"f207a12b4c2d24c7c637c4c6cdd96d447dd4ffc5fe3927bcab4bcf36949dea00\",\"source\":\"logs\",\"locator\":\"demo://logs/4\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":51.57,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"4\",\"available\":true,\"event_time\":\"2026-09-24T19:43:41.958902+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"4\"},{\"id\":\"logs:5:4e7e509fc579\",\"team\":\"orders\",\"sha256\":\"4e7e509fc579334f8c0f83f088ac4acacdc4a33215f5364c437dde4f16393a7d\",\"source\":\"logs\",\"locator\":\"demo://logs/5\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":50.43,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"5\",\"available\":true,\"event_time\":\"2026-09-24T19:43:42.020279+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"5\"},{\"id\":\"logs:6:c309d777ce65\",\"team\":\"orders\",\"sha256\":\"c309d777ce6571c34d3b68d2167386f7daf5e3ac502fd8fc7472c8bc04840fd3\",\"source\":\"logs\",\"locator\":\"demo://logs/6\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":61.04,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"6\",\"available\":true,\"event_time\":\"2026-09-24T19:43:42.093701+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"6\"},{\"id\":\"logs:7:67e3a6f10213\",\"team\":\"orders\",\"sha256\":\"67e3a6f10213bc5928227143f3ceeec89c173d73c0bb622d64c073760a7baa9d\",\"source\":\"logs\",\"locator\":\"demo://logs/7\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":53.53,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"7\",\"available\":true,\"event_time\":\"2026-09-24T19:53:05.054034+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"7\"},{\"id\":\"logs:8:860056d421ee\",\"team\":\"orders\",\"sha256\":\"860056d421ee9ff079150beb4bccf320837088fa0656771e99824a5c0fd559f2\",\"source\":\"logs\",\"locator\":\"demo://logs/8\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":50.77,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"8\",\"available\":true,\"event_time\":\"2026-09-24T19:53:05.113454+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"8\"},{\"id\":\"logs:9:8bb75203e558\",\"team\":\"orders\",\"sha256\":\"8bb75203e558d0469c00ca66c5f514665211facf17ca8718f9e5215298cd0783\",\"source\":\"logs\",\"locator\":\"demo://logs/9\",\"snippet\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":51.16,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"version\":\"9\",\"available\":true,\"event_time\":\"2026-09-24T19:53:05.175255+00:00\",\"collected_at\":\"2026-09-24T19:53:05.822276+00:00\",\"source_record\":\"9\"},{\"id\":\"git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c\",\"team\":\"orders\",\"sha256\":\"5c3f6efdbb3cad5f7fcaa7e523d7d019fe5dfa6ffe57be2da3ea7d814859c360\",\"source\":\"git\",\"locator\":\"demo-git://repo/commit/8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"snippet\":{\"diff\":\"commit 8533cad59ea1d855baeaa3c37426ff32357e4f30\\nAuthor:     IncidentDesk Demo \\u003cdemo@incidentdesk.invalid\\u003e\\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\\nCommit:     IncidentDesk Demo \\u003cdemo@incidentdesk.invalid\\u003e\\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\\n\\n    docs: add versioned demo runbook\\n\\n RUNBOOK.md | 2 ++\\n 1 file changed, 2 insertions(+)\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"config\":\"{\\\"pool_size\\\":1,\\\"timeout_ms\\\":50}\"},\"version\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"available\":true,\"event_time\":\"2026-09-24T19:10:15+00:00\",\"collected_at\":\"2026-09-24T19:53:05.851513+00:00\",\"source_record\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\"},{\"id\":\"runbook:orders-runbook:3fd079fe1881\",\"team\":\"orders\",\"sha256\":\"3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b\",\"source\":\"runbook\",\"locator\":\"demo-git://repo/RUNBOOK.md\",\"snippet\":{\"markdown\":\"# Demo order service\\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\\n\"},\"version\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"available\":true,\"event_time\":\"2026-09-24T19:10:15+00:00\",\"collected_at\":\"2026-09-24T19:53:05.880262+00:00\",\"source_record\":\"orders-runbook\"}],\"conflicts\":[{\"text\":\"\u53d1\u5e03\u6307\u5411\u7684\u63d0\u4ea4\u672a\u5339\u914d\u5df2\u8bfb\u53d6\u7684 Git \u8bb0\u5f55\u3002\",\"evidence\":[\"deployments:dep-svc-17:744e6bc77038\",\"git:8533cad59ea1d855baeaa3c37426ff32357e4f30:5c3f6efdbb3c\"]}],\"freshness\":[{\"source\":\"deployments\",\"watermark\":\"2\",\"observed_at\":\"2026-09-24T19:53:05.764719+00:00\",\"snapshot_consistency\":\"independent_source\"},{\"source\":\"logs\",\"watermark\":\"2\",\"observed_at\":\"2026-09-24T19:53:05.822276+00:00\",\"snapshot_consistency\":\"independent_source\"},{\"source\":\"git\",\"watermark\":\"2\",\"observed_at\":\"2026-09-24T19:53:05.851513+00:00\",\"snapshot_consistency\":\"independent_source\"},{\"source\":\"runbook\",\"watermark\":\"2\",\"observed_at\":\"2026-09-24T19:53:05.880262+00:00\",\"snapshot_consistency\":\"independent_source\"}],\"candidates\":[{\"rule\":\"\u65e5\u5fd7\u76f4\u63a5\u89c2\u6d4b\u652f\u6301\u5019\u9009\uff1b\u65f6\u95f4\u76f8\u5173\u4e0d\u8bc1\u660e\u56e0\u679c\u3002\",\"text\":\"\u8fde\u63a5\u6c60\u8017\u5c3d\u53ef\u80fd\u5bfc\u81f4\u8bf7\u6c42\u7b49\u5f85\uff1b\u6838\u5bf9\u6d3b\u8dc3\u8fde\u63a5\u3001\u6c60\u4e0a\u9650\u548c\u7b49\u5f85\u65f6\u95f4\u3002\",\"label\":\"\u6709\u5f85\u9a8c\u8bc1\",\"evidence\":[\"logs:1:35e25a778bff\",\"logs:2:5b74dc48e26c\",\"logs:3:7e9dc3719f2c\",\"logs:4:f207a12b4c2d\",\"logs:5:4e7e509fc579\",\"logs:6:c309d777ce65\",\"logs:7:67e3a6f10213\",\"logs:8:860056d421ee\",\"logs:9:8bb75203e558\"]}],\"next_steps\":[\"\u6838\u5bf9\u5b9e\u9645\u90e8\u7f72\u7248\u672c\u4e0e\u65e5\u5fd7\u65f6\u95f4\u7a97\u53e3\u3002\",\"\u68c0\u67e5\u8fde\u63a5\u6c60\u548c\u4f9d\u8d56\u5ef6\u8fdf\u6307\u6807\uff0c\u8865\u9f50\u7f3a\u5931\u6765\u6e90\u540e\u786e\u8ba4\u539f\u56e0\u3002\"],\"confidence_rule\":\"\u4e8b\u5b9e\u6709\u76f4\u63a5\u6765\u6e90\uff1b\u5019\u9009\u6709\u5f85\u9a8c\u8bc1\uff1b\u65e0\u65e5\u5fd7\u65f6\u4e0d\u63a8\u65ad\u6839\u56e0\u3002\",\"historical_memory\":[]},\"status\":\"completed\",\"service\":\"svc-17\",\"subject\":\"alice\",\"symptom\":\"Investigate pool exhaustion after deployment\",\"manifest\":{\"code\":\"b736a1c71ccdda91df4f51640510b546b29a09a6\",\"cost\":{\"unknown\":\"provider usage unavailable in baseline\",\"estimated_usd\":null,\"known_model_tokens\":null},\"model\":\"\",\"prompt\":\"investigate-v1\",\"skills\":[\"release-compare@1\",\"log-analysis@1\"],\"version\":\"1\",\"ontology\":\"1\",\"evaluator\":\"rules-v1\",\"retrieval\":\"bounded-50\",\"snapshots\":{\"git\":{\"sync\":\"rescan\",\"scope\":{\"end\":\"2026-09-24T19:53:05.180571+00:00\",\"team\":\"orders\",\"start\":\"2026-09-23T19:53:05.180571+00:00\",\"service\":\"svc-17\",\"subject\":\"alice\",\"watermark\":2,\"generation\":1},\"records\":[{\"id\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"content\":{\"diff\":\"commit 8533cad59ea1d855baeaa3c37426ff32357e4f30\\nAuthor:     IncidentDesk Demo \\u003cdemo@incidentdesk.invalid\\u003e\\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\\nCommit:     IncidentDesk Demo \\u003cdemo@incidentdesk.invalid\\u003e\\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\\n\\n    docs: add versioned demo runbook\\n\\n RUNBOOK.md | 2 ++\\n 1 file changed, 2 insertions(+)\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"config\":\"{\\\"pool_size\\\":1,\\\"timeout_ms\\\":50}\"},\"deleted\":false,\"locator\":\"demo-git://repo/commit/8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"version\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"event_time\":\"2026-09-24T19:10:15+00:00\"}],\"watermark\":2,\"next_cursor\":null,\"observed_at\":\"2026-09-24T19:53:05.851513+00:00\"},\"logs\":{\"sync\":\"monotonic_id\",\"scope\":{\"end\":\"2026-09-24T19:53:05.180571+00:00\",\"team\":\"orders\",\"start\":\"2026-09-23T19:53:05.180571+00:00\",\"service\":\"svc-17\",\"subject\":\"alice\",\"watermark\":2,\"generation\":1},\"records\":[{\"id\":\"1\",\"content\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":76.67,\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/1\",\"version\":\"1\",\"event_time\":\"2026-09-24T19:11:14.722934+00:00\"},{\"id\":\"2\",\"content\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":81.67,\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/2\",\"version\":\"2\",\"event_time\":\"2026-09-24T19:11:14.813295+00:00\"},{\"id\":\"3\",\"content\":{\"level\":\"ERROR\",\"commit\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":79.54,\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/3\",\"version\":\"3\",\"event_time\":\"2026-09-24T19:11:14.907093+00:00\"},{\"id\":\"4\",\"content\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":51.57,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/4\",\"version\":\"4\",\"event_time\":\"2026-09-24T19:43:41.958902+00:00\"},{\"id\":\"5\",\"content\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":50.43,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/5\",\"version\":\"5\",\"event_time\":\"2026-09-24T19:43:42.020279+00:00\"},{\"id\":\"6\",\"content\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":61.04,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/6\",\"version\":\"6\",\"event_time\":\"2026-09-24T19:43:42.093701+00:00\"},{\"id\":\"7\",\"content\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":53.53,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/7\",\"version\":\"7\",\"event_time\":\"2026-09-24T19:53:05.054034+00:00\"},{\"id\":\"8\",\"content\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":50.77,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/8\",\"version\":\"8\",\"event_time\":\"2026-09-24T19:53:05.113454+00:00\"},{\"id\":\"9\",\"content\":{\"level\":\"ERROR\",\"commit\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"message\":\"database pool exhausted: active=1 max=1\",\"release\":\"v2\",\"duration_ms\":51.16,\"error_class\":\"PoolAcquireTimeout\",\"service_name\":\"checkout-api\"},\"deleted\":false,\"locator\":\"demo://logs/9\",\"version\":\"9\",\"event_time\":\"2026-09-24T19:53:05.175255+00:00\"}],\"watermark\":2,\"next_cursor\":null,\"observed_at\":\"2026-09-24T19:53:05.822276+00:00\"},\"runbook\":{\"sync\":\"rescan\",\"scope\":{\"end\":\"2026-09-24T19:53:05.180571+00:00\",\"team\":\"orders\",\"start\":\"2026-09-23T19:53:05.180571+00:00\",\"service\":\"svc-17\",\"subject\":\"alice\",\"watermark\":2,\"generation\":1},\"records\":[{\"id\":\"orders-runbook\",\"content\":{\"markdown\":\"# Demo order service\\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\\n\"},\"deleted\":false,\"locator\":\"demo-git://repo/RUNBOOK.md\",\"version\":\"8533cad59ea1d855baeaa3c37426ff32357e4f30\",\"event_time\":\"2026-09-24T19:10:15+00:00\"}],\"watermark\":2,\"next_cursor\":null,\"observed_at\":\"2026-09-24T19:53:05.880262+00:00\"},\"deployments\":{\"scope\":{\"end\":\"2026-09-24T19:53:05.180571+00:00\",\"team\":\"orders\",\"start\":\"2026-09-23T19:53:05.180571+00:00\",\"service\":\"svc-17\",\"subject\":\"alice\",\"watermark\":2,\"generation\":1},\"records\":[{\"id\":\"dep-svc-17\",\"content\":{\"id\":\"dep-svc-17\",\"app_id\":\"svc-17\",\"deleted\":false,\"service\":\"svc-17\",\"version\":\"v2\",\"watermark\":1,\"commit_sha\":\"e1925867e810fa1bacfb21a5cba711fdef2239be\"},\"deleted\":false,\"locator\":\"postgres://sources/deployments/dep-svc-17\",\"version\":\"1\",\"event_time\":\"2026-09-24T19:10:15.958646+00:00\"}],\"watermark\":2,\"next_cursor\":null,\"observed_at\":\"2026-09-24T19:53:05.764719+00:00\"}},\"generation\":1,\"tool_schema\":\"1\",\"source_mapping\":\"1\",\"model_parameters\":{\"temperature\":\"provider-default\"},\"permission_policy\":\"go-v1\"},\"start_at\":\"2026-09-23T19:53:05.180571+00:00\",\"timezone\":\"UTC\",\"trace_id\":\"b81ccbfeda7c9b955c40be178f8cebae\",\"created_at\":\"2026-09-24T19:53:05.182084+00:00\",\"updated_at\":\"2026-09-24T19:53:05.989465+00:00\",\"request_hash\":\"fe1d46a3224502dcddb77e2f040900ca234834e1a3b7bc4eeef24da14a089d28\",\"evidence_stale\":false,\"source_version\":2}\n"
+    },
+    {
+      "test": "investigator_cannot_approve",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "stale_version_denied",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "concurrent_approve_idempotent",
+      "pass": true,
+      "detail": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "test": "stub_issue_readback",
+      "pass": true,
+      "detail": {
+        "id": "411a3531-c300-429f-90b0-d10e4086f05d",
+        "body": "Evidence-backed investigation. Verify deployed pool config.",
+        "state": "succeeded",
+        "title": "Investigate database pool",
+        "digest": "a9a72824f0b5277956532d8e27a30b8b7a7d1a31c57d3c4793a49baeb9def148",
+        "marker": "incidentdesk:411a3531-c300-429f-90b0-d10e4086f05d",
+        "result": {
+          "body": "Evidence-backed investigation. Verify deployed pool config.\n\n<!-- incidentdesk:411a3531-c300-429f-90b0-d10e4086f05d -->",
+          "title": "Investigate database pool",
+          "number": 5,
+          "html_url": "http://localhost:8090/github/repos/local/incident-demo/issues/5",
+          "integration": "local-github-stub"
+        },
+        "target": "local/incident-demo",
+        "version": 1,
+        "updated_at": "2026-09-24T19:53:06.209004+00:00",
+        "approved_by": "alice",
+        "evidence_hash": "fb091382ccaf37b1e240c022eec0367e299972de30da945940cd9f33d97edc65",
+        "investigation": "ec7a4f01-5146-415d-9e72-ad62f5022a84",
+        "source_version": 2,
+        "approved_digest": "a9a72824f0b5277956532d8e27a30b8b7a7d1a31c57d3c4793a49baeb9def148",
+        "approved_version": 1
+      }
+    },
+    {
+      "test": "one_logical_issue",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "recording_export",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "event_cursor_replay",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "memory_candidate_hidden",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "memory_review",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "memory_visible_after_review",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "memory_revocation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "badcase_reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "write_timeout_unknown",
+      "pass": true,
+      "detail": {
+        "id": "def7e2f9-8fd9-4422-8efd-fbd82c532619",
+        "body": "Evidence-backed investigation. Verify deployed pool config.",
+        "state": "unknown",
+        "title": "Investigate database pool",
+        "digest": "207ef32cf66341bd453fd7df0b32ec4c5f9130f79d802204b8b63dcbab72d711",
+        "marker": "incidentdesk:def7e2f9-8fd9-4422-8efd-fbd82c532619",
+        "result": {
+          "marker": "incidentdesk:def7e2f9-8fd9-4422-8efd-fbd82c532619",
+          "message": "Outcome unknown; reconcile by marker. Automatic re-creation disabled."
+        },
+        "target": "local/incident-demo",
+        "version": 1,
+        "updated_at": "2026-09-24T19:53:15.220664+00:00",
+        "approved_by": "alice",
+        "evidence_hash": "4eb26a569e0f8cfb1a21c6aaf70b8cb0dbe4865dcbf131c50dd9b6f871c1930a",
+        "investigation": "a5d8c16c-8e09-46e2-bce1-1717905fd898",
+        "source_version": 3,
+        "approved_digest": "207ef32cf66341bd453fd7df0b32ec4c5f9130f79d802204b8b63dcbab72d711",
+        "approved_version": 1
+      }
+    },
+    {
+      "test": "unknown_reconciled",
+      "pass": true,
+      "detail": {
+        "id": "def7e2f9-8fd9-4422-8efd-fbd82c532619",
+        "body": "Evidence-backed investigation. Verify deployed pool config.",
+        "state": "succeeded",
+        "title": "Investigate database pool",
+        "digest": "207ef32cf66341bd453fd7df0b32ec4c5f9130f79d802204b8b63dcbab72d711",
+        "marker": "incidentdesk:def7e2f9-8fd9-4422-8efd-fbd82c532619",
+        "result": {
+          "body": "Evidence-backed investigation. Verify deployed pool config.\n\n<!-- incidentdesk:def7e2f9-8fd9-4422-8efd-fbd82c532619 -->",
+          "title": "Investigate database pool",
+          "number": 6,
+          "html_url": "http://localhost:8090/github/repos/local/incident-demo/issues/6",
+          "integration": "local-github-stub"
+        },
+        "target": "local/incident-demo",
+        "version": 1,
+        "updated_at": "2026-09-24T19:53:31.213559+00:00",
+        "approved_by": "alice",
+        "evidence_hash": "4eb26a569e0f8cfb1a21c6aaf70b8cb0dbe4865dcbf131c50dd9b6f871c1930a",
+        "investigation": "a5d8c16c-8e09-46e2-bce1-1717905fd898",
+        "source_version": 3,
+        "approved_digest": "207ef32cf66341bd453fd7df0b32ec4c5f9130f79d802204b8b63dcbab72d711",
+        "approved_version": 1
+      }
+    }
+  ]
+}

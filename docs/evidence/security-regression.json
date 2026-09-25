@@ -1,0 +1,66 @@
+[
+  {
+    "test": "cross_team_create",
+    "pass": true
+  },
+  {
+    "test": "invalid_jwt",
+    "pass": true
+  },
+  {
+    "test": "protocol_mismatch",
+    "pass": true
+  },
+  {
+    "test": "service_identity",
+    "pass": true
+  },
+  {
+    "test": "draft_without_approval",
+    "pass": true
+  },
+  {
+    "test": "edit_version_increment",
+    "pass": true
+  },
+  {
+    "test": "old_approval_rejected",
+    "pass": true
+  },
+  {
+    "test": "unapproved_no_external_result",
+    "pass": true
+  },
+  {
+    "test": "revoked_995a3a39-181b-432a-86f5-d0aeee06d2d6",
+    "pass": true
+  },
+  {
+    "test": "revoked_replay",
+    "pass": true
+  },
+  {
+    "test": "revoked_events",
+    "pass": true
+  },
+  {
+    "test": "revoked_memories_empty",
+    "pass": true
+  },
+  {
+    "test": "cancel_blocks_approval",
+    "pass": true
+  },
+  {
+    "test": "cancelled_action_invalidated",
+    "pass": true
+  },
+  {
+    "test": "deleted_report_hidden",
+    "pass": true
+  },
+  {
+    "test": "deleted_replay_denied",
+    "pass": true
+  }
+]

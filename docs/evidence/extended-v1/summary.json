@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-25",
+  "distinct_scenarios": 42,
+  "passed": 42,
+  "initial_run": {
+    "passed": 35,
+    "total": 40,
+    "file": "20260925-145257.json"
+  },
+  "targeted_final_retest": {
+    "passed": 17,
+    "total": 17,
+    "file": "20260925-150055.json"
+  },
+  "query_unit_tests": 14,
+  "go_race_and_vet": "passed",
+  "proxy_recovery": {
+    "old_api_ip": "172.18.0.9",
+    "web_container_before": "62135f9eafdbb3415d8afeb3c9b02b9a3fc3c38bfabccc557e3733f0824004cb",
+    "new_api_ip": "172.18.0.17",
+    "statuses": [
+      502,
+      502,
+      401
+    ],
+    "seconds": 3.06,
+    "web_container_after": "62135f9eafdbb3415d8afeb3c9b02b9a3fc3c38bfabccc557e3733f0824004cb",
+    "passed": true
+  },
+  "notes": [
+    "42 is the union of initial and targeted tests, not a fresh full run of all 42",
+    "Two additional cases verify standalone AOV and NULL when no orders exist",
+    "Unrequested date restriction on all available data was found by reviewing SQL despite a matching aggregate",
+    "502 transport failure run is retained separately; it did not reach the model",
+    "115 synthetic orders; these tests expand input/condition coverage rather than data volume"
+  ]
+}

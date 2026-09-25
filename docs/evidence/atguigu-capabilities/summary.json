@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-25",
+  "scope": "single complete live run; teaching warehouse only",
+  "live_cases": 46,
+  "live_passed": 46,
+  "additional_checks": [
+    {
+      "name": "workflow_progress_and_timing",
+      "passed": true,
+      "queries": 29,
+      "required_steps": [
+        "召回字段信息",
+        "召回字段取值",
+        "召回指标信息",
+        "合并召回信息",
+        "执行SQL",
+        "抽取关键词",
+        "校验SQL",
+        "添加额外上下文",
+        "生成SQL",
+        "过滤指标信息",
+        "过滤表信息"
+      ]
+    },
+    {
+      "name": "query_id_in_python_logs",
+      "passed": true
+    },
+    {
+      "name": "teaching_metadata_and_data_preserved",
+      "passed": true,
+      "counts_tables_columns_metrics_orders": [
+        [
+          "5",
+          "24",
+          "2",
+          "115"
+        ]
+      ]
+    }
+  ],
+  "query_unit_tests": 21,
+  "go_race_and_vet": "passed",
+  "compose_build": "passed",
+  "sql_cases_including_routing_polling_seconds": {
+    "min": 3.66,
+    "median": 4.68,
+    "max": 6.24
+  },
+  "ui_verified": {
+    "question": "2025年第一季度苹果品牌的商品一共卖了多少件？只返回商品件数。",
+    "result": 8,
+    "query_id": "3105b18b-32ca-4fca-b894-ca0af1aede4c",
+    "stages_with_timing": 11,
+    "executed_sql_visible": true
+  },
+  "limits": [
+    "115 teaching orders; not a scale benchmark",
+    "no causal latency improvement claim from a single run",
+    "complete official customized source not obtained",
+    "capability gaps remain in the audit matrix"
+  ]
+}

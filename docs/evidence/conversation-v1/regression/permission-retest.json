@@ -1,0 +1,22 @@
+[
+  {
+    "name": "跨团队拒绝",
+    "passed": true,
+    "http": 403,
+    "mode": "warehouse",
+    "retested": true,
+    "response": {
+      "error": "dataset_forbidden"
+    }
+  },
+  {
+    "name": "管理员不自动获得数据权限",
+    "passed": true,
+    "http": 403,
+    "mode": "warehouse",
+    "retested": true,
+    "response": {
+      "error": "dataset_forbidden"
+    }
+  }
+]

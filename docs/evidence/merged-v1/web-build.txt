@@ -1,0 +1,13 @@
+
+> incidentdesk-web@0.1.0 build
+> tsc -b && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 29 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.38 kB │ gzip:  0.30 kB
+dist/assets/index-CRzvFzNT.css    6.99 kB │ gzip:  2.48 kB
+dist/assets/index-B5cQBplA.js   216.24 kB │ gzip: 68.81 kB
+✓ built in 335ms

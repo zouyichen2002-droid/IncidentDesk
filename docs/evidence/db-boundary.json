@@ -1,0 +1,27 @@
+[
+  {
+    "test": "agent_cannot_write_business",
+    "pass": true,
+    "result": "ERROR:  permission denied for schema business\nLINE 1: SET ROLE incident_agent; INSERT INTO business.admins VALUES(...\n                                             ^"
+  },
+  {
+    "test": "agent_cannot_read_business",
+    "pass": true,
+    "result": "ERROR:  permission denied for schema business\nLINE 1: SET ROLE incident_agent; SELECT * FROM business.actions;\n                                               ^"
+  },
+  {
+    "test": "source_cannot_write",
+    "pass": true,
+    "result": "ERROR:  permission denied for table deployments"
+  },
+  {
+    "test": "api_cannot_write_checkpoints",
+    "pass": true,
+    "result": "ERROR:  permission denied for schema agent\nLINE 1: SET ROLE incident_api; DELETE FROM agent.checkpoints;\n                                           ^"
+  },
+  {
+    "test": "worker_no_github_credential",
+    "pass": true,
+    "result": "No GitHub credential in Worker environment"
+  }
+]

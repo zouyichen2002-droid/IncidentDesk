@@ -1,0 +1,71 @@
+{{- range $name := list "postgres" "demo" "objects" }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: {{ $name }}-data}
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 2Gi}}
+---
+{{- end }}
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: {name: postgres}
+spec:
+  serviceName: postgres
+  replicas: 1
+  selector: {matchLabels: {app: postgres}}
+  template:
+    metadata: {labels: {app: postgres, incidentdesk: "true"}}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: postgres
+          image: postgres:17.6-bookworm
+          env:
+            - {name: POSTGRES_DB, value: incidentdesk}
+            - {name: POSTGRES_USER, value: postgres}
+            - {name: POSTGRES_PASSWORD, valueFrom: {secretKeyRef: {name: incident-secrets, key: POSTGRES_PASSWORD}}}
+            - {name: PGDATA, value: /var/lib/postgresql/data/pgdata}
+          ports: [{containerPort: 5432}]
+          resources: {requests: {cpu: 100m, memory: 128Mi}, limits: {cpu: '1', memory: 512Mi}}
+          readinessProbe: {exec: {command: [pg_isready, '-U', postgres, '-d', incidentdesk]}, periodSeconds: 3}
+          livenessProbe: {exec: {command: [pg_isready, '-U', postgres]}, initialDelaySeconds: 30, periodSeconds: 10}
+          volumeMounts:
+            - {name: data, mountPath: /var/lib/postgresql/data}
+            - {name: init, mountPath: /docker-entrypoint-initdb.d}
+      volumes:
+        - {name: data, persistentVolumeClaim: {claimName: postgres-data}}
+        - {name: init, configMap: {name: database-init}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: postgres}
+spec:
+  selector: {app: postgres}
+  ports: [{port: 5432}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: objects}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: objects}}
+  template:
+    metadata: {labels: {app: objects, incidentdesk: "true"}}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: objects
+          image: chrislusf/seaweedfs:3.97
+          args: [server, '-dir=/data', '-s3', '-s3.port=9000', '-ip=127.0.0.1', '-ip.bind=0.0.0.0']
+          ports: [{containerPort: 9000}]
+          resources: {requests: {cpu: 100m, memory: 128Mi}, limits: {cpu: '1', memory: 512Mi}}
+          volumeMounts: [{name: data, mountPath: /data}]
+      volumes: [{name: data, persistentVolumeClaim: {claimName: objects-data}}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: objects}
+spec:
+  selector: {app: objects}
+  ports: [{port: 9000}]

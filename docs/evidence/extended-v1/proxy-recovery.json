@@ -1,0 +1,13 @@
+{
+  "old_api_ip": "172.18.0.9",
+  "web_container_before": "62135f9eafdbb3415d8afeb3c9b02b9a3fc3c38bfabccc557e3733f0824004cb",
+  "new_api_ip": "172.18.0.17",
+  "statuses": [
+    502,
+    502,
+    401
+  ],
+  "seconds": 3.06,
+  "web_container_after": "62135f9eafdbb3415d8afeb3c9b02b9a3fc3c38bfabccc557e3733f0824004cb",
+  "passed": true
+}

@@ -1,0 +1,767 @@
+{
+  "detail": {
+    "id": "6ffa7f35-2351-42ad-bbc3-a4e31881e93b",
+    "seq": 33,
+    "idem": "6673a901-0e3a-4aa8-8b86-b021219690f8",
+    "team": "orders",
+    "query": {
+      "mode": "search",
+      "terms": [
+        "zznonexistentmarker91472"
+      ],
+      "levels": [
+        "UNKNOWN"
+      ]
+    },
+    "action": null,
+    "end_at": "2005-11-03T23:59:59.999999+00:00",
+    "report": {
+      "mode": "mistral",
+      "facts": [],
+      "model": {
+        "model": "mistral-small-latest",
+        "usage": {
+          "service_tier": "standard",
+          "total_tokens": 773,
+          "prompt_tokens": 609,
+          "completion_tokens": 164,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "provider": "mistral",
+        "milliseconds": 1612.69
+      },
+      "answer": "在给定范围内未查到2005年11月3日包含“zznonexistentmarker91472”的BGL日志。检索统计显示：retrieval.matched=0，且scope内无可访问的部署、日志、Git或运维手册记录。",
+      "impact": "svc-17",
+      "context": {
+        "plan": {
+          "end": "2005-11-03T23:59:59.999999Z",
+          "start": "2005-11-03T00:00:00Z",
+          "steps": [
+            {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            },
+            {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            },
+            {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            },
+            {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          ],
+          "service": "svc-17",
+          "version": "1"
+        },
+        "facts": [],
+        "scope": {
+          "team": "orders",
+          "service": "svc-17",
+          "subject": "alice"
+        },
+        "missing": [
+          "deployments: no accessible records in scope",
+          "logs: no accessible records in scope",
+          "git: no accessible records in scope",
+          "runbook: no accessible records in scope"
+        ],
+        "objects": [
+          {
+            "id": "svc-17",
+            "team": "orders",
+            "type": "Service"
+          }
+        ],
+        "version": "1",
+        "evidence": [],
+        "memories": [],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "1",
+            "observed_at": "2026-09-24T21:04:59.344688+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "1",
+            "observed_at": "2026-09-24T21:04:59.385238+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "1",
+            "observed_at": "2026-09-24T21:04:59.414598+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "1",
+            "observed_at": "2026-09-24T21:04:59.443785+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "retrieval": {
+          "mode": "search",
+          "pages": 1,
+          "terms": [
+            "zznonexistentmarker91472"
+          ],
+          "levels": {},
+          "matched": 0,
+          "sampled": false,
+          "selection": "rare-patterns-and-severity-keyset",
+          "provenance": "public-dataset",
+          "labels_used": false,
+          "template_scan": 0,
+          "evidence_count": 0,
+          "total_in_query": 0
+        },
+        "token_budget": 12000,
+        "mapping_version": "2",
+        "ontology_version": "1"
+      },
+      "missing": [
+        "deployments: no accessible records in scope",
+        "logs: no accessible records in scope",
+        "git: no accessible records in scope",
+        "runbook: no accessible records in scope"
+      ],
+      "evidence": [],
+      "conflicts": [],
+      "freshness": [
+        {
+          "source": "deployments",
+          "watermark": "1",
+          "observed_at": "2026-09-24T21:04:59.344688+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "logs",
+          "watermark": "1",
+          "observed_at": "2026-09-24T21:04:59.385238+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "git",
+          "watermark": "1",
+          "observed_at": "2026-09-24T21:04:59.414598+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "runbook",
+          "watermark": "1",
+          "observed_at": "2026-09-24T21:04:59.443785+00:00",
+          "snapshot_consistency": "independent_source"
+        }
+      ],
+      "retrieval": {
+        "mode": "search",
+        "pages": 1,
+        "terms": [
+          "zznonexistentmarker91472"
+        ],
+        "levels": {},
+        "matched": 0,
+        "sampled": false,
+        "selection": "rare-patterns-and-severity-keyset",
+        "provenance": "public-dataset",
+        "labels_used": false,
+        "template_scan": 0,
+        "evidence_count": 0,
+        "total_in_query": 0
+      },
+      "candidates": [],
+      "next_steps": [
+        "确认检索关键词是否准确（如大小写、特殊字符）",
+        "扩展时间窗口至前后数日再次检索",
+        "核对服务别名与scope映射是否正确"
+      ],
+      "answer_evidence": [],
+      "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+      "historical_memory": [],
+      "model_evidence_count": 0
+    },
+    "status": "waiting_information",
+    "service": "svc-17",
+    "subject": "alice",
+    "symptom": "查BGL在2005年11月3日包含“zznonexistentmarker91472”的日志",
+    "manifest": {
+      "code": "working-tree",
+      "cost": {
+        "unknown": "USD cost not calculated; interpretation usage is in queued event",
+        "estimated_usd": null,
+        "known_model_tokens": 773
+      },
+      "model": "mistral-small-latest",
+      "prompt": "investigate-v1",
+      "skills": [
+        "release-compare@1",
+        "log-analysis@1"
+      ],
+      "version": "1",
+      "ontology": "1",
+      "evaluator": "rules-v1",
+      "retrieval": "indexed-stratified-3-pages-v2",
+      "snapshots": {
+        "git": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2005-11-03T23:59:59.999999+00:00",
+            "team": "orders",
+            "query": {
+              "mode": "search",
+              "terms": [
+                "zznonexistentmarker91472"
+              ],
+              "levels": [
+                "UNKNOWN"
+              ]
+            },
+            "start": "2005-11-03T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "provenance": "local-demo",
+          "next_cursor": null,
+          "observed_at": "2026-09-24T21:04:59.414598+00:00"
+        },
+        "logs": {
+          "sync": "indexed-keyset-v2",
+          "scope": {
+            "end": "2005-11-03T23:59:59.999999+00:00",
+            "team": "orders",
+            "query": {
+              "mode": "search",
+              "terms": [
+                "zznonexistentmarker91472"
+              ],
+              "levels": [
+                "UNKNOWN"
+              ]
+            },
+            "start": "2005-11-03T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "summary": {
+            "mode": "search",
+            "terms": [
+              "zznonexistentmarker91472"
+            ],
+            "levels": {},
+            "matched": 0,
+            "selection": "rare-patterns-and-severity-keyset",
+            "labels_used": false,
+            "template_scan": 0,
+            "total_in_query": 0
+          },
+          "retrieval": {
+            "mode": "search",
+            "pages": 1,
+            "terms": [
+              "zznonexistentmarker91472"
+            ],
+            "levels": {},
+            "matched": 0,
+            "sampled": false,
+            "selection": "rare-patterns-and-severity-keyset",
+            "provenance": "public-dataset",
+            "labels_used": false,
+            "template_scan": 0,
+            "evidence_count": 0,
+            "total_in_query": 0
+          },
+          "watermark": 1,
+          "provenance": "public-dataset",
+          "next_cursor": null,
+          "observed_at": "2026-09-24T21:04:59.385238+00:00"
+        },
+        "runbook": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2005-11-03T23:59:59.999999+00:00",
+            "team": "orders",
+            "query": {
+              "mode": "search",
+              "terms": [
+                "zznonexistentmarker91472"
+              ],
+              "levels": [
+                "UNKNOWN"
+              ]
+            },
+            "start": "2005-11-03T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "provenance": "local-demo",
+          "next_cursor": null,
+          "observed_at": "2026-09-24T21:04:59.443785+00:00"
+        },
+        "deployments": {
+          "scope": {
+            "end": "2005-11-03T23:59:59.999999+00:00",
+            "team": "orders",
+            "query": {
+              "mode": "search",
+              "terms": [
+                "zznonexistentmarker91472"
+              ],
+              "levels": [
+                "UNKNOWN"
+              ]
+            },
+            "start": "2005-11-03T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T21:04:59.344688+00:00"
+        }
+      },
+      "generation": 1,
+      "tool_schema": "1",
+      "source_mapping": "2",
+      "model_parameters": {
+        "temperature": 0
+      },
+      "permission_policy": "go-v1"
+    },
+    "start_at": "2005-11-03T00:00:00+00:00",
+    "timezone": "UTC",
+    "trace_id": "3bab38a84420da7715f5aca9ddc41c54",
+    "created_at": "2026-09-24T21:04:59.189905+00:00",
+    "updated_at": "2026-09-24T21:05:01.093176+00:00",
+    "request_hash": "815eb9770adb33e84d9fee572830cc3c9655fa681028fdc3d888a8c8aba1db67",
+    "evidence_stale": false,
+    "source_version": 1
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "queued",
+      "payload": {
+        "request_id": "e3e9f247-450c-45ca-89a5-f6c46f81cc72",
+        "interpretation": {
+          "mode": "mistral",
+          "model": {
+            "model": "mistral-small-latest",
+            "usage": {
+              "service_tier": "standard",
+              "total_tokens": 612,
+              "prompt_tokens": 411,
+              "completion_tokens": 201,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "provider": "mistral",
+            "milliseconds": 1691.19
+          },
+          "explanation": "按问题中明确给出的时间与所选时区执行，不按来源最新日期改写范围。"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.189905+00:00"
+    },
+    {
+      "seq": 2,
+      "kind": "claimed",
+      "payload": {
+        "worker": "3982458c3df2:ae66eb28-0ba0-4c4f-a4ca-f853537885cb"
+      },
+      "created_at": "2026-09-24T21:04:59.291856+00:00"
+    },
+    {
+      "seq": 3,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.332817+00:00"
+    },
+    {
+      "seq": 4,
+      "kind": "hook",
+      "payload": {
+        "name": "plan_validated",
+        "status": "pass",
+        "summary": {
+          "steps": 4
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.338282+00:00"
+    },
+    {
+      "seq": 5,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.339288+00:00"
+    },
+    {
+      "seq": 6,
+      "kind": "authorized",
+      "payload": {
+        "tool": "deployments",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.340377+00:00"
+    },
+    {
+      "seq": 7,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.345041+00:00"
+    },
+    {
+      "seq": 8,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "deployments",
+          "status": "ok",
+          "milliseconds": 6.67
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.345917+00:00"
+    },
+    {
+      "seq": 9,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.346698+00:00"
+    },
+    {
+      "seq": 10,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.347231+00:00"
+    },
+    {
+      "seq": 11,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.373064+00:00"
+    },
+    {
+      "seq": 12,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.386191+00:00"
+    },
+    {
+      "seq": 13,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "logs",
+          "status": "ok",
+          "milliseconds": 40.47
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.387193+00:00"
+    },
+    {
+      "seq": 14,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.388088+00:00"
+    },
+    {
+      "seq": 15,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.3889+00:00"
+    },
+    {
+      "seq": 16,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.413179+00:00"
+    },
+    {
+      "seq": 17,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.415262+00:00"
+    },
+    {
+      "seq": 18,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "git",
+          "status": "ok",
+          "milliseconds": 27.88
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.415923+00:00"
+    },
+    {
+      "seq": 19,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.416546+00:00"
+    },
+    {
+      "seq": 20,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.417124+00:00"
+    },
+    {
+      "seq": 21,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.441652+00:00"
+    },
+    {
+      "seq": 22,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.444514+00:00"
+    },
+    {
+      "seq": 23,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "runbook",
+          "status": "ok",
+          "milliseconds": 28.75
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.445328+00:00"
+    },
+    {
+      "seq": 24,
+      "kind": "authorized",
+      "payload": {
+        "tool": "memory",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.446007+00:00"
+    },
+    {
+      "seq": 25,
+      "kind": "hook",
+      "payload": {
+        "name": "context_assembled",
+        "status": "pass",
+        "summary": {
+          "facts": 0,
+          "evidence": 0,
+          "conflicts": 0
+        }
+      },
+      "created_at": "2026-09-24T21:04:59.446779+00:00"
+    },
+    {
+      "seq": 26,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.447355+00:00"
+    },
+    {
+      "seq": 27,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:59.453965+00:00"
+    },
+    {
+      "seq": 28,
+      "kind": "model_usage",
+      "payload": {
+        "model": "mistral-small-latest",
+        "usage": {
+          "service_tier": "standard",
+          "total_tokens": 773,
+          "prompt_tokens": 609,
+          "completion_tokens": 164,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "provider": "mistral",
+        "milliseconds": 1612.69
+      },
+      "created_at": "2026-09-24T21:05:01.068912+00:00"
+    },
+    {
+      "seq": 29,
+      "kind": "checkpoint_saved",
+      "payload": {
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:05:01.070066+00:00"
+    },
+    {
+      "seq": 30,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:05:01.080442+00:00"
+    },
+    {
+      "seq": 31,
+      "kind": "artifact_saved",
+      "payload": {
+        "key": "orders/6ffa7f35-2351-42ad-bbc3-a4e31881e93b/74de4021-e8ce-4450-8ed6-b99fd52342ad",
+        "state": "ready",
+        "sha256": "a4435db024b371a3984105fc2e37bdf7f1aa4efc6e44f572f150502e75ef1532"
+      },
+      "created_at": "2026-09-24T21:05:01.091516+00:00"
+    },
+    {
+      "seq": 32,
+      "kind": "hook",
+      "payload": {
+        "name": "run_finished",
+        "status": "pass",
+        "summary": {
+          "mode": "mistral",
+          "facts": 0
+        }
+      },
+      "created_at": "2026-09-24T21:05:01.092425+00:00"
+    },
+    {
+      "seq": 33,
+      "kind": "result",
+      "payload": {
+        "status": "waiting_information",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:05:01.093176+00:00"
+    }
+  ]
+}

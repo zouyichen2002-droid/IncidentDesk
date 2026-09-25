@@ -1,0 +1,14 @@
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=0.28..8.36 rows=50 width=24) (actual time=0.021..0.048 rows=50 loops=1)
+   Buffers: shared hit=37
+   ->  Index Only Scan using inv_team_list on investigations  (cost=0.28..480.78 rows=2975 width=24) (actual time=0.021..0.045 rows=50 loops=1)
+         Index Cond: (team = 'orders'::text)
+         Heap Fetches: 54
+         Buffers: shared hit=37
+ Planning:
+   Buffers: shared hit=135
+ Planning Time: 0.151 ms
+ Execution Time: 0.056 ms
+(10 rows)
+

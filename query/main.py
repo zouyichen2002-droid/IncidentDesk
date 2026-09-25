@@ -1,0 +1,51 @@
+"""
+FastAPI 应用入口
+
+负责创建后端应用实例，注册应用生命周期函数，并把各业务模块中的 router
+挂载到同一个 app 上。HTTP 请求会先进入这里创建的 app，再按路由分发到
+具体的接口处理函数。
+"""
+
+import uuid
+import os
+import secrets
+from starlette.responses import JSONResponse
+from app.api.routers.routing import router as routing_router
+
+from fastapi import FastAPI, Request
+
+from app.api.lifespan import lifespan
+from app.api.routers.query_router import query_router
+from app.core.context import request_id_ctx_var
+
+# lifespan 交给 FastAPI 管理，用于在服务启动和关闭时统一初始化与释放外部客户端
+app = FastAPI(lifespan=lifespan)
+
+# 把查询路由注册进应用；没有挂载时，/docs 和真实 HTTP 请求都访问不到该接口
+app.include_router(query_router)
+app.include_router(routing_router)
+
+@app.get("/healthz")
+async def health():
+    return {"status": "alive"}
+
+
+
+@app.middleware("http")
+async def add_request_id(request: Request, call_next):
+    if request.url.path != "/healthz":
+        key = os.getenv("INTERNAL_KEY", "")
+        if not key or not secrets.compare_digest(request.headers.get("X-Worker-Key", ""), key):
+            return JSONResponse({"error": "service_identity_required"}, status_code=401)
+    # The authenticated Go worker supplies the persisted query UUID.
+    try:
+        request_id = str(uuid.UUID(request.headers.get("X-Request-ID", "")))
+    except ValueError:
+        request_id = str(uuid.uuid4())
+    token = request_id_ctx_var.set(request_id)
+    try:
+        response = await call_next(request)
+        response.headers["X-Request-ID"] = request_id
+        return response
+    finally:
+        request_id_ctx_var.reset(token)

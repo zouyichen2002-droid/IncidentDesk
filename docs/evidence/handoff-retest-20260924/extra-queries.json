@@ -1,0 +1,62 @@
+[
+  {
+    "case": "config",
+    "id": "f24a52b0-7ebd-46dd-9823-27538c883bc8",
+    "seconds": 6.064,
+    "status": "completed",
+    "query": {
+      "mode": "search",
+      "terms": [
+        "pool",
+        "connection pool",
+        "pool configuration",
+        "连接池配置"
+      ],
+      "levels": []
+    },
+    "mode": "mistral",
+    "answer": "订单服务（svc-17）的连接池配置文件路径为：config.json。该文件在Git仓库的e1925867提交中被修改，包含pool_size和timeout_ms两项配置。",
+    "answer_validation": null,
+    "answer_evidence": [
+      "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+    ],
+    "sources": [
+      "deployments",
+      "logs",
+      "logs",
+      "logs",
+      "logs",
+      "logs",
+      "logs",
+      "logs",
+      "logs",
+      "logs",
+      "git",
+      "runbook"
+    ]
+  },
+  {
+    "case": "missing_document",
+    "id": "30b7075b-b886-4c41-b8d5-b8eec5b46dc3",
+    "seconds": 7.249,
+    "status": "waiting_information",
+    "query": {
+      "mode": "search",
+      "terms": [
+        "database backup",
+        "backup operation",
+        "backup document"
+      ],
+      "levels": []
+    },
+    "mode": "mistral",
+    "answer": "未在提供的证据中找到订单服务数据库备份操作文档的具体位置。当前runbook仅为通用故障排查指引，未包含备份操作说明；部署与Git证据均未涉及备份配置或文档路径。",
+    "answer_validation": null,
+    "answer_evidence": [],
+    "sources": [
+      "deployments",
+      "git",
+      "runbook"
+    ]
+  }
+]

@@ -1,0 +1,102 @@
+{
+  "mode": "deterministic module perturbation checks; not a controlled model ablation",
+  "rows": [
+    {
+      "case": "case-05",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-09",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-08",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-04",
+      "full": true,
+      "unmapped_alias_perturbation": true,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-03",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-02",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-01",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-00",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-11",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-07",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-06",
+      "full": true,
+      "unmapped_alias_perturbation": false,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    },
+    {
+      "case": "case-10",
+      "full": true,
+      "unmapped_alias_perturbation": true,
+      "ungrounded_candidate_perturbation": false,
+      "without_dynamic_plan": true,
+      "without_memory": true
+    }
+  ],
+  "interpretation": "Mapping failures and ungrounded claims are detectable. These cases show no marginal benefit from dynamic planning or historical memory because the baseline plan is fixed and fixture memories are empty. Real-model ablation remains external."
+}

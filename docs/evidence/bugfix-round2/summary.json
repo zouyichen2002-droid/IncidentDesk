@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-25",
+  "live": {
+    "edge": {
+      "passed": 12,
+      "total": 12,
+      "file": "edge-20260925-160011.json"
+    },
+    "memory": {
+      "passed": 34,
+      "total": 34,
+      "file": "memory-regression.json"
+    },
+    "logs": {
+      "passed": 2,
+      "total": 2,
+      "file": "log-regression.json",
+      "interrupted_attempt": "log-restart-interrupted.txt",
+      "note": "An earlier run overlapped the web rebuild and lost its connection; repeated after the service was stable."
+    }
+  },
+  "go": {
+    "tests": 13,
+    "race": "passed",
+    "vet": "passed",
+    "long_history_failed_before_fix": true
+  },
+  "frontend_build": "passed",
+  "browser": {
+    "draft_loss_reproduced_before_fix": true,
+    "draft_retained_after_fix": true,
+    "draft_and_mode_isolated_per_conversation": true,
+    "pagination_visible": 53,
+    "pagination_unique": 53,
+    "pagination_fixtures_removed": 53,
+    "api_unavailable_send_disabled": true,
+    "recovery_returns_same_conversation": true,
+    "recovery_retains_draft": true,
+    "long_title_stays_within_container": true
+  },
+  "not_fault_injected": [
+    "out-of-order query detail responses",
+    "401 token expiration"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "checked_at": "2026-09-24T19:57:37.493295+00:00",
+  "code_version_in_worker_image": "b2a6c2e5acbbf4372279e4a9a991d3d53e68f4fa",
+  "k8s": [
+    {
+      "name": "api",
+      "desired": 2,
+      "ready": 2,
+      "images": [
+        "incidentdesk-api:0.7.0"
+      ]
+    },
+    {
+      "name": "context",
+      "desired": 1,
+      "ready": 1,
+      "images": [
+        "incidentdesk-worker:0.7.0"
+      ]
+    },
+    {
+      "name": "demo",
+      "desired": 1,
+      "ready": 1,
+      "images": [
+        "incidentdesk-demo:0.7.0"
+      ]
+    },
+    {
+      "name": "objects",
+      "desired": 1,
+      "ready": 1,
+      "images": [
+        "chrislusf/seaweedfs:3.97"
+      ]
+    },
+    {
+      "name": "web",
+      "desired": 1,
+      "ready": 1,
+      "images": [
+        "incidentdesk-web:0.7.1"
+      ]
+    },
+    {
+      "name": "worker",
+      "desired": 3,
+      "ready": 3,
+      "images": [
+        "incidentdesk-worker:0.7.0"
+      ]
+    }
+  ],
+  "compose": [
+    {
+      "service": "api",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "context",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "demo",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "grafana",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "objects",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "postgres",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "prometheus",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "web",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "worker",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "worker",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "worker",
+      "state": "running",
+      "health": ""
+    }
+  ],
+  "browser_checked": {
+    "url": "http://localhost:8088",
+    "login": "alice demo identity",
+    "task": "acac7b37-d79c-4f59-9dec-65123ea8f1b2",
+    "observed_status": "completed",
+    "evidence_count": 9,
+    "visual_review": "1280px screenshot reviewed; report, candidate, conflict, tabs and cancel button rendered"
+  },
+  "pass": true,
+  "docker_memory_gib": 7.7500152587890625,
+  "browser_invalidation": {
+    "task": "da8723f3-191a-4def-b7ef-6fd6d37df288",
+    "before_evidence": 12,
+    "after_evidence": 0,
+    "stale_notice_visible": true,
+    "old_facts_hidden": true
+  }
+}

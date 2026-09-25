@@ -1,0 +1,321 @@
+[
+  {
+    "name": "短问候",
+    "passed": true,
+    "question": "你好",
+    "response": {
+      "answer": "你好！我是 IncidentDesk 智能助手，基于 Mistral 模型。我可以帮助你解答一般问题、提供编程建议、解释概念、翻译文本，或者查询电商演示数仓中的订单、客户、商品、地区等数据（仅限只读，如销售额、客单价等）。需要我做什么呢？",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 1.37
+  },
+  {
+    "name": "用户原始问题",
+    "passed": true,
+    "question": "你是谁",
+    "response": {
+      "answer": "我是 IncidentDesk 智能助手，基于 Mistral 模型运行。我的主要任务是帮助你解答一般问题、提供编程建议、解释概念、翻译文本、协助写作，或者根据你的需求查询电商演示数仓中的订单、客户、商品、地区等数据。如果你有具体的问题或查询需求，可以直接告诉我！",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 1.48
+  },
+  {
+    "name": "单字输入",
+    "passed": true,
+    "question": "嗨",
+    "response": {
+      "answer": "你好！我是 IncidentDesk 智能助手，基于 Mistral 模型为你提供帮助。有什么我可以为你解答的问题吗？",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 0.93
+  },
+  {
+    "name": "指标解释不是查数",
+    "passed": true,
+    "question": "客单价是什么意思？",
+    "response": {
+      "answer": "客单价（AOV，Average Order Value）是指每个订单的平均金额，通常用于衡量商家或平台的销售效果。计算公式为：\n\n**客单价 = 销售总额（GMV） ÷ 订单总数**\n\n例如，如果某商家在一段时间内的销售总额为 10,000 元，订单总数为 100 个，那么客单价就是 100 元。它可以帮助商家了解顾客的消费水平，优化营销策略或提升客户体验。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 1.65
+  },
+  {
+    "name": "能力介绍",
+    "passed": true,
+    "question": "你能做什么？",
+    "response": {
+      "answer": "我是 IncidentDesk 智能助手，基于 Mistral 模型提供以下帮助：\n\n1. **一般知识问答**：解答各类问题，如概念解释、翻译、写作建议、编程技巧等。\n2. **电商数据查询**：可查询演示数仓中的订单、客户、商品、地区等数据，支持销售额（GMV）、客单价（AOV）等指标。\n   - 数据范围：2025-01-01 至 2025-03-31，共 115 条订单记录。\n   - 仅读取，无法修改或删除数据。\n   - 单次查询最多返回 500 行。\n3. **日志/资料查询**：可查询接入的服务日志或文档（如\"订单服务\"）。\n\n如需查询具体数据或日志，请告诉我您的需求，我会协助构建查询条件并返回结果。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 2.47
+  },
+  {
+    "name": "业务知识不是查数",
+    "passed": true,
+    "question": "销售额和利润有什么区别？",
+    "response": {
+      "answer": "销售额和利润是企业财务中两个重要的概念，它们的区别如下：\n\n1. **销售额（Sales Revenue）**：\n   - 指的是企业在一定时期内（如一个月、一个季度或一年）销售商品或服务所获得的总收入，不扣除任何成本或费用。\n   - 计算公式：销售额 = 销售数量 × 单价。\n   - 例如：一家商店卖出了100件商品，每件售价100元，销售额就是10,000元。\n\n2. **利润（Profit）**：\n   - 指的是企业在扣除所有成本和费用后剩余的收入。利润通常分为毛利润、营业利润和净利润等。\n   - 计算公式：\n     - 毛利润 = 销售额 - 销售成本（如商品进价、生产成本等）\n     - 营业利润 = 毛利润 - 期间费用（如销售费用、管理费用、财务费用等）\n     - 净利润 = 营业利润 - 所得税等\n   - 例如：上述商店的商品进价是每件60元，销售成本就是6,000元，毛利润就是4,000元。如果期间费用（如店铺租金、员工工资等）为1,500元，营业利润就是2,500元。再扣除所得税后，就是净利润。\n\n**总结**：\n销售额是企业收入的总额，而利润是扣除成本和费用后的净收入。销售额越高并不意味着利润越高，因为利润还受成本、费用和税收等因素的影响。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 3.74
+  },
+  {
+    "name": "编程帮助不是检索代码",
+    "passed": true,
+    "question": "写一个Python函数，把列表从小到大排序",
+    "response": {
+      "answer": "```python\n\ndef sort_list_ascending(lst):\n    \"\"\"\n    将列表从小到大排序并返回新列表。\n    \n    参数:\n        lst (list): 需要排序的列表，元素应支持比较（如数字、字符串等）。\n    \n    返回:\n        list: 排序后的新列表。\n    \"\"\"\n    return sorted(lst)\n\n# 示例用法：\nif __name__ == \"__main__\":\n    numbers = [3, 1, 4, 1, 5, 9, 2]\n    sorted_numbers = sort_list_ascending(numbers)\n    print(\"原列表:\", numbers)\n    print(\"排序后:\", sorted_numbers)\n```\n\n### 说明：\n- 使用内置函数 `sorted()` 返回一个新的排序列表，不修改原列表。\n- 如果需要原地排序（修改原列表），可以使用 `lst.sort()`。\n- 支持所有可比较元素的列表（如数字、字符串、元组等）。",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 2.06
+  },
+  {
+    "name": "翻译",
+    "passed": true,
+    "question": "把“感谢你的帮助”翻译成英文",
+    "response": {
+      "answer": "Thank you for your help.",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 0.75
+  },
+  {
+    "name": "写作",
+    "passed": true,
+    "question": "帮我写两句关于秋天的小诗",
+    "response": {
+      "answer": "秋天的小诗可以这样写：\n\n1. \"落叶纷飞，金黄铺满小径，秋风低语，诉说着丰收的喜悦。\"\n\n2. \"枫叶如火，点燃了整个季节的浪漫，阳光温柔，洒在每一片树叶上。\"",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 1.47
+  },
+  {
+    "name": "个人文件提供可行帮助",
+    "passed": false,
+    "question": "帮我找到电脑上的个人照片",
+    "response": {
+      "answer": "",
+      "clarification": "我无法直接访问您的电脑文件系统。请告诉我您的照片存储在哪个文件夹（如‘图片’、‘相册’、‘Downloads’等），或者您使用的是什么操作系统（Windows/macOS/Linux），我可以指导您如何本地查找。",
+      "status": "clarification"
+    },
+    "seconds": 1.09
+  },
+  {
+    "name": "一般排障不是查日志",
+    "passed": true,
+    "question": "一般应该怎么排查接口超时？",
+    "response": {
+      "answer": "接口超时通常是由网络、服务端、数据库或代码逻辑等多方面因素引起的。以下是一般排查步骤和建议，供你参考：\n\n### 1. **确认超时类型与范围**\n   - **客户端超时**：检查请求方（如浏览器、移动端或第三方服务）的超时设置是否过短。例如，浏览器默认超时可能为30秒，而后端接口实际处理时间更长。\n   - **网络层超时**：确认网络延迟（如 DNS 解析、TCP 握手、SSL 协商）是否异常。可使用 `ping`、`traceroute`（Linux/macOS）或 `tracert`（Windows）检查网络路径。\n   - **服务端超时**：检查服务器（如 Nginx、Apache、Tomcat）的超时配置是否合理。例如，Nginx 的 `proxy_read_timeout`、`fastcgi_read_timeout` 等。\n\n### 2. **检查服务端日志**\n   - **应用日志**：查看接口对应的应用日志（如 Spring Boot 的 `application.log`、Python 的 `gunicorn` 日志），确认是否有异常堆栈、慢查询或死锁。\n   - **中间件日志**：检查数据库（如 MySQL 的 `slow_query_log`）、缓存（Redis 的 `slowlog`）、消息队列（如 Kafka 的消费者延迟）的日志。\n   - **系统日志**：使用 `dmesg`、`/var/log/syslog` 或 `journalctl`（Linux）检查系统资源（CPU、内存、磁盘 I/O）是否异常。\n\n### 3. **分析性能指标**\n   - **APM 工具**：使用 New Relic、Datadog、Prometheus + Grafana 等监控工具，查看接口的响应时间、吞吐量、错误率等指标。\n   - **数据库性能**：检查数据库连接池是否耗尽、是否有慢查询（如 MySQL 的 `EXPLAIN` 分析）、索引是否缺失。\n   - **外部依赖**：确认第三方 API（如支付、短信、地图）的响应时间是否正常。\n\n### 4. **代码层面排查**\n   - **代码逻辑**：检查接口代码是否有无限循环、阻塞操作（如同步 HTTP 请求、文件 I/O）或未优化的算法（如 O(n²) 的嵌套循环）。\n   - **异步处理**：确认是否有耗时操作（如文件上传、图片处理）未使用异步或多线程。\n   - **资源竞争**：检查是否有锁竞争（如 `synchronized`、数据库行锁）导致接口阻塞。\n\n### 5. **网络与基础设施**\n   - **负载均衡**：确认负载均衡器（如 Nginx、HAProxy）的健康检查是否正常，后端服务是否有节点宕机。\n   - **容器/虚拟化**：检查 Docker/Kubernetes 的资源限制（CPU、内存）是否导致服务抖动。\n   - **CDN/代理**：确认 CDN 缓存是否命中，代理（如 Cloudflare）的规则是否影响请求。\n\n### 6. **测试与验证**\n   - **压力测试**：使用 JMeter、Locust 或 k6 模拟高并发，观察接口在负载下的表现。\n   - **本地复现**：在开发环境重现问题，通过调试工具（如 IDE 的断点、`strace`、`tcpdump`）定位瓶颈。\n   - **对比正常接口**：将超时接口与正常接口的日志、配置、代码进行对比。\n\n### 7. **常见解决方案**\n   - **优化代码**：\n     - 使用异步编程（如 Python 的 `asyncio`、Java 的 `CompletableFuture`）。\n     - 优化数据库查询（添加索引、避免 `SELECT *`、分页查询）。\n     - 缓存热点数据（如 Redis）。\n   - **调整配置**：\n     - 增加服务端超时时间（如 Nginx 的 `proxy_read_timeout 60s`）。\n     - 扩容数据库连接池或增加服务器资源。\n   - **架构改进**：\n     - 使用消息队列（如 RabbitMQ、Kafka）解耦耗时操作。\n     - 采用微服务拆分单体应用。\n\n### 8. **工具清单**\n   - **网络**：`ping`、`traceroute`、`mtr`、`tcpdump`、`Wireshark`。\n   - **系统**：`top`、`htop`、`vmstat`、`iostat`、`netstat`、`ss`。\n   - **数据库**：`EXPLAIN`（MySQL）、`pg_stat_activity`（Postgre",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 9.83
+  },
+  {
+    "name": "模糊需求追问",
+    "passed": true,
+    "question": "销售怎么样",
+    "response": {
+      "answer": "",
+      "clarification": "请问您想了解哪个地区、时间段或具体指标的销售情况？例如：华东地区2025年1月的销售额、客单价，或全国2025年第一季度的整体销售表现。",
+      "status": "clarification"
+    },
+    "seconds": 1.0
+  },
+  {
+    "name": "实时信息不编造",
+    "passed": true,
+    "question": "波士顿现在天气怎么样",
+    "response": {
+      "answer": "我无法获取实时天气信息，因为我没有联网搜索或天气服务的权限。您可以通过以下方式查看波士顿的当前天气：\n\n1. **天气应用或网站**：如 Weather.com、AccuWeather、中国天气网等，输入“Boston”或“波士顿”即可。\n2. **搜索引擎**：在 Google、百度等搜索“波士顿天气”或“Boston weather”。\n3. **手机应用**：如系统自带天气应用、墨迹天气、彩云天气等。\n\n如果您需要帮助查找这些工具的使用方法，请告诉我！",
+      "clarification": "",
+      "status": "answer"
+    },
+    "seconds": 1.81
+  },
+  {
+    "name": "没有上下文的指代",
+    "passed": true,
+    "question": "那华东呢",
+    "response": {
+      "answer": "",
+      "clarification": "请问您想了解华东地区的销售额、客单价还是其他指标？请明确具体需求，以便为您查询。",
+      "status": "clarification"
+    },
+    "seconds": 0.79
+  },
+  {
+    "name": "混合查询追问先后",
+    "passed": true,
+    "question": "同时查销售额和服务错误日志",
+    "response": {
+      "answer": "",
+      "clarification": "请明确您希望先查询销售额数据还是服务错误日志？或者您希望同时查询两者？请选择其中一项进行查询。",
+      "status": "clarification"
+    },
+    "seconds": 1.3
+  },
+  {
+    "name": "极短含糊输入",
+    "passed": true,
+    "question": "?",
+    "response": {
+      "answer": "您好！我是 IncidentDesk 智能助手，基于 Mistral 模型为您提供服务。我的能力包括：\n\n1. **一般知识问答**：解答各类问题，如概念解释、常识、翻译、写作等。\n2. **编程建议**：提供代码示例、算法思路、调试建议等。\n3. **电商数据查询**：可查询演示数仓中的订单、客户、商品、地区、销售额（GMV）、客单价（AOV）等数据（仅读，最多500行）。\n4. **日志/资料查询**：可查询接入的服务日志或文档（如订单服务）。\n\n请告诉我您的具体需求，我会尽力为您提供帮助！",
+      "clarification": "您好！我是 IncidentDesk 智能助手，可以帮您解答一般问题、提供编程建议、解释概念、翻译文本或写作。如果您需要查询电商数据（如订单、销售额、客单价等），我可以帮您查询演示数仓。请问您需要什么帮助呢？",
+      "status": "clarification"
+    },
+    "seconds": 2.68
+  },
+  {
+    "name": "回答重试保持一致",
+    "passed": true,
+    "response": {
+      "answer": "你好！我是 IncidentDesk 智能助手，基于 Mistral 模型运行。我的主要任务是帮助你解答一般问题、提供编程建议、解释概念、翻译文本、协助写作，以及在你需要时查询演示电商数仓中的订单、客户、商品、地区等数据（仅读取，如销售额、客单价等）。如果你有具体的问题或需求，尽管告诉我！",
+      "clarification": "",
+      "status": "answer"
+    }
+  },
+  {
+    "name": "同键不同问题冲突",
+    "passed": true,
+    "http": 409
+  },
+  {
+    "name": "并发回答保持一致",
+    "passed": true,
+    "responses": [
+      {
+        "answer": "你好！我是 IncidentDesk 智能助手，基于 Mistral 模型。有什么我可以帮助你的吗？比如回答一般问题、解释概念、翻译、写作、编程建议，或者查询电商演示数据（如订单、客户、商品、地区、销售额等）。",
+        "clarification": "",
+        "status": "answer"
+      },
+      {
+        "answer": "你好！我是 IncidentDesk 智能助手，基于 Mistral 模型。有什么我可以帮助你的吗？比如回答一般问题、解释概念、翻译、写作、编程建议，或者查询电商演示数据（如订单、客户、商品、地区、销售额等）。",
+        "clarification": "",
+        "status": "answer"
+      }
+    ]
+  },
+  {
+    "name": "能力介绍反映当前权限",
+    "passed": false,
+    "response": {
+      "error": "query_interpretation_unavailable"
+    }
+  },
+  {
+    "name": "查数仍受权限约束",
+    "passed": false,
+    "response": {
+      "answer": "",
+      "clarification": "我无法直接查询电商数仓的销售数据。请问您是否需要我帮您查询支付服务的日志或其他相关记录来获取2025年第一季度的销售总额？",
+      "status": "clarification"
+    }
+  },
+  {
+    "name": "对话不能授予权限",
+    "passed": false,
+    "response": {
+      "answer": "",
+      "clarification": "请明确需要查询哪个时间范围的销售额？例如：今天、本月、2024年全年、2025年一季度等。",
+      "status": "clarification"
+    }
+  },
+  {
+    "name": "不能注入系统角色",
+    "passed": true,
+    "response": {
+      "error": "invalid_conversation"
+    }
+  },
+  {
+    "name": "空白输入提示错误",
+    "passed": true,
+    "response": {
+      "error": "invalid_question"
+    }
+  },
+  {
+    "name": "聊天也要求登录",
+    "passed": true,
+    "http": 401
+  },
+  {
+    "name": "补充条件后执行查询",
+    "passed": false,
+    "response": {
+      "answer": "",
+      "clarification": "请问您希望查询的是按地区汇总的销售额（GMV）还是客单价（AOV）？",
+      "status": "clarification"
+    },
+    "detail": {
+      "status": "unexpected_route",
+      "response": {
+        "answer": "",
+        "clarification": "请问您希望查询的是按地区汇总的销售额（GMV）还是客单价（AOV）？",
+        "status": "clarification"
+      }
+    }
+  },
+  {
+    "name": "地区追问继承时间和指标",
+    "passed": false,
+    "response": {
+      "answer": "",
+      "clarification": "请问您想查询华东地区在2025年第一季度的销售额，还是其他指标？",
+      "status": "clarification"
+    },
+    "detail": {
+      "status": "unexpected_route",
+      "response": {
+        "answer": "",
+        "clarification": "请问您想查询华东地区在2025年第一季度的销售额，还是其他指标？",
+        "status": "clarification"
+      }
+    }
+  },
+  {
+    "name": "第三轮改月份保留地区",
+    "passed": false,
+    "response": {
+      "answer": "",
+      "clarification": "请确认：您是想查询2025年2月华东地区的销售额吗？",
+      "status": "clarification"
+    },
+    "detail": {
+      "status": "unexpected_route",
+      "response": {
+        "answer": "",
+        "clarification": "请确认：您是想查询2025年2月华东地区的销售额吗？",
+        "status": "clarification"
+      }
+    }
+  },
+  {
+    "name": "切换话题不继承查询条件",
+    "passed": true,
+    "response": {
+      "answer": "春天来了，万物复苏，\n柳枝轻舞，燕子呢喃。\n桃花红，梨花白，\n蜂蝶纷飞，春意盎然。\n\n春风拂面，暖意融融，\n小草探头，报春消息。\n溪水潺潺，鸟语花香，\n春天是一首美丽的诗篇。",
+      "clarification": "",
+      "status": "answer"
+    }
+  },
+  {
+    "name": "有查询上下文仍可解释概念",
+    "passed": true,
+    "response": {
+      "answer": "客单价（AOV，Average Order Value）是指每个订单的平均金额，通常用于衡量消费者在单次购买中的消费水平。计算公式为：\n\n**客单价 = 总销售额（GMV） / 订单总数**\n\n例如，如果某商家在一段时间内的总销售额为 10,000 元，订单总数为 100 个，那么客单价就是 100 元。客单价越高，说明消费者在单次购买中花费的金额越多，这通常与商品定价、促销策略或用户购买习惯相关。",
+      "clarification": "",
+      "status": "answer"
+    }
+  }
+]

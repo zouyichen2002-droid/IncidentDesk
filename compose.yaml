@@ -1,0 +1,175 @@
+name: incidentdesk
+services:
+  web:
+    restart: on-failure
+    build: ./web
+    image: incidentdesk-web:0.1.0
+    ports: ["127.0.0.1:8088:80"]
+    depends_on: [api, demo]
+  postgres:
+    image: postgres:17.6-bookworm
+    environment:
+      POSTGRES_DB: incidentdesk
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: local-bootstrap
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/migrations:/docker-entrypoint-initdb.d:ro
+    ports: ["127.0.0.1:55432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d incidentdesk"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  demo:
+    build:
+      context: .
+      dockerfile: demo/Dockerfile
+    image: incidentdesk-demo:0.1.0
+    environment:
+      OIDC_ISSUER: http://demo:8090
+      API_URL: http://api:8080
+      SEED_DATABASE_URL: postgres://postgres:local-bootstrap@postgres/incidentdesk
+    volumes: ["demodata:/data"]
+    ports: ["127.0.0.1:8090:8090"]
+    depends_on:
+      postgres: {condition: service_healthy}
+  api:
+    build: ./backend
+    image: incidentdesk-api:0.1.0
+    environment:
+      DATABASE_URL: postgres://incident_api:local-api@postgres/incidentdesk?search_path=business
+      OIDC_ISSUER: http://demo:8090
+      CONTEXT_URL: http://context:8091
+      QUERY_URL: http://query:8092
+      SOURCE_URL: http://demo:8090
+      INTERNAL_KEY: local-worker-key
+      GITHUB_API_URL: ${GITHUB_API_URL:-http://demo:8090/github}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      PPROF_ADDR: 0.0.0.0:6060
+    ports: ["127.0.0.1:8080:8080", "127.0.0.1:6060:6060"]
+    restart: on-failure
+    depends_on:
+      demo: {condition: service_started}
+      query: {condition: service_healthy}
+  worker:
+    build:
+      context: .
+      dockerfile: worker/Dockerfile
+      args: {CODE_VERSION: "${CODE_VERSION:-working-tree}"}
+    image: incidentdesk-worker:0.1.0
+    environment:
+      API_URL: http://api:8080
+      SOURCE_URL: http://demo:8090
+      CHECKPOINT_DATABASE_URL: postgres://incident_agent:local-agent@postgres/incidentdesk?options=-csearch_path%3Dagent
+      SOURCE_DATABASE_URL: postgres://incident_source:local-source@postgres/incidentdesk
+      INTERNAL_KEY: local-worker-key
+      HARNESS: ${HARNESS:-langgraph}
+      MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
+      MISTRAL_MODEL: ${MISTRAL_MODEL:-mistral-small-latest}
+      MISTRAL_BASE_URL: ${MISTRAL_BASE_URL:-https://api.mistral.ai/v1}
+      MODEL_NAME: ${MODEL_NAME:-}
+      MODEL_BASE_URL: ${MODEL_BASE_URL:-}
+      MODEL_API_KEY: ${MODEL_API_KEY:-}
+      S3_ENDPOINT: http://objects:9000
+      WORKER_SLOTS: '3'
+    restart: on-failure
+    depends_on: [api]
+  context:
+    build:
+      context: .
+      dockerfile: worker/Dockerfile
+      args: {CODE_VERSION: "${CODE_VERSION:-working-tree}"}
+    image: incidentdesk-worker:0.1.0
+    command: ["uvicorn", "incident_worker.context_api:app", "--host", "0.0.0.0", "--port", "8091"]
+    environment:
+      MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
+      MISTRAL_MODEL: ${MISTRAL_MODEL:-mistral-small-latest}
+      MISTRAL_BASE_URL: ${MISTRAL_BASE_URL:-https://api.mistral.ai/v1}
+      API_URL: http://api:8080
+      SOURCE_URL: http://demo:8090
+      CHECKPOINT_DATABASE_URL: postgres://incident_agent:local-agent@postgres/incidentdesk?options=-csearch_path%3Dagent
+      SOURCE_DATABASE_URL: postgres://incident_source:local-source@postgres/incidentdesk
+      INTERNAL_KEY: local-worker-key
+    ports: ["127.0.0.1:8091:8091"]
+    depends_on: [api]
+  query:
+    build: ./query
+    image: incidentdesk-query:0.1.0
+    restart: on-failure
+    environment:
+      INTERNAL_KEY: local-worker-key
+      LLM_API_KEY: ${MISTRAL_API_KEY:-}
+      MISTRAL_MODEL: ${MISTRAL_MODEL:-mistral-small-latest}
+      MISTRAL_BASE_URL: ${MISTRAL_BASE_URL:-https://api.mistral.ai/v1}
+      QUERY_MYSQL_HOST: query-mysql
+      QUERY_MYSQL_PORT: '3306'
+      QUERY_QDRANT_HOST: query-qdrant
+      QUERY_QDRANT_PORT: '6333'
+      QUERY_ES_HOST: query-es
+      QUERY_ES_PORT: '9200'
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8092/healthz', timeout=2)"]
+      interval: 3s
+      timeout: 3s
+      start_period: 45s
+      retries: 40
+    depends_on:
+      query-mysql: {condition: service_healthy}
+      query-es: {condition: service_healthy}
+      query-qdrant: {condition: service_started}
+  query-mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: local-shopkeeper-root
+      MYSQL_USER: didilili
+      MYSQL_PASSWORD: dili123
+    volumes: ['query_mysql:/var/lib/mysql', './query/docker/mysql:/docker-entrypoint-initdb.d:ro']
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 5s
+      retries: 30
+  query-es:
+    build: ./query/docker/elasticsearch
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: 'false'
+      ES_JAVA_OPTS: -Xms384m -Xmx384m
+    volumes: ['query_es:/usr/share/elasticsearch/data']
+    healthcheck:
+      test: ['CMD-SHELL', 'curl -fsS http://localhost:9200/_cluster/health >/dev/null']
+      interval: 5s
+      retries: 40
+  query-qdrant:
+    image: qdrant/qdrant:v1.16
+    volumes: ['query_qdrant:/qdrant/storage']
+
+  objects:
+    image: chrislusf/seaweedfs:3.97
+    command: server -dir=/data -s3 -s3.port=9000 -ip=objects
+    volumes: ["objects:/data"]
+    ports: ["127.0.0.1:9000:9000"]
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    volumes: ["./monitoring/prometheus.yaml:/etc/prometheus/prometheus.yml:ro", "./monitoring/alerts.yaml:/etc/prometheus/alerts.yaml:ro"]
+    ports: ["127.0.0.1:9090:9090"]
+  grafana:
+    image: grafana/grafana:12.1.1
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: local-grafana
+    volumes:
+      - ./monitoring/datasources.yaml:/etc/grafana/provisioning/datasources/local.yaml:ro
+      - ./monitoring/dashboard-provider.yaml:/etc/grafana/provisioning/dashboards/local.yaml:ro
+      - ./monitoring/dashboard.json:/var/lib/grafana/dashboards/incidentdesk.json:ro
+    ports: ["127.0.0.1:3000:3000"]
+
+volumes:
+  pgdata:
+  demodata:
+  objects:
+
+  query_mysql:
+  query_es:
+  query_qdrant:

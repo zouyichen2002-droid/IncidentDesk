@@ -1,0 +1,98 @@
+[
+  {
+    "name": "无订单客单价空值",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2026年9月客单价是多少？只返回客单价，没有订单时返回空值，不要当作0。"
+  },
+  {
+    "name": "客单价单指标",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2025年第一季度客单价是多少？保留两位小数，只返回客单价。"
+  },
+  {
+    "name": "月份分组",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2025年第一季度每个月有多少订单？只显示月份数字（1、2、3）和订单数，按月份升序。"
+  },
+  {
+    "name": "客户去重与客单价",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2025年第一季度，统计订单数、去重客户数和客单价（保留两位小数），只返回这三个指标。"
+  },
+  {
+    "name": "单日查询",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2025年1月1日共有多少订单？只返回订单数。"
+  },
+  {
+    "name": "跨月闭区间",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2025年1月15日至2月15日（含首尾两天）的销售总额是多少？只返回金额。"
+  },
+  {
+    "name": "无数据月份",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2025年4月共有多少订单？只返回订单数。"
+  },
+  {
+    "name": "销售额占比",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2025年第一季度华东销售额占全国的百分之多少？只返回百分数数值，保留两位小数，不带百分号。"
+  },
+  {
+    "name": "代码中的日志关键词",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "解释这行Python代码：logger.error(\"timeout\")，不要查询任何日志。"
+  },
+  {
+    "name": "假设数字计算",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "假设销售额1000元，有10个订单，客单价是多少？这是算术题，不要查数据库。"
+  },
+  {
+    "name": "缺少退货字段",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "2025年第一季度退货率是多少？"
+  },
+  {
+    "name": "追问撤销地区",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "不限制地区了，查全国，其他条件不变"
+  },
+  {
+    "name": "追问换地区",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "换成华南，其他不变"
+  },
+  {
+    "name": "纠正年份",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "年份说错了，是2026年，月份和地区不变，查订单数"
+  },
+  {
+    "name": "追问换指标",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "金额不看了，改查订单数，其他条件不变"
+  },
+  {
+    "name": "新问题不带旧筛选",
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "question": "另一个问题：统计全部可用订单的总数，只返回订单数"
+  }
+]

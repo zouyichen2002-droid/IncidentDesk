@@ -1,0 +1,177 @@
+{
+  "$defs": {
+    "Budget": {
+      "additionalProperties": false,
+      "properties": {
+        "steps": {
+          "maximum": 32,
+          "minimum": 1,
+          "title": "Steps",
+          "type": "integer"
+        },
+        "seconds": {
+          "maximum": 300,
+          "minimum": 1,
+          "title": "Seconds",
+          "type": "integer"
+        },
+        "output_bytes": {
+          "maximum": 1048576,
+          "minimum": 100,
+          "title": "Output Bytes",
+          "type": "integer"
+        },
+        "model_calls": {
+          "maximum": 5,
+          "minimum": 0,
+          "title": "Model Calls",
+          "type": "integer"
+        },
+        "tokens": {
+          "maximum": 32000,
+          "minimum": 1,
+          "title": "Tokens",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "steps",
+        "seconds",
+        "output_bytes",
+        "model_calls",
+        "tokens"
+      ],
+      "title": "Budget",
+      "type": "object"
+    },
+    "LogQuery": {
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "default": "anomalies",
+          "enum": [
+            "anomalies",
+            "search",
+            "all"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "terms": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 6,
+          "title": "Terms",
+          "type": "array"
+        },
+        "levels": {
+          "items": {
+            "enum": [
+              "ERROR",
+              "FATAL",
+              "SEVERE",
+              "FAILURE",
+              "WARN",
+              "WARNING",
+              "CRITICAL",
+              "ALERT",
+              "EMERG",
+              "INFO",
+              "DEBUG",
+              "TRACE",
+              "UNKNOWN"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Levels",
+          "type": "array"
+        }
+      },
+      "title": "LogQuery",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "protocol_version": {
+      "const": 1,
+      "title": "Protocol Version",
+      "type": "integer"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "subject": {
+      "title": "Subject",
+      "type": "string"
+    },
+    "team": {
+      "title": "Team",
+      "type": "string"
+    },
+    "service": {
+      "title": "Service",
+      "type": "string"
+    },
+    "symptom": {
+      "title": "Symptom",
+      "type": "string"
+    },
+    "start": {
+      "format": "date-time",
+      "title": "Start",
+      "type": "string"
+    },
+    "end": {
+      "format": "date-time",
+      "title": "End",
+      "type": "string"
+    },
+    "source_version": {
+      "title": "Source Version",
+      "type": "integer"
+    },
+    "generation": {
+      "title": "Generation",
+      "type": "integer"
+    },
+    "attempt": {
+      "default": 1,
+      "title": "Attempt",
+      "type": "integer"
+    },
+    "owner": {
+      "title": "Owner",
+      "type": "string"
+    },
+    "lease_seconds": {
+      "title": "Lease Seconds",
+      "type": "integer"
+    },
+    "query": {
+      "$ref": "#/$defs/LogQuery"
+    },
+    "budget": {
+      "$ref": "#/$defs/Budget"
+    }
+  },
+  "required": [
+    "protocol_version",
+    "id",
+    "subject",
+    "team",
+    "service",
+    "symptom",
+    "start",
+    "end",
+    "source_version",
+    "generation",
+    "owner",
+    "lease_seconds",
+    "budget"
+  ],
+  "title": "RunContext",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "saved_reports_checked": 36,
+  "log_evidence_checked": 1600,
+  "failures": [],
+  "note": "Verifies saved evidence hash and original dataset line mapping; does not assert diagnostic correctness."
+}

@@ -1,0 +1,165 @@
+ Image incidentdesk-web:0.1.0 Building 
+ Image incidentdesk-api:0.1.0 Building 
+ Image incidentdesk-demo:0.1.0 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.51kB done
+#1 DONE 0.0s
+
+#2 [api internal] load build definition from Dockerfile
+#2 transferring dockerfile: 317B done
+#2 DONE 0.0s
+
+#3 [web internal] load build definition from Dockerfile
+#3 transferring dockerfile: 292B done
+#3 DONE 0.0s
+
+#4 [api internal] load metadata for docker.io/library/golang:1.27.1-bookworm
+#4 ...
+
+#5 [auth] library/nginx:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#6 [auth] library/node:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [auth] library/golang:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [api internal] load metadata for gcr.io/distroless/static-debian12:nonroot
+#8 DONE 0.3s
+
+#4 [api internal] load metadata for docker.io/library/golang:1.27.1-bookworm
+#4 DONE 0.6s
+
+#9 [web internal] load metadata for docker.io/library/node:24.18.0-bookworm-slim
+#9 DONE 0.6s
+
+#10 [web internal] load metadata for docker.io/library/nginx:1.28.0-alpine
+#10 DONE 0.6s
+
+#11 [api internal] load .dockerignore
+#11 transferring context: 2B done
+#11 DONE 0.0s
+
+#12 [web internal] load .dockerignore
+#12 transferring context: 58B done
+#12 DONE 0.0s
+
+#13 [web internal] load build context
+#13 transferring context: 35.31kB done
+#13 DONE 0.0s
+
+#14 [web build 1/6] FROM docker.io/library/node:24.18.0-bookworm-slim@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d
+#14 resolve docker.io/library/node:24.18.0-bookworm-slim@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d 0.0s done
+#14 DONE 0.0s
+
+#15 [web stage-1 1/3] FROM docker.io/library/nginx:1.28.0-alpine@sha256:30f1c0d78e0ad60901648be663a710bdadf19e4c10ac6782c235200619158284
+#15 resolve docker.io/library/nginx:1.28.0-alpine@sha256:30f1c0d78e0ad60901648be663a710bdadf19e4c10ac6782c235200619158284 0.0s done
+#15 DONE 0.0s
+
+#16 [web build 3/6] COPY package.json package-lock.json ./
+#16 CACHED
+
+#17 [web build 2/6] WORKDIR /app
+#17 CACHED
+
+#18 [web build 4/6] RUN npm ci
+#18 CACHED
+
+#19 [api stage-1 1/2] FROM gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab
+#19 resolve gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab 0.0s done
+#19 DONE 0.0s
+
+#20 [api build 1/6] FROM docker.io/library/golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195
+#20 resolve docker.io/library/golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195 0.0s done
+#20 DONE 0.0s
+
+#21 [api internal] load build context
+#21 transferring context: 25.58kB done
+#21 DONE 0.0s
+
+#22 [api build 2/6] WORKDIR /src
+#22 CACHED
+
+#23 [api build 3/6] COPY go.mod go.sum ./
+#23 CACHED
+
+#24 [api build 4/6] RUN go mod download
+#24 CACHED
+
+#25 [web build 5/6] COPY . .
+#25 DONE 0.0s
+
+#26 [api build 5/6] COPY . .
+#26 DONE 0.0s
+
+#27 [api build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#27 ...
+
+#28 [web build 6/6] RUN npm run build
+#28 0.307 
+#28 0.307 > incidentdesk-web@0.1.0 build
+#28 0.307 > tsc -b && vite build
+#28 0.307 
+#28 1.455 vite v7.3.6 building client environment for production...
+#28 1.517 transforming...
+#28 2.208 ✓ 29 modules transformed.
+#28 2.362 rendering chunks...
+#28 2.367 computing gzip size...
+#28 2.386 dist/index.html                   0.38 kB │ gzip:  0.30 kB
+#28 2.386 dist/assets/index-44eH-CKP.css    7.41 kB │ gzip:  2.59 kB
+#28 2.386 dist/assets/index-CbXODZTp.js   222.55 kB │ gzip: 70.83 kB
+#28 2.386 ✓ built in 912ms
+#28 DONE 2.6s
+
+#15 [web stage-1 1/3] FROM docker.io/library/nginx:1.28.0-alpine@sha256:30f1c0d78e0ad60901648be663a710bdadf19e4c10ac6782c235200619158284
+#15 CACHED
+
+#29 [web stage-1 2/3] COPY --from=build /app/dist /usr/share/nginx/html
+#29 DONE 0.0s
+
+#27 [api build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#27 ...
+
+#30 [web stage-1 3/3] COPY nginx.conf /etc/nginx/conf.d/default.conf
+#30 DONE 0.0s
+
+#31 [web] exporting to image
+#31 exporting layers 0.2s done
+#31 exporting manifest sha256:a0d81c5fcc11ce715526640b46a92949b078d8a2b2074f0d9d763001d91ffd74 done
+#31 exporting config sha256:cbb0d2f94de00f1d391f7fbdc604b3684018467a8dabf2c6de816ef33782412b done
+#31 exporting attestation manifest sha256:f7999df4b2657beeddc596c46ba0469236e44be66f21cdcfaebc51c59c548c5e 0.0s done
+#31 exporting manifest list sha256:898125bfa205c669ed0f4d9689ebe523536b8c11c39159ae91876f52658c8ff4 0.0s done
+#31 naming to docker.io/library/incidentdesk-web:0.1.0 done
+#31 unpacking to docker.io/library/incidentdesk-web:0.1.0 0.0s done
+#31 DONE 0.4s
+
+#27 [api build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#27 ...
+
+#32 [web] resolving provenance for metadata file
+#32 DONE 0.1s
+
+#27 [api build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#27 DONE 6.8s
+
+#19 [api stage-1 1/2] FROM gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab
+#19 CACHED
+
+#33 [api stage-1 2/2] COPY --from=build /server /server
+#33 DONE 0.0s
+
+#34 [api] exporting to image
+#34 exporting layers 0.4s done
+#34 exporting manifest sha256:6d75746bb49552b683757f721d543539b54138ee0a96738f43c35df1af85e618 done
+#34 exporting config sha256:5f1425718b032ec3421c386c38d2752e954eed85006171153c88055b4ecc77e5 done
+#34 exporting attestation manifest sha256:02498dc213b50cf4b74796ecb8c2a1c50ead11e32f7580f448039f0e119b61c9 done
+#34 exporting manifest list sha256:15201b9ec0a51f67c4146750b6638388226c7159cfb412ba43c6dbfbf4e87a4e done
+#34 naming to docker.io/library/incidentdesk-api:0.1.0 done
+#34 unpacking to docker.io/library/incidentdesk-api:0.1.0 0.1s done
+#34 DONE 0.6s
+
+#35 [api] resolving provenance for metadata file
+#35 DONE 0.0s
+ Image incidentdesk-api:0.1.0 Built 
+ Image incidentdesk-web:0.1.0 Built 

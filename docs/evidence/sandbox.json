@@ -1,0 +1,13 @@
+{
+  "analysis": {
+    "count": 2,
+    "levels": {
+      "ERROR": 1,
+      "INFO": 1
+    }
+  },
+  "read_only_denied": true,
+  "network_denied": true,
+  "memory_limited": true,
+  "timeout_killed": true
+}

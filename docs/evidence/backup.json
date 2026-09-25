@@ -1,0 +1,16 @@
+{
+  "database": "restore_1790277304",
+  "backup_bytes": 1608651,
+  "rto_seconds": 1.751252416,
+  "rpo": "consistent pg_dump snapshot; writes after snapshot are not in restore",
+  "counts": {
+    "investigations": 843,
+    "jobs": 843,
+    "actions": 2,
+    "approvals": 2,
+    "events": 19019,
+    "memories": 1
+  },
+  "orphan_actions": 0,
+  "pass": true
+}

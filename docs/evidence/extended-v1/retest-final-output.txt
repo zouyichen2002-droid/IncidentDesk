@@ -1,0 +1,18 @@
+无订单客单价空值 PASS
+客单价单指标 PASS
+客户去重与客单价 PASS
+月份分组 PASS
+跨月闭区间 PASS
+单日查询 PASS
+无数据月份 PASS
+销售额占比 PASS
+假设数字计算 PASS
+代码中的日志关键词 PASS
+缺少退货字段 PASS
+追问撤销地区 PASS
+追问换地区 PASS
+追问换指标 PASS
+纠正年份 PASS
+新问题不带旧筛选 PASS
+无效记录ID PASS
+PASS 17 / 17 Evidence: /workspace/docs/evidence/extended-v1/20260925-150055.json

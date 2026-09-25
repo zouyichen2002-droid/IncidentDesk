@@ -1,0 +1,10 @@
+多地区起点 PASS
+从集合排除一个地区 PASS
+指代月份替换季度 PASS
+纠正年份不能沿用旧年 PASS
+清除全部筛选条件 PASS
+新问题增加分组排序 PASS
+反转排名并替换数量 PASS
+分组排名改为单一总额 PASS
+切换AOV精度 PASS
+TOTAL 9 / 9 docs/evidence/bugfix-round3/20260925-161715-filters.json

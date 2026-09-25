@@ -1,0 +1,1275 @@
+{
+  "detail": {
+    "id": "197ff8d4-d59e-4eee-8087-f3f2bf0ca352",
+    "seq": 34,
+    "idem": "1c6b044c-9780-43ea-97c1-906737510d33",
+    "team": "orders",
+    "query": {
+      "mode": "search",
+      "terms": [
+        "timed out",
+        "timeout",
+        "timeout_error",
+        "request_timeout",
+        "504",
+        "gateway_timeout"
+      ],
+      "levels": [
+        "ERROR",
+        "FATAL",
+        "SEVERE",
+        "FAILURE",
+        "WARN",
+        "WARNING",
+        "CRITICAL"
+      ]
+    },
+    "action": null,
+    "end_at": "2026-09-24T21:04:29.420115+00:00",
+    "report": {
+      "mode": "mistral",
+      "facts": [
+        {
+          "id": "fact:deployments:dep-svc-17:744e6bc77038",
+          "kind": "observation",
+          "text": "发布版本 v2 指向提交 e1925867e810fa1bacfb21a5cba711fdef2239be",
+          "evidence": [
+            "deployments:dep-svc-17:744e6bc77038"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "deployments"
+            ],
+            "limit": 50,
+            "object": "Deployment",
+            "source": "deployments"
+          }
+        },
+        {
+          "id": "fact:logs:10:c7950509b09f",
+          "kind": "observation",
+          "text": "日志记录 ERROR: upstream inventory timed out after 50ms",
+          "evidence": [
+            "logs:10:c7950509b09f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 20,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc",
+          "kind": "observation",
+          "text": "代码提交 e1925867e810fa1bacfb21a5cba711fdef2239be，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+          "evidence": [
+            "git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "deployments",
+              "commit"
+            ],
+            "limit": 50,
+            "object": "Commit",
+            "source": "git"
+          }
+        },
+        {
+          "id": "fact:runbook:orders-runbook:7a507ba18105",
+          "kind": "observation",
+          "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+          "evidence": [
+            "runbook:orders-runbook:7a507ba18105"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "runbook"
+            ],
+            "limit": 50,
+            "object": "Runbook",
+            "source": "runbook"
+          }
+        },
+        {
+          "id": "fact:relation:deployments:dep-svc-17:744e6bc77038",
+          "kind": "computed",
+          "text": "发布记录与 Git 提交标识一致；这只确认变更归属，不证明故障因果。",
+          "evidence": [
+            "deployments:dep-svc-17:744e6bc77038",
+            "git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc"
+          ],
+          "transform": "commit-equality-v1",
+          "query_step": {
+            "relation": "Deployment.commit"
+          }
+        }
+      ],
+      "model": {
+        "model": "mistral-small-latest",
+        "usage": {
+          "service_tier": "standard",
+          "total_tokens": 2133,
+          "prompt_tokens": 1459,
+          "completion_tokens": 674,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "provider": "mistral",
+        "milliseconds": 5569.75
+      },
+      "answer": "检索范围内共 1 条日志，匹配 1 条；以下展示 1 条可追溯证据。 代表日志：upstream inventory timed out after 50ms",
+      "impact": "svc-17",
+      "context": {
+        "plan": {
+          "end": "2026-09-24T21:04:29.420115Z",
+          "start": "2026-09-23T21:04:29.420115Z",
+          "steps": [
+            {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            },
+            {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            },
+            {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            },
+            {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          ],
+          "service": "svc-17",
+          "version": "1"
+        },
+        "facts": [
+          {
+            "id": "fact:deployments:dep-svc-17:744e6bc77038",
+            "kind": "observation",
+            "text": "发布版本 v2 指向提交 e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            }
+          },
+          {
+            "id": "fact:logs:10:c7950509b09f",
+            "kind": "observation",
+            "text": "日志记录 ERROR: upstream inventory timed out after 50ms",
+            "evidence": [
+              "logs:10:c7950509b09f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc",
+            "kind": "observation",
+            "text": "代码提交 e1925867e810fa1bacfb21a5cba711fdef2239be，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:7a507ba18105",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+            "evidence": [
+              "runbook:orders-runbook:7a507ba18105"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          },
+          {
+            "id": "fact:relation:deployments:dep-svc-17:744e6bc77038",
+            "kind": "computed",
+            "text": "发布记录与 Git 提交标识一致；这只确认变更归属，不证明故障因果。",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038",
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc"
+            ],
+            "transform": "commit-equality-v1",
+            "query_step": {
+              "relation": "Deployment.commit"
+            }
+          }
+        ],
+        "scope": {
+          "team": "orders",
+          "service": "svc-17",
+          "subject": "alice"
+        },
+        "missing": [],
+        "objects": [
+          {
+            "id": "svc-17",
+            "team": "orders",
+            "type": "Service"
+          },
+          {
+            "id": "dep-svc-17",
+            "type": "Deployment",
+            "service": "svc-17",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038"
+            ],
+            "valid_time": "2026-09-24T19:10:15.958646+00:00"
+          },
+          {
+            "id": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "type": "Commit",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038",
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc"
+            ],
+            "deployment": "dep-svc-17"
+          }
+        ],
+        "version": "1",
+        "evidence": [
+          {
+            "id": "deployments:dep-svc-17:744e6bc77038",
+            "team": "orders",
+            "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+            "source": "deployments",
+            "locator": "postgres://sources/deployments/dep-svc-17",
+            "snippet": {
+              "id": "dep-svc-17",
+              "app_id": "svc-17",
+              "deleted": false,
+              "service": "svc-17",
+              "version": "v2",
+              "watermark": 1,
+              "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+            },
+            "version": "1",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15.958646+00:00",
+            "collected_at": "2026-09-24T21:04:32.532969+00:00",
+            "source_record": "dep-svc-17"
+          },
+          {
+            "id": "logs:10:c7950509b09f",
+            "team": "orders",
+            "sha256": "c7950509b09fbac965f889d28ea0157634c8a3f651976bb2aba5b407733f3880",
+            "source": "logs",
+            "locator": "logs://svc-17/10",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "message": "upstream inventory timed out after 50ms",
+              "release": "v2",
+              "duration_ms": 68.74,
+              "error_class": "DependencyReadTimeout",
+              "service_name": "checkout-api"
+            },
+            "version": "10",
+            "available": true,
+            "event_time": "2026-09-24T21:00:43.034277+00:00",
+            "collected_at": "2026-09-24T21:04:32.562514+00:00",
+            "source_record": "10"
+          },
+          {
+            "id": "git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc",
+            "team": "orders",
+            "sha256": "093e77a239ccbbb43447cd078fcb344e1f0540e7277ee9b2c2aeae7a6d76fd49",
+            "source": "git",
+            "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "snippet": {
+              "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+              "service": "svc-17",
+              "provenance": "local-demo"
+            },
+            "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15+00:00",
+            "collected_at": "2026-09-24T21:04:32.598046+00:00",
+            "source_record": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+          },
+          {
+            "id": "runbook:orders-runbook:7a507ba18105",
+            "team": "orders",
+            "sha256": "7a507ba18105e5a93926c63bc409686c1da8690e049fae07bb2668156edaaee4",
+            "source": "runbook",
+            "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+            "snippet": {
+              "service": "svc-17",
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+              "provenance": "local-demo",
+              "valid_as_of": "2026-09-24T21:04:29.420115+00:00"
+            },
+            "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15+00:00",
+            "collected_at": "2026-09-24T21:04:32.629005+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "memories": [],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "4",
+            "observed_at": "2026-09-24T21:04:32.532969+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "4",
+            "observed_at": "2026-09-24T21:04:32.562514+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "4",
+            "observed_at": "2026-09-24T21:04:32.598046+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "4",
+            "observed_at": "2026-09-24T21:04:32.629005+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "retrieval": {
+          "mode": "search",
+          "pages": 1,
+          "terms": [
+            "timed out",
+            "timeout",
+            "timeout_error",
+            "request_timeout",
+            "504",
+            "gateway_timeout"
+          ],
+          "levels": {
+            "ERROR": 1
+          },
+          "matched": 1,
+          "sampled": false,
+          "selection": "rare-patterns-and-severity-keyset",
+          "provenance": "local-demo",
+          "labels_used": false,
+          "template_scan": 0,
+          "evidence_count": 1,
+          "total_in_query": 1
+        },
+        "token_budget": 12000,
+        "mapping_version": "2",
+        "ontology_version": "1"
+      },
+      "missing": [],
+      "evidence": [
+        {
+          "id": "deployments:dep-svc-17:744e6bc77038",
+          "team": "orders",
+          "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+          "source": "deployments",
+          "locator": "postgres://sources/deployments/dep-svc-17",
+          "snippet": {
+            "id": "dep-svc-17",
+            "app_id": "svc-17",
+            "deleted": false,
+            "service": "svc-17",
+            "version": "v2",
+            "watermark": 1,
+            "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+          },
+          "version": "1",
+          "available": true,
+          "event_time": "2026-09-24T19:10:15.958646+00:00",
+          "collected_at": "2026-09-24T21:04:32.532969+00:00",
+          "source_record": "dep-svc-17"
+        },
+        {
+          "id": "logs:10:c7950509b09f",
+          "team": "orders",
+          "sha256": "c7950509b09fbac965f889d28ea0157634c8a3f651976bb2aba5b407733f3880",
+          "source": "logs",
+          "locator": "logs://svc-17/10",
+          "snippet": {
+            "level": "ERROR",
+            "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+            "message": "upstream inventory timed out after 50ms",
+            "release": "v2",
+            "duration_ms": 68.74,
+            "error_class": "DependencyReadTimeout",
+            "service_name": "checkout-api"
+          },
+          "version": "10",
+          "available": true,
+          "event_time": "2026-09-24T21:00:43.034277+00:00",
+          "collected_at": "2026-09-24T21:04:32.562514+00:00",
+          "source_record": "10"
+        },
+        {
+          "id": "git:e1925867e810fa1bacfb21a5cba711fdef2239be:093e77a239cc",
+          "team": "orders",
+          "sha256": "093e77a239ccbbb43447cd078fcb344e1f0540e7277ee9b2c2aeae7a6d76fd49",
+          "source": "git",
+          "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+          "snippet": {
+            "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+            "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+            "service": "svc-17",
+            "provenance": "local-demo"
+          },
+          "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+          "available": true,
+          "event_time": "2026-09-24T19:10:15+00:00",
+          "collected_at": "2026-09-24T21:04:32.598046+00:00",
+          "source_record": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+        },
+        {
+          "id": "runbook:orders-runbook:7a507ba18105",
+          "team": "orders",
+          "sha256": "7a507ba18105e5a93926c63bc409686c1da8690e049fae07bb2668156edaaee4",
+          "source": "runbook",
+          "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+          "snippet": {
+            "service": "svc-17",
+            "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+            "provenance": "local-demo",
+            "valid_as_of": "2026-09-24T21:04:29.420115+00:00"
+          },
+          "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+          "available": true,
+          "event_time": "2026-09-24T19:10:15+00:00",
+          "collected_at": "2026-09-24T21:04:32.629005+00:00",
+          "source_record": "orders-runbook"
+        }
+      ],
+      "conflicts": [],
+      "freshness": [
+        {
+          "source": "deployments",
+          "watermark": "4",
+          "observed_at": "2026-09-24T21:04:32.532969+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "logs",
+          "watermark": "4",
+          "observed_at": "2026-09-24T21:04:32.562514+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "git",
+          "watermark": "4",
+          "observed_at": "2026-09-24T21:04:32.598046+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "runbook",
+          "watermark": "4",
+          "observed_at": "2026-09-24T21:04:32.629005+00:00",
+          "snapshot_consistency": "independent_source"
+        }
+      ],
+      "retrieval": {
+        "mode": "search",
+        "pages": 1,
+        "terms": [
+          "timed out",
+          "timeout",
+          "timeout_error",
+          "request_timeout",
+          "504",
+          "gateway_timeout"
+        ],
+        "levels": {
+          "ERROR": 1
+        },
+        "matched": 1,
+        "sampled": false,
+        "selection": "rare-patterns-and-severity-keyset",
+        "provenance": "local-demo",
+        "labels_used": false,
+        "template_scan": 0,
+        "evidence_count": 1,
+        "total_in_query": 1
+      },
+      "candidates": [
+        {
+          "rule": "日志直接观测支持候选；时间相关不证明因果。",
+          "text": "上游依赖延迟可能超过超时阈值；核对依赖耗时与阈值变更。",
+          "label": "有待验证",
+          "evidence": [
+            "logs:10:c7950509b09f"
+          ]
+        }
+      ],
+      "next_steps": [
+        "核对生产环境是否部署了v2版本且commit一致",
+        "检查上游库存服务的实际响应时间与超时配置是否匹配",
+        "排查本地演示数据的误报来源，避免干扰根因分析",
+        "如需进一步调查，建议扩大日志检索范围至更长时间窗口"
+      ],
+      "answer_evidence": [
+        "logs:10:c7950509b09f"
+      ],
+      "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+      "answer_validation": "检索已有命中；模型回答与统计不一致，已改为展示原始证据。",
+      "historical_memory": [],
+      "model_evidence_count": 4
+    },
+    "status": "completed",
+    "service": "svc-17",
+    "subject": "alice",
+    "symptom": "查一下订单服务最近24小时的超时，核对发布与代码变更",
+    "manifest": {
+      "code": "working-tree",
+      "cost": {
+        "unknown": "USD cost not calculated; interpretation usage is in queued event",
+        "estimated_usd": null,
+        "known_model_tokens": 2133
+      },
+      "model": "mistral-small-latest",
+      "prompt": "investigate-v1",
+      "skills": [
+        "release-compare@1",
+        "log-analysis@1"
+      ],
+      "version": "1",
+      "ontology": "1",
+      "evaluator": "rules-v1",
+      "retrieval": "indexed-stratified-3-pages-v2",
+      "snapshots": {
+        "git": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2026-09-24T21:04:29.420115+00:00",
+            "team": "orders",
+            "query": {
+              "mode": "search",
+              "terms": [
+                "timed out",
+                "timeout",
+                "timeout_error",
+                "request_timeout",
+                "504",
+                "gateway_timeout"
+              ],
+              "levels": [
+                "ERROR",
+                "FATAL",
+                "SEVERE",
+                "FAILURE",
+                "WARN",
+                "WARNING",
+                "CRITICAL"
+              ]
+            },
+            "start": "2026-09-23T21:04:29.420115+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 4,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "content": {
+                "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+                "service": "svc-17",
+                "provenance": "local-demo"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "event_time": "2026-09-24T19:10:15+00:00"
+            }
+          ],
+          "watermark": 4,
+          "provenance": "local-demo",
+          "next_cursor": null,
+          "observed_at": "2026-09-24T21:04:32.598046+00:00"
+        },
+        "logs": {
+          "sync": "indexed-keyset-v2",
+          "scope": {
+            "end": "2026-09-24T21:04:29.420115+00:00",
+            "team": "orders",
+            "query": {
+              "mode": "search",
+              "terms": [
+                "timed out",
+                "timeout",
+                "timeout_error",
+                "request_timeout",
+                "504",
+                "gateway_timeout"
+              ],
+              "levels": [
+                "ERROR",
+                "FATAL",
+                "SEVERE",
+                "FAILURE",
+                "WARN",
+                "WARNING",
+                "CRITICAL"
+              ]
+            },
+            "start": "2026-09-23T21:04:29.420115+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 4,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "10",
+              "content": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "upstream inventory timed out after 50ms",
+                "release": "v2",
+                "duration_ms": 68.74,
+                "error_class": "DependencyReadTimeout",
+                "service_name": "checkout-api"
+              },
+              "deleted": false,
+              "locator": "logs://svc-17/10",
+              "version": "10",
+              "event_time": "2026-09-24T21:00:43.034277+00:00"
+            }
+          ],
+          "summary": {
+            "mode": "search",
+            "terms": [
+              "timed out",
+              "timeout",
+              "timeout_error",
+              "request_timeout",
+              "504",
+              "gateway_timeout"
+            ],
+            "levels": {
+              "ERROR": 1
+            },
+            "matched": 1,
+            "selection": "rare-patterns-and-severity-keyset",
+            "labels_used": false,
+            "template_scan": 0,
+            "total_in_query": 1
+          },
+          "retrieval": {
+            "mode": "search",
+            "pages": 1,
+            "terms": [
+              "timed out",
+              "timeout",
+              "timeout_error",
+              "request_timeout",
+              "504",
+              "gateway_timeout"
+            ],
+            "levels": {
+              "ERROR": 1
+            },
+            "matched": 1,
+            "sampled": false,
+            "selection": "rare-patterns-and-severity-keyset",
+            "provenance": "local-demo",
+            "labels_used": false,
+            "template_scan": 0,
+            "evidence_count": 1,
+            "total_in_query": 1
+          },
+          "watermark": 4,
+          "provenance": "local-demo",
+          "next_cursor": null,
+          "observed_at": "2026-09-24T21:04:32.562514+00:00"
+        },
+        "runbook": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2026-09-24T21:04:29.420115+00:00",
+            "team": "orders",
+            "query": {
+              "mode": "search",
+              "terms": [
+                "timed out",
+                "timeout",
+                "timeout_error",
+                "request_timeout",
+                "504",
+                "gateway_timeout"
+              ],
+              "levels": [
+                "ERROR",
+                "FATAL",
+                "SEVERE",
+                "FAILURE",
+                "WARN",
+                "WARNING",
+                "CRITICAL"
+              ]
+            },
+            "start": "2026-09-23T21:04:29.420115+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 4,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "orders-runbook",
+              "content": {
+                "service": "svc-17",
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+                "provenance": "local-demo",
+                "valid_as_of": "2026-09-24T21:04:29.420115+00:00"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+              "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "event_time": "2026-09-24T19:10:15+00:00"
+            }
+          ],
+          "watermark": 4,
+          "provenance": "local-demo",
+          "next_cursor": null,
+          "observed_at": "2026-09-24T21:04:32.629005+00:00"
+        },
+        "deployments": {
+          "scope": {
+            "end": "2026-09-24T21:04:29.420115+00:00",
+            "team": "orders",
+            "query": {
+              "mode": "search",
+              "terms": [
+                "timed out",
+                "timeout",
+                "timeout_error",
+                "request_timeout",
+                "504",
+                "gateway_timeout"
+              ],
+              "levels": [
+                "ERROR",
+                "FATAL",
+                "SEVERE",
+                "FAILURE",
+                "WARN",
+                "WARNING",
+                "CRITICAL"
+              ]
+            },
+            "start": "2026-09-23T21:04:29.420115+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 4,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "dep-svc-17",
+              "content": {
+                "id": "dep-svc-17",
+                "app_id": "svc-17",
+                "deleted": false,
+                "service": "svc-17",
+                "version": "v2",
+                "watermark": 1,
+                "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+              },
+              "deleted": false,
+              "locator": "postgres://sources/deployments/dep-svc-17",
+              "version": "1",
+              "event_time": "2026-09-24T19:10:15.958646+00:00"
+            }
+          ],
+          "watermark": 4,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T21:04:32.532969+00:00"
+        }
+      },
+      "generation": 1,
+      "tool_schema": "1",
+      "source_mapping": "2",
+      "model_parameters": {
+        "temperature": 0
+      },
+      "permission_policy": "go-v1"
+    },
+    "start_at": "2026-09-23T21:04:29.420115+00:00",
+    "timezone": "America/New_York",
+    "trace_id": "ea2b96d3bda06718e4301cd75d61b0d9",
+    "created_at": "2026-09-24T21:04:31.997234+00:00",
+    "updated_at": "2026-09-24T21:04:38.258147+00:00",
+    "request_hash": "1177c579a756b94a7b289a6d9defb4e567d1f287503d889ae7f02bd556672d71",
+    "evidence_stale": false,
+    "source_version": 4
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "queued",
+      "payload": {
+        "request_id": "17d5fa4e-b890-413a-9c9b-8393d5cc90be",
+        "interpretation": {
+          "mode": "mistral",
+          "model": {
+            "model": "mistral-small-latest",
+            "usage": {
+              "service_tier": "standard",
+              "total_tokens": 743,
+              "prompt_tokens": 418,
+              "completion_tokens": 325,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "provider": "mistral",
+            "milliseconds": 2538.9
+          },
+          "explanation": "按问题中明确给出的时间与所选时区执行，不按来源最新日期改写范围。"
+        }
+      },
+      "created_at": "2026-09-24T21:04:31.997234+00:00"
+    },
+    {
+      "seq": 2,
+      "kind": "claimed",
+      "payload": {
+        "worker": "e2dec8c65ae5:8fb09317-92e3-42db-9b00-741448edbc1a"
+      },
+      "created_at": "2026-09-24T21:04:32.133769+00:00"
+    },
+    {
+      "seq": 3,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.522807+00:00"
+    },
+    {
+      "seq": 4,
+      "kind": "hook",
+      "payload": {
+        "name": "plan_validated",
+        "status": "pass",
+        "summary": {
+          "steps": 4
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.52732+00:00"
+    },
+    {
+      "seq": 5,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.528144+00:00"
+    },
+    {
+      "seq": 6,
+      "kind": "authorized",
+      "payload": {
+        "tool": "deployments",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.528775+00:00"
+    },
+    {
+      "seq": 7,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.533372+00:00"
+    },
+    {
+      "seq": 8,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "deployments",
+          "status": "ok",
+          "milliseconds": 6.11
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.534237+00:00"
+    },
+    {
+      "seq": 9,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.534812+00:00"
+    },
+    {
+      "seq": 10,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.535429+00:00"
+    },
+    {
+      "seq": 11,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.560558+00:00"
+    },
+    {
+      "seq": 12,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.563307+00:00"
+    },
+    {
+      "seq": 13,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "logs",
+          "status": "ok",
+          "milliseconds": 29.37
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.564234+00:00"
+    },
+    {
+      "seq": 14,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.564907+00:00"
+    },
+    {
+      "seq": 15,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.565526+00:00"
+    },
+    {
+      "seq": 16,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.591201+00:00"
+    },
+    {
+      "seq": 17,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.599039+00:00"
+    },
+    {
+      "seq": 18,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "git",
+          "status": "ok",
+          "milliseconds": 35.02
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.599978+00:00"
+    },
+    {
+      "seq": 19,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.600641+00:00"
+    },
+    {
+      "seq": 20,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.601255+00:00"
+    },
+    {
+      "seq": 21,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.625595+00:00"
+    },
+    {
+      "seq": 22,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.62981+00:00"
+    },
+    {
+      "seq": 23,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "runbook",
+          "status": "ok",
+          "milliseconds": 29.92
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.630585+00:00"
+    },
+    {
+      "seq": 24,
+      "kind": "authorized",
+      "payload": {
+        "tool": "memory",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.631223+00:00"
+    },
+    {
+      "seq": 25,
+      "kind": "hook",
+      "payload": {
+        "name": "context_assembled",
+        "status": "pass",
+        "summary": {
+          "facts": 5,
+          "evidence": 4,
+          "conflicts": 0
+        }
+      },
+      "created_at": "2026-09-24T21:04:32.632067+00:00"
+    },
+    {
+      "seq": 26,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.632669+00:00"
+    },
+    {
+      "seq": 27,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:32.642803+00:00"
+    },
+    {
+      "seq": 28,
+      "kind": "model_usage",
+      "payload": {
+        "model": "mistral-small-latest",
+        "usage": {
+          "service_tier": "standard",
+          "total_tokens": 2133,
+          "prompt_tokens": 1459,
+          "completion_tokens": 674,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "provider": "mistral",
+        "milliseconds": 5569.75
+      },
+      "created_at": "2026-09-24T21:04:38.215693+00:00"
+    },
+    {
+      "seq": 29,
+      "kind": "model_answer_guard",
+      "payload": {
+        "reason": "contradicts_log_hits",
+        "matched": 1
+      },
+      "created_at": "2026-09-24T21:04:38.221486+00:00"
+    },
+    {
+      "seq": 30,
+      "kind": "checkpoint_saved",
+      "payload": {
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:38.225247+00:00"
+    },
+    {
+      "seq": 31,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:38.241322+00:00"
+    },
+    {
+      "seq": 32,
+      "kind": "artifact_saved",
+      "payload": {
+        "key": "orders/197ff8d4-d59e-4eee-8087-f3f2bf0ca352/ee019974-0ced-4d2b-9d0f-eb14c0be1b4d",
+        "state": "ready",
+        "sha256": "16b094ff9a9b43ea5bb56424553ea063756240c3d30d55addc62d974e309c865"
+      },
+      "created_at": "2026-09-24T21:04:38.256141+00:00"
+    },
+    {
+      "seq": 33,
+      "kind": "hook",
+      "payload": {
+        "name": "run_finished",
+        "status": "pass",
+        "summary": {
+          "mode": "mistral",
+          "facts": 5
+        }
+      },
+      "created_at": "2026-09-24T21:04:38.257102+00:00"
+    },
+    {
+      "seq": 34,
+      "kind": "result",
+      "payload": {
+        "status": "completed",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T21:04:38.258147+00:00"
+    }
+  ]
+}

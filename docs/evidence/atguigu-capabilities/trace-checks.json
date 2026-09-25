@@ -1,0 +1,36 @@
+[
+  {
+    "name": "workflow_progress_and_timing",
+    "passed": true,
+    "queries": 29,
+    "required_steps": [
+      "召回字段信息",
+      "召回字段取值",
+      "召回指标信息",
+      "合并召回信息",
+      "执行SQL",
+      "抽取关键词",
+      "校验SQL",
+      "添加额外上下文",
+      "生成SQL",
+      "过滤指标信息",
+      "过滤表信息"
+    ]
+  },
+  {
+    "name": "query_id_in_python_logs",
+    "passed": true
+  },
+  {
+    "name": "teaching_metadata_and_data_preserved",
+    "passed": true,
+    "counts_tables_columns_metrics_orders": [
+      [
+        "5",
+        "24",
+        "2",
+        "115"
+      ]
+    ]
+  }
+]

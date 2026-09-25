@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+query/docker/elasticsearch/plugins/*.zip
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+dist/
+.local/
+*.prof
+.DS_Store
+
+*.tsbuildinfo

@@ -1,0 +1,5058 @@
+{
+  "investigation": {
+    "id": "5ba87cc9-82d4-48c6-a2ef-cc152c66229d",
+    "seq": 31,
+    "idem": "04afe566-3163-4274-9339-7a4241604b41",
+    "team": "orders",
+    "action": null,
+    "end_at": "2005-06-12T23:59:59.010002+00:00",
+    "report": {
+      "mode": "deterministic-baseline",
+      "facts": [
+        {
+          "id": "fact:logs:222715:6d880c02b52a",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.605961 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL machine check interrupt (bit=0x10): L2 DCU read error",
+          "evidence": [
+            "logs:222715:6d880c02b52a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222716:d89e6c6cd232",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.898186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222716:d89e6c6cd232"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222717:15f16423c720",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.004402 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222717:15f16423c720"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222718:b631983fdb55",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.103186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222718:b631983fdb55"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222719:1d7ab2af395c",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.353061 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222719:1d7ab2af395c"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222720:eaad8c9b3c39",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.452604 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222720:eaad8c9b3c39"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222721:b9983f43c491",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.548971 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222721:b9983f43c491"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222722:67e7130948aa",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.685070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222722:67e7130948aa"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222723:e48fd95cb8ff",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.866271 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222723:e48fd95cb8ff"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222724:087b22a43555",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.967642 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222724:087b22a43555"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222725:c1ce92eb3cfc",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.067584 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222725:c1ce92eb3cfc"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222726:c26855d5c65f",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.272226 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222726:c26855d5c65f"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222727:c05d1341c075",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.434663 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222727:c05d1341c075"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222728:7d6dda9f9ed7",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.531187 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222728:7d6dda9f9ed7"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222729:2d9d0f4b09bb",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.630753 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222729:2d9d0f4b09bb"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222730:8b2dedb01f67",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.919426 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222730:8b2dedb01f67"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222731:a872f10c30dc",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.021232 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222731:a872f10c30dc"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222732:ff8f2ac17725",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.122285 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222732:ff8f2ac17725"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222733:6f4483c9642e",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.296433 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222733:6f4483c9642e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222734:9013b5f499d2",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.456192 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222734:9013b5f499d2"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222735:e419273ceef1",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.572962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222735:e419273ceef1"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222736:f6502672a861",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.673962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222736:f6502672a861"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222737:06bc63063e31",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.977843 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222737:06bc63063e31"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222738:b553d968db4a",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.078314 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222738:b553d968db4a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222739:987c8d8698b9",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.178888 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222739:987c8d8698b9"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222740:10eefc744bab",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.482799 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222740:10eefc744bab"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222741:f43a42a82866",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.581457 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222741:f43a42a82866"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222742:bc195566e387",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.683964 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222742:bc195566e387"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222743:96f0b2495a5a",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.970070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222743:96f0b2495a5a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222744:32055440266d",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.072671 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222744:32055440266d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222745:31c74124dfd5",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.174078 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222745:31c74124dfd5"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222746:a74c8845cb93",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.414928 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222746:a74c8845cb93"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222747:93ba5d104e9d",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.519342 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222747:93ba5d104e9d"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222748:ff1838375edc",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.618309 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222748:ff1838375edc"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222749:9cbba19afd65",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.714099 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222749:9cbba19afd65"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222750:35056c46bb33",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.005382 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222750:35056c46bb33"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222751:e4843a3ec4c1",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.120335 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222751:e4843a3ec4c1"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222752:6e2a28c5d2c0",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.219790 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222752:6e2a28c5d2c0"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222753:76f5347684fb",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.524344 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222753:76f5347684fb"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222754:116b200e0b01",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.622384 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222754:116b200e0b01"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222755:bf736975bfcb",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.722851 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222755:bf736975bfcb"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222756:436535e4d83e",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.008712 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222756:436535e4d83e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222757:871b75e82790",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.107395 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222757:871b75e82790"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222758:f7885a45497e",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.206905 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222758:f7885a45497e"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222759:205052721296",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.389449 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222759:205052721296"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222760:851cd879ac8b",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.577304 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222760:851cd879ac8b"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222761:943732674dfc",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.675568 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222761:943732674dfc"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222762:bb6b58f75878",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.865056 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222762:bb6b58f75878"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222763:8d2df6e4f34a",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.029356 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222763:8d2df6e4f34a"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:logs:222764:44354ff28754",
+          "kind": "observation",
+          "text": "日志记录 FATAL: 1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.385423 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+          "evidence": [
+            "logs:222764:44354ff28754"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service"
+            ],
+            "limit": 50,
+            "object": "Service",
+            "source": "logs"
+          }
+        },
+        {
+          "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "kind": "observation",
+          "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+          "evidence": [
+            "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "deployments",
+              "commit"
+            ],
+            "limit": 50,
+            "object": "Commit",
+            "source": "git"
+          }
+        },
+        {
+          "id": "fact:runbook:orders-runbook:3fd079fe1881",
+          "kind": "observation",
+          "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+          "evidence": [
+            "runbook:orders-runbook:3fd079fe1881"
+          ],
+          "transform": "normalize-v1",
+          "query_step": {
+            "path": [
+              "Service",
+              "runbook"
+            ],
+            "limit": 50,
+            "object": "Runbook",
+            "source": "runbook"
+          }
+        }
+      ],
+      "impact": "svc-17",
+      "context": {
+        "plan": {
+          "end": "2005-06-12T23:59:59.010002Z",
+          "start": "2005-06-12T00:00:00Z",
+          "steps": [
+            {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            },
+            {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            },
+            {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            },
+            {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          ],
+          "service": "svc-17",
+          "version": "1"
+        },
+        "facts": [
+          {
+            "id": "fact:logs:222715:6d880c02b52a",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.605961 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL machine check interrupt (bit=0x10): L2 DCU read error",
+            "evidence": [
+              "logs:222715:6d880c02b52a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222716:d89e6c6cd232",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.898186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222716:d89e6c6cd232"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222717:15f16423c720",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.004402 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222717:15f16423c720"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222718:b631983fdb55",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.103186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222718:b631983fdb55"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222719:1d7ab2af395c",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.353061 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222719:1d7ab2af395c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222720:eaad8c9b3c39",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.452604 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222720:eaad8c9b3c39"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222721:b9983f43c491",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.548971 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222721:b9983f43c491"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222722:67e7130948aa",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.685070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222722:67e7130948aa"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222723:e48fd95cb8ff",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.866271 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222723:e48fd95cb8ff"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222724:087b22a43555",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.967642 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222724:087b22a43555"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222725:c1ce92eb3cfc",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.067584 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222725:c1ce92eb3cfc"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222726:c26855d5c65f",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.272226 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222726:c26855d5c65f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222727:c05d1341c075",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.434663 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222727:c05d1341c075"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222728:7d6dda9f9ed7",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.531187 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222728:7d6dda9f9ed7"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222729:2d9d0f4b09bb",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.630753 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222729:2d9d0f4b09bb"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222730:8b2dedb01f67",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.919426 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222730:8b2dedb01f67"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222731:a872f10c30dc",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.021232 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222731:a872f10c30dc"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222732:ff8f2ac17725",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.122285 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222732:ff8f2ac17725"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222733:6f4483c9642e",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.296433 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222733:6f4483c9642e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222734:9013b5f499d2",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.456192 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222734:9013b5f499d2"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222735:e419273ceef1",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.572962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222735:e419273ceef1"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222736:f6502672a861",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.673962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222736:f6502672a861"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222737:06bc63063e31",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.977843 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222737:06bc63063e31"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222738:b553d968db4a",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.078314 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222738:b553d968db4a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222739:987c8d8698b9",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.178888 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222739:987c8d8698b9"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222740:10eefc744bab",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.482799 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222740:10eefc744bab"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222741:f43a42a82866",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.581457 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222741:f43a42a82866"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222742:bc195566e387",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.683964 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222742:bc195566e387"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222743:96f0b2495a5a",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.970070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222743:96f0b2495a5a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222744:32055440266d",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.072671 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222744:32055440266d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222745:31c74124dfd5",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.174078 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222745:31c74124dfd5"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222746:a74c8845cb93",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.414928 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222746:a74c8845cb93"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222747:93ba5d104e9d",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.519342 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222747:93ba5d104e9d"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222748:ff1838375edc",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.618309 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222748:ff1838375edc"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222749:9cbba19afd65",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.714099 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222749:9cbba19afd65"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222750:35056c46bb33",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.005382 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222750:35056c46bb33"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222751:e4843a3ec4c1",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.120335 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222751:e4843a3ec4c1"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222752:6e2a28c5d2c0",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.219790 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222752:6e2a28c5d2c0"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222753:76f5347684fb",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.524344 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222753:76f5347684fb"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222754:116b200e0b01",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.622384 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222754:116b200e0b01"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222755:bf736975bfcb",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.722851 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222755:bf736975bfcb"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222756:436535e4d83e",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.008712 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222756:436535e4d83e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222757:871b75e82790",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.107395 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222757:871b75e82790"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222758:f7885a45497e",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.206905 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222758:f7885a45497e"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222759:205052721296",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.389449 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222759:205052721296"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222760:851cd879ac8b",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.577304 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222760:851cd879ac8b"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222761:943732674dfc",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.675568 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222761:943732674dfc"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222762:bb6b58f75878",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.865056 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222762:bb6b58f75878"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222763:8d2df6e4f34a",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.029356 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222763:8d2df6e4f34a"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:logs:222764:44354ff28754",
+            "kind": "observation",
+            "text": "日志记录 FATAL: 1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.385423 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "evidence": [
+              "logs:222764:44354ff28754"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 50,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "kind": "observation",
+            "text": "代码提交 fec45e28cf9d3ed28369abf162485cc57d53770f，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:3fd079fe1881",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n",
+            "evidence": [
+              "runbook:orders-runbook:3fd079fe1881"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          }
+        ],
+        "scope": {
+          "team": "orders",
+          "service": "svc-17",
+          "subject": "alice"
+        },
+        "missing": [
+          "deployments: no accessible records in scope",
+          "logs: truncated at bounded page; more records exist"
+        ],
+        "objects": [
+          {
+            "id": "svc-17",
+            "team": "orders",
+            "type": "Service"
+          }
+        ],
+        "version": "1",
+        "evidence": [
+          {
+            "id": "logs:222715:6d880c02b52a",
+            "team": "orders",
+            "sha256": "6d880c02b52a244abfaab3ed4a4d545941b968fa8db19a15d21b29669f2ea868",
+            "source": "logs",
+            "locator": "demo://logs/222715",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.605961 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL machine check interrupt (bit=0x10): L2 DCU read error",
+              "service_name": "checkout-api",
+              "original_line": 222715
+            },
+            "version": "222715",
+            "available": true,
+            "event_time": "2005-06-12T00:17:44+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222715"
+          },
+          {
+            "id": "logs:222716:d89e6c6cd232",
+            "team": "orders",
+            "sha256": "d89e6c6cd23215a5214a316d0a7785bcc1ac83454b7f17b30b5a4a906b789b61",
+            "source": "logs",
+            "locator": "demo://logs/222716",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.898186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222716
+            },
+            "version": "222716",
+            "available": true,
+            "event_time": "2005-06-12T00:17:44+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222716"
+          },
+          {
+            "id": "logs:222717:15f16423c720",
+            "team": "orders",
+            "sha256": "15f16423c720d11c1e094bf4fdbf680bb5e1f2275ff94c4a34f6cb2d529ba8f2",
+            "source": "logs",
+            "locator": "demo://logs/222717",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.004402 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222717
+            },
+            "version": "222717",
+            "available": true,
+            "event_time": "2005-06-12T00:17:45+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222717"
+          },
+          {
+            "id": "logs:222718:b631983fdb55",
+            "team": "orders",
+            "sha256": "b631983fdb55cc9bbed6d4be518f30a2799bfe6bbb3d09d848d2e2be388f6e8c",
+            "source": "logs",
+            "locator": "demo://logs/222718",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.103186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222718
+            },
+            "version": "222718",
+            "available": true,
+            "event_time": "2005-06-12T00:17:45+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222718"
+          },
+          {
+            "id": "logs:222719:1d7ab2af395c",
+            "team": "orders",
+            "sha256": "1d7ab2af395c5896af189ad0539a25841fd526677dc359fb0e34f79e8515cfb5",
+            "source": "logs",
+            "locator": "demo://logs/222719",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.353061 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222719
+            },
+            "version": "222719",
+            "available": true,
+            "event_time": "2005-06-12T00:17:45+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222719"
+          },
+          {
+            "id": "logs:222720:eaad8c9b3c39",
+            "team": "orders",
+            "sha256": "eaad8c9b3c39432d737313cbef9c94807503b50d4a3a821eb2294a44f44d8341",
+            "source": "logs",
+            "locator": "demo://logs/222720",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.452604 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222720
+            },
+            "version": "222720",
+            "available": true,
+            "event_time": "2005-06-12T00:17:45+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222720"
+          },
+          {
+            "id": "logs:222721:b9983f43c491",
+            "team": "orders",
+            "sha256": "b9983f43c49190895018d13569cc1eadd042d184f996718127162fa5feb363b6",
+            "source": "logs",
+            "locator": "demo://logs/222721",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.548971 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222721
+            },
+            "version": "222721",
+            "available": true,
+            "event_time": "2005-06-12T00:17:45+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222721"
+          },
+          {
+            "id": "logs:222722:67e7130948aa",
+            "team": "orders",
+            "sha256": "67e7130948aa43aefb7356fbc11d8398a37bbe6d66d3424ff579ce032454476f",
+            "source": "logs",
+            "locator": "demo://logs/222722",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.685070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222722
+            },
+            "version": "222722",
+            "available": true,
+            "event_time": "2005-06-12T00:17:45+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222722"
+          },
+          {
+            "id": "logs:222723:e48fd95cb8ff",
+            "team": "orders",
+            "sha256": "e48fd95cb8fff1689fd3ce1513e8e534690bbc9039a28c65b7ff9c8266a38359",
+            "source": "logs",
+            "locator": "demo://logs/222723",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.866271 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222723
+            },
+            "version": "222723",
+            "available": true,
+            "event_time": "2005-06-12T00:17:45+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222723"
+          },
+          {
+            "id": "logs:222724:087b22a43555",
+            "team": "orders",
+            "sha256": "087b22a4355512122b32d26e0ff8682b0de0dffdc50dda39a1869204258f9607",
+            "source": "logs",
+            "locator": "demo://logs/222724",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.967642 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222724
+            },
+            "version": "222724",
+            "available": true,
+            "event_time": "2005-06-12T00:17:45+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222724"
+          },
+          {
+            "id": "logs:222725:c1ce92eb3cfc",
+            "team": "orders",
+            "sha256": "c1ce92eb3cfcc50036218e30e2099bcb9e8533bdb6e3df2a0086c06e2869c73c",
+            "source": "logs",
+            "locator": "demo://logs/222725",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.067584 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222725
+            },
+            "version": "222725",
+            "available": true,
+            "event_time": "2005-06-12T00:17:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222725"
+          },
+          {
+            "id": "logs:222726:c26855d5c65f",
+            "team": "orders",
+            "sha256": "c26855d5c65f348cc0ae71ec3c902fd03acc134e7625f60d611bdd85baa0a059",
+            "source": "logs",
+            "locator": "demo://logs/222726",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.272226 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222726
+            },
+            "version": "222726",
+            "available": true,
+            "event_time": "2005-06-12T00:17:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222726"
+          },
+          {
+            "id": "logs:222727:c05d1341c075",
+            "team": "orders",
+            "sha256": "c05d1341c07579d207b3ff5d7c4dbd863e0dc3491fe32c8abb69c3e3c32b2202",
+            "source": "logs",
+            "locator": "demo://logs/222727",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.434663 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222727
+            },
+            "version": "222727",
+            "available": true,
+            "event_time": "2005-06-12T00:17:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222727"
+          },
+          {
+            "id": "logs:222728:7d6dda9f9ed7",
+            "team": "orders",
+            "sha256": "7d6dda9f9ed754a25a20ee87dffe2c3d3541ae1d15269ae3d404622736e13400",
+            "source": "logs",
+            "locator": "demo://logs/222728",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.531187 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222728
+            },
+            "version": "222728",
+            "available": true,
+            "event_time": "2005-06-12T00:17:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222728"
+          },
+          {
+            "id": "logs:222729:2d9d0f4b09bb",
+            "team": "orders",
+            "sha256": "2d9d0f4b09bb8c1df288ea0f26b95bbe0b86d19aac37ad308371222c12134c97",
+            "source": "logs",
+            "locator": "demo://logs/222729",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.630753 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222729
+            },
+            "version": "222729",
+            "available": true,
+            "event_time": "2005-06-12T00:17:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222729"
+          },
+          {
+            "id": "logs:222730:8b2dedb01f67",
+            "team": "orders",
+            "sha256": "8b2dedb01f67e7201cac39be6fbb76b70da0d434e9697fd3a4412a77406fc36a",
+            "source": "logs",
+            "locator": "demo://logs/222730",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.919426 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222730
+            },
+            "version": "222730",
+            "available": true,
+            "event_time": "2005-06-12T00:17:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222730"
+          },
+          {
+            "id": "logs:222731:a872f10c30dc",
+            "team": "orders",
+            "sha256": "a872f10c30dc8e39dd2cd8a413d0e8d6feb695a1f845a89d1ba4517b71ed502d",
+            "source": "logs",
+            "locator": "demo://logs/222731",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.021232 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222731
+            },
+            "version": "222731",
+            "available": true,
+            "event_time": "2005-06-12T00:17:47+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222731"
+          },
+          {
+            "id": "logs:222732:ff8f2ac17725",
+            "team": "orders",
+            "sha256": "ff8f2ac1772522be7bcf134efba769e0b328fe6407f6b38f36f9c83fa8ad182e",
+            "source": "logs",
+            "locator": "demo://logs/222732",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.122285 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222732
+            },
+            "version": "222732",
+            "available": true,
+            "event_time": "2005-06-12T00:17:47+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222732"
+          },
+          {
+            "id": "logs:222733:6f4483c9642e",
+            "team": "orders",
+            "sha256": "6f4483c9642e85eb5cc11ffd1f3b7eaa75548335fd6c4af5f0c8b5473744fd71",
+            "source": "logs",
+            "locator": "demo://logs/222733",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.296433 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222733
+            },
+            "version": "222733",
+            "available": true,
+            "event_time": "2005-06-12T00:17:47+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222733"
+          },
+          {
+            "id": "logs:222734:9013b5f499d2",
+            "team": "orders",
+            "sha256": "9013b5f499d229f43a75ebffd995b4473e2aa93f562e5bbd4bfd2867f4bfaea2",
+            "source": "logs",
+            "locator": "demo://logs/222734",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.456192 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222734
+            },
+            "version": "222734",
+            "available": true,
+            "event_time": "2005-06-12T00:17:47+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222734"
+          },
+          {
+            "id": "logs:222735:e419273ceef1",
+            "team": "orders",
+            "sha256": "e419273ceef1976ea10629c8471ea1e667f8e4858f9b6bcd7dfeb67f2de8acb6",
+            "source": "logs",
+            "locator": "demo://logs/222735",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.572962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222735
+            },
+            "version": "222735",
+            "available": true,
+            "event_time": "2005-06-12T00:17:47+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222735"
+          },
+          {
+            "id": "logs:222736:f6502672a861",
+            "team": "orders",
+            "sha256": "f6502672a861c6ce82f02db705cdf4d1505147f6e45342482740ec1785a15f7c",
+            "source": "logs",
+            "locator": "demo://logs/222736",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.673962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222736
+            },
+            "version": "222736",
+            "available": true,
+            "event_time": "2005-06-12T00:17:47+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222736"
+          },
+          {
+            "id": "logs:222737:06bc63063e31",
+            "team": "orders",
+            "sha256": "06bc63063e31416b48fbd64b0fc773b02c22092b0952dd520af4cf31281fcaff",
+            "source": "logs",
+            "locator": "demo://logs/222737",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.977843 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222737
+            },
+            "version": "222737",
+            "available": true,
+            "event_time": "2005-06-12T00:17:47+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222737"
+          },
+          {
+            "id": "logs:222738:b553d968db4a",
+            "team": "orders",
+            "sha256": "b553d968db4a2565c4da9e884523e9cfad7f8df90d6df6ded2f3c771943575c5",
+            "source": "logs",
+            "locator": "demo://logs/222738",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.078314 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222738
+            },
+            "version": "222738",
+            "available": true,
+            "event_time": "2005-06-12T00:17:48+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222738"
+          },
+          {
+            "id": "logs:222739:987c8d8698b9",
+            "team": "orders",
+            "sha256": "987c8d8698b99125d243c52ad9aa13e3b11f983a0ada05da1bbaee8d0645181f",
+            "source": "logs",
+            "locator": "demo://logs/222739",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.178888 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222739
+            },
+            "version": "222739",
+            "available": true,
+            "event_time": "2005-06-12T00:17:48+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222739"
+          },
+          {
+            "id": "logs:222740:10eefc744bab",
+            "team": "orders",
+            "sha256": "10eefc744babf64341b88ef976513851808301221813e340108d12b2e16e5dab",
+            "source": "logs",
+            "locator": "demo://logs/222740",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.482799 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222740
+            },
+            "version": "222740",
+            "available": true,
+            "event_time": "2005-06-12T00:17:48+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222740"
+          },
+          {
+            "id": "logs:222741:f43a42a82866",
+            "team": "orders",
+            "sha256": "f43a42a828667bdf44b6155a21a3f84e4c59a6a21cbc820fcb52feb5f4b00773",
+            "source": "logs",
+            "locator": "demo://logs/222741",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.581457 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222741
+            },
+            "version": "222741",
+            "available": true,
+            "event_time": "2005-06-12T00:17:48+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222741"
+          },
+          {
+            "id": "logs:222742:bc195566e387",
+            "team": "orders",
+            "sha256": "bc195566e3876719a48c525a8fbbe88cccf9783184d3bef9f01f278f0b40712a",
+            "source": "logs",
+            "locator": "demo://logs/222742",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.683964 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222742
+            },
+            "version": "222742",
+            "available": true,
+            "event_time": "2005-06-12T00:17:48+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222742"
+          },
+          {
+            "id": "logs:222743:96f0b2495a5a",
+            "team": "orders",
+            "sha256": "96f0b2495a5a96ec89023c1f4bf242546b4f0853b8915c769969af7fe6610af0",
+            "source": "logs",
+            "locator": "demo://logs/222743",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.970070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222743
+            },
+            "version": "222743",
+            "available": true,
+            "event_time": "2005-06-12T00:17:48+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222743"
+          },
+          {
+            "id": "logs:222744:32055440266d",
+            "team": "orders",
+            "sha256": "32055440266df98bd6fedd05288e98d8b4c5cb9783e38a0f51b85fc9692f65a0",
+            "source": "logs",
+            "locator": "demo://logs/222744",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.072671 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222744
+            },
+            "version": "222744",
+            "available": true,
+            "event_time": "2005-06-12T00:17:49+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222744"
+          },
+          {
+            "id": "logs:222745:31c74124dfd5",
+            "team": "orders",
+            "sha256": "31c74124dfd5c274cc292b6afb0f305021bf32961c787b3773277dd32f1bde74",
+            "source": "logs",
+            "locator": "demo://logs/222745",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.174078 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222745
+            },
+            "version": "222745",
+            "available": true,
+            "event_time": "2005-06-12T00:17:49+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222745"
+          },
+          {
+            "id": "logs:222746:a74c8845cb93",
+            "team": "orders",
+            "sha256": "a74c8845cb930289f14573324229790ea89f1a8c1013f7a79bae393b1f7a2b28",
+            "source": "logs",
+            "locator": "demo://logs/222746",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.414928 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222746
+            },
+            "version": "222746",
+            "available": true,
+            "event_time": "2005-06-12T00:17:49+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222746"
+          },
+          {
+            "id": "logs:222747:93ba5d104e9d",
+            "team": "orders",
+            "sha256": "93ba5d104e9d1a44430f896e7ea0e04e918c9c828ebbe06dc0fb4ce129a5a1e8",
+            "source": "logs",
+            "locator": "demo://logs/222747",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.519342 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222747
+            },
+            "version": "222747",
+            "available": true,
+            "event_time": "2005-06-12T00:17:49+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222747"
+          },
+          {
+            "id": "logs:222748:ff1838375edc",
+            "team": "orders",
+            "sha256": "ff1838375edccd886381908e522767c44ee9595893a986c83f2d9da3647a2c9f",
+            "source": "logs",
+            "locator": "demo://logs/222748",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.618309 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222748
+            },
+            "version": "222748",
+            "available": true,
+            "event_time": "2005-06-12T00:17:49+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222748"
+          },
+          {
+            "id": "logs:222749:9cbba19afd65",
+            "team": "orders",
+            "sha256": "9cbba19afd657ce1d7c0958d37a73d8559d7b8a0c44aa630f84cb96a75f924e4",
+            "source": "logs",
+            "locator": "demo://logs/222749",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.714099 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222749
+            },
+            "version": "222749",
+            "available": true,
+            "event_time": "2005-06-12T00:17:49+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222749"
+          },
+          {
+            "id": "logs:222750:35056c46bb33",
+            "team": "orders",
+            "sha256": "35056c46bb33935f264e4d3126eb5b98f2345102af821fb0b3070839c2e7aba3",
+            "source": "logs",
+            "locator": "demo://logs/222750",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.005382 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222750
+            },
+            "version": "222750",
+            "available": true,
+            "event_time": "2005-06-12T00:17:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222750"
+          },
+          {
+            "id": "logs:222751:e4843a3ec4c1",
+            "team": "orders",
+            "sha256": "e4843a3ec4c18e3f0834b20722b2413c1cd57615a6db557f30a4451e6cb958be",
+            "source": "logs",
+            "locator": "demo://logs/222751",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.120335 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222751
+            },
+            "version": "222751",
+            "available": true,
+            "event_time": "2005-06-12T00:17:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222751"
+          },
+          {
+            "id": "logs:222752:6e2a28c5d2c0",
+            "team": "orders",
+            "sha256": "6e2a28c5d2c002ca328bef1d09bc57a5e174347f6fd8c519bf813a96684f04d7",
+            "source": "logs",
+            "locator": "demo://logs/222752",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.219790 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222752
+            },
+            "version": "222752",
+            "available": true,
+            "event_time": "2005-06-12T00:17:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222752"
+          },
+          {
+            "id": "logs:222753:76f5347684fb",
+            "team": "orders",
+            "sha256": "76f5347684fb6c2d12a880a0251e692925779d2df25f31fc39db3c5a6cd8a3d1",
+            "source": "logs",
+            "locator": "demo://logs/222753",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.524344 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222753
+            },
+            "version": "222753",
+            "available": true,
+            "event_time": "2005-06-12T00:17:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222753"
+          },
+          {
+            "id": "logs:222754:116b200e0b01",
+            "team": "orders",
+            "sha256": "116b200e0b0148b1e749debcb581b03a50174f528074040871799751d01e34d1",
+            "source": "logs",
+            "locator": "demo://logs/222754",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.622384 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222754
+            },
+            "version": "222754",
+            "available": true,
+            "event_time": "2005-06-12T00:17:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222754"
+          },
+          {
+            "id": "logs:222755:bf736975bfcb",
+            "team": "orders",
+            "sha256": "bf736975bfcb883206b78eeab025072d44552aecb44fc0321adc953efc7dc8dd",
+            "source": "logs",
+            "locator": "demo://logs/222755",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.722851 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222755
+            },
+            "version": "222755",
+            "available": true,
+            "event_time": "2005-06-12T00:17:50+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222755"
+          },
+          {
+            "id": "logs:222756:436535e4d83e",
+            "team": "orders",
+            "sha256": "436535e4d83e2a2ea00cef3593ab41085b62a82d539070545de79fde2f0c8f99",
+            "source": "logs",
+            "locator": "demo://logs/222756",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.008712 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222756
+            },
+            "version": "222756",
+            "available": true,
+            "event_time": "2005-06-12T00:17:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222756"
+          },
+          {
+            "id": "logs:222757:871b75e82790",
+            "team": "orders",
+            "sha256": "871b75e82790109fde7129aa08a5c939cf338f38435b704fd6f5e60e1fb303c5",
+            "source": "logs",
+            "locator": "demo://logs/222757",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.107395 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222757
+            },
+            "version": "222757",
+            "available": true,
+            "event_time": "2005-06-12T00:17:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222757"
+          },
+          {
+            "id": "logs:222758:f7885a45497e",
+            "team": "orders",
+            "sha256": "f7885a45497e27cdcfc175d64f6da082aae0b7af7d3f061748bdee646c2db2c4",
+            "source": "logs",
+            "locator": "demo://logs/222758",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.206905 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222758
+            },
+            "version": "222758",
+            "available": true,
+            "event_time": "2005-06-12T00:17:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222758"
+          },
+          {
+            "id": "logs:222759:205052721296",
+            "team": "orders",
+            "sha256": "205052721296e025671e0d7d4cd14c4589a9651eb77a579de5887171c0fd700e",
+            "source": "logs",
+            "locator": "demo://logs/222759",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.389449 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222759
+            },
+            "version": "222759",
+            "available": true,
+            "event_time": "2005-06-12T00:17:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222759"
+          },
+          {
+            "id": "logs:222760:851cd879ac8b",
+            "team": "orders",
+            "sha256": "851cd879ac8baf59187ba482801bfc8b78c8bc12675cc31bf31bf0c54c8713bf",
+            "source": "logs",
+            "locator": "demo://logs/222760",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.577304 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222760
+            },
+            "version": "222760",
+            "available": true,
+            "event_time": "2005-06-12T00:17:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222760"
+          },
+          {
+            "id": "logs:222761:943732674dfc",
+            "team": "orders",
+            "sha256": "943732674dfcee15c09794906f8afd760705849f7b4ea45490071935fab86d32",
+            "source": "logs",
+            "locator": "demo://logs/222761",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.675568 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222761
+            },
+            "version": "222761",
+            "available": true,
+            "event_time": "2005-06-12T00:17:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222761"
+          },
+          {
+            "id": "logs:222762:bb6b58f75878",
+            "team": "orders",
+            "sha256": "bb6b58f75878516b8480a189bf726a63c6ea76b88a507a4b7c54d4d70e8f6c82",
+            "source": "logs",
+            "locator": "demo://logs/222762",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.865056 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222762
+            },
+            "version": "222762",
+            "available": true,
+            "event_time": "2005-06-12T00:17:51+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222762"
+          },
+          {
+            "id": "logs:222763:8d2df6e4f34a",
+            "team": "orders",
+            "sha256": "8d2df6e4f34a7fa355761c66ddb05b5db6f6fe8cfdf5ab14f5c7c2c43cb77162",
+            "source": "logs",
+            "locator": "demo://logs/222763",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.029356 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222763
+            },
+            "version": "222763",
+            "available": true,
+            "event_time": "2005-06-12T00:17:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222763"
+          },
+          {
+            "id": "logs:222764:44354ff28754",
+            "team": "orders",
+            "sha256": "44354ff28754ea081524c9c1f18816efec8c933ce96a7920e79066000c98032c",
+            "source": "logs",
+            "locator": "demo://logs/222764",
+            "snippet": {
+              "level": "FATAL",
+              "dataset": "BGL",
+              "message": "1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.385423 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+              "service_name": "checkout-api",
+              "original_line": 222764
+            },
+            "version": "222764",
+            "available": true,
+            "event_time": "2005-06-12T00:17:52+00:00",
+            "collected_at": "2026-09-24T20:30:14.321558+00:00",
+            "source_record": "222764"
+          },
+          {
+            "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+            "team": "orders",
+            "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+            "source": "git",
+            "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "snippet": {
+              "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+            },
+            "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.356184+00:00",
+            "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+          },
+          {
+            "id": "runbook:orders-runbook:3fd079fe1881",
+            "team": "orders",
+            "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+            "source": "runbook",
+            "locator": "demo-git://repo/RUNBOOK.md",
+            "snippet": {
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+            },
+            "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+            "available": true,
+            "event_time": "2026-09-24T20:23:46+00:00",
+            "collected_at": "2026-09-24T20:30:14.384929+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "memories": [],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:14.282152+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:14.321558+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:14.356184+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "1",
+            "observed_at": "2026-09-24T20:30:14.384929+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "token_budget": 12000,
+        "mapping_version": "1",
+        "ontology_version": "1"
+      },
+      "missing": [
+        "deployments: no accessible records in scope",
+        "logs: truncated at bounded page; more records exist"
+      ],
+      "evidence": [
+        {
+          "id": "logs:222715:6d880c02b52a",
+          "team": "orders",
+          "sha256": "6d880c02b52a244abfaab3ed4a4d545941b968fa8db19a15d21b29669f2ea868",
+          "source": "logs",
+          "locator": "demo://logs/222715",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.605961 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL machine check interrupt (bit=0x10): L2 DCU read error",
+            "service_name": "checkout-api",
+            "original_line": 222715
+          },
+          "version": "222715",
+          "available": true,
+          "event_time": "2005-06-12T00:17:44+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222715"
+        },
+        {
+          "id": "logs:222716:d89e6c6cd232",
+          "team": "orders",
+          "sha256": "d89e6c6cd23215a5214a316d0a7785bcc1ac83454b7f17b30b5a4a906b789b61",
+          "source": "logs",
+          "locator": "demo://logs/222716",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.898186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222716
+          },
+          "version": "222716",
+          "available": true,
+          "event_time": "2005-06-12T00:17:44+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222716"
+        },
+        {
+          "id": "logs:222717:15f16423c720",
+          "team": "orders",
+          "sha256": "15f16423c720d11c1e094bf4fdbf680bb5e1f2275ff94c4a34f6cb2d529ba8f2",
+          "source": "logs",
+          "locator": "demo://logs/222717",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.004402 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222717
+          },
+          "version": "222717",
+          "available": true,
+          "event_time": "2005-06-12T00:17:45+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222717"
+        },
+        {
+          "id": "logs:222718:b631983fdb55",
+          "team": "orders",
+          "sha256": "b631983fdb55cc9bbed6d4be518f30a2799bfe6bbb3d09d848d2e2be388f6e8c",
+          "source": "logs",
+          "locator": "demo://logs/222718",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.103186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222718
+          },
+          "version": "222718",
+          "available": true,
+          "event_time": "2005-06-12T00:17:45+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222718"
+        },
+        {
+          "id": "logs:222719:1d7ab2af395c",
+          "team": "orders",
+          "sha256": "1d7ab2af395c5896af189ad0539a25841fd526677dc359fb0e34f79e8515cfb5",
+          "source": "logs",
+          "locator": "demo://logs/222719",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.353061 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222719
+          },
+          "version": "222719",
+          "available": true,
+          "event_time": "2005-06-12T00:17:45+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222719"
+        },
+        {
+          "id": "logs:222720:eaad8c9b3c39",
+          "team": "orders",
+          "sha256": "eaad8c9b3c39432d737313cbef9c94807503b50d4a3a821eb2294a44f44d8341",
+          "source": "logs",
+          "locator": "demo://logs/222720",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.452604 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222720
+          },
+          "version": "222720",
+          "available": true,
+          "event_time": "2005-06-12T00:17:45+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222720"
+        },
+        {
+          "id": "logs:222721:b9983f43c491",
+          "team": "orders",
+          "sha256": "b9983f43c49190895018d13569cc1eadd042d184f996718127162fa5feb363b6",
+          "source": "logs",
+          "locator": "demo://logs/222721",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.548971 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222721
+          },
+          "version": "222721",
+          "available": true,
+          "event_time": "2005-06-12T00:17:45+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222721"
+        },
+        {
+          "id": "logs:222722:67e7130948aa",
+          "team": "orders",
+          "sha256": "67e7130948aa43aefb7356fbc11d8398a37bbe6d66d3424ff579ce032454476f",
+          "source": "logs",
+          "locator": "demo://logs/222722",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.685070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222722
+          },
+          "version": "222722",
+          "available": true,
+          "event_time": "2005-06-12T00:17:45+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222722"
+        },
+        {
+          "id": "logs:222723:e48fd95cb8ff",
+          "team": "orders",
+          "sha256": "e48fd95cb8fff1689fd3ce1513e8e534690bbc9039a28c65b7ff9c8266a38359",
+          "source": "logs",
+          "locator": "demo://logs/222723",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.866271 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222723
+          },
+          "version": "222723",
+          "available": true,
+          "event_time": "2005-06-12T00:17:45+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222723"
+        },
+        {
+          "id": "logs:222724:087b22a43555",
+          "team": "orders",
+          "sha256": "087b22a4355512122b32d26e0ff8682b0de0dffdc50dda39a1869204258f9607",
+          "source": "logs",
+          "locator": "demo://logs/222724",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.967642 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222724
+          },
+          "version": "222724",
+          "available": true,
+          "event_time": "2005-06-12T00:17:45+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222724"
+        },
+        {
+          "id": "logs:222725:c1ce92eb3cfc",
+          "team": "orders",
+          "sha256": "c1ce92eb3cfcc50036218e30e2099bcb9e8533bdb6e3df2a0086c06e2869c73c",
+          "source": "logs",
+          "locator": "demo://logs/222725",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.067584 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222725
+          },
+          "version": "222725",
+          "available": true,
+          "event_time": "2005-06-12T00:17:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222725"
+        },
+        {
+          "id": "logs:222726:c26855d5c65f",
+          "team": "orders",
+          "sha256": "c26855d5c65f348cc0ae71ec3c902fd03acc134e7625f60d611bdd85baa0a059",
+          "source": "logs",
+          "locator": "demo://logs/222726",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.272226 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222726
+          },
+          "version": "222726",
+          "available": true,
+          "event_time": "2005-06-12T00:17:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222726"
+        },
+        {
+          "id": "logs:222727:c05d1341c075",
+          "team": "orders",
+          "sha256": "c05d1341c07579d207b3ff5d7c4dbd863e0dc3491fe32c8abb69c3e3c32b2202",
+          "source": "logs",
+          "locator": "demo://logs/222727",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.434663 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222727
+          },
+          "version": "222727",
+          "available": true,
+          "event_time": "2005-06-12T00:17:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222727"
+        },
+        {
+          "id": "logs:222728:7d6dda9f9ed7",
+          "team": "orders",
+          "sha256": "7d6dda9f9ed754a25a20ee87dffe2c3d3541ae1d15269ae3d404622736e13400",
+          "source": "logs",
+          "locator": "demo://logs/222728",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.531187 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222728
+          },
+          "version": "222728",
+          "available": true,
+          "event_time": "2005-06-12T00:17:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222728"
+        },
+        {
+          "id": "logs:222729:2d9d0f4b09bb",
+          "team": "orders",
+          "sha256": "2d9d0f4b09bb8c1df288ea0f26b95bbe0b86d19aac37ad308371222c12134c97",
+          "source": "logs",
+          "locator": "demo://logs/222729",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.630753 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222729
+          },
+          "version": "222729",
+          "available": true,
+          "event_time": "2005-06-12T00:17:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222729"
+        },
+        {
+          "id": "logs:222730:8b2dedb01f67",
+          "team": "orders",
+          "sha256": "8b2dedb01f67e7201cac39be6fbb76b70da0d434e9697fd3a4412a77406fc36a",
+          "source": "logs",
+          "locator": "demo://logs/222730",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.919426 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222730
+          },
+          "version": "222730",
+          "available": true,
+          "event_time": "2005-06-12T00:17:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222730"
+        },
+        {
+          "id": "logs:222731:a872f10c30dc",
+          "team": "orders",
+          "sha256": "a872f10c30dc8e39dd2cd8a413d0e8d6feb695a1f845a89d1ba4517b71ed502d",
+          "source": "logs",
+          "locator": "demo://logs/222731",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.021232 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222731
+          },
+          "version": "222731",
+          "available": true,
+          "event_time": "2005-06-12T00:17:47+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222731"
+        },
+        {
+          "id": "logs:222732:ff8f2ac17725",
+          "team": "orders",
+          "sha256": "ff8f2ac1772522be7bcf134efba769e0b328fe6407f6b38f36f9c83fa8ad182e",
+          "source": "logs",
+          "locator": "demo://logs/222732",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.122285 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222732
+          },
+          "version": "222732",
+          "available": true,
+          "event_time": "2005-06-12T00:17:47+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222732"
+        },
+        {
+          "id": "logs:222733:6f4483c9642e",
+          "team": "orders",
+          "sha256": "6f4483c9642e85eb5cc11ffd1f3b7eaa75548335fd6c4af5f0c8b5473744fd71",
+          "source": "logs",
+          "locator": "demo://logs/222733",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.296433 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222733
+          },
+          "version": "222733",
+          "available": true,
+          "event_time": "2005-06-12T00:17:47+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222733"
+        },
+        {
+          "id": "logs:222734:9013b5f499d2",
+          "team": "orders",
+          "sha256": "9013b5f499d229f43a75ebffd995b4473e2aa93f562e5bbd4bfd2867f4bfaea2",
+          "source": "logs",
+          "locator": "demo://logs/222734",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.456192 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222734
+          },
+          "version": "222734",
+          "available": true,
+          "event_time": "2005-06-12T00:17:47+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222734"
+        },
+        {
+          "id": "logs:222735:e419273ceef1",
+          "team": "orders",
+          "sha256": "e419273ceef1976ea10629c8471ea1e667f8e4858f9b6bcd7dfeb67f2de8acb6",
+          "source": "logs",
+          "locator": "demo://logs/222735",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.572962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222735
+          },
+          "version": "222735",
+          "available": true,
+          "event_time": "2005-06-12T00:17:47+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222735"
+        },
+        {
+          "id": "logs:222736:f6502672a861",
+          "team": "orders",
+          "sha256": "f6502672a861c6ce82f02db705cdf4d1505147f6e45342482740ec1785a15f7c",
+          "source": "logs",
+          "locator": "demo://logs/222736",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.673962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222736
+          },
+          "version": "222736",
+          "available": true,
+          "event_time": "2005-06-12T00:17:47+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222736"
+        },
+        {
+          "id": "logs:222737:06bc63063e31",
+          "team": "orders",
+          "sha256": "06bc63063e31416b48fbd64b0fc773b02c22092b0952dd520af4cf31281fcaff",
+          "source": "logs",
+          "locator": "demo://logs/222737",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.977843 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222737
+          },
+          "version": "222737",
+          "available": true,
+          "event_time": "2005-06-12T00:17:47+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222737"
+        },
+        {
+          "id": "logs:222738:b553d968db4a",
+          "team": "orders",
+          "sha256": "b553d968db4a2565c4da9e884523e9cfad7f8df90d6df6ded2f3c771943575c5",
+          "source": "logs",
+          "locator": "demo://logs/222738",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.078314 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222738
+          },
+          "version": "222738",
+          "available": true,
+          "event_time": "2005-06-12T00:17:48+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222738"
+        },
+        {
+          "id": "logs:222739:987c8d8698b9",
+          "team": "orders",
+          "sha256": "987c8d8698b99125d243c52ad9aa13e3b11f983a0ada05da1bbaee8d0645181f",
+          "source": "logs",
+          "locator": "demo://logs/222739",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.178888 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222739
+          },
+          "version": "222739",
+          "available": true,
+          "event_time": "2005-06-12T00:17:48+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222739"
+        },
+        {
+          "id": "logs:222740:10eefc744bab",
+          "team": "orders",
+          "sha256": "10eefc744babf64341b88ef976513851808301221813e340108d12b2e16e5dab",
+          "source": "logs",
+          "locator": "demo://logs/222740",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.482799 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222740
+          },
+          "version": "222740",
+          "available": true,
+          "event_time": "2005-06-12T00:17:48+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222740"
+        },
+        {
+          "id": "logs:222741:f43a42a82866",
+          "team": "orders",
+          "sha256": "f43a42a828667bdf44b6155a21a3f84e4c59a6a21cbc820fcb52feb5f4b00773",
+          "source": "logs",
+          "locator": "demo://logs/222741",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.581457 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222741
+          },
+          "version": "222741",
+          "available": true,
+          "event_time": "2005-06-12T00:17:48+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222741"
+        },
+        {
+          "id": "logs:222742:bc195566e387",
+          "team": "orders",
+          "sha256": "bc195566e3876719a48c525a8fbbe88cccf9783184d3bef9f01f278f0b40712a",
+          "source": "logs",
+          "locator": "demo://logs/222742",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.683964 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222742
+          },
+          "version": "222742",
+          "available": true,
+          "event_time": "2005-06-12T00:17:48+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222742"
+        },
+        {
+          "id": "logs:222743:96f0b2495a5a",
+          "team": "orders",
+          "sha256": "96f0b2495a5a96ec89023c1f4bf242546b4f0853b8915c769969af7fe6610af0",
+          "source": "logs",
+          "locator": "demo://logs/222743",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.970070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222743
+          },
+          "version": "222743",
+          "available": true,
+          "event_time": "2005-06-12T00:17:48+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222743"
+        },
+        {
+          "id": "logs:222744:32055440266d",
+          "team": "orders",
+          "sha256": "32055440266df98bd6fedd05288e98d8b4c5cb9783e38a0f51b85fc9692f65a0",
+          "source": "logs",
+          "locator": "demo://logs/222744",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.072671 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222744
+          },
+          "version": "222744",
+          "available": true,
+          "event_time": "2005-06-12T00:17:49+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222744"
+        },
+        {
+          "id": "logs:222745:31c74124dfd5",
+          "team": "orders",
+          "sha256": "31c74124dfd5c274cc292b6afb0f305021bf32961c787b3773277dd32f1bde74",
+          "source": "logs",
+          "locator": "demo://logs/222745",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.174078 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222745
+          },
+          "version": "222745",
+          "available": true,
+          "event_time": "2005-06-12T00:17:49+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222745"
+        },
+        {
+          "id": "logs:222746:a74c8845cb93",
+          "team": "orders",
+          "sha256": "a74c8845cb930289f14573324229790ea89f1a8c1013f7a79bae393b1f7a2b28",
+          "source": "logs",
+          "locator": "demo://logs/222746",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.414928 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222746
+          },
+          "version": "222746",
+          "available": true,
+          "event_time": "2005-06-12T00:17:49+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222746"
+        },
+        {
+          "id": "logs:222747:93ba5d104e9d",
+          "team": "orders",
+          "sha256": "93ba5d104e9d1a44430f896e7ea0e04e918c9c828ebbe06dc0fb4ce129a5a1e8",
+          "source": "logs",
+          "locator": "demo://logs/222747",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.519342 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222747
+          },
+          "version": "222747",
+          "available": true,
+          "event_time": "2005-06-12T00:17:49+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222747"
+        },
+        {
+          "id": "logs:222748:ff1838375edc",
+          "team": "orders",
+          "sha256": "ff1838375edccd886381908e522767c44ee9595893a986c83f2d9da3647a2c9f",
+          "source": "logs",
+          "locator": "demo://logs/222748",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.618309 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222748
+          },
+          "version": "222748",
+          "available": true,
+          "event_time": "2005-06-12T00:17:49+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222748"
+        },
+        {
+          "id": "logs:222749:9cbba19afd65",
+          "team": "orders",
+          "sha256": "9cbba19afd657ce1d7c0958d37a73d8559d7b8a0c44aa630f84cb96a75f924e4",
+          "source": "logs",
+          "locator": "demo://logs/222749",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.714099 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222749
+          },
+          "version": "222749",
+          "available": true,
+          "event_time": "2005-06-12T00:17:49+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222749"
+        },
+        {
+          "id": "logs:222750:35056c46bb33",
+          "team": "orders",
+          "sha256": "35056c46bb33935f264e4d3126eb5b98f2345102af821fb0b3070839c2e7aba3",
+          "source": "logs",
+          "locator": "demo://logs/222750",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.005382 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222750
+          },
+          "version": "222750",
+          "available": true,
+          "event_time": "2005-06-12T00:17:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222750"
+        },
+        {
+          "id": "logs:222751:e4843a3ec4c1",
+          "team": "orders",
+          "sha256": "e4843a3ec4c18e3f0834b20722b2413c1cd57615a6db557f30a4451e6cb958be",
+          "source": "logs",
+          "locator": "demo://logs/222751",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.120335 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222751
+          },
+          "version": "222751",
+          "available": true,
+          "event_time": "2005-06-12T00:17:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222751"
+        },
+        {
+          "id": "logs:222752:6e2a28c5d2c0",
+          "team": "orders",
+          "sha256": "6e2a28c5d2c002ca328bef1d09bc57a5e174347f6fd8c519bf813a96684f04d7",
+          "source": "logs",
+          "locator": "demo://logs/222752",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.219790 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222752
+          },
+          "version": "222752",
+          "available": true,
+          "event_time": "2005-06-12T00:17:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222752"
+        },
+        {
+          "id": "logs:222753:76f5347684fb",
+          "team": "orders",
+          "sha256": "76f5347684fb6c2d12a880a0251e692925779d2df25f31fc39db3c5a6cd8a3d1",
+          "source": "logs",
+          "locator": "demo://logs/222753",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.524344 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222753
+          },
+          "version": "222753",
+          "available": true,
+          "event_time": "2005-06-12T00:17:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222753"
+        },
+        {
+          "id": "logs:222754:116b200e0b01",
+          "team": "orders",
+          "sha256": "116b200e0b0148b1e749debcb581b03a50174f528074040871799751d01e34d1",
+          "source": "logs",
+          "locator": "demo://logs/222754",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.622384 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222754
+          },
+          "version": "222754",
+          "available": true,
+          "event_time": "2005-06-12T00:17:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222754"
+        },
+        {
+          "id": "logs:222755:bf736975bfcb",
+          "team": "orders",
+          "sha256": "bf736975bfcb883206b78eeab025072d44552aecb44fc0321adc953efc7dc8dd",
+          "source": "logs",
+          "locator": "demo://logs/222755",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.722851 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222755
+          },
+          "version": "222755",
+          "available": true,
+          "event_time": "2005-06-12T00:17:50+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222755"
+        },
+        {
+          "id": "logs:222756:436535e4d83e",
+          "team": "orders",
+          "sha256": "436535e4d83e2a2ea00cef3593ab41085b62a82d539070545de79fde2f0c8f99",
+          "source": "logs",
+          "locator": "demo://logs/222756",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.008712 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222756
+          },
+          "version": "222756",
+          "available": true,
+          "event_time": "2005-06-12T00:17:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222756"
+        },
+        {
+          "id": "logs:222757:871b75e82790",
+          "team": "orders",
+          "sha256": "871b75e82790109fde7129aa08a5c939cf338f38435b704fd6f5e60e1fb303c5",
+          "source": "logs",
+          "locator": "demo://logs/222757",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.107395 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222757
+          },
+          "version": "222757",
+          "available": true,
+          "event_time": "2005-06-12T00:17:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222757"
+        },
+        {
+          "id": "logs:222758:f7885a45497e",
+          "team": "orders",
+          "sha256": "f7885a45497e27cdcfc175d64f6da082aae0b7af7d3f061748bdee646c2db2c4",
+          "source": "logs",
+          "locator": "demo://logs/222758",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.206905 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222758
+          },
+          "version": "222758",
+          "available": true,
+          "event_time": "2005-06-12T00:17:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222758"
+        },
+        {
+          "id": "logs:222759:205052721296",
+          "team": "orders",
+          "sha256": "205052721296e025671e0d7d4cd14c4589a9651eb77a579de5887171c0fd700e",
+          "source": "logs",
+          "locator": "demo://logs/222759",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.389449 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222759
+          },
+          "version": "222759",
+          "available": true,
+          "event_time": "2005-06-12T00:17:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222759"
+        },
+        {
+          "id": "logs:222760:851cd879ac8b",
+          "team": "orders",
+          "sha256": "851cd879ac8baf59187ba482801bfc8b78c8bc12675cc31bf31bf0c54c8713bf",
+          "source": "logs",
+          "locator": "demo://logs/222760",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.577304 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222760
+          },
+          "version": "222760",
+          "available": true,
+          "event_time": "2005-06-12T00:17:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222760"
+        },
+        {
+          "id": "logs:222761:943732674dfc",
+          "team": "orders",
+          "sha256": "943732674dfcee15c09794906f8afd760705849f7b4ea45490071935fab86d32",
+          "source": "logs",
+          "locator": "demo://logs/222761",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.675568 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222761
+          },
+          "version": "222761",
+          "available": true,
+          "event_time": "2005-06-12T00:17:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222761"
+        },
+        {
+          "id": "logs:222762:bb6b58f75878",
+          "team": "orders",
+          "sha256": "bb6b58f75878516b8480a189bf726a63c6ea76b88a507a4b7c54d4d70e8f6c82",
+          "source": "logs",
+          "locator": "demo://logs/222762",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.865056 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222762
+          },
+          "version": "222762",
+          "available": true,
+          "event_time": "2005-06-12T00:17:51+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222762"
+        },
+        {
+          "id": "logs:222763:8d2df6e4f34a",
+          "team": "orders",
+          "sha256": "8d2df6e4f34a7fa355761c66ddb05b5db6f6fe8cfdf5ab14f5c7c2c43cb77162",
+          "source": "logs",
+          "locator": "demo://logs/222763",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.029356 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222763
+          },
+          "version": "222763",
+          "available": true,
+          "event_time": "2005-06-12T00:17:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222763"
+        },
+        {
+          "id": "logs:222764:44354ff28754",
+          "team": "orders",
+          "sha256": "44354ff28754ea081524c9c1f18816efec8c933ce96a7920e79066000c98032c",
+          "source": "logs",
+          "locator": "demo://logs/222764",
+          "snippet": {
+            "level": "FATAL",
+            "dataset": "BGL",
+            "message": "1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.385423 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+            "service_name": "checkout-api",
+            "original_line": 222764
+          },
+          "version": "222764",
+          "available": true,
+          "event_time": "2005-06-12T00:17:52+00:00",
+          "collected_at": "2026-09-24T20:30:14.321558+00:00",
+          "source_record": "222764"
+        },
+        {
+          "id": "git:fec45e28cf9d3ed28369abf162485cc57d53770f:fc29b06d66c4",
+          "team": "orders",
+          "sha256": "fc29b06d66c4a8a46098b0caf2d6b6b8d5ae2c564ee6561a4bcc7f8702189812",
+          "source": "git",
+          "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "snippet": {
+            "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+            "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+            "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+          },
+          "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.356184+00:00",
+          "source_record": "fec45e28cf9d3ed28369abf162485cc57d53770f"
+        },
+        {
+          "id": "runbook:orders-runbook:3fd079fe1881",
+          "team": "orders",
+          "sha256": "3fd079fe18813e652940e1ebbc9745532b9b72df3621c12e2856971d97d23b1b",
+          "source": "runbook",
+          "locator": "demo-git://repo/RUNBOOK.md",
+          "snippet": {
+            "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+          },
+          "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+          "available": true,
+          "event_time": "2026-09-24T20:23:46+00:00",
+          "collected_at": "2026-09-24T20:30:14.384929+00:00",
+          "source_record": "orders-runbook"
+        }
+      ],
+      "conflicts": [],
+      "freshness": [
+        {
+          "source": "deployments",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:14.282152+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "logs",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:14.321558+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "git",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:14.356184+00:00",
+          "snapshot_consistency": "independent_source"
+        },
+        {
+          "source": "runbook",
+          "watermark": "1",
+          "observed_at": "2026-09-24T20:30:14.384929+00:00",
+          "snapshot_consistency": "independent_source"
+        }
+      ],
+      "candidates": [],
+      "next_steps": [
+        "核对实际部署版本与日志时间窗口。",
+        "检查连接池和依赖延迟指标，补齐缺失来源后确认原因。"
+      ],
+      "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+      "historical_memory": []
+    },
+    "status": "partial",
+    "service": "svc-17",
+    "subject": "alice",
+    "symptom": "[Loghub sequential 10001] Investigate public BGL system logs in this historical window; identify observations, uncertainty and missing sources.",
+    "manifest": {
+      "code": "b2a6c2e5acbbf4372279e4a9a991d3d53e68f4fa",
+      "cost": {
+        "unknown": "provider usage unavailable in baseline",
+        "estimated_usd": null,
+        "known_model_tokens": null
+      },
+      "model": "none-deterministic",
+      "prompt": "investigate-v1",
+      "skills": [
+        "release-compare@1",
+        "log-analysis@1"
+      ],
+      "version": "1",
+      "ontology": "1",
+      "evaluator": "rules-v1",
+      "retrieval": "bounded-50",
+      "snapshots": {
+        "git": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2005-06-12T23:59:59.010002+00:00",
+            "team": "orders",
+            "start": "2005-06-12T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "content": {
+                "diff": "commit fec45e28cf9d3ed28369abf162485cc57d53770f\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 20:23:46 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 20:23:46 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/commit/fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "version": "fec45e28cf9d3ed28369abf162485cc57d53770f",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:14.356184+00:00"
+        },
+        "logs": {
+          "sync": "monotonic_id",
+          "scope": {
+            "end": "2005-06-12T23:59:59.010002+00:00",
+            "team": "orders",
+            "start": "2005-06-12T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "222715",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.605961 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL machine check interrupt (bit=0x10): L2 DCU read error",
+                "service_name": "checkout-api",
+                "original_line": 222715
+              },
+              "deleted": false,
+              "locator": "demo://logs/222715",
+              "version": "222715",
+              "event_time": "2005-06-12T00:17:44+00:00"
+            },
+            {
+              "id": "222716",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535464 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.44.898186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222716
+              },
+              "deleted": false,
+              "locator": "demo://logs/222716",
+              "version": "222716",
+              "event_time": "2005-06-12T00:17:44+00:00"
+            },
+            {
+              "id": "222717",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.004402 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222717
+              },
+              "deleted": false,
+              "locator": "demo://logs/222717",
+              "version": "222717",
+              "event_time": "2005-06-12T00:17:45+00:00"
+            },
+            {
+              "id": "222718",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.103186 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222718
+              },
+              "deleted": false,
+              "locator": "demo://logs/222718",
+              "version": "222718",
+              "event_time": "2005-06-12T00:17:45+00:00"
+            },
+            {
+              "id": "222719",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.353061 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222719
+              },
+              "deleted": false,
+              "locator": "demo://logs/222719",
+              "version": "222719",
+              "event_time": "2005-06-12T00:17:45+00:00"
+            },
+            {
+              "id": "222720",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.452604 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222720
+              },
+              "deleted": false,
+              "locator": "demo://logs/222720",
+              "version": "222720",
+              "event_time": "2005-06-12T00:17:45+00:00"
+            },
+            {
+              "id": "222721",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.548971 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222721
+              },
+              "deleted": false,
+              "locator": "demo://logs/222721",
+              "version": "222721",
+              "event_time": "2005-06-12T00:17:45+00:00"
+            },
+            {
+              "id": "222722",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.685070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222722
+              },
+              "deleted": false,
+              "locator": "demo://logs/222722",
+              "version": "222722",
+              "event_time": "2005-06-12T00:17:45+00:00"
+            },
+            {
+              "id": "222723",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.866271 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222723
+              },
+              "deleted": false,
+              "locator": "demo://logs/222723",
+              "version": "222723",
+              "event_time": "2005-06-12T00:17:45+00:00"
+            },
+            {
+              "id": "222724",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535465 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.45.967642 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222724
+              },
+              "deleted": false,
+              "locator": "demo://logs/222724",
+              "version": "222724",
+              "event_time": "2005-06-12T00:17:45+00:00"
+            },
+            {
+              "id": "222725",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.067584 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222725
+              },
+              "deleted": false,
+              "locator": "demo://logs/222725",
+              "version": "222725",
+              "event_time": "2005-06-12T00:17:46+00:00"
+            },
+            {
+              "id": "222726",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.272226 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222726
+              },
+              "deleted": false,
+              "locator": "demo://logs/222726",
+              "version": "222726",
+              "event_time": "2005-06-12T00:17:46+00:00"
+            },
+            {
+              "id": "222727",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.434663 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222727
+              },
+              "deleted": false,
+              "locator": "demo://logs/222727",
+              "version": "222727",
+              "event_time": "2005-06-12T00:17:46+00:00"
+            },
+            {
+              "id": "222728",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.531187 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222728
+              },
+              "deleted": false,
+              "locator": "demo://logs/222728",
+              "version": "222728",
+              "event_time": "2005-06-12T00:17:46+00:00"
+            },
+            {
+              "id": "222729",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.630753 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222729
+              },
+              "deleted": false,
+              "locator": "demo://logs/222729",
+              "version": "222729",
+              "event_time": "2005-06-12T00:17:46+00:00"
+            },
+            {
+              "id": "222730",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535466 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.46.919426 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222730
+              },
+              "deleted": false,
+              "locator": "demo://logs/222730",
+              "version": "222730",
+              "event_time": "2005-06-12T00:17:46+00:00"
+            },
+            {
+              "id": "222731",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.021232 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222731
+              },
+              "deleted": false,
+              "locator": "demo://logs/222731",
+              "version": "222731",
+              "event_time": "2005-06-12T00:17:47+00:00"
+            },
+            {
+              "id": "222732",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.122285 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222732
+              },
+              "deleted": false,
+              "locator": "demo://logs/222732",
+              "version": "222732",
+              "event_time": "2005-06-12T00:17:47+00:00"
+            },
+            {
+              "id": "222733",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.296433 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222733
+              },
+              "deleted": false,
+              "locator": "demo://logs/222733",
+              "version": "222733",
+              "event_time": "2005-06-12T00:17:47+00:00"
+            },
+            {
+              "id": "222734",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.456192 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222734
+              },
+              "deleted": false,
+              "locator": "demo://logs/222734",
+              "version": "222734",
+              "event_time": "2005-06-12T00:17:47+00:00"
+            },
+            {
+              "id": "222735",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.572962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222735
+              },
+              "deleted": false,
+              "locator": "demo://logs/222735",
+              "version": "222735",
+              "event_time": "2005-06-12T00:17:47+00:00"
+            },
+            {
+              "id": "222736",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.673962 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222736
+              },
+              "deleted": false,
+              "locator": "demo://logs/222736",
+              "version": "222736",
+              "event_time": "2005-06-12T00:17:47+00:00"
+            },
+            {
+              "id": "222737",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535467 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.47.977843 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222737
+              },
+              "deleted": false,
+              "locator": "demo://logs/222737",
+              "version": "222737",
+              "event_time": "2005-06-12T00:17:47+00:00"
+            },
+            {
+              "id": "222738",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.078314 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222738
+              },
+              "deleted": false,
+              "locator": "demo://logs/222738",
+              "version": "222738",
+              "event_time": "2005-06-12T00:17:48+00:00"
+            },
+            {
+              "id": "222739",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.178888 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222739
+              },
+              "deleted": false,
+              "locator": "demo://logs/222739",
+              "version": "222739",
+              "event_time": "2005-06-12T00:17:48+00:00"
+            },
+            {
+              "id": "222740",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.482799 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222740
+              },
+              "deleted": false,
+              "locator": "demo://logs/222740",
+              "version": "222740",
+              "event_time": "2005-06-12T00:17:48+00:00"
+            },
+            {
+              "id": "222741",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.581457 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222741
+              },
+              "deleted": false,
+              "locator": "demo://logs/222741",
+              "version": "222741",
+              "event_time": "2005-06-12T00:17:48+00:00"
+            },
+            {
+              "id": "222742",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.683964 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222742
+              },
+              "deleted": false,
+              "locator": "demo://logs/222742",
+              "version": "222742",
+              "event_time": "2005-06-12T00:17:48+00:00"
+            },
+            {
+              "id": "222743",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535468 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.48.970070 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222743
+              },
+              "deleted": false,
+              "locator": "demo://logs/222743",
+              "version": "222743",
+              "event_time": "2005-06-12T00:17:48+00:00"
+            },
+            {
+              "id": "222744",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.072671 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222744
+              },
+              "deleted": false,
+              "locator": "demo://logs/222744",
+              "version": "222744",
+              "event_time": "2005-06-12T00:17:49+00:00"
+            },
+            {
+              "id": "222745",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.174078 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222745
+              },
+              "deleted": false,
+              "locator": "demo://logs/222745",
+              "version": "222745",
+              "event_time": "2005-06-12T00:17:49+00:00"
+            },
+            {
+              "id": "222746",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.414928 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222746
+              },
+              "deleted": false,
+              "locator": "demo://logs/222746",
+              "version": "222746",
+              "event_time": "2005-06-12T00:17:49+00:00"
+            },
+            {
+              "id": "222747",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.519342 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222747
+              },
+              "deleted": false,
+              "locator": "demo://logs/222747",
+              "version": "222747",
+              "event_time": "2005-06-12T00:17:49+00:00"
+            },
+            {
+              "id": "222748",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.618309 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222748
+              },
+              "deleted": false,
+              "locator": "demo://logs/222748",
+              "version": "222748",
+              "event_time": "2005-06-12T00:17:49+00:00"
+            },
+            {
+              "id": "222749",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535469 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.49.714099 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222749
+              },
+              "deleted": false,
+              "locator": "demo://logs/222749",
+              "version": "222749",
+              "event_time": "2005-06-12T00:17:49+00:00"
+            },
+            {
+              "id": "222750",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.005382 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222750
+              },
+              "deleted": false,
+              "locator": "demo://logs/222750",
+              "version": "222750",
+              "event_time": "2005-06-12T00:17:50+00:00"
+            },
+            {
+              "id": "222751",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.120335 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222751
+              },
+              "deleted": false,
+              "locator": "demo://logs/222751",
+              "version": "222751",
+              "event_time": "2005-06-12T00:17:50+00:00"
+            },
+            {
+              "id": "222752",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.219790 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222752
+              },
+              "deleted": false,
+              "locator": "demo://logs/222752",
+              "version": "222752",
+              "event_time": "2005-06-12T00:17:50+00:00"
+            },
+            {
+              "id": "222753",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.524344 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222753
+              },
+              "deleted": false,
+              "locator": "demo://logs/222753",
+              "version": "222753",
+              "event_time": "2005-06-12T00:17:50+00:00"
+            },
+            {
+              "id": "222754",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.622384 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222754
+              },
+              "deleted": false,
+              "locator": "demo://logs/222754",
+              "version": "222754",
+              "event_time": "2005-06-12T00:17:50+00:00"
+            },
+            {
+              "id": "222755",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535470 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.50.722851 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222755
+              },
+              "deleted": false,
+              "locator": "demo://logs/222755",
+              "version": "222755",
+              "event_time": "2005-06-12T00:17:50+00:00"
+            },
+            {
+              "id": "222756",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.008712 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222756
+              },
+              "deleted": false,
+              "locator": "demo://logs/222756",
+              "version": "222756",
+              "event_time": "2005-06-12T00:17:51+00:00"
+            },
+            {
+              "id": "222757",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.107395 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222757
+              },
+              "deleted": false,
+              "locator": "demo://logs/222757",
+              "version": "222757",
+              "event_time": "2005-06-12T00:17:51+00:00"
+            },
+            {
+              "id": "222758",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.206905 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222758
+              },
+              "deleted": false,
+              "locator": "demo://logs/222758",
+              "version": "222758",
+              "event_time": "2005-06-12T00:17:51+00:00"
+            },
+            {
+              "id": "222759",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.389449 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222759
+              },
+              "deleted": false,
+              "locator": "demo://logs/222759",
+              "version": "222759",
+              "event_time": "2005-06-12T00:17:51+00:00"
+            },
+            {
+              "id": "222760",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.577304 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222760
+              },
+              "deleted": false,
+              "locator": "demo://logs/222760",
+              "version": "222760",
+              "event_time": "2005-06-12T00:17:51+00:00"
+            },
+            {
+              "id": "222761",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.675568 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222761
+              },
+              "deleted": false,
+              "locator": "demo://logs/222761",
+              "version": "222761",
+              "event_time": "2005-06-12T00:17:51+00:00"
+            },
+            {
+              "id": "222762",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535471 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.51.865056 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222762
+              },
+              "deleted": false,
+              "locator": "demo://logs/222762",
+              "version": "222762",
+              "event_time": "2005-06-12T00:17:51+00:00"
+            },
+            {
+              "id": "222763",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.029356 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222763
+              },
+              "deleted": false,
+              "locator": "demo://logs/222763",
+              "version": "222763",
+              "event_time": "2005-06-12T00:17:52+00:00"
+            },
+            {
+              "id": "222764",
+              "content": {
+                "level": "FATAL",
+                "dataset": "BGL",
+                "message": "1118535472 2005.06.11 R30-M0-N9-C:J16-U01 2005-06-11-17.17.52.385423 R30-M0-N9-C:J16-U01 RAS KERNEL FATAL data TLB error interrupt",
+                "service_name": "checkout-api",
+                "original_line": 222764
+              },
+              "deleted": false,
+              "locator": "demo://logs/222764",
+              "version": "222764",
+              "event_time": "2005-06-12T00:17:52+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": "222764",
+          "observed_at": "2026-09-24T20:30:14.321558+00:00"
+        },
+        "runbook": {
+          "sync": "rescan",
+          "scope": {
+            "end": "2005-06-12T23:59:59.010002+00:00",
+            "team": "orders",
+            "start": "2005-06-12T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [
+            {
+              "id": "orders-runbook",
+              "content": {
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.\n"
+              },
+              "deleted": false,
+              "locator": "demo-git://repo/RUNBOOK.md",
+              "version": "7b1dcdd87f0d1bfe6f9d5cd758633638ba9e51ef",
+              "event_time": "2026-09-24T20:23:46+00:00"
+            }
+          ],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:14.384929+00:00"
+        },
+        "deployments": {
+          "scope": {
+            "end": "2005-06-12T23:59:59.010002+00:00",
+            "team": "orders",
+            "start": "2005-06-12T00:00:00+00:00",
+            "service": "svc-17",
+            "subject": "alice",
+            "watermark": 1,
+            "generation": 1
+          },
+          "records": [],
+          "watermark": 1,
+          "next_cursor": null,
+          "observed_at": "2026-09-24T20:30:14.282152+00:00"
+        }
+      },
+      "generation": 1,
+      "tool_schema": "1",
+      "source_mapping": "1",
+      "model_parameters": {
+        "temperature": "provider-default"
+      },
+      "permission_policy": "go-v1"
+    },
+    "start_at": "2005-06-12T00:00:00+00:00",
+    "timezone": "UTC",
+    "trace_id": "f390dcdb5b7e28db26c2da223a1c90bb",
+    "created_at": "2026-09-24T20:30:14.240319+00:00",
+    "updated_at": "2026-09-24T20:30:14.420426+00:00",
+    "request_hash": "f69acebecf1ae6dbf828b7b346bc990874266cf706992bb0b19d57a16eef1447",
+    "evidence_stale": false,
+    "source_version": 1
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "queued",
+      "payload": {
+        "request_id": "de7cb6da-3f4a-42ea-b3aa-36611a2ed882"
+      },
+      "created_at": "2026-09-24T20:30:14.240319+00:00"
+    },
+    {
+      "seq": 2,
+      "kind": "claimed",
+      "payload": {
+        "worker": "62c884b0db5b:344970be-8585-476e-a273-2bda0e10e93b"
+      },
+      "created_at": "2026-09-24T20:30:14.245216+00:00"
+    },
+    {
+      "seq": 3,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.271615+00:00"
+    },
+    {
+      "seq": 4,
+      "kind": "hook",
+      "payload": {
+        "name": "plan_validated",
+        "status": "pass",
+        "summary": {
+          "steps": 4
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.276062+00:00"
+    },
+    {
+      "seq": 5,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.277007+00:00"
+    },
+    {
+      "seq": 6,
+      "kind": "authorized",
+      "payload": {
+        "tool": "deployments",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.278172+00:00"
+    },
+    {
+      "seq": 7,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 0,
+          "source": "deployments"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.282379+00:00"
+    },
+    {
+      "seq": 8,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "deployments",
+          "status": "ok",
+          "milliseconds": 6.05
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.283066+00:00"
+    },
+    {
+      "seq": 9,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.283621+00:00"
+    },
+    {
+      "seq": 10,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.28426+00:00"
+    },
+    {
+      "seq": 11,
+      "kind": "authorized",
+      "payload": {
+        "tool": "logs",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.308552+00:00"
+    },
+    {
+      "seq": 12,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 50,
+          "source": "logs"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.326333+00:00"
+    },
+    {
+      "seq": 13,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "logs",
+          "status": "ok",
+          "milliseconds": 43.93
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.327587+00:00"
+    },
+    {
+      "seq": 14,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.328451+00:00"
+    },
+    {
+      "seq": 15,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.329241+00:00"
+    },
+    {
+      "seq": 16,
+      "kind": "authorized",
+      "payload": {
+        "tool": "git",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.35316+00:00"
+    },
+    {
+      "seq": 17,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "git"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.356926+00:00"
+    },
+    {
+      "seq": 18,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "git",
+          "status": "ok",
+          "milliseconds": 29.24
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.357697+00:00"
+    },
+    {
+      "seq": 19,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_before",
+        "status": "pass",
+        "summary": {
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.358321+00:00"
+    },
+    {
+      "seq": 20,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.358893+00:00"
+    },
+    {
+      "seq": 21,
+      "kind": "authorized",
+      "payload": {
+        "tool": "runbook",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.382514+00:00"
+    },
+    {
+      "seq": 22,
+      "kind": "hook",
+      "payload": {
+        "name": "retrieval_returned",
+        "status": "pass",
+        "summary": {
+          "count": 1,
+          "source": "runbook"
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.385671+00:00"
+    },
+    {
+      "seq": 23,
+      "kind": "hook",
+      "payload": {
+        "name": "tool_after",
+        "status": "pass",
+        "summary": {
+          "source": "runbook",
+          "status": "ok",
+          "milliseconds": 28.2
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.386627+00:00"
+    },
+    {
+      "seq": 24,
+      "kind": "authorized",
+      "payload": {
+        "tool": "memory",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.387411+00:00"
+    },
+    {
+      "seq": 25,
+      "kind": "hook",
+      "payload": {
+        "name": "context_assembled",
+        "status": "pass",
+        "summary": {
+          "facts": 52,
+          "evidence": 52,
+          "conflicts": 0
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.388262+00:00"
+    },
+    {
+      "seq": 26,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.388831+00:00"
+    },
+    {
+      "seq": 27,
+      "kind": "checkpoint_saved",
+      "payload": {
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.399035+00:00"
+    },
+    {
+      "seq": 28,
+      "kind": "authorized",
+      "payload": {
+        "tool": "context",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.408896+00:00"
+    },
+    {
+      "seq": 29,
+      "kind": "artifact_saved",
+      "payload": {
+        "key": "orders/5ba87cc9-82d4-48c6-a2ef-cc152c66229d/e4a6b524-0192-45e3-98d0-9f744e7f2138",
+        "state": "ready",
+        "sha256": "9698c58e2952ae940febe5c65b89ef7acb37d94ab959967a72d54b44d250e883"
+      },
+      "created_at": "2026-09-24T20:30:14.418122+00:00"
+    },
+    {
+      "seq": 30,
+      "kind": "hook",
+      "payload": {
+        "name": "run_finished",
+        "status": "pass",
+        "summary": {
+          "mode": "deterministic-baseline",
+          "facts": 52
+        }
+      },
+      "created_at": "2026-09-24T20:30:14.418868+00:00"
+    },
+    {
+      "seq": 31,
+      "kind": "result",
+      "payload": {
+        "status": "partial",
+        "generation": 1
+      },
+      "created_at": "2026-09-24T20:30:14.420426+00:00"
+    }
+  ]
+}

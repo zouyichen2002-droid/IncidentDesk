@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "latest_page": true,
+    "older_page": true,
+    "order_and_completeness": true,
+    "unique": true,
+    "revision_preserved": true
+  },
+  "cleanup": "DELETE 55\nDELETE 1\n"
+}

@@ -1,0 +1,70 @@
+{
+  "recorded_at": "2026-09-25T20:27:49.977335+00:00",
+  "live_suites": [
+    {
+      "file": "20260925-162415-reset.json",
+      "passed": 15,
+      "total": 15
+    },
+    {
+      "file": "20260925-162437-filters.json",
+      "passed": 9,
+      "total": 9
+    },
+    {
+      "file": "memory-regression/20260925-162435.json",
+      "passed": 34,
+      "total": 34
+    },
+    {
+      "file": "log-regression.json",
+      "passed": 2,
+      "total": 2
+    },
+    {
+      "file": "disconnect.json",
+      "passed": 1,
+      "total": 1
+    }
+  ],
+  "live_total": {
+    "passed": 61,
+    "total": 61
+  },
+  "pagination": {
+    "file": "pagination.json",
+    "passed": 5,
+    "total": 5,
+    "fixture_cleaned": true
+  },
+  "go": {
+    "passed": 15,
+    "race": true,
+    "vet": true,
+    "file": "go-tests.txt"
+  },
+  "query_unit": {
+    "passed": 26,
+    "file": "query-tests.txt"
+  },
+  "web_build": {
+    "passed": true,
+    "file": "web-build.txt"
+  },
+  "browser": {
+    "url": "http://localhost:8088/",
+    "conversation_id": "9bb796de-40b4-46d4-971b-f7314993cd13",
+    "reset_marker_persists_after_reload": true,
+    "archived_messages_preserved": true,
+    "followup": "那华南呢？",
+    "answer": "请明确您要查询华南地区的哪个指标（如销售额、客单价、订单数等）以及时间范围？",
+    "new_query_not_dispatched": true
+  },
+  "failed_baseline": "20260925-161713-reset.json",
+  "startup_failure": "20260925-161958-reset.json",
+  "limits": [
+    "115 teaching orders; no large warehouse benchmark in this round",
+    "Finite cases do not establish arbitrary natural-language correctness",
+    "HTTP health does not establish external model or index availability"
+  ]
+}

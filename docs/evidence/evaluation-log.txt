@@ -1,0 +1,20 @@
+{
+  "mode": "offline deterministic rule checks; NOT human investigation effectiveness or real-model evaluation",
+  "cases": 24,
+  "heldout_cases": 12,
+  "heldout_repeats": 3,
+  "passed": 48,
+  "runs": 48,
+  "failed": [],
+  "latency_mean_ms": 0.1053932622501937,
+  "latency_stdev_ms": 0.03693674595866672,
+  "human_effectiveness": {
+    "status": "external_input_required",
+    "scored": 0,
+    "threshold": 0.8
+  },
+  "regression_gate": {
+    "candidate_pass": true,
+    "injected_regression_blocked": true
+  }
+}

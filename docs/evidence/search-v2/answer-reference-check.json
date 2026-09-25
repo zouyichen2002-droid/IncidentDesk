@@ -1,0 +1,17 @@
+[
+  {
+    "case": "rare",
+    "answer_references_resolve": true,
+    "real_mistral": true
+  },
+  {
+    "case": "block",
+    "answer_references_resolve": true,
+    "real_mistral": true
+  },
+  {
+    "case": "empty",
+    "answer_references_resolve": true,
+    "real_mistral": true
+  }
+]

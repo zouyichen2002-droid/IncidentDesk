@@ -1,0 +1,13 @@
+长问题尾部约束 PASS
+长问题后的月份追问 PASS
+复合过滤初始问题 PASS
+显式移除地区筛选 PASS
+切换指标保留月份 PASS
+空数据保持空值 PASS
+从空数据恢复真实年份 PASS
+模糊需求先澄清 PASS
+澄清后完整补充 PASS
+只读写入请求 PASS
+英文知识不误查数 PASS
+短输入表情 PASS
+TOTAL 12 / 12

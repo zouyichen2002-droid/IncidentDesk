@@ -1,0 +1,20 @@
+{
+  "index": "benchmark_logs_service_time_id",
+  "columns": [
+    "service",
+    "event_time",
+    "id"
+  ],
+  "seconds": 8.883,
+  "db_bytes": 5500751872,
+  "indexes": [
+    [
+      0,
+      "benchmark_logs_service_time_id",
+      0,
+      "c",
+      0
+    ]
+  ],
+  "scope": "isolated benchmark volume only; no production source change"
+}

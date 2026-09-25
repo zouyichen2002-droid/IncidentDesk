@@ -1,0 +1,52 @@
+{
+  "metric": "BGL alert-bearing window coverage in the first log page; not anomaly-classification accuracy or root-cause recall",
+  "positive_windows": 8,
+  "positive_windows_with_any_alert_in_first_page": 1,
+  "sampled_window_alert_rows": 154288,
+  "first_page_alert_rows": 50,
+  "selection": "Nine BGL calendar-day windows: seven temporal spread points, highest alert count day, lowest nonzero alert ratio day; not a random/unbiased test set",
+  "missed_windows": [
+    {
+      "case": "BGL:2005-06-24",
+      "log_rows": 12219,
+      "alert_rows": 16,
+      "retrieved_alert_rows": 0
+    },
+    {
+      "case": "BGL:2005-07-27",
+      "log_rows": 51806,
+      "alert_rows": 5,
+      "retrieved_alert_rows": 0
+    },
+    {
+      "case": "BGL:2005-09-19",
+      "log_rows": 4276,
+      "alert_rows": 20,
+      "retrieved_alert_rows": 0
+    },
+    {
+      "case": "BGL:2005-11-03",
+      "log_rows": 162695,
+      "alert_rows": 1,
+      "retrieved_alert_rows": 0
+    },
+    {
+      "case": "BGL:2005-11-11",
+      "log_rows": 16958,
+      "alert_rows": 1031,
+      "retrieved_alert_rows": 0
+    },
+    {
+      "case": "BGL:2005-12-14",
+      "log_rows": 4312,
+      "alert_rows": 1024,
+      "retrieved_alert_rows": 0
+    },
+    {
+      "case": "BGL:2006-01-04",
+      "log_rows": 171,
+      "alert_rows": 8,
+      "retrieved_alert_rows": 0
+    }
+  ]
+}

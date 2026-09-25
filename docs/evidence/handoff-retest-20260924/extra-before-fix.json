@@ -1,0 +1,58 @@
+[
+  {
+    "case": "config",
+    "id": "d70ca368-7299-4b70-beea-f76ef161a453",
+    "seconds": 6.692,
+    "status": "waiting_information",
+    "query": {
+      "mode": "search",
+      "terms": [
+        "pool",
+        "connection pool configuration",
+        "连接池配置"
+      ],
+      "levels": [
+        "INFO",
+        "DEBUG",
+        "TRACE"
+      ]
+    },
+    "mode": "mistral",
+    "answer": "未查到订单服务（svc-17）的连接池配置文件路径。检索范围内仅包含部署快照、一次commit修改记录（config.json）及runbook，未发现完整配置文件或路径描述。",
+    "answer_validation": null,
+    "answer_evidence": [],
+    "sources": [
+      "deployments",
+      "git",
+      "runbook"
+    ]
+  },
+  {
+    "case": "missing_document",
+    "id": "66f9ed91-803d-4013-b83c-271c32324101",
+    "seconds": 5.444,
+    "status": "waiting_information",
+    "query": {
+      "mode": "search",
+      "terms": [
+        "database backup documentation",
+        "db backup guide",
+        "backup operation manual"
+      ],
+      "levels": [
+        "INFO",
+        "DEBUG",
+        "TRACE"
+      ]
+    },
+    "mode": "mistral",
+    "answer": "在当前检索范围内未查到订单服务（svc-17）的数据库备份操作文档。检索使用关键词：database backup documentation、db backup guide、backup operation manual，共命中0条记录。",
+    "answer_validation": null,
+    "answer_evidence": [],
+    "sources": [
+      "deployments",
+      "git",
+      "runbook"
+    ]
+  }
+]

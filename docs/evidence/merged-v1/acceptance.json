@@ -1,0 +1,2751 @@
+[
+  {
+    "name": "地区GMV",
+    "passed": true,
+    "seconds": 8.07,
+    "detail": {
+      "id": "39e13ab4-9628-48b6-be44-747d42f7fe7c",
+      "error": null,
+      "result": {
+        "sql": "SELECT dr.region_name AS 地区, SUM(fo.order_amount) AS GMV FROM fact_order AS fo JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dr.region_name ORDER BY GMV DESC LIMIT 500",
+        "data": [
+          {
+            "GMV": 107373.0,
+            "地区": "华东"
+          },
+          {
+            "GMV": 70202.0,
+            "地区": "华南"
+          },
+          {
+            "GMV": 41099.5,
+            "地区": "华北"
+          },
+          {
+            "GMV": 31528.0,
+            "地区": "西南"
+          },
+          {
+            "GMV": 28957.0,
+            "地区": "华中"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "统计 2025 年第一季度各大区的 GMV，并按 GMV 从高到低排序",
+      "created_at": "2026-09-25T00:39:51.926815+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "region_name": "华东",
+        "SUM(o.order_amount)": 107373.0
+      },
+      {
+        "region_name": "华南",
+        "SUM(o.order_amount)": 70202.0
+      },
+      {
+        "region_name": "华北",
+        "SUM(o.order_amount)": 41099.5
+      },
+      {
+        "region_name": "西南",
+        "SUM(o.order_amount)": 31528.0
+      },
+      {
+        "region_name": "华中",
+        "SUM(o.order_amount)": 28957.0
+      }
+    ]
+  },
+  {
+    "name": "品类销量销售额",
+    "passed": true,
+    "seconds": 9.07,
+    "detail": {
+      "id": "32e819c5-3b8e-41e4-849a-055449c1f8c5",
+      "error": null,
+      "result": {
+        "sql": "SELECT dp.category AS 商品品类, SUM(fo.order_quantity) AS 销量, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_product AS dp ON fo.product_id = dp.product_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.month = 3 GROUP BY dp.category ORDER BY 销售额 DESC LIMIT 500",
+        "data": [
+          {
+            "销量": "10",
+            "销售额": 62190.0,
+            "商品品类": "手机数码"
+          },
+          {
+            "销量": "6",
+            "销售额": 19196.0,
+            "商品品类": "家用电器"
+          },
+          {
+            "销量": "4",
+            "销售额": 4396.0,
+            "商品品类": "鞋靴"
+          },
+          {
+            "销量": "7",
+            "销售额": 2593.0,
+            "商品品类": "服饰"
+          },
+          {
+            "销量": "139",
+            "销售额": 1115.0,
+            "商品品类": "食品饮料"
+          },
+          {
+            "销量": "156",
+            "销售额": 630.0,
+            "商品品类": "休闲零食"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "统计 2025 年 3 月各商品品类的销量和销售额",
+      "created_at": "2026-09-25T00:39:59.992621+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "category": "手机数码",
+        "SUM(o.order_quantity)": "10",
+        "SUM(o.order_amount)": 62190.0
+      },
+      {
+        "category": "食品饮料",
+        "SUM(o.order_quantity)": "139",
+        "SUM(o.order_amount)": 1115.0
+      },
+      {
+        "category": "休闲零食",
+        "SUM(o.order_quantity)": "156",
+        "SUM(o.order_amount)": 630.0
+      },
+      {
+        "category": "鞋靴",
+        "SUM(o.order_quantity)": "4",
+        "SUM(o.order_amount)": 4396.0
+      },
+      {
+        "category": "服饰",
+        "SUM(o.order_quantity)": "7",
+        "SUM(o.order_amount)": 2593.0
+      },
+      {
+        "category": "家用电器",
+        "SUM(o.order_quantity)": "6",
+        "SUM(o.order_amount)": 19196.0
+      }
+    ]
+  },
+  {
+    "name": "地区商品排行",
+    "passed": true,
+    "seconds": 7.06,
+    "detail": {
+      "id": "3a581a69-833e-4bcf-9c49-e6ca60da2f8d",
+      "error": null,
+      "result": {
+        "sql": "SELECT dp.product_name AS 商品名称, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_product AS dp ON fo.product_id = dp.product_id JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dp.product_id, dp.product_name ORDER BY 销售额 DESC LIMIT 5",
+        "data": [
+          {
+            "销售额": 28497.0,
+            "商品名称": "Galaxy S24 Ultra"
+          },
+          {
+            "销售额": 27996.0,
+            "商品名称": "Mate 60 Pro"
+          },
+          {
+            "销售额": 17998.0,
+            "商品名称": "iPhone 15 Pro"
+          },
+          {
+            "销售额": 10998.0,
+            "商品名称": "戴森 V15 吸尘器"
+          },
+          {
+            "销售额": 6400.0,
+            "商品名称": "美的空调 KFR-35GW"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询华东地区 2025 年第一季度销售额最高的前 5 个商品",
+      "created_at": "2026-09-25T00:40:09.065555+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "product_name": "Galaxy S24 Ultra",
+        "SUM(o.order_amount)": 28497.0
+      },
+      {
+        "product_name": "Mate 60 Pro",
+        "SUM(o.order_amount)": 27996.0
+      },
+      {
+        "product_name": "iPhone 15 Pro",
+        "SUM(o.order_amount)": 17998.0
+      },
+      {
+        "product_name": "戴森 V15 吸尘器",
+        "SUM(o.order_amount)": 10998.0
+      },
+      {
+        "product_name": "美的空调 KFR-35GW",
+        "SUM(o.order_amount)": 6400.0
+      }
+    ]
+  },
+  {
+    "name": "会员订单销售额",
+    "passed": true,
+    "seconds": 7.07,
+    "detail": {
+      "id": "84e1dce1-b416-44d0-9cf3-6b514216e476",
+      "error": null,
+      "result": {
+        "sql": "SELECT dc.member_level AS 会员等级, COUNT(DISTINCT fo.order_id) AS 订单数, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_customer AS dc ON fo.customer_id = dc.customer_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dc.member_level ORDER BY dc.member_level LIMIT 500",
+        "data": [
+          {
+            "订单数": 30,
+            "销售额": 71094.0,
+            "会员等级": "白银"
+          },
+          {
+            "订单数": 25,
+            "销售额": 57679.0,
+            "会员等级": "铂金"
+          },
+          {
+            "订单数": 26,
+            "销售额": 50208.0,
+            "会员等级": "青铜"
+          },
+          {
+            "订单数": 34,
+            "销售额": 100178.5,
+            "会员等级": "黄金"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "按会员等级统计 2025 年第一季度的订单数和销售额",
+      "created_at": "2026-09-25T00:40:16.126213+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "member_level": "黄金",
+        "COUNT(*)": 34,
+        "SUM(o.order_amount)": 100178.5
+      },
+      {
+        "member_level": "铂金",
+        "COUNT(*)": 25,
+        "SUM(o.order_amount)": 57679.0
+      },
+      {
+        "member_level": "青铜",
+        "COUNT(*)": 26,
+        "SUM(o.order_amount)": 50208.0
+      },
+      {
+        "member_level": "白银",
+        "COUNT(*)": 30,
+        "SUM(o.order_amount)": 71094.0
+      }
+    ]
+  },
+  {
+    "name": "客单价",
+    "passed": true,
+    "seconds": 6.06,
+    "detail": {
+      "id": "1ed604a3-7daf-4e57-a816-f2d494af4797",
+      "error": null,
+      "result": {
+        "sql": "SELECT ROUND(AVG(order_amount), 2) AS 客单价 FROM fact_order JOIN dim_date ON fact_order.date_id = dim_date.date_id WHERE dim_date.year = 2025 AND dim_date.quarter = 'Q1' LIMIT 500",
+        "data": [
+          {
+            "客单价": 2427.47
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度的客单价是多少？保留两位小数",
+      "created_at": "2026-09-25T00:40:23.198117+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": [
+      {
+        "ROUND(SUM(order_amount)/COUNT(DISTINCT order_id),2)": 2427.47
+      }
+    ]
+  },
+  {
+    "name": "空结果",
+    "passed": true,
+    "seconds": 5.05,
+    "detail": {
+      "id": "180b7429-ef19-4b85-9da3-931a46150010",
+      "error": null,
+      "result": {
+        "sql": "SELECT fo.order_id AS 订单ID, fo.customer_id AS 客户ID, fo.date_id AS 日期ID, dd.year AS 年份, fo.product_id AS 商品ID, fo.order_quantity AS 销量, fo.order_amount AS 销售额, fo.region_id AS 地区ID FROM fact_order AS fo JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dd.year = 2026 AND fo.date_id BETWEEN 20260901 AND 20260930 ORDER BY fo.date_id, fo.order_id LIMIT 500",
+        "data": [],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询2026年9月订单明细",
+      "created_at": "2026-09-25T00:40:29.260979+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": []
+  },
+  {
+    "name": "缺少成本字段",
+    "passed": true,
+    "seconds": 6.07,
+    "detail": {
+      "id": "68f73c4d-e51e-4709-9366-b8528de62fa6",
+      "error": "无法计算利润，缺少成本相关字段",
+      "result": null,
+      "status": "failed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "error"
+        }
+      ],
+      "question": "2025年第一季度利润是多少？",
+      "created_at": "2026-09-25T00:40:34.3108+00:00",
+      "dataset_name": "电商演示数仓"
+    },
+    "expected": []
+  },
+  {
+    "name": "拒绝删除",
+    "passed": true,
+    "response": {
+      "clarification": "业务数据仅支持只读查询，不支持删除或修改订单。请描述要查询的内容。",
+      "status": "clarification"
+    }
+  },
+  {
+    "name": "复测-客单价",
+    "passed": true,
+    "detail": {
+      "id": "2a7584fd-ba20-464a-96f2-8d116fbba9f7",
+      "error": null,
+      "result": {
+        "sql": "SELECT ROUND(AVG(order_amount), 2) AS 客单价 FROM fact_order JOIN dim_date ON fact_order.date_id = dim_date.date_id WHERE dim_date.year = 2025 AND dim_date.quarter = 'Q1' LIMIT 500",
+        "data": [
+          {
+            "客单价": 2427.47
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度的客单价是多少？保留两位小数",
+      "created_at": "2026-09-25T00:40:40.391002+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "复测-地区商品排行",
+    "passed": true,
+    "detail": {
+      "id": "24a41118-f2b0-403b-9581-a2b651099550",
+      "error": null,
+      "result": {
+        "sql": "SELECT dp.product_name AS 商品名称, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_product AS dp ON fo.product_id = dp.product_id JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dp.product_id, dp.product_name ORDER BY 销售额 DESC LIMIT 5",
+        "data": [
+          {
+            "销售额": 28497.0,
+            "商品名称": "Galaxy S24 Ultra"
+          },
+          {
+            "销售额": 27996.0,
+            "商品名称": "Mate 60 Pro"
+          },
+          {
+            "销售额": 17998.0,
+            "商品名称": "iPhone 15 Pro"
+          },
+          {
+            "销售额": 10998.0,
+            "商品名称": "戴森 V15 吸尘器"
+          },
+          {
+            "销售额": 6400.0,
+            "商品名称": "美的空调 KFR-35GW"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询华东地区 2025 年第一季度销售额最高的前 5 个商品",
+      "created_at": "2026-09-25T00:40:46.456306+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "复测-客单价",
+    "passed": true,
+    "detail": {
+      "id": "1e7db156-e86a-4f1b-9ab7-4a7604412785",
+      "error": null,
+      "result": {
+        "sql": "SELECT ROUND(AVG(order_amount), 2) AS 客单价 FROM fact_order JOIN dim_date ON fact_order.date_id = dim_date.date_id WHERE dim_date.year = 2025 AND dim_date.quarter = 'Q1' LIMIT 500",
+        "data": [
+          {
+            "客单价": 2427.47
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "2025年第一季度的客单价是多少？保留两位小数",
+      "created_at": "2026-09-25T00:40:54.544566+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "复测-地区商品排行",
+    "passed": true,
+    "detail": {
+      "id": "87b4808b-d3eb-4bd3-9869-08099ae72d15",
+      "error": null,
+      "result": {
+        "sql": "SELECT dp.product_name AS 商品名称, SUM(fo.order_amount) AS 销售额 FROM fact_order AS fo JOIN dim_product AS dp ON fo.product_id = dp.product_id JOIN dim_region AS dr ON fo.region_id = dr.region_id JOIN dim_date AS dd ON fo.date_id = dd.date_id WHERE dr.region_name = '华东' AND dd.year = 2025 AND dd.quarter = 'Q1' GROUP BY dp.product_id, dp.product_name ORDER BY 销售额 DESC LIMIT 5",
+        "data": [
+          {
+            "销售额": 28497.0,
+            "商品名称": "Galaxy S24 Ultra"
+          },
+          {
+            "销售额": 27996.0,
+            "商品名称": "Mate 60 Pro"
+          },
+          {
+            "销售额": 17998.0,
+            "商品名称": "iPhone 15 Pro"
+          },
+          {
+            "销售额": 10998.0,
+            "商品名称": "戴森 V15 吸尘器"
+          },
+          {
+            "销售额": 6400.0,
+            "商品名称": "美的空调 KFR-35GW"
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "查询华东地区 2025 年第一季度销售额最高的前 5 个商品",
+      "created_at": "2026-09-25T00:41:00.591406+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "未登录拒绝",
+    "passed": true,
+    "http": 401
+  },
+  {
+    "name": "跨团队拒绝",
+    "passed": true,
+    "http": 403
+  },
+  {
+    "name": "管理员不自动获得数据权限",
+    "passed": true,
+    "http": 403
+  },
+  {
+    "name": "目录按权限过滤",
+    "passed": true,
+    "response": []
+  },
+  {
+    "name": "混合问题澄清",
+    "passed": true,
+    "response": {
+      "clarification": "请分别提出业务数据和日志调查问题，例如“各地区销售额”或“订单服务超时日志”。",
+      "status": "clarification"
+    }
+  },
+  {
+    "name": "范围外问题澄清",
+    "passed": true,
+    "response": {
+      "clarification": "当前支持电商数据查询和已接入服务的日志/资料查询。请说明要查的业务指标或服务，无法访问你电脑上的任意文件。",
+      "status": "clarification"
+    }
+  },
+  {
+    "name": "自然表达自动分流",
+    "passed": true,
+    "response": {
+      "id": "37145cdd-b615-4dca-adeb-ab2cfb238afe",
+      "kind": "warehouse"
+    }
+  },
+  {
+    "name": "今年不偷换成全部历史",
+    "passed": true,
+    "detail": {
+      "id": "37145cdd-b615-4dca-adeb-ab2cfb238afe",
+      "error": null,
+      "result": {
+        "sql": "SELECT SUM(order_amount) AS 销售额 FROM fact_order WHERE date_id >= 20260101 AND date_id <= 20261231 LIMIT 500",
+        "data": [
+          {
+            "销售额": null
+          }
+        ],
+        "type": "result",
+        "row_limit": 500
+      },
+      "status": "completed",
+      "attempts": 1,
+      "progress": [
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "抽取关键词",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "召回字段取值",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回字段信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "召回指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "合并召回信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "过滤表信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "过滤指标信息",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "添加额外上下文",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "生成SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校验SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "校正SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "校正SQL",
+          "type": "progress",
+          "status": "success"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "running"
+        },
+        {
+          "step": "执行SQL",
+          "type": "progress",
+          "status": "success"
+        }
+      ],
+      "question": "今年我们一共卖了多少钱？",
+      "created_at": "2026-09-25T00:41:09.027597+00:00",
+      "dataset_name": "电商演示数仓"
+    }
+  },
+  {
+    "name": "并发重试幂等",
+    "passed": true,
+    "ids": [
+      "af7298d2-e0d1-4189-8929-fa6feaabed7f",
+      "af7298d2-e0d1-4189-8929-fa6feaabed7f"
+    ]
+  },
+  {
+    "name": "跨查询类型幂等冲突",
+    "passed": true,
+    "http": 409
+  },
+  {
+    "name": "结果可重新读取",
+    "passed": true,
+    "id": "af7298d2-e0d1-4189-8929-fa6feaabed7f"
+  },
+  {
+    "name": "结果跨团队不可读",
+    "passed": true,
+    "http": 404
+  },
+  {
+    "name": "同团队查询历史按创建人隔离",
+    "passed": true,
+    "http": 404
+  },
+  {
+    "name": "原调查能力经统一入口回归",
+    "passed": true,
+    "detail": {
+      "id": "98e10859-bdfb-44fc-8bb7-5ea17be92cb6",
+      "seq": 33,
+      "idem": "74ac73e6-92f5-4725-983b-88306952dfe9",
+      "team": "orders",
+      "query": {
+        "mode": "search",
+        "terms": [
+          "timed out",
+          "timeout",
+          "超时"
+        ],
+        "levels": []
+      },
+      "action": null,
+      "end_at": "2026-09-25T00:41:22.184805+00:00",
+      "report": {
+        "mode": "mistral",
+        "facts": [
+          {
+            "id": "fact:deployments:dep-svc-17:744e6bc77038",
+            "kind": "observation",
+            "text": "发布版本 v2 指向提交 e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments"
+              ],
+              "limit": 50,
+              "object": "Deployment",
+              "source": "deployments"
+            }
+          },
+          {
+            "id": "fact:logs:10:c7950509b09f",
+            "kind": "observation",
+            "text": "日志记录 ERROR: upstream inventory timed out after 50ms",
+            "evidence": [
+              "logs:10:c7950509b09f"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service"
+              ],
+              "limit": 20,
+              "object": "Service",
+              "source": "logs"
+            }
+          },
+          {
+            "id": "fact:git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+            "kind": "observation",
+            "text": "代码提交 e1925867e810fa1bacfb21a5cba711fdef2239be，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+            "evidence": [
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "deployments",
+                "commit"
+              ],
+              "limit": 50,
+              "object": "Commit",
+              "source": "git"
+            }
+          },
+          {
+            "id": "fact:runbook:orders-runbook:c0e226a749e8",
+            "kind": "observation",
+            "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+            "evidence": [
+              "runbook:orders-runbook:c0e226a749e8"
+            ],
+            "transform": "normalize-v1",
+            "query_step": {
+              "path": [
+                "Service",
+                "runbook"
+              ],
+              "limit": 50,
+              "object": "Runbook",
+              "source": "runbook"
+            }
+          },
+          {
+            "id": "fact:relation:deployments:dep-svc-17:744e6bc77038",
+            "kind": "computed",
+            "text": "发布记录与 Git 提交标识一致；这只确认变更归属，不证明故障因果。",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038",
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ],
+            "transform": "commit-equality-v1",
+            "query_step": {
+              "relation": "Deployment.commit"
+            }
+          }
+        ],
+        "model": {
+          "model": "mistral-small-latest",
+          "usage": {
+            "service_tier": "standard",
+            "total_tokens": 2382,
+            "prompt_tokens": 1763,
+            "completion_tokens": 619,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "provider": "mistral",
+          "milliseconds": 4009.11
+        },
+        "answer": "订单服务（svc-17）在24小时内仅检索到1条超时日志：2026-09-24 21:00:43 记录了ERROR级别的「upstream inventory timed out after 50ms」，实际耗时68.74ms。该日志对应部署版本v2与commit 8533cad5，但部署记录显示当前运行版本为v2（commit e1925867），存在版本不一致待核对。",
+        "impact": "svc-17",
+        "context": {
+          "plan": {
+            "end": "2026-09-25T00:41:22.184805Z",
+            "start": "2026-09-24T00:41:22.184805Z",
+            "steps": [
+              {
+                "path": [
+                  "Service",
+                  "deployments"
+                ],
+                "limit": 50,
+                "object": "Deployment",
+                "source": "deployments"
+              },
+              {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              },
+              {
+                "path": [
+                  "Service",
+                  "deployments",
+                  "commit"
+                ],
+                "limit": 50,
+                "object": "Commit",
+                "source": "git"
+              },
+              {
+                "path": [
+                  "Service",
+                  "runbook"
+                ],
+                "limit": 50,
+                "object": "Runbook",
+                "source": "runbook"
+              }
+            ],
+            "service": "svc-17",
+            "version": "1"
+          },
+          "facts": [
+            {
+              "id": "fact:deployments:dep-svc-17:744e6bc77038",
+              "kind": "observation",
+              "text": "发布版本 v2 指向提交 e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "deployments"
+                ],
+                "limit": 50,
+                "object": "Deployment",
+                "source": "deployments"
+              }
+            },
+            {
+              "id": "fact:logs:10:c7950509b09f",
+              "kind": "observation",
+              "text": "日志记录 ERROR: upstream inventory timed out after 50ms",
+              "evidence": [
+                "logs:10:c7950509b09f"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service"
+                ],
+                "limit": 20,
+                "object": "Service",
+                "source": "logs"
+              }
+            },
+            {
+              "id": "fact:git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+              "kind": "observation",
+              "text": "代码提交 e1925867e810fa1bacfb21a5cba711fdef2239be，配置差异：{\"pool_size\":1,\"timeout_ms\":50}",
+              "evidence": [
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "deployments",
+                  "commit"
+                ],
+                "limit": 50,
+                "object": "Commit",
+                "source": "git"
+              }
+            },
+            {
+              "id": "fact:runbook:orders-runbook:c0e226a749e8",
+              "kind": "observation",
+              "text": "运行手册摘录：# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+              "evidence": [
+                "runbook:orders-runbook:c0e226a749e8"
+              ],
+              "transform": "normalize-v1",
+              "query_step": {
+                "path": [
+                  "Service",
+                  "runbook"
+                ],
+                "limit": 50,
+                "object": "Runbook",
+                "source": "runbook"
+              }
+            },
+            {
+              "id": "fact:relation:deployments:dep-svc-17:744e6bc77038",
+              "kind": "computed",
+              "text": "发布记录与 Git 提交标识一致；这只确认变更归属，不证明故障因果。",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038",
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "transform": "commit-equality-v1",
+              "query_step": {
+                "relation": "Deployment.commit"
+              }
+            }
+          ],
+          "scope": {
+            "team": "orders",
+            "service": "svc-17",
+            "subject": "alice"
+          },
+          "missing": [],
+          "objects": [
+            {
+              "id": "svc-17",
+              "team": "orders",
+              "type": "Service"
+            },
+            {
+              "id": "dep-svc-17",
+              "type": "Deployment",
+              "service": "svc-17",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038"
+              ],
+              "valid_time": "2026-09-24T19:10:15.958646+00:00"
+            },
+            {
+              "id": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "type": "Commit",
+              "evidence": [
+                "deployments:dep-svc-17:744e6bc77038",
+                "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+              ],
+              "deployment": "dep-svc-17"
+            }
+          ],
+          "version": "1",
+          "evidence": [
+            {
+              "id": "deployments:dep-svc-17:744e6bc77038",
+              "team": "orders",
+              "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+              "source": "deployments",
+              "locator": "postgres://sources/deployments/dep-svc-17",
+              "snippet": {
+                "id": "dep-svc-17",
+                "app_id": "svc-17",
+                "deleted": false,
+                "service": "svc-17",
+                "version": "v2",
+                "watermark": 1,
+                "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+              },
+              "version": "1",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15.958646+00:00",
+              "collected_at": "2026-09-25T00:41:24.141778+00:00",
+              "source_record": "dep-svc-17"
+            },
+            {
+              "id": "logs:10:c7950509b09f",
+              "team": "orders",
+              "sha256": "c7950509b09fbac965f889d28ea0157634c8a3f651976bb2aba5b407733f3880",
+              "source": "logs",
+              "locator": "logs://svc-17/10",
+              "snippet": {
+                "level": "ERROR",
+                "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "message": "upstream inventory timed out after 50ms",
+                "release": "v2",
+                "duration_ms": 68.74,
+                "error_class": "DependencyReadTimeout",
+                "service_name": "checkout-api"
+              },
+              "version": "10",
+              "available": true,
+              "event_time": "2026-09-24T21:00:43.034277+00:00",
+              "collected_at": "2026-09-25T00:41:24.174604+00:00",
+              "source_record": "10"
+            },
+            {
+              "id": "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+              "team": "orders",
+              "sha256": "a0bdae97902c01ab77a2dfb41b772e98a550fdb57ebd95789f0694422e13d749",
+              "source": "git",
+              "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "snippet": {
+                "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+                "service": "svc-17",
+                "provenance": "local-demo",
+                "config_path": "config.json",
+                "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+              },
+              "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15+00:00",
+              "collected_at": "2026-09-25T00:41:24.230681+00:00",
+              "source_record": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+            },
+            {
+              "id": "runbook:orders-runbook:c0e226a749e8",
+              "team": "orders",
+              "sha256": "c0e226a749e8ee3c444d556b9bb564278edbc95dc652f129517d30ece61adf9b",
+              "source": "runbook",
+              "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+              "snippet": {
+                "service": "svc-17",
+                "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+                "provenance": "local-demo",
+                "valid_as_of": "2026-09-25T00:41:22.184805+00:00"
+              },
+              "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "available": true,
+              "event_time": "2026-09-24T19:10:15+00:00",
+              "collected_at": "2026-09-25T00:41:24.261435+00:00",
+              "source_record": "orders-runbook"
+            }
+          ],
+          "memories": [],
+          "conflicts": [],
+          "freshness": [
+            {
+              "source": "deployments",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:24.141778+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "logs",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:24.174604+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "git",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:24.230681+00:00",
+              "snapshot_consistency": "independent_source"
+            },
+            {
+              "source": "runbook",
+              "watermark": "4",
+              "observed_at": "2026-09-25T00:41:24.261435+00:00",
+              "snapshot_consistency": "independent_source"
+            }
+          ],
+          "retrieval": {
+            "mode": "search",
+            "pages": 1,
+            "terms": [
+              "timed out",
+              "timeout",
+              "超时"
+            ],
+            "levels": {
+              "ERROR": 1
+            },
+            "matched": 1,
+            "sampled": false,
+            "selection": "rare-patterns-and-severity-keyset",
+            "provenance": "local-demo",
+            "labels_used": false,
+            "template_scan": 0,
+            "evidence_count": 1,
+            "total_in_query": 1
+          },
+          "token_budget": 12000,
+          "mapping_version": "2",
+          "ontology_version": "1"
+        },
+        "missing": [],
+        "evidence": [
+          {
+            "id": "deployments:dep-svc-17:744e6bc77038",
+            "team": "orders",
+            "sha256": "744e6bc770387157c9e07af7a433378d28d2e22271a77264d9a5445a2ee57050",
+            "source": "deployments",
+            "locator": "postgres://sources/deployments/dep-svc-17",
+            "snippet": {
+              "id": "dep-svc-17",
+              "app_id": "svc-17",
+              "deleted": false,
+              "service": "svc-17",
+              "version": "v2",
+              "watermark": 1,
+              "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+            },
+            "version": "1",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15.958646+00:00",
+            "collected_at": "2026-09-25T00:41:24.141778+00:00",
+            "source_record": "dep-svc-17"
+          },
+          {
+            "id": "logs:10:c7950509b09f",
+            "team": "orders",
+            "sha256": "c7950509b09fbac965f889d28ea0157634c8a3f651976bb2aba5b407733f3880",
+            "source": "logs",
+            "locator": "logs://svc-17/10",
+            "snippet": {
+              "level": "ERROR",
+              "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+              "message": "upstream inventory timed out after 50ms",
+              "release": "v2",
+              "duration_ms": 68.74,
+              "error_class": "DependencyReadTimeout",
+              "service_name": "checkout-api"
+            },
+            "version": "10",
+            "available": true,
+            "event_time": "2026-09-24T21:00:43.034277+00:00",
+            "collected_at": "2026-09-25T00:41:24.174604+00:00",
+            "source_record": "10"
+          },
+          {
+            "id": "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c",
+            "team": "orders",
+            "sha256": "a0bdae97902c01ab77a2dfb41b772e98a550fdb57ebd95789f0694422e13d749",
+            "source": "git",
+            "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "snippet": {
+              "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+              "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+              "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+              "service": "svc-17",
+              "provenance": "local-demo",
+              "config_path": "config.json",
+              "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+            },
+            "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15+00:00",
+            "collected_at": "2026-09-25T00:41:24.230681+00:00",
+            "source_record": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+          },
+          {
+            "id": "runbook:orders-runbook:c0e226a749e8",
+            "team": "orders",
+            "sha256": "c0e226a749e8ee3c444d556b9bb564278edbc95dc652f129517d30ece61adf9b",
+            "source": "runbook",
+            "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+            "snippet": {
+              "service": "svc-17",
+              "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+              "provenance": "local-demo",
+              "valid_as_of": "2026-09-25T00:41:22.184805+00:00"
+            },
+            "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+            "available": true,
+            "event_time": "2026-09-24T19:10:15+00:00",
+            "collected_at": "2026-09-25T00:41:24.261435+00:00",
+            "source_record": "orders-runbook"
+          }
+        ],
+        "conflicts": [],
+        "freshness": [
+          {
+            "source": "deployments",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:24.141778+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "logs",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:24.174604+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "git",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:24.230681+00:00",
+            "snapshot_consistency": "independent_source"
+          },
+          {
+            "source": "runbook",
+            "watermark": "4",
+            "observed_at": "2026-09-25T00:41:24.261435+00:00",
+            "snapshot_consistency": "independent_source"
+          }
+        ],
+        "retrieval": {
+          "mode": "search",
+          "pages": 1,
+          "terms": [
+            "timed out",
+            "timeout",
+            "超时"
+          ],
+          "levels": {
+            "ERROR": 1
+          },
+          "matched": 1,
+          "sampled": false,
+          "selection": "rare-patterns-and-severity-keyset",
+          "provenance": "local-demo",
+          "labels_used": false,
+          "template_scan": 0,
+          "evidence_count": 1,
+          "total_in_query": 1
+        },
+        "candidates": [
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "上游库存服务响应超时，订单服务连接池或超时配置（50ms）过紧导致",
+            "label": "有待验证",
+            "evidence": [
+              "logs:10:c7950509b09f",
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ]
+          },
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "部署版本与运行版本不一致（v2 vs commit 8533cad5），可能存在代码与配置差异",
+            "label": "有待验证",
+            "evidence": [
+              "deployments:dep-svc-17:744e6bc77038",
+              "logs:10:c7950509b09f"
+            ]
+          },
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "订单服务连接池大小为1，资源竞争导致超时",
+            "label": "有待验证",
+            "evidence": [
+              "git:e1925867e810fa1bacfb21a5cba711fdef2239be:a0bdae97902c"
+            ]
+          },
+          {
+            "rule": "Mistral 基于引用证据提出候选，需进一步验证",
+            "text": "日志抽样范围有限，可能存在未被检索到的同类超时事件",
+            "label": "有待验证",
+            "evidence": [
+              "runbook:orders-runbook:c0e226a749e8"
+            ]
+          }
+        ],
+        "next_steps": [
+          "核对部署版本与运行版本的一致性",
+          "检查上游库存服务的响应时间与可用性",
+          "评估连接池大小与超时配置是否需调整",
+          "扩大日志检索范围或增加关键词以排查遗漏"
+        ],
+        "answer_evidence": [
+          "logs:10:c7950509b09f",
+          "deployments:dep-svc-17:744e6bc77038"
+        ],
+        "confidence_rule": "事实有直接来源；候选有待验证；无日志时不推断根因。",
+        "historical_memory": [],
+        "model_evidence_count": 4
+      },
+      "status": "completed",
+      "service": "svc-17",
+      "subject": "alice",
+      "symptom": "查一下订单服务最近24小时的超时日志",
+      "manifest": {
+        "code": "working-tree",
+        "cost": {
+          "unknown": "USD cost not calculated; interpretation usage is in queued event",
+          "estimated_usd": null,
+          "known_model_tokens": 2382
+        },
+        "model": "mistral-small-latest",
+        "prompt": "investigate-v1",
+        "skills": [
+          "release-compare@1",
+          "log-analysis@1"
+        ],
+        "version": "1",
+        "ontology": "1",
+        "evaluator": "rules-v1",
+        "retrieval": "indexed-stratified-3-pages-v2",
+        "snapshots": {
+          "git": {
+            "sync": "rescan",
+            "scope": {
+              "end": "2026-09-25T00:41:22.184805+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "timed out",
+                  "timeout",
+                  "超时"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T00:41:22.184805+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "content": {
+                  "diff": "commit e1925867e810fa1bacfb21a5cba711fdef2239be\nAuthor:     IncidentDesk Demo <demo@incidentdesk.invalid>\nAuthorDate: Thu Sep 24 19:10:15 2026 +0000\nCommit:     IncidentDesk Demo <demo@incidentdesk.invalid>\nCommitDate: Thu Sep 24 19:10:15 2026 +0000\n\n    demo: reduce pool and dependency timeout\n\n config.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+                  "commit": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                  "config": "{\"pool_size\":1,\"timeout_ms\":50}",
+                  "service": "svc-17",
+                  "provenance": "local-demo",
+                  "config_path": "config.json",
+                  "config_locator": "demo-git://repo/e1925867e810fa1bacfb21a5cba711fdef2239be/config.json"
+                },
+                "deleted": false,
+                "locator": "demo-git://repo/commit/e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "version": "e1925867e810fa1bacfb21a5cba711fdef2239be",
+                "event_time": "2026-09-24T19:10:15+00:00"
+              }
+            ],
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:24.230681+00:00"
+          },
+          "logs": {
+            "sync": "indexed-keyset-v2",
+            "scope": {
+              "end": "2026-09-25T00:41:22.184805+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "timed out",
+                  "timeout",
+                  "超时"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T00:41:22.184805+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "10",
+                "content": {
+                  "level": "ERROR",
+                  "commit": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                  "message": "upstream inventory timed out after 50ms",
+                  "release": "v2",
+                  "duration_ms": 68.74,
+                  "error_class": "DependencyReadTimeout",
+                  "service_name": "checkout-api"
+                },
+                "deleted": false,
+                "locator": "logs://svc-17/10",
+                "version": "10",
+                "event_time": "2026-09-24T21:00:43.034277+00:00"
+              }
+            ],
+            "summary": {
+              "mode": "search",
+              "terms": [
+                "timed out",
+                "timeout",
+                "超时"
+              ],
+              "levels": {
+                "ERROR": 1
+              },
+              "matched": 1,
+              "selection": "rare-patterns-and-severity-keyset",
+              "labels_used": false,
+              "template_scan": 0,
+              "total_in_query": 1
+            },
+            "retrieval": {
+              "mode": "search",
+              "pages": 1,
+              "terms": [
+                "timed out",
+                "timeout",
+                "超时"
+              ],
+              "levels": {
+                "ERROR": 1
+              },
+              "matched": 1,
+              "sampled": false,
+              "selection": "rare-patterns-and-severity-keyset",
+              "provenance": "local-demo",
+              "labels_used": false,
+              "template_scan": 0,
+              "evidence_count": 1,
+              "total_in_query": 1
+            },
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:24.174604+00:00"
+          },
+          "runbook": {
+            "sync": "rescan",
+            "scope": {
+              "end": "2026-09-25T00:41:22.184805+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "timed out",
+                  "timeout",
+                  "超时"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T00:41:22.184805+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "orders-runbook",
+                "content": {
+                  "service": "svc-17",
+                  "markdown": "# Demo order service\nInvestigate pool utilization, dependency latency and recent deployments. A temporal correlation is not proof of causation. Confirm config against the deployed commit before proposing a fix.",
+                  "provenance": "local-demo",
+                  "valid_as_of": "2026-09-25T00:41:22.184805+00:00"
+                },
+                "deleted": false,
+                "locator": "demo-git://repo/8533cad59ea1d855baeaa3c37426ff32357e4f30/RUNBOOK.md",
+                "version": "8533cad59ea1d855baeaa3c37426ff32357e4f30",
+                "event_time": "2026-09-24T19:10:15+00:00"
+              }
+            ],
+            "watermark": 4,
+            "provenance": "local-demo",
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:24.261435+00:00"
+          },
+          "deployments": {
+            "scope": {
+              "end": "2026-09-25T00:41:22.184805+00:00",
+              "team": "orders",
+              "query": {
+                "mode": "search",
+                "terms": [
+                  "timed out",
+                  "timeout",
+                  "超时"
+                ],
+                "levels": []
+              },
+              "start": "2026-09-24T00:41:22.184805+00:00",
+              "service": "svc-17",
+              "subject": "alice",
+              "watermark": 4,
+              "generation": 1
+            },
+            "records": [
+              {
+                "id": "dep-svc-17",
+                "content": {
+                  "id": "dep-svc-17",
+                  "app_id": "svc-17",
+                  "deleted": false,
+                  "service": "svc-17",
+                  "version": "v2",
+                  "watermark": 1,
+                  "commit_sha": "e1925867e810fa1bacfb21a5cba711fdef2239be"
+                },
+                "deleted": false,
+                "locator": "postgres://sources/deployments/dep-svc-17",
+                "version": "1",
+                "event_time": "2026-09-24T19:10:15.958646+00:00"
+              }
+            ],
+            "watermark": 4,
+            "next_cursor": null,
+            "observed_at": "2026-09-25T00:41:24.141778+00:00"
+          }
+        },
+        "generation": 1,
+        "tool_schema": "1",
+        "source_mapping": "2",
+        "model_parameters": {
+          "temperature": 0
+        },
+        "permission_policy": "go-v1"
+      },
+      "start_at": "2026-09-24T00:41:22.184805+00:00",
+      "timezone": "UTC",
+      "trace_id": "1bc681c89f5c2656fbcb27f73618ff95",
+      "created_at": "2026-09-25T00:41:23.978617+00:00",
+      "updated_at": "2026-09-25T00:41:28.404885+00:00",
+      "request_hash": "42f8ffab1fa36d10ba3d16a9cdfcd64958727243c210cff7a59fa127e4d644e5",
+      "evidence_stale": false,
+      "source_version": 4
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "Service": {
+    "team": "Team",
+    "deployments": "Deployment",
+    "runbook": "Runbook",
+    "incidents": "Incident"
+  },
+  "Deployment": {
+    "commit": "Commit"
+  },
+  "Commit": {},
+  "Runbook": {},
+  "Incident": {
+    "service": "Service"
+  },
+  "Team": {}
+}

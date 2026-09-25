@@ -1,0 +1,223 @@
+[
+  {
+    "case": "rare",
+    "question": "查BGL在2005年11月3日的异常日志",
+    "create_status": 202,
+    "create_s": 1.588,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": true,
+      "planner_mistral": true,
+      "answer_references_resolve": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": true,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "rare_event_found": true
+    },
+    "id": "a5e88059-0fb7-4ad1-b894-8efa1b15b030",
+    "status": "partial",
+    "elapsed_s": 8.652,
+    "mode": "mistral",
+    "retrieval": {
+      "mode": "anomalies",
+      "pages": 3,
+      "terms": [],
+      "levels": {
+        "INFO": 157110,
+        "KILL": 8,
+        "FATAL": 5577
+      },
+      "matched": 5577,
+      "sampled": true,
+      "selection": "rare-patterns-and-severity-keyset",
+      "provenance": "public-dataset",
+      "labels_used": false,
+      "template_scan": 5577,
+      "evidence_count": 60,
+      "total_in_query": 162695
+    },
+    "log_evidence": 60,
+    "answer": "2005年11月3日BGL异常日志共检索到5577条FATAL级别记录（按严重程度与模板筛选）。核心异常包括：1)内核级FATAL（1条）：R23-M1-N8-I节点出现kernel panic；2)应用级FATAL（9条）：ciod组件因程序镜像缺失、路径错误或镜像过大（如/home/antypas1/bgl_F3/FLASH3/Sod3d64IO/flash3、/p/gb1/bmiller/CALTECH/BGLcode/test/mdcask.opt等）而崩溃。所有异常均来自公开数据集BGL，证据ID见下。",
+    "model": {
+      "model": "mistral-small-latest",
+      "usage": {
+        "service_tier": "standard",
+        "total_tokens": 4045,
+        "prompt_tokens": 3157,
+        "completion_tokens": 888,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "provider": "mistral",
+      "milliseconds": 5126.88
+    },
+    "query": {
+      "mode": "anomalies",
+      "terms": [],
+      "levels": []
+    }
+  },
+  {
+    "case": "block",
+    "question": "查HDFS在2008年11月9日 blk_-1608999687919862906 的日志",
+    "create_status": 202,
+    "create_s": 1.644,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": true,
+      "planner_mistral": true,
+      "answer_references_resolve": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": true,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "exact_block": true
+    },
+    "id": "f8dd0b2e-a259-4960-a396-12ac9c715b32",
+    "status": "partial",
+    "elapsed_s": 8.688,
+    "mode": "mistral",
+    "retrieval": {
+      "mode": "search",
+      "pages": 3,
+      "terms": [
+        "blk_-1608999687919862906"
+      ],
+      "levels": {
+        "INFO": 269
+      },
+      "matched": 269,
+      "sampled": true,
+      "selection": "rare-patterns-and-severity-keyset",
+      "provenance": "public-dataset",
+      "labels_used": false,
+      "template_scan": 0,
+      "evidence_count": 60,
+      "total_in_query": 269
+    },
+    "log_evidence": 60,
+    "answer": "在2008年11月9日，HDFS日志显示blk_-1608999687919862906被多个DataNode接收并存储。该块在20:35:18由DataNode（10.250.19.102:50010）开始接收，随后被分配给MapReduce任务job_200811092030_0001。同一时间段内，10.250.10.6、10.250.14.224等节点也完成了该块的接收与存储，块大小为91178字节。",
+    "model": {
+      "model": "mistral-small-latest",
+      "usage": {
+        "service_tier": "standard",
+        "total_tokens": 4008,
+        "prompt_tokens": 3111,
+        "completion_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 173
+        }
+      },
+      "provider": "mistral",
+      "milliseconds": 5269.42
+    },
+    "query": {
+      "mode": "search",
+      "terms": [
+        "blk_-1608999687919862906"
+      ],
+      "levels": []
+    }
+  },
+  {
+    "case": "empty",
+    "question": "查BGL在2005年11月3日包含“zznonexistentmarker91472”的日志",
+    "create_status": 202,
+    "create_s": 1.441,
+    "checks": {
+      "expected_status": true,
+      "real_mistral_report": true,
+      "planner_mistral": true,
+      "answer_references_resolve": true,
+      "references_resolve": true,
+      "no_unrelated_fixtures": true,
+      "bounded_logs": true,
+      "source_gaps": true,
+      "idempotent": true,
+      "idempotency_conflict": true,
+      "cross_team_denied": true,
+      "empty_honest": true
+    },
+    "id": "bfd12b96-7202-4096-bc86-1e922afa01a4",
+    "status": "waiting_information",
+    "elapsed_s": 3.455,
+    "mode": "mistral",
+    "retrieval": {
+      "mode": "search",
+      "pages": 1,
+      "terms": [
+        "zznonexistentmarker91472"
+      ],
+      "levels": {},
+      "matched": 0,
+      "sampled": false,
+      "selection": "rare-patterns-and-severity-keyset",
+      "provenance": "public-dataset",
+      "labels_used": false,
+      "template_scan": 0,
+      "evidence_count": 0,
+      "total_in_query": 0
+    },
+    "log_evidence": 0,
+    "answer": "在给定范围内未检索到包含“zznonexistentmarker91472”的BGL日志。检索统计显示：retrieval.total_in_query=0，retrieval.matched=0，且未发现任何相关证据。",
+    "model": {
+      "model": "mistral-small-latest",
+      "usage": {
+        "service_tier": "standard",
+        "total_tokens": 889,
+        "prompt_tokens": 735,
+        "completion_tokens": 154,
+        "prompt_tokens_details": {
+          "cached_tokens": 172
+        }
+      },
+      "provider": "mistral",
+      "milliseconds": 1466.0
+    },
+    "query": {
+      "mode": "search",
+      "terms": [
+        "zznonexistentmarker91472"
+      ],
+      "levels": []
+    }
+  },
+  {
+    "case": "forbidden",
+    "question": "查HDFS在2008年11月9日的错误日志",
+    "create_status": 200,
+    "create_s": 0.004,
+    "checks": {
+      "expected_status": true,
+      "clarification": true
+    },
+    "response": {
+      "clarification": "该服务不在当前账号可查询的来源中。可选：订单服务",
+      "mode": "scope-check",
+      "status": "clarification"
+    }
+  },
+  {
+    "case": "wide",
+    "question": "查BGL在2005年11月1日到2005年11月30日的异常",
+    "create_status": 200,
+    "create_s": 1.321,
+    "checks": {
+      "expected_status": true,
+      "clarification": true
+    },
+    "response": {
+      "clarification": "请给出明确的起止时间，且单次范围不超过7天。",
+      "mode": "mistral",
+      "status": "clarification"
+    }
+  }
+]
