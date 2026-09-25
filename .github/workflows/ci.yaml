@@ -10,6 +10,10 @@ jobs:
       INCIDENT_GITHUB_TOKEN: ''
     steps:
       - uses: actions/checkout@v4
+      - name: Start with fresh CI evidence
+        # Only this ephemeral runner checkout; never publish old local records
+        # as results of a failed/skipped CI step.
+        run: rm -rf docs/evidence && mkdir -p docs/evidence
       - name: Check isolated fixture configuration
         run: python3 scripts/test_compose_config.py
       - uses: actions/setup-go@v5

@@ -30,6 +30,7 @@ def analyze(records, timeout=5):
             "--cap-drop=ALL",
             "--security-opt=no-new-privileges",
             "--memory=64m",
+            "--memory-swap=64m",
             "--cpus=.5",
             "--pids-limit=16",
             "--mount",
