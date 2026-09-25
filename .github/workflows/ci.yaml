@@ -5,8 +5,13 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
+    env:
+      INCIDENT_GITHUB_API_URL: http://demo:8090/github
+      INCIDENT_GITHUB_TOKEN: ''
     steps:
       - uses: actions/checkout@v4
+      - name: Check isolated fixture configuration
+        run: python3 scripts/test_compose_config.py
       - uses: actions/setup-go@v5
         with: {go-version: '1.27.1', cache-dependency-path: backend/go.sum}
       - uses: actions/setup-node@v4
@@ -32,6 +37,12 @@ jobs:
           uv run --project worker python scripts/smoke.py
           scripts/test-go.sh
       - run: docker build -t incidentdesk-sandbox:0.1.0 sandbox && python scripts/test_sandbox.py
+      - name: Collect container diagnostics on failure
+        if: failure()
+        run: |
+          mkdir -p docs/evidence/ci
+          docker compose ps -a > docs/evidence/ci/containers.txt
+          docker compose logs --no-color --tail 200 > docs/evidence/ci/containers.log 2>&1
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: acceptance-evidence, path: docs/evidence}

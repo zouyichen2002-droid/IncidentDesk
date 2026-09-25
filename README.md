@@ -106,7 +106,7 @@ TEST_API=http://localhost:18080 TEST_SOURCE=http://localhost:18090 uv run --proj
 
 ## 外部集成验收
 
-1. 提供已授权的测试 `owner/repo`，在 Admin 配置中更新服务仓库；将有最低必要 Issue 写权限的 token 放入本机 `.env` 的 `GITHUB_TOKEN`，设置 `GITHUB_API_URL=https://api.github.com`。只有 Go API 接收该 token。重建 API 后，由审批者审阅草稿并批准；保存真实 Issue URL/回读证据。
+1. 提供已授权的测试 `owner/repo`，在 Admin 配置中更新服务仓库；将有最低必要 Issue 写权限的 token 放入本机 `.env` 的 `INCIDENT_GITHUB_TOKEN`，设置 `INCIDENT_GITHUB_API_URL=https://api.github.com`。只有 Go API 接收该 token。Compose 主机配置使用 `INCIDENT_` 前缀，避免与 GitHub Actions 自动注入的变量冲突；旧 `.env` 中的 `GITHUB_API_URL` / `GITHUB_TOKEN` 需要改为上述名称。重建 API 后，由审批者审阅草稿并批准；保存真实 Issue URL/回读证据。
 2. 将已授权的 OpenAI-compatible 模型配置写入 `.env` 的 `MODEL_NAME`、`MODEL_BASE_URL`、`MODEL_API_KEY`，设置 `HARNESS=deepagents`，重启 Worker。代码使用真实 Deep Agents 状态/工具中间件和 LangGraph Postgres checkpoint；录制模型测试不能替代真实供应商请求。
 3. 按 `evaluation/RUBRIC.md` 对 12 个保留用例各 3 次独立评分，公开有效调查分子/分母、失败样本和波动；人工确认 badcase 与试用反馈。未提供模型前不报告 ≥80% 质量或模型吞吐/成本。
 

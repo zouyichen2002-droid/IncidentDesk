@@ -44,8 +44,9 @@ services:
       QUERY_URL: http://query:8092
       SOURCE_URL: http://demo:8090
       INTERNAL_KEY: local-worker-key
-      GITHUB_API_URL: ${GITHUB_API_URL:-http://demo:8090/github}
-      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      # Host variables must not collide with GitHub Actions' built-in variables.
+      GITHUB_API_URL: ${INCIDENT_GITHUB_API_URL:-http://demo:8090/github}
+      GITHUB_TOKEN: ${INCIDENT_GITHUB_TOKEN:-}
       PPROF_ADDR: 0.0.0.0:6060
     ports: ["127.0.0.1:8080:8080", "127.0.0.1:6060:6060"]
     restart: on-failure
