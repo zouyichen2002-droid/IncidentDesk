@@ -6,7 +6,7 @@
 
 > 2026-09-25 持久会话更新：新增账号隔离的历史对话、刷新/重新登录恢复、服务端上下文、版本并发控制与安全重试，范围和验收见 [CONVERSATION_MEMORY.md](CONVERSATION_MEMORY.md)。尚未完成独立结构化查询规划。
 
-> 2026-09-25 完整参考范围更新：按尚硅谷当前“掌柜问数”介绍、社区18章教程及京东DataAgent源码分别核查，完整矩阵与后续验收工作项见 [ATGUIGU_CAPABILITIES.md](ATGUIGU_CAPABILITIES.md)。教学主链路已合入，不代表官网当前描述的三阶段规划、完整HyDE或大Schema能力均已完成。继续使用Mistral。
+> 2026-09-25 能力更新：问数主链路已实现；独立查询规划、完整 HyDE 和大 Schema 检索仍待完成。范围与验收见 [能力清单](CAPABILITIES.md)。模型使用 Mistral。
 
 > 2026-09-25 对话入口更新：新增普通问答、语义分流、具体澄清和当前页面连续追问，范围与验收见 [CONVERSATION_V1.md](CONVERSATION_V1.md)。
 

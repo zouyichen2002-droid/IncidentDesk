@@ -1,6 +1,6 @@
 """Bounded retrieval and deterministic rank fusion across query variants.
 
-Inspired by JoyDataAgent's bounded TableRAG retrieval. RRF uses ranks, so
+RRF uses ranks, so
 Qdrant cosine scores and Elasticsearch BM25 scores need not be comparable.
 No candidate is discarded here; metadata completion and filtering follow.
 """

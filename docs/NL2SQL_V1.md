@@ -2,13 +2,13 @@
 
 > 已被统一合并版接替。请使用 [MERGED_V1](MERGED_V1.md) 和 8088 入口；下文保留独立试用阶段的历史记录。
 
-更新：2026-09-24。用户确认直接基于现成项目修改，以加快第一版。本文是问数方向的独立验收基线；原 IncidentDesk PRD 保留为旧方向文档，不代表两个产品已经合并。
+更新：2026-09-24。本文是问数方向的独立验收基线；原 IncidentDesk PRD 保留为旧方向文档，不代表两个产品已经合并。
 
 ## 产品目标
 
 用户输入一句中文，在已接入的业务数据范围内得到正确的查询结果，并能查看执行 SQL。遇到不存在的数据、缺少指标字段或写入要求时明确反馈，不编造结果。
 
-第一版复用 [didilili/shopkeeper-agent](https://github.com/didilili/shopkeeper-agent)，固定版本 `8045fa4d61608f58df551fda6cd1a70529bb5b67`，MIT，保留 didilili 版权。这是尚硅谷“掌柜问数”相关的社区整理实现，未确认是尚硅谷官方源码仓库。尚硅谷课程介绍见 https://www.atguigu.com/ai/ 。
+问数服务使用 FastAPI、LangGraph、MySQL、Qdrant 和 Elasticsearch。组件许可证见根目录 THIRD_PARTY_NOTICES.md。
 
 ## 当前可用范围
 

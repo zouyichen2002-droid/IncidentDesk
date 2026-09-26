@@ -2,18 +2,13 @@
 
 IncidentDesk's original code is licensed under the root MIT license. This license does not replace licenses covering third-party code, dependencies, services, or datasets.
 
-## Vendored teaching implementation
+## Query component
 
 - Source: https://github.com/didilili/shopkeeper-agent
 - Upstream commit: `8045fa4d61608f58df551fda6cd1a70529bb5b67`
 - Copyright (c) 2026 didilili; MIT.
-- Adapted code and teaching data live under `query/`. Original license and README are retained in `query/LICENSE` and `query/README.md`; changes are described in `query/UPSTREAM.md` and `docs/MERGED_V1.md`.
+- Adapted code and sample data live under `query/`. The original copyright and license are retained in `query/LICENSE`. Component provenance is recorded in `query/UPSTREAM.md`.
 - Compatibility patches under `integrations/shopkeeper/` retain the same upstream license.
-- This community teaching implementation is not represented as official Atguigu source code. No proprietary course materials are distributed.
-
-## Architectural references
-
-JoyDataAgent and the AI-Powered Rehabilitation Coaching System were studied as design references. Their source code was not copied into this project. Reference links and the scope of reuse are documented in `docs/ATGUIGU_CAPABILITIES.md` and `docs/REHAB_REFERENCE_REVIEW.md`.
 
 ## Runtime dependencies and plugin
 

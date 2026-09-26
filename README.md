@@ -19,7 +19,7 @@ IncidentDesk is an open-source natural-language data and incident investigation 
 
 最近一轮本机验收：61/61 项接口检查、5/5 项分页断言、15 项 Go 测试及 26 项查询服务测试通过，见 [测试报告](docs/BUGFIX_ROUND3.md)。这些是有限场景的记录，不代表任意问法准确率或生产性能。GitHub CI 单独运行不需要模型密钥的测试。
 
-[需求 PRD](docs/PRD.md) · [合并架构与使用](docs/MERGED_V1.md) · [持久会话](docs/CONVERSATION_MEMORY.md) · [能力对照与路线图](docs/ATGUIGU_CAPABILITIES.md) · [第三方来源](THIRD_PARTY_NOTICES.md) · [参与贡献](CONTRIBUTING.md)
+[需求 PRD](docs/PRD.md) · [架构与使用](docs/MERGED_V1.md) · [持久会话](docs/CONVERSATION_MEMORY.md) · [能力与路线图](docs/CAPABILITIES.md) · [许可证声明](THIRD_PARTY_NOTICES.md) · [参与贡献](CONTRIBUTING.md)
 
 ## 启动
 
@@ -147,4 +147,4 @@ Helm 默认仍为离线可运行模式。真实模型使用已有 Secret（键 `
 
 ## 开源与来源
 
-项目原创部分采用 [MIT](LICENSE)；`query/` 来自 didilili/shopkeeper-agent 的 MIT 教学实现，保留原作者许可证和固定提交信息，不能冒称尚硅谷官方源码。第三方依赖、运行服务及数据按各自许可使用，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。公开版本包含脱敏的本机验收记录，不包含 `.env`、模型密钥、运行数据库、下载的完整日志语料或私人开发目录。
+项目采用 [MIT](LICENSE) 协议。第三方组件、运行服务及数据的许可信息见 [许可证声明](THIRD_PARTY_NOTICES.md)。公开版本包含脱敏的本机验收记录，不包含密钥、运行数据库或完整日志语料。
